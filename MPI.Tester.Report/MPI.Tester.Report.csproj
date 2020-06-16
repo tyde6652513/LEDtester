@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7BDBC493-7469-4545-B793-AD812E0E2DCE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MPI.Tester.Report</RootNamespace>
+    <AssemblyName>MPI.Tester.Report</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Assembly\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assembly\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseMethod\CSVReportBase.cs" />
+    <Compile Include="BaseMethod\SptReportBase.cs" />
+    <Compile Include="CsvQuoteMark.cs" />
+    <Compile Include="ReportBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportInterpolation\IRICalcMath.cs" />
+    <Compile Include="ReportInterpolation\ReportInterpolationData.cs" />
+    <Compile Include="ReportInterpolation\RIMathA.cs" />
+    <Compile Include="ReportProcess.cs" />
+    <Compile Include="ResultTitleInfo.cs" />
+    <Compile Include="StatisticSet.cs" />
+    <Compile Include="BaseMethod\SweepReportBase.cs" />
+    <Compile Include="User\AOI\Report.cs" />
+    <Compile Include="User\ATV\Report.cs" />
+    <Compile Include="User\ChangeLight\Report.cs" />
+    <Compile Include="User\CHT\Report.cs" />
+    <Compile Include="User\DOWA\Report.cs" />
+    <Compile Include="User\Emcore\Report.cs" />
+    <Compile Include="User\EpiStar\Report.cs" />
+    <Compile Include="User\Eti\Report.cs" />
+    <Compile Include="User\GPI\Report.cs" />
+    <Compile Include="User\Heptagon\Report.cs" />
+    <Compile Include="User\InfiniLED\Report.cs" />
+    <Compile Include="User\EPISKY\Report.cs" />
+    <Compile Include="User\HP000\Report.cs" />
+    <Compile Include="User\Lextar\Report.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="User\Lumitek\Report.cs" />
+    <Compile Include="User\Lumitek\UserXML.cs" />
+    <Compile Include="User\Luxnet\Report.cs" />
+    <Compile Include="User\MPI\Report.cs" />
+    <Compile Include="User\MPI_DEMO\Report.cs" />
+    <Compile Include="User\MPI_LCR\Report.cs" />
+    <Compile Include="User\MPI_LD\Report.cs" />
+    <Compile Include="User\MPI_Python\BinDataInfo.cs" />
+    <Compile Include="User\MPI_Python\ProductDataInfo.cs" />
+    <Compile Include="User\MPI_Python\TesterSettingInfo.cs" />
+    <Compile Include="User\MPI_Python\Report.cs" />
+    <Compile Include="User\MPI_Python\UISettingInfo.cs" />
+    <Compile Include="User\OptoTech\LaserPowerReport.cs" />
+    <Compile Include="User\OptoTech\Report.cs" />
+    <Compile Include="User\Picometrix\Report.cs" />
+    <Compile Include="User\Sanan_Xiamen\Report.cs" />
+    <Compile Include="User\TSB\Report.cs" />
+    <Compile Include="User\TSMC01\Report.cs" />
+    <Compile Include="User\TYNTE\Report.cs" />
+    <Compile Include="User\UOC\Report.cs" />
+    <Compile Include="User\WAVETEK00\File1.cs" />
+    <Compile Include="User\WAVETEK00\File2.cs" />
+    <Compile Include="User\WAVETEK00\File3.cs" />
+    <Compile Include="User\WAVETEK00\File4.cs" />
+    <Compile Include="User\WAVETEK00\File5.cs" />
+    <Compile Include="User\WAVETEK00\File6.cs" />
+    <Compile Include="User\WAVETEK00\PostProcess.cs" />
+    <Compile Include="User\WAVETEK00\Report.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MPI.Tester.Data\MPI.Tester.Data.csproj">
+      <Project>{33C2AD1C-45FE-4D42-86F2-E9685AEB51F3}</Project>
+      <Name>MPI.Tester.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester.DeviceCommon\MPI.Tester.DeviceCommon.csproj">
+      <Project>{E1AEFEEE-68BB-47C5-B6CC-826BDA0DABAA}</Project>
+      <Name>MPI.Tester.DeviceCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester.Maths\MPI.Tester.Maths.csproj">
+      <Project>{F33CF83B-82FB-4E56-A0EC-DCC4869FB603}</Project>
+      <Name>MPI.Tester.Maths</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester.TestKernel\MPI.Tester.TestKernel.csproj">
+      <Project>{FD9B1C73-4CCC-481F-B7A7-8E8BF4A834AB}</Project>
+      <Name>MPI.Tester.TestKernel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester.TestServer\MPI.Tester.TestServer.csproj">
+      <Project>{948C8B36-F5F9-4183-9592-B385E2CC1ACC}</Project>
+      <Name>MPI.Tester.TestServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester.Tools\MPI.Tester.Tools.csproj">
+      <Project>{79982B67-8173-449C-9A4F-1A6B767CB979}</Project>
+      <Name>MPI.Tester.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester\MPI.Tester.csproj">
+      <Project>{71A9C95D-A461-4742-8FDD-B41F58B91C8E}</Project>
+      <Name>MPI.Tester</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

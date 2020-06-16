@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2130CA87-A23D-4D40-AECE-30B87CFB1F41}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MPI.Tester.Device2</RootNamespace>
+    <AssemblyName>MPI.Tester.Device2</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Assembly\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MPI">
+      <HintPath>..\Assembly\MPI.dll</HintPath>
+    </Reference>
+    <Reference Include="MPI.Tester.Device">
+      <HintPath>..\Assembly\MPI.Tester.Device.dll</HintPath>
+    </Reference>
+    <Reference Include="MPI.Tester.Device2.LDT3A200, Version=0.0.8.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assembly\MPI.Tester.Device2.LDT3A200.dll</HintPath>
+    </Reference>
+    <Reference Include="MPI.Tester.DeviceCommon">
+      <HintPath>..\Assembly\MPI.Tester.DeviceCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.Common, Version=9.1.20.159, Culture=neutral, PublicKeyToken=4544464cdeaab541, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assembly\NationalInstruments.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Thorlabs.PM100D_32.Interop, Version=1.0.1297.46, Culture=neutral, PublicKeyToken=db52e1f7e1afc70c, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assembly\Thorlabs.PM100D_32.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Thorlabs.TLPM_32.Interop, Version=5.0.2846.231, Culture=neutral, PublicKeyToken=db52e1f7e1afc70c, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assembly\Thorlabs.TLPM_32.Interop.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAQ\DAQ2213.cs" />
+    <Compile Include="DAQ\DAQ9527.cs" />
+    <Compile Include="DAQ\PCI9111HR.cs" />
+    <Compile Include="DAQ\PCI9222.cs" />
+    <Compile Include="DeciveAPI\D2K_DASK.cs" />
+    <Compile Include="DeciveAPI\DSA_DASK.cs" />
+    <Compile Include="DeciveAPI\PCI_DASK.cs" />
+    <Compile Include="DMM\K7510.cs" />
+    <Compile Include="ESD\ESDCtrlPCI.cs" />
+    <Compile Include="ESD\PCI7230Wrapper.cs" />
+    <Compile Include="ESD\PISODA2UWrapper.cs" />
+    <Compile Include="IOCard\PCI1756Wrapper.cs" />
+    <Compile Include="LaserCharacteristicsAnalysis\MpiLaserPostCalc.cs" />
+    <Compile Include="LaserSourceSys\Attenuator\AttenuatorBase.cs" />
+    <Compile Include="LaserSourceSys\Attenuator\ATT_Manager.cs" />
+    <Compile Include="LaserSourceSys\Attenuator\FTBx_3500.cs" />
+    <Compile Include="LaserSourceSys\Attenuator\N7760A.cs" />
+    <Compile Include="LaserSourceSys\Attenuator\SimuAtt.cs" />
+    <Compile Include="LaserSourceSys\LaserSourceSystem.cs" />
+    <Compile Include="LaserSourceSys\OpticalSwitch\FTBx_9160.cs" />
+    <Compile Include="LaserSourceSys\OpticalSwitch\OpticalSwitchManager.cs" />
+    <Compile Include="LaserSourceSys\OpticalSwitch\OSBase.cs" />
+    <Compile Include="LaserSourceSys\OpticalSwitch\OSW12.cs" />
+    <Compile Include="LaserSourceSys\OpticalSwitch\OSW1xN.cs" />
+    <Compile Include="LaserSourceSys\OpticalSwitch\SimuOS.cs" />
+    <Compile Include="LaserSourceSys\PowerMeter\FTBx_1750.cs" />
+    <Compile Include="LaserSourceSys\PowerMeter\K2600PowerMeter.cs" />
+    <Compile Include="LaserSourceSys\PowerMeter\PM400.cs" />
+    <Compile Include="LaserSourceSys\PowerMeter\PowerMeterManager.cs" />
+    <Compile Include="LaserSourceSys\PowerMeter\SimuPowerMeter.cs" />
+    <Compile Include="LCRMeter\3506_10.cs" />
+    <Compile Include="LCRMeter\AGILENT 4284A.cs" />
+    <Compile Include="LCRMeter\E4980A.cs" />
+    <Compile Include="LCRMeter\eWK6101.cs" />
+    <Compile Include="LCRMeter\HP4278A.cs" />
+    <Compile Include="LCRMeter\IM3536.cs" />
+    <Compile Include="LCRMeter\LCRBase.cs" />
+    <Compile Include="LCRMeter\WK4100.cs" />
+    <Compile Include="LCRMeter\WK6500B.cs" />
+    <Compile Include="LDT3A\DevCmdData.cs" />
+    <Compile Include="LDT3A\Enumerations.cs" />
+    <Compile Include="LDT3A\LDT3ALib.cs" />
+    <Compile Include="LDT3A\USBPortHWhandle.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegMappingData\CmdClearTestItem.cs" />
+    <Compile Include="RegMappingData\CmdResetSystem.cs" />
+    <Compile Include="RegMappingData\CmdRunAutoCalEnable.cs" />
+    <Compile Include="RegMappingData\CmdRunCurrComp.cs" />
+    <Compile Include="RegMappingData\CmdRunDioInput.cs" />
+    <Compile Include="RegMappingData\CmdRunDioOutput.cs" />
+    <Compile Include="RegMappingData\CmdRunMemoryClear.cs" />
+    <Compile Include="RegMappingData\CmdRunSourceReset.cs" />
+    <Compile Include="RegMappingData\CmdRunTestItem.cs" />
+    <Compile Include="RegMappingData\CmdRunTriggerIn.cs" />
+    <Compile Include="RegMappingData\CmdRunTriggerIn1.cs" />
+    <Compile Include="RegMappingData\CmdRunTriggerOut.cs" />
+    <Compile Include="RegMappingData\CmdRunTurnOffRangeChange.cs" />
+    <Compile Include="RegMappingData\CmdRunVoltComp.cs" />
+    <Compile Include="RegMappingData\CmdRunWait.cs" />
+    <Compile Include="RegMappingData\CmdSetCurrComp.cs" />
+    <Compile Include="RegMappingData\CmdSetCurrTestItem.cs" />
+    <Compile Include="RegMappingData\CmdSetEEPROMSave.cs" />
+    <Compile Include="RegMappingData\CmdSetGainOffset.cs" />
+    <Compile Include="RegMappingData\CmdSetTestItem.cs" />
+    <Compile Include="RegMappingData\CmdSetTriggerOutDuration.cs" />
+    <Compile Include="RegMappingData\CmdSetVoltComp.cs" />
+    <Compile Include="RegMappingData\CmdSetVoltTestItem.cs" />
+    <Compile Include="RegMappingData\CmdSpRunTestItem.cs" />
+    <Compile Include="RegMappingData\CmdStopCurrComp.cs" />
+    <Compile Include="RegMappingData\CmdStopTestItem.cs" />
+    <Compile Include="RegMappingData\CmdStopVoltComp.cs" />
+    <Compile Include="RegMappingData\EnumAddrReg.cs" />
+    <Compile Include="RegMappingData\RegCmdBase.cs" />
+    <Compile Include="SourceMeter\DR2000.cs" />
+    <Compile Include="SourceMeter\DSPHD.cs" />
+    <Compile Include="SourceMeter\IT7321.cs" />
+    <Compile Include="SourceMeter\K2520Wrapper.cs" />
+    <Compile Include="SourceMeter\K2600\K2600Common.cs" />
+    <Compile Include="SourceMeter\K2600\K2600Script.cs" />
+    <Compile Include="SourceMeter\K2600\K2600Wrapper.cs" />
+    <Compile Include="SourceMeter\K2600\K2600_IO.cs" />
+    <Compile Include="SourceMeter\Keithley2400.cs" />
+    <Compile Include="SourceMeter\Keithley2520.cs" />
+    <Compile Include="SourceMeter\Keithley2600.cs" />
+    <Compile Include="SourceMeter\KeysightB2900A.cs" />
+    <Compile Include="SourceMeter\KeysightWrapper.cs" />
+    <Compile Include="SourceMeter\LDT3A200.cs" />
+    <Compile Include="SourceMeter\N5751A.cs" />
+    <Compile Include="SourceMeter\Persona.cs" />
+    <Compile Include="SourceMeter\RM3542.cs" />
+    <Compile Include="SourceMeter\SS400.cs" />
+    <Compile Include="SourceMeter\T2001L.cs" />
+    <Compile Include="SourceMeter\TSEWrapper.cs" />
+    <Compile Include="SourceMeter\VektrexWrapper.cs" />
+    <Compile Include="SpectroMeter\IS\CAS4.cs" />
+    <Compile Include="SpectroMeter\IS\CAS4Wrapper.cs" />
+    <Compile Include="SpectroMeter\IS\Enumerations.cs" />
+    <Compile Include="SwitchSystem\K3706A.cs" />
+    <Compile Include="SwitchSystem\MultiFuncBox.cs" />
+    <Compile Include="SwitchSystem\PCI1756Wrapper.cs" />
+    <Compile Include="SwitchSystem\PIO821HWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MPI.Tester.Data\MPI.Tester.Data.csproj">
+      <Project>{33C2AD1C-45FE-4D42-86F2-E9685AEB51F3}</Project>
+      <Name>MPI.Tester.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester.Maths\MPI.Tester.Maths.csproj">
+      <Project>{F33CF83B-82FB-4E56-A0EC-DCC4869FB603}</Project>
+      <Name>MPI.Tester.Maths</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester.Tools\MPI.Tester.Tools.csproj">
+      <Project>{79982B67-8173-449C-9A4F-1A6B767CB979}</Project>
+      <Name>MPI.Tester.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester\MPI.Tester.csproj">
+      <Project>{71A9C95D-A461-4742-8FDD-B41F58B91C8E}</Project>
+      <Name>MPI.Tester</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LaserSourceSys\LaserSource\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

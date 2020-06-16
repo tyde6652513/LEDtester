@@ -1,0 +1,1019 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Column3.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Column3.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column3.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column3.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column3.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column3.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column3.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column3.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column3.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column3.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column3.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column3.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column3.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column3.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column3.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column5.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column5.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column5.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column5.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column5.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column5.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column5.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column5.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column5.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column5.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column5.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column5.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column5.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column5.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column5.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column7.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column7.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column7.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column7.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column7.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column7.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column7.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column7.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column7.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column7.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column7.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column7.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column7.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column7.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column7.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column4.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column4.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column4.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column4.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column4.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column4.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column4.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column4.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column4.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column4.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column4.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column4.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column4.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column4.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column4.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column6.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column6.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column6.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column6.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column6.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column6.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column6.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column6.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column6.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column6.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column6.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column6.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column6.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column6.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column6.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column8.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column8.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column8.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column8.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column8.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column8.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column8.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column8.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column8.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column8.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column8.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column8.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column8.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column8.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column8.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridViewDoubleInputColumn2.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dataGridViewDoubleInputColumn2.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dataGridViewDoubleInputColumn2.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridViewDoubleInputColumn2.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dataGridViewDoubleInputColumn2.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dataGridViewDoubleInputColumn2.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridViewDoubleInputColumn2.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dataGridViewDoubleInputColumn2.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dataGridViewDoubleInputColumn2.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridViewDoubleInputColumn2.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dataGridViewDoubleInputColumn2.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dataGridViewDoubleInputColumn2.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridViewDoubleInputColumn2.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dataGridViewDoubleInputColumn2.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dataGridViewDoubleInputColumn2.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column9.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column9.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column9.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column9.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column9.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column9.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column9.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column9.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column9.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column9.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column9.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column9.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column9.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column9.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column9.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column10.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column10.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column10.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column10.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column10.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column10.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column10.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column10.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column10.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column10.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column10.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column10.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column10.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column10.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column10.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnDailyCalc.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAbBJREFUOE99k0tL
+        AlEUx2fTNsplhFb02PSw/FxBi6hFlGWE2ucIWjTYiK/UWhXYJizC1BiFSGdMLZ+VUXA65zp3cGzswJ87
+        9zLnd8//nnuFBXe0Nr0XBpszBNadIJPNGYSp3RDM7UdSi+6osOKNC45DcwmUPCiu5CqBjhlkEIB2pvBn
+        VCYprbL50JrIxkuEzLrCR0ueqGD3xJiWvTEdKFDJFOe5Clyg4nKFzVdPkjpkfDsAk2hpAjfTrIncmg5I
+        PL/CNYrGp/qHwdXohmSY91rTAclSA241JdU63CgoHCmG131wnu9Wxq0RBA9Z1AHZagtIj9pI3xkUByQK
+        tT/WyI4OKDY7oKDUVlf0TWsccF9uQKHxabBixXbrADFVhNMHxSBa44A8nssdWuy1Rg0QeBt9WrKUVrCV
+        XRCtcYD63gH5rc1scmsM8N9F4vWOYBfa3z/w0v4yWGOA+YNIkyDUY6qGX+mxrQBYNiWwYDLeQjiTy+DH
+        S0aVcWsMgGFHOfpFJ0wRy5VZciBb0gHcGm1m+kjoqs64Br8Rbo0qNwXQwzGzxi2SXUqmf8jCoDC11mfV
+        /gtcPrrvSGcA0AAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="dinChipIndex.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinChipIndex.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinChipIndex.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinChipIndex.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinChipIndex.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinChipIndex.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinChipIndex.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinChipIndex.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinChipIndex.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinChipIndex.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinChipIndex.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinChipIndex.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinChipIndex.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinChipIndex.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinChipIndex.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colGainOffsetNo.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colGainOffsetNo.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="colGainOffsetNo.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colGainOffsetNo.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colGainOffsetNo.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="colGainOffsetNo.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colGainOffsetNo.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colGainOffsetNo.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="colGainOffsetNo.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colGainOffsetNo.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colGainOffsetNo.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="colGainOffsetNo.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colGainOffsetNo.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colGainOffsetNo.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="colGainOffsetNo.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colSquare.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colSquare.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="colSquare.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colSquare.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colSquare.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="colSquare.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colSquare.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colSquare.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="colSquare.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colSquare.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colSquare.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="colSquare.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colSquare.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colSquare.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="colSquare.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colGain.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colGain.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="colGain.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colGain.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colGain.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="colGain.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colGain.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colGain.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="colGain.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colGain.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colGain.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="colGain.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colGain.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colGain.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="colGain.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column1.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column1.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column1.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column1.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column1.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column1.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column1.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column1.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column1.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column1.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column1.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column1.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column1.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column1.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column1.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column11.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column11.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column11.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column11.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column11.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column11.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column11.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column11.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column11.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column11.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column11.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column11.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Column11.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Column11.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Column11.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="superTabControl1.ControlBox.Category" xml:space="preserve">
+    <value />
+  </data>
+  <data name="superTabControl1.ControlBox.CloseBox.Category" xml:space="preserve">
+    <value />
+  </data>
+  <data name="superTabControl1.ControlBox.CloseBox.CommandParameter" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="superTabControl1.ControlBox.CloseBox.Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="superTabControl1.ControlBox.CloseBox.Tag" xml:space="preserve">
+    <value />
+  </data>
+  <data name="superTabControl1.ControlBox.CloseBox.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="superTabControl1.ControlBox.CloseBox.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="superTabControl1.ControlBox.CommandParameter" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="superTabControl1.ControlBox.Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="superTabControl1.ControlBox.MenuBox.Category" xml:space="preserve">
+    <value />
+  </data>
+  <data name="superTabControl1.ControlBox.MenuBox.CommandParameter" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="superTabControl1.ControlBox.MenuBox.Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="superTabControl1.ControlBox.MenuBox.Tag" xml:space="preserve">
+    <value />
+  </data>
+  <data name="superTabControl1.ControlBox.MenuBox.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="superTabControl1.ControlBox.MenuBox.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="superTabControl1.ControlBox.Tag" xml:space="preserve">
+    <value />
+  </data>
+  <data name="superTabControl1.ControlBox.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="superTabControl1.ControlBox.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtComparePath.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtComparePath.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtComparePath.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtComparePath.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtComparePath.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtComparePath.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtOpenStandardPath.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtOpenStandardPath.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtOpenStandardPath.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtOpenStandardPath.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtOpenStandardPath.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtOpenStandardPath.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtStdPathAndFile.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtStdPathAndFile.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtStdPathAndFile.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtStdPathAndFile.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtStdPathAndFile.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtStdPathAndFile.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMsrtPathAndFile.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtMsrtPathAndFile.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtMsrtPathAndFile.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMsrtPathAndFile.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtMsrtPathAndFile.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtMsrtPathAndFile.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRecipeName.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtRecipeName.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtRecipeName.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRecipeName.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtRecipeName.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtRecipeName.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCalc.Text" xml:space="preserve">
+    <value>計算</value>
+  </data>
+  <data name="labelX2.Text" xml:space="preserve">
+    <value>標準檔名稱</value>
+  </data>
+  <data name="labelX3.Text" xml:space="preserve">
+    <value>測試檔名稱</value>
+  </data>
+  <data name="lblComparedPath.Text" xml:space="preserve">
+    <value>Result Folder Setting</value>
+  </data>
+  <data name="lblLopValue.Text" xml:space="preserve">
+    <value>超過每日校正，自動計算新的補償係數 (Auto Tune) </value>
+  </data>
+  <data name="lblOverSpec.Text" xml:space="preserve">
+    <value>超過驗證規格，需重新校正</value>
+  </data>
+  <data name="lblRecipeItem.Text" xml:space="preserve">
+    <value>產品工單</value>
+  </data>
+  <data name="lblSpecTitle.Text" xml:space="preserve">
+    <value>Daily Watch Spec.</value>
+  </data>
+  <data name="lblStdChipIndex.Text" xml:space="preserve">
+    <value>選擇標準晶粒</value>
+  </data>
+  <data name="lblStdFolderPath.Text" xml:space="preserve">
+    <value>Standard Folder Setting</value>
+  </data>
+  <data name="lblWdValue.Text" xml:space="preserve">
+    <value>狀態說明</value>
+  </data>
+  <data name="superTabControl1.Text" xml:space="preserve">
+    <value>superTabControl1</value>
+  </data>
+  <data name="superTabItem2.Text" xml:space="preserve">
+    <value>Chuck校正</value>
+  </data>
+  <data name="tabChuckCorrect.Text" xml:space="preserve">
+    <value>Path Setting</value>
+  </data>
+  <data name="txtComparePath.Text" xml:space="preserve">
+    <value>Test Result Path</value>
+  </data>
+  <data name="txtOpenStandardPath.Text" xml:space="preserve">
+    <value>Test Result Path</value>
+  </data>
+  <data name="btnLoadStdFile.Text" xml:space="preserve">
+    <value>載入標準值</value>
+  </data>
+  <data name="btnSaveCoeffToSystem.Text" xml:space="preserve">
+    <value>儲存校正係數</value>
+  </data>
+  <data name="btnLoadMsrtFile.Text" xml:space="preserve">
+    <value>載入量測檔</value>
+  </data>
+  <data name="btnReturn.Text" xml:space="preserve">
+    <value>離開</value>
+  </data>
+  <data name="btnUnLack.Text" xml:space="preserve">
+    <value>解除鎖定</value>
+  </data>
+</root>

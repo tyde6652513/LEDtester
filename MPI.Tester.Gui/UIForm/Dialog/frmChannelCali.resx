@@ -1,0 +1,1809 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="buttonItem1.Text" xml:space="preserve">
+    <value>Dark Noise</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnSaveSetting.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="btnSaveSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 12</value>
+  </data>
+  <data name="btnSaveSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 50</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnSaveSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>403</value>
+  </data>
+  <data name="btnSaveSetting.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;btnSaveSetting.Name" xml:space="preserve">
+    <value>btnSaveSetting</value>
+  </data>
+  <data name="&gt;&gt;btnSaveSetting.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;btnSaveSetting.Parent" xml:space="preserve">
+    <value>tabpFilter</value>
+  </data>
+  <data name="&gt;&gt;btnSaveSetting.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column3.HeaderText" xml:space="preserve">
+    <value>NO.</value>
+  </data>
+  <data name="Column3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>KeyName</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <metadata name="colCheck.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colCheck.HeaderText" xml:space="preserve">
+    <value>Enable</value>
+  </data>
+  <data name="colCheck.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <metadata name="dataGridViewDoubleInputColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewDoubleInputColumn1.HeaderText" xml:space="preserve">
+    <value>Min</value>
+  </data>
+  <metadata name="dataGridViewDoubleInputColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewDoubleInputColumn4.HeaderText" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column5.HeaderText" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Column5.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="Format.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Format.HeaderText" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="Format.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="dgvFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 108</value>
+  </data>
+  <data name="dgvFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>522, 521</value>
+  </data>
+  <data name="dgvFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>402</value>
+  </data>
+  <data name="&gt;&gt;dgvFilter.Name" xml:space="preserve">
+    <value>dgvFilter</value>
+  </data>
+  <data name="&gt;&gt;dgvFilter.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dgvFilter.Parent" xml:space="preserve">
+    <value>tabpFilter</value>
+  </data>
+  <data name="&gt;&gt;dgvFilter.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnCalcuate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="btnCalcuate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>703, 36</value>
+  </data>
+  <data name="btnCalcuate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 52</value>
+  </data>
+  <data name="btnCalcuate.TabIndex" type="System.Int32, mscorlib">
+    <value>400</value>
+  </data>
+  <data name="btnCalcuate.Text" xml:space="preserve">
+    <value>Compare / Calc. By Channel Gain Offset</value>
+  </data>
+  <data name="&gt;&gt;btnCalcuate.Name" xml:space="preserve">
+    <value>btnCalcuate</value>
+  </data>
+  <data name="&gt;&gt;btnCalcuate.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;btnCalcuate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnCalcuate.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnLoadStd.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="btnLoadStd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="btnLoadStd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 35</value>
+  </data>
+  <data name="btnLoadStd.TabIndex" type="System.Int32, mscorlib">
+    <value>404</value>
+  </data>
+  <data name="btnLoadStd.Text" xml:space="preserve">
+    <value>Load Std...</value>
+  </data>
+  <data name="&gt;&gt;btnLoadStd.Name" xml:space="preserve">
+    <value>btnLoadStd</value>
+  </data>
+  <data name="&gt;&gt;btnLoadStd.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;btnLoadStd.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnLoadStd.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnLoadMsrt.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="btnLoadMsrt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 53</value>
+  </data>
+  <data name="btnLoadMsrt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 35</value>
+  </data>
+  <data name="btnLoadMsrt.TabIndex" type="System.Int32, mscorlib">
+    <value>405</value>
+  </data>
+  <data name="btnLoadMsrt.Text" xml:space="preserve">
+    <value>Load Msrt...</value>
+  </data>
+  <data name="&gt;&gt;btnLoadMsrt.Name" xml:space="preserve">
+    <value>btnLoadMsrt</value>
+  </data>
+  <data name="&gt;&gt;btnLoadMsrt.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;btnLoadMsrt.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnLoadMsrt.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="txtStdPathAndFile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtStdPathAndFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 19</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtStdPathAndFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="txtStdPathAndFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>550, 35</value>
+  </data>
+  <data name="txtStdPathAndFile.TabIndex" type="System.Int32, mscorlib">
+    <value>469</value>
+  </data>
+  <data name="txtStdPathAndFile.Text" xml:space="preserve">
+    <value>Load Std File</value>
+  </data>
+  <data name="&gt;&gt;txtStdPathAndFile.Name" xml:space="preserve">
+    <value>txtStdPathAndFile</value>
+  </data>
+  <data name="&gt;&gt;txtStdPathAndFile.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;txtStdPathAndFile.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtStdPathAndFile.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtMsrtPathAndFile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtMsrtPathAndFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 60</value>
+  </data>
+  <data name="txtMsrtPathAndFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="txtMsrtPathAndFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>550, 35</value>
+  </data>
+  <data name="txtMsrtPathAndFile.TabIndex" type="System.Int32, mscorlib">
+    <value>470</value>
+  </data>
+  <data name="txtMsrtPathAndFile.Text" xml:space="preserve">
+    <value>Load Msrt File</value>
+  </data>
+  <data name="&gt;&gt;txtMsrtPathAndFile.Name" xml:space="preserve">
+    <value>txtMsrtPathAndFile</value>
+  </data>
+  <data name="&gt;&gt;txtMsrtPathAndFile.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;txtMsrtPathAndFile.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtMsrtPathAndFile.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnCombineAllParamToTable.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="btnCombineAllParamToTable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>427, 203</value>
+  </data>
+  <data name="btnCombineAllParamToTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 49</value>
+  </data>
+  <data name="btnCombineAllParamToTable.TabIndex" type="System.Int32, mscorlib">
+    <value>481</value>
+  </data>
+  <data name="btnCombineAllParamToTable.Text" xml:space="preserve">
+    <value>Combine All Para.</value>
+  </data>
+  <data name="&gt;&gt;btnCombineAllParamToTable.Name" xml:space="preserve">
+    <value>btnCombineAllParamToTable</value>
+  </data>
+  <data name="&gt;&gt;btnCombineAllParamToTable.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;btnCombineAllParamToTable.Parent" xml:space="preserve">
+    <value>superTabControlPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnCombineAllParamToTable.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblGainOffset.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblGainOffset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>427, 175</value>
+  </data>
+  <data name="lblGainOffset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 25</value>
+  </data>
+  <data name="lblGainOffset.TabIndex" type="System.Int32, mscorlib">
+    <value>480</value>
+  </data>
+  <data name="lblGainOffset.Text" xml:space="preserve">
+    <value>Combine To Table</value>
+  </data>
+  <data name="&gt;&gt;lblGainOffset.Name" xml:space="preserve">
+    <value>lblGainOffset</value>
+  </data>
+  <data name="&gt;&gt;lblGainOffset.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblGainOffset.Parent" xml:space="preserve">
+    <value>superTabControlPanel1</value>
+  </data>
+  <data name="&gt;&gt;lblGainOffset.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="dataGridViewLabelXColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewLabelXColumn1.HeaderText" xml:space="preserve">
+    <value>NO</value>
+  </data>
+  <data name="dataGridViewLabelXColumn1.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <metadata name="dataGridViewLabelXColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewLabelXColumn2.HeaderText" xml:space="preserve">
+    <value>Channel</value>
+  </data>
+  <data name="dataGridViewLabelXColumn2.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <metadata name="dataGridViewIntegerInputColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewIntegerInputColumn1.HeaderText" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="dataGridViewIntegerInputColumn1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="dataGridViewIntegerInputColumn1.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="dataGridViewDoubleInputColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewDoubleInputColumn2.HeaderText" xml:space="preserve">
+    <value>Square</value>
+  </data>
+  <data name="dataGridViewDoubleInputColumn2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="dataGridViewDoubleInputColumn2.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <metadata name="dataGridViewDoubleInputColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewDoubleInputColumn3.HeaderText" xml:space="preserve">
+    <value>Gain</value>
+  </data>
+  <data name="dataGridViewDoubleInputColumn3.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <metadata name="dataGridViewDoubleInputColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewDoubleInputColumn5.HeaderText" xml:space="preserve">
+    <value>Offset</value>
+  </data>
+  <data name="dataGridViewDoubleInputColumn5.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <metadata name="dataGridViewLabelXColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewLabelXColumn3.HeaderText" xml:space="preserve">
+    <value>KeyName</value>
+  </data>
+  <data name="dataGridViewLabelXColumn3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="dgvCalcCoef.Location" type="System.Drawing.Point, System.Drawing">
+    <value>582, 99</value>
+  </data>
+  <data name="dgvCalcCoef.Size" type="System.Drawing.Size, System.Drawing">
+    <value>399, 530</value>
+  </data>
+  <data name="dgvCalcCoef.TabIndex" type="System.Int32, mscorlib">
+    <value>479</value>
+  </data>
+  <data name="&gt;&gt;dgvCalcCoef.Name" xml:space="preserve">
+    <value>dgvCalcCoef</value>
+  </data>
+  <data name="&gt;&gt;dgvCalcCoef.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dgvCalcCoef.Parent" xml:space="preserve">
+    <value>superTabControlPanel1</value>
+  </data>
+  <data name="&gt;&gt;dgvCalcCoef.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="colCoefNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colCoefNo.HeaderText" xml:space="preserve">
+    <value>NO</value>
+  </data>
+  <data name="colCoefNo.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="colCoefName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colCoefName.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <metadata name="colCoefChannel.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colCoefChannel.HeaderText" xml:space="preserve">
+    <value>Channel</value>
+  </data>
+  <data name="colCoefChannel.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <metadata name="colCoefType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colCoefType.HeaderText" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="colCoefType.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="colCoefType.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="colCoefSquare.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colCoefSquare.HeaderText" xml:space="preserve">
+    <value>Square</value>
+  </data>
+  <data name="colCoefSquare.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="colCoefSquare.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <metadata name="colCoefGain.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colCoefGain.HeaderText" xml:space="preserve">
+    <value>Gain</value>
+  </data>
+  <data name="colCoefGain.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <metadata name="colCoefOffset.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colCoefOffset.HeaderText" xml:space="preserve">
+    <value>Offset</value>
+  </data>
+  <data name="colCoefOffset.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <metadata name="colCoefKeyName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colCoefKeyName.HeaderText" xml:space="preserve">
+    <value>KeyName</value>
+  </data>
+  <data name="colCoefKeyName.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="dgvSysCoef.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 99</value>
+  </data>
+  <data name="dgvSysCoef.Size" type="System.Drawing.Size, System.Drawing">
+    <value>399, 530</value>
+  </data>
+  <data name="dgvSysCoef.TabIndex" type="System.Int32, mscorlib">
+    <value>478</value>
+  </data>
+  <data name="&gt;&gt;dgvSysCoef.Name" xml:space="preserve">
+    <value>dgvSysCoef</value>
+  </data>
+  <data name="&gt;&gt;dgvSysCoef.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dgvSysCoef.Parent" xml:space="preserve">
+    <value>superTabControlPanel1</value>
+  </data>
+  <data name="&gt;&gt;dgvSysCoef.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblSysGainOffset.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblSysGainOffset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 68</value>
+  </data>
+  <data name="lblSysGainOffset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>399, 25</value>
+  </data>
+  <data name="lblSysGainOffset.TabIndex" type="System.Int32, mscorlib">
+    <value>477</value>
+  </data>
+  <data name="lblSysGainOffset.Text" xml:space="preserve">
+    <value>System By Channel Gain Offset</value>
+  </data>
+  <data name="&gt;&gt;lblSysGainOffset.Name" xml:space="preserve">
+    <value>lblSysGainOffset</value>
+  </data>
+  <data name="&gt;&gt;lblSysGainOffset.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblSysGainOffset.Parent" xml:space="preserve">
+    <value>superTabControlPanel1</value>
+  </data>
+  <data name="&gt;&gt;lblSysGainOffset.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblCalcGainOffset.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblCalcGainOffset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>582, 68</value>
+  </data>
+  <data name="lblCalcGainOffset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>399, 25</value>
+  </data>
+  <data name="lblCalcGainOffset.TabIndex" type="System.Int32, mscorlib">
+    <value>477</value>
+  </data>
+  <data name="lblCalcGainOffset.Text" xml:space="preserve">
+    <value>Calc By Channel Gain Offset</value>
+  </data>
+  <data name="&gt;&gt;lblCalcGainOffset.Name" xml:space="preserve">
+    <value>lblCalcGainOffset</value>
+  </data>
+  <data name="&gt;&gt;lblCalcGainOffset.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblCalcGainOffset.Parent" xml:space="preserve">
+    <value>superTabControlPanel1</value>
+  </data>
+  <data name="&gt;&gt;lblCalcGainOffset.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnSaveCalibrationData.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="btnSaveCalibrationData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 12</value>
+  </data>
+  <data name="btnSaveCalibrationData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 50</value>
+  </data>
+  <data name="btnSaveCalibrationData.TabIndex" type="System.Int32, mscorlib">
+    <value>407</value>
+  </data>
+  <data name="btnSaveCalibrationData.Text" xml:space="preserve">
+    <value>Save Gain / Offset to System</value>
+  </data>
+  <data name="&gt;&gt;btnSaveCalibrationData.Name" xml:space="preserve">
+    <value>btnSaveCalibrationData</value>
+  </data>
+  <data name="&gt;&gt;btnSaveCalibrationData.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;btnSaveCalibrationData.Parent" xml:space="preserve">
+    <value>superTabControlPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnSaveCalibrationData.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="superTabControlPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="superTabControlPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>153, 0</value>
+  </data>
+  <data name="superTabControlPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>966, 637</value>
+  </data>
+  <data name="superTabControlPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabiGainOffset.Text" xml:space="preserve">
+    <value>Calc Gain/Offset</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel1.Name" xml:space="preserve">
+    <value>superTabControlPanel1</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.SuperTabControlPanel, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel1.Parent" xml:space="preserve">
+    <value>tabmMain</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblConditionSetting.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblConditionSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 73</value>
+  </data>
+  <data name="lblConditionSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>522, 25</value>
+  </data>
+  <data name="lblConditionSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>476</value>
+  </data>
+  <data name="lblConditionSetting.Text" xml:space="preserve">
+    <value>Condition Setting</value>
+  </data>
+  <data name="&gt;&gt;lblConditionSetting.Name" xml:space="preserve">
+    <value>lblConditionSetting</value>
+  </data>
+  <data name="&gt;&gt;lblConditionSetting.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblConditionSetting.Parent" xml:space="preserve">
+    <value>tabpFilter</value>
+  </data>
+  <data name="&gt;&gt;lblConditionSetting.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblType3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="lblType3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>555, 171</value>
+  </data>
+  <data name="lblType3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 15</value>
+  </data>
+  <data name="lblType3.TabIndex" type="System.Int32, mscorlib">
+    <value>475</value>
+  </data>
+  <data name="lblType3.Text" xml:space="preserve">
+    <value>Type 3 :  Linear(y=ax+b)</value>
+  </data>
+  <data name="&gt;&gt;lblType3.Name" xml:space="preserve">
+    <value>lblType3</value>
+  </data>
+  <data name="&gt;&gt;lblType3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblType3.Parent" xml:space="preserve">
+    <value>tabpFilter</value>
+  </data>
+  <data name="&gt;&gt;lblType3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblType2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="lblType2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>555, 150</value>
+  </data>
+  <data name="lblType2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 15</value>
+  </data>
+  <data name="lblType2.TabIndex" type="System.Int32, mscorlib">
+    <value>474</value>
+  </data>
+  <data name="lblType2.Text" xml:space="preserve">
+    <value>Type 2 :  Gain Only</value>
+  </data>
+  <data name="&gt;&gt;lblType2.Name" xml:space="preserve">
+    <value>lblType2</value>
+  </data>
+  <data name="&gt;&gt;lblType2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblType2.Parent" xml:space="preserve">
+    <value>tabpFilter</value>
+  </data>
+  <data name="&gt;&gt;lblType2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblType1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="lblType1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>555, 129</value>
+  </data>
+  <data name="lblType1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 15</value>
+  </data>
+  <data name="lblType1.TabIndex" type="System.Int32, mscorlib">
+    <value>473</value>
+  </data>
+  <data name="lblType1.Text" xml:space="preserve">
+    <value>Type 1 :  Offset Only</value>
+  </data>
+  <data name="&gt;&gt;lblType1.Name" xml:space="preserve">
+    <value>lblType1</value>
+  </data>
+  <data name="&gt;&gt;lblType1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblType1.Parent" xml:space="preserve">
+    <value>tabpFilter</value>
+  </data>
+  <data name="&gt;&gt;lblType1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblType0.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="lblType0.Location" type="System.Drawing.Point, System.Drawing">
+    <value>555, 108</value>
+  </data>
+  <data name="lblType0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 15</value>
+  </data>
+  <data name="lblType0.TabIndex" type="System.Int32, mscorlib">
+    <value>472</value>
+  </data>
+  <data name="lblType0.Text" xml:space="preserve">
+    <value>Type 0 :  NONE</value>
+  </data>
+  <data name="&gt;&gt;lblType0.Name" xml:space="preserve">
+    <value>lblType0</value>
+  </data>
+  <data name="&gt;&gt;lblType0.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblType0.Parent" xml:space="preserve">
+    <value>tabpFilter</value>
+  </data>
+  <data name="&gt;&gt;lblType0.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tabpFilter.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tabpFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 0</value>
+  </data>
+  <data name="tabpFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>963, 637</value>
+  </data>
+  <data name="tabpFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabiFilter.Text" xml:space="preserve">
+    <value>Filter / Condition</value>
+  </data>
+  <data name="&gt;&gt;tabpFilter.Name" xml:space="preserve">
+    <value>tabpFilter</value>
+  </data>
+  <data name="&gt;&gt;tabpFilter.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.SuperTabControlPanel, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;tabpFilter.Parent" xml:space="preserve">
+    <value>tabmMain</value>
+  </data>
+  <data name="&gt;&gt;tabpFilter.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cmbDisplayLOP.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="cmbDisplayLOP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>365, 344</value>
+  </data>
+  <data name="cmbDisplayLOP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 26</value>
+  </data>
+  <data name="cmbDisplayLOP.TabIndex" type="System.Int32, mscorlib">
+    <value>292</value>
+  </data>
+  <data name="&gt;&gt;cmbDisplayLOP.Name" xml:space="preserve">
+    <value>cmbDisplayLOP</value>
+  </data>
+  <data name="&gt;&gt;cmbDisplayLOP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbDisplayLOP.Parent" xml:space="preserve">
+    <value>superTabControlPanel2</value>
+  </data>
+  <data name="&gt;&gt;cmbDisplayLOP.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cmbDisplayWave.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="cmbDisplayWave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>365, 45</value>
+  </data>
+  <data name="cmbDisplayWave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 26</value>
+  </data>
+  <data name="cmbDisplayWave.TabIndex" type="System.Int32, mscorlib">
+    <value>291</value>
+  </data>
+  <data name="&gt;&gt;cmbDisplayWave.Name" xml:space="preserve">
+    <value>cmbDisplayWave</value>
+  </data>
+  <data name="&gt;&gt;cmbDisplayWave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbDisplayWave.Parent" xml:space="preserve">
+    <value>superTabControlPanel2</value>
+  </data>
+  <data name="&gt;&gt;cmbDisplayWave.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelX21.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="labelX21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>238, 14</value>
+  </data>
+  <data name="labelX21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 12</value>
+  </data>
+  <data name="labelX21.TabIndex" type="System.Int32, mscorlib">
+    <value>290</value>
+  </data>
+  <data name="labelX21.Text" xml:space="preserve">
+    <value>Coef. Table Select</value>
+  </data>
+  <data name="&gt;&gt;labelX21.Name" xml:space="preserve">
+    <value>labelX21</value>
+  </data>
+  <data name="&gt;&gt;labelX21.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;labelX21.Parent" xml:space="preserve">
+    <value>superTabControlPanel2</value>
+  </data>
+  <data name="&gt;&gt;labelX21.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cmbDisplayTable.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="cmbDisplayTable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>364, 8</value>
+  </data>
+  <data name="cmbDisplayTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 28</value>
+  </data>
+  <data name="cmbDisplayTable.TabIndex" type="System.Int32, mscorlib">
+    <value>289</value>
+  </data>
+  <data name="&gt;&gt;cmbDisplayTable.Name" xml:space="preserve">
+    <value>cmbDisplayTable</value>
+  </data>
+  <data name="&gt;&gt;cmbDisplayTable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbDisplayTable.Parent" xml:space="preserve">
+    <value>superTabControlPanel2</value>
+  </data>
+  <data name="&gt;&gt;cmbDisplayTable.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="zedMcdGainValue.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="zedMcdGainValue.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="zedMcdGainValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 340</value>
+  </data>
+  <data name="zedMcdGainValue.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="zedMcdGainValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>846, 292</value>
+  </data>
+  <data name="zedMcdGainValue.TabIndex" type="System.Int32, mscorlib">
+    <value>126</value>
+  </data>
+  <data name="&gt;&gt;zedMcdGainValue.Name" xml:space="preserve">
+    <value>zedMcdGainValue</value>
+  </data>
+  <data name="&gt;&gt;zedMcdGainValue.Type" xml:space="preserve">
+    <value>ZedGraph.ZedGraphControl, ZedGraph, Version=5.1.5.28844, Culture=neutral, PublicKeyToken=02a83cbd123fcd60</value>
+  </data>
+  <data name="&gt;&gt;zedMcdGainValue.Parent" xml:space="preserve">
+    <value>superTabControlPanel2</value>
+  </data>
+  <data name="&gt;&gt;zedMcdGainValue.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="zedWaveLength.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="zedWaveLength.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="zedWaveLength.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="zedWaveLength.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 41</value>
+  </data>
+  <data name="zedWaveLength.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="zedWaveLength.Size" type="System.Drawing.Size, System.Drawing">
+    <value>846, 296</value>
+  </data>
+  <data name="zedWaveLength.TabIndex" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="&gt;&gt;zedWaveLength.Name" xml:space="preserve">
+    <value>zedWaveLength</value>
+  </data>
+  <data name="&gt;&gt;zedWaveLength.Type" xml:space="preserve">
+    <value>ZedGraph.ZedGraphControl, ZedGraph, Version=5.1.5.28844, Culture=neutral, PublicKeyToken=02a83cbd123fcd60</value>
+  </data>
+  <data name="&gt;&gt;zedWaveLength.Parent" xml:space="preserve">
+    <value>superTabControlPanel2</value>
+  </data>
+  <data name="&gt;&gt;zedWaveLength.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="superTabControlPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="superTabControlPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 0</value>
+  </data>
+  <data name="superTabControlPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>971, 637</value>
+  </data>
+  <data name="superTabControlPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabiWaveLOP.Text" xml:space="preserve">
+    <value>By WaveLength</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel2.Name" xml:space="preserve">
+    <value>superTabControlPanel2</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.SuperTabControlPanel, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel2.Parent" xml:space="preserve">
+    <value>tabmMain</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnSaveToolsConfig.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.7pt, style=Bold</value>
+  </data>
+  <data name="btnSaveToolsConfig.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 12</value>
+  </data>
+  <data name="btnSaveToolsConfig.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 50</value>
+  </data>
+  <data name="btnSaveToolsConfig.TabIndex" type="System.Int32, mscorlib">
+    <value>281</value>
+  </data>
+  <data name="btnSaveToolsConfig.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;btnSaveToolsConfig.Name" xml:space="preserve">
+    <value>btnSaveToolsConfig</value>
+  </data>
+  <data name="&gt;&gt;btnSaveToolsConfig.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;btnSaveToolsConfig.Parent" xml:space="preserve">
+    <value>superTabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;btnSaveToolsConfig.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblStdFolderPath.Name" xml:space="preserve">
+    <value>lblStdFolderPath</value>
+  </data>
+  <data name="&gt;&gt;lblStdFolderPath.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblStdFolderPath.Parent" xml:space="preserve">
+    <value>pnlPathSetting</value>
+  </data>
+  <data name="&gt;&gt;lblStdFolderPath.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnOpenStdFilePath.Name" xml:space="preserve">
+    <value>btnOpenStdFilePath</value>
+  </data>
+  <data name="&gt;&gt;btnOpenStdFilePath.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;btnOpenStdFilePath.Parent" xml:space="preserve">
+    <value>pnlPathSetting</value>
+  </data>
+  <data name="&gt;&gt;btnOpenStdFilePath.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtOpenStdFilePath.Name" xml:space="preserve">
+    <value>txtOpenStdFilePath</value>
+  </data>
+  <data name="&gt;&gt;txtOpenStdFilePath.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;txtOpenStdFilePath.Parent" xml:space="preserve">
+    <value>pnlPathSetting</value>
+  </data>
+  <data name="&gt;&gt;txtOpenStdFilePath.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblMsrtFolderPath.Name" xml:space="preserve">
+    <value>lblMsrtFolderPath</value>
+  </data>
+  <data name="&gt;&gt;lblMsrtFolderPath.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblMsrtFolderPath.Parent" xml:space="preserve">
+    <value>pnlPathSetting</value>
+  </data>
+  <data name="&gt;&gt;lblMsrtFolderPath.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtOpenMsrtFilePath.Name" xml:space="preserve">
+    <value>txtOpenMsrtFilePath</value>
+  </data>
+  <data name="&gt;&gt;txtOpenMsrtFilePath.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;txtOpenMsrtFilePath.Parent" xml:space="preserve">
+    <value>pnlPathSetting</value>
+  </data>
+  <data name="&gt;&gt;txtOpenMsrtFilePath.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnOpenMsrtFilePath.Name" xml:space="preserve">
+    <value>btnOpenMsrtFilePath</value>
+  </data>
+  <data name="&gt;&gt;btnOpenMsrtFilePath.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;btnOpenMsrtFilePath.Parent" xml:space="preserve">
+    <value>pnlPathSetting</value>
+  </data>
+  <data name="&gt;&gt;btnOpenMsrtFilePath.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pnlPathSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 104</value>
+  </data>
+  <data name="pnlPathSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>647, 120</value>
+  </data>
+  <data name="pnlPathSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>280</value>
+  </data>
+  <data name="&gt;&gt;pnlPathSetting.Name" xml:space="preserve">
+    <value>pnlPathSetting</value>
+  </data>
+  <data name="&gt;&gt;pnlPathSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlPathSetting.Parent" xml:space="preserve">
+    <value>superTabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;pnlPathSetting.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelX1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="labelX1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 73</value>
+  </data>
+  <data name="labelX1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>647, 25</value>
+  </data>
+  <data name="labelX1.TabIndex" type="System.Int32, mscorlib">
+    <value>271</value>
+  </data>
+  <data name="labelX1.Text" xml:space="preserve">
+    <value>Tools Path Setting</value>
+  </data>
+  <data name="&gt;&gt;labelX1.Name" xml:space="preserve">
+    <value>labelX1</value>
+  </data>
+  <data name="&gt;&gt;labelX1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;labelX1.Parent" xml:space="preserve">
+    <value>superTabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;labelX1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="superTabControlPanel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="superTabControlPanel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>146, 0</value>
+  </data>
+  <data name="superTabControlPanel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>973, 637</value>
+  </data>
+  <data name="superTabControlPanel4.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabiToolSetting.Text" xml:space="preserve">
+    <value>Tool Setting</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel4.Name" xml:space="preserve">
+    <value>superTabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.SuperTabControlPanel, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel4.Parent" xml:space="preserve">
+    <value>tabmMain</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="zedDisplayVolt4.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="zedDisplayVolt4.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="zedDisplayVolt4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="zedDisplayVolt4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>488, 327</value>
+  </data>
+  <data name="zedDisplayVolt4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="zedDisplayVolt4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>475, 290</value>
+  </data>
+  <data name="zedDisplayVolt4.TabIndex" type="System.Int32, mscorlib">
+    <value>129</value>
+  </data>
+  <data name="&gt;&gt;zedDisplayVolt4.Name" xml:space="preserve">
+    <value>zedDisplayVolt4</value>
+  </data>
+  <data name="&gt;&gt;zedDisplayVolt4.Type" xml:space="preserve">
+    <value>ZedGraph.ZedGraphControl, ZedGraph, Version=5.1.5.28844, Culture=neutral, PublicKeyToken=02a83cbd123fcd60</value>
+  </data>
+  <data name="&gt;&gt;zedDisplayVolt4.Parent" xml:space="preserve">
+    <value>superTabControlPanel3</value>
+  </data>
+  <data name="&gt;&gt;zedDisplayVolt4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="zedDisplayVolt3.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="zedDisplayVolt3.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="zedDisplayVolt3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="zedDisplayVolt3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 327</value>
+  </data>
+  <data name="zedDisplayVolt3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="zedDisplayVolt3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>475, 290</value>
+  </data>
+  <data name="zedDisplayVolt3.TabIndex" type="System.Int32, mscorlib">
+    <value>128</value>
+  </data>
+  <data name="&gt;&gt;zedDisplayVolt3.Name" xml:space="preserve">
+    <value>zedDisplayVolt3</value>
+  </data>
+  <data name="&gt;&gt;zedDisplayVolt3.Type" xml:space="preserve">
+    <value>ZedGraph.ZedGraphControl, ZedGraph, Version=5.1.5.28844, Culture=neutral, PublicKeyToken=02a83cbd123fcd60</value>
+  </data>
+  <data name="&gt;&gt;zedDisplayVolt3.Parent" xml:space="preserve">
+    <value>superTabControlPanel3</value>
+  </data>
+  <data name="&gt;&gt;zedDisplayVolt3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="zedDisplayVolt2.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="zedDisplayVolt2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="zedDisplayVolt2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="zedDisplayVolt2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>488, 25</value>
+  </data>
+  <data name="zedDisplayVolt2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="zedDisplayVolt2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>475, 290</value>
+  </data>
+  <data name="zedDisplayVolt2.TabIndex" type="System.Int32, mscorlib">
+    <value>127</value>
+  </data>
+  <data name="&gt;&gt;zedDisplayVolt2.Name" xml:space="preserve">
+    <value>zedDisplayVolt2</value>
+  </data>
+  <data name="&gt;&gt;zedDisplayVolt2.Type" xml:space="preserve">
+    <value>ZedGraph.ZedGraphControl, ZedGraph, Version=5.1.5.28844, Culture=neutral, PublicKeyToken=02a83cbd123fcd60</value>
+  </data>
+  <data name="&gt;&gt;zedDisplayVolt2.Parent" xml:space="preserve">
+    <value>superTabControlPanel3</value>
+  </data>
+  <data name="&gt;&gt;zedDisplayVolt2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="zedDisplayVolt1.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="zedDisplayVolt1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="zedDisplayVolt1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="zedDisplayVolt1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 25</value>
+  </data>
+  <data name="zedDisplayVolt1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="zedDisplayVolt1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>475, 290</value>
+  </data>
+  <data name="zedDisplayVolt1.TabIndex" type="System.Int32, mscorlib">
+    <value>126</value>
+  </data>
+  <data name="&gt;&gt;zedDisplayVolt1.Name" xml:space="preserve">
+    <value>zedDisplayVolt1</value>
+  </data>
+  <data name="&gt;&gt;zedDisplayVolt1.Type" xml:space="preserve">
+    <value>ZedGraph.ZedGraphControl, ZedGraph, Version=5.1.5.28844, Culture=neutral, PublicKeyToken=02a83cbd123fcd60</value>
+  </data>
+  <data name="&gt;&gt;zedDisplayVolt1.Parent" xml:space="preserve">
+    <value>superTabControlPanel3</value>
+  </data>
+  <data name="&gt;&gt;zedDisplayVolt1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="superTabControlPanel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="superTabControlPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>146, 0</value>
+  </data>
+  <data name="superTabControlPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>973, 637</value>
+  </data>
+  <data name="superTabControlPanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabiVFCheck.Text" xml:space="preserve">
+    <value>Volt. Check</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel3.Name" xml:space="preserve">
+    <value>superTabControlPanel3</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.SuperTabControlPanel, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel3.Parent" xml:space="preserve">
+    <value>tabmMain</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tabmMain.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="tabmMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 101</value>
+  </data>
+  <data name="tabmMain.SelectedTabFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="tabmMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1119, 637</value>
+  </data>
+  <data name="tabmMain.TabFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="tabmMain.TabIndex" type="System.Int32, mscorlib">
+    <value>471</value>
+  </data>
+  <data name="tabmMain.Text" xml:space="preserve">
+    <value>superTabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabmMain.Name" xml:space="preserve">
+    <value>tabmMain</value>
+  </data>
+  <data name="&gt;&gt;tabmMain.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.SuperTabControl, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;tabmMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabmMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblStdFolderPath.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
+  </data>
+  <data name="lblStdFolderPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 9</value>
+  </data>
+  <data name="lblStdFolderPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 22</value>
+  </data>
+  <data name="lblStdFolderPath.TabIndex" type="System.Int32, mscorlib">
+    <value>272</value>
+  </data>
+  <data name="lblStdFolderPath.Text" xml:space="preserve">
+    <value>Standard Forlder</value>
+  </data>
+  <data name="&gt;&gt;lblStdFolderPath.Name" xml:space="preserve">
+    <value>lblStdFolderPath</value>
+  </data>
+  <data name="&gt;&gt;lblStdFolderPath.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblStdFolderPath.Parent" xml:space="preserve">
+    <value>pnlPathSetting</value>
+  </data>
+  <data name="&gt;&gt;lblStdFolderPath.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnOpenStdFilePath.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="btnOpenStdFilePath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>615, 9</value>
+  </data>
+  <data name="btnOpenStdFilePath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
+  </data>
+  <data name="btnOpenStdFilePath.TabIndex" type="System.Int32, mscorlib">
+    <value>222</value>
+  </data>
+  <data name="btnOpenStdFilePath.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;btnOpenStdFilePath.Name" xml:space="preserve">
+    <value>btnOpenStdFilePath</value>
+  </data>
+  <data name="&gt;&gt;btnOpenStdFilePath.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;btnOpenStdFilePath.Parent" xml:space="preserve">
+    <value>pnlPathSetting</value>
+  </data>
+  <data name="&gt;&gt;btnOpenStdFilePath.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtOpenStdFilePath.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="txtOpenStdFilePath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 11</value>
+  </data>
+  <data name="txtOpenStdFilePath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>480, 29</value>
+  </data>
+  <data name="txtOpenStdFilePath.TabIndex" type="System.Int32, mscorlib">
+    <value>221</value>
+  </data>
+  <data name="txtOpenStdFilePath.Text" xml:space="preserve">
+    <value>Standard Path</value>
+  </data>
+  <data name="&gt;&gt;txtOpenStdFilePath.Name" xml:space="preserve">
+    <value>txtOpenStdFilePath</value>
+  </data>
+  <data name="&gt;&gt;txtOpenStdFilePath.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;txtOpenStdFilePath.Parent" xml:space="preserve">
+    <value>pnlPathSetting</value>
+  </data>
+  <data name="&gt;&gt;txtOpenStdFilePath.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblMsrtFolderPath.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
+  </data>
+  <data name="lblMsrtFolderPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 43</value>
+  </data>
+  <data name="lblMsrtFolderPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 22</value>
+  </data>
+  <data name="lblMsrtFolderPath.TabIndex" type="System.Int32, mscorlib">
+    <value>273</value>
+  </data>
+  <data name="lblMsrtFolderPath.Text" xml:space="preserve">
+    <value>Measure Folder</value>
+  </data>
+  <data name="&gt;&gt;lblMsrtFolderPath.Name" xml:space="preserve">
+    <value>lblMsrtFolderPath</value>
+  </data>
+  <data name="&gt;&gt;lblMsrtFolderPath.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblMsrtFolderPath.Parent" xml:space="preserve">
+    <value>pnlPathSetting</value>
+  </data>
+  <data name="&gt;&gt;lblMsrtFolderPath.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtOpenMsrtFilePath.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="txtOpenMsrtFilePath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 45</value>
+  </data>
+  <data name="txtOpenMsrtFilePath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>480, 29</value>
+  </data>
+  <data name="txtOpenMsrtFilePath.TabIndex" type="System.Int32, mscorlib">
+    <value>224</value>
+  </data>
+  <data name="txtOpenMsrtFilePath.Text" xml:space="preserve">
+    <value>Measured Path</value>
+  </data>
+  <data name="&gt;&gt;txtOpenMsrtFilePath.Name" xml:space="preserve">
+    <value>txtOpenMsrtFilePath</value>
+  </data>
+  <data name="&gt;&gt;txtOpenMsrtFilePath.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;txtOpenMsrtFilePath.Parent" xml:space="preserve">
+    <value>pnlPathSetting</value>
+  </data>
+  <data name="&gt;&gt;txtOpenMsrtFilePath.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnOpenMsrtFilePath.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="btnOpenMsrtFilePath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>615, 43</value>
+  </data>
+  <data name="btnOpenMsrtFilePath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
+  </data>
+  <data name="btnOpenMsrtFilePath.TabIndex" type="System.Int32, mscorlib">
+    <value>225</value>
+  </data>
+  <data name="btnOpenMsrtFilePath.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;btnOpenMsrtFilePath.Name" xml:space="preserve">
+    <value>btnOpenMsrtFilePath</value>
+  </data>
+  <data name="&gt;&gt;btnOpenMsrtFilePath.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;btnOpenMsrtFilePath.Parent" xml:space="preserve">
+    <value>pnlPathSetting</value>
+  </data>
+  <data name="&gt;&gt;btnOpenMsrtFilePath.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1132, 742</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Channel Calibration</value>
+  </data>
+  <data name="&gt;&gt;buttonItem1.Name" xml:space="preserve">
+    <value>buttonItem1</value>
+  </data>
+  <data name="&gt;&gt;buttonItem1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;Column3.Name" xml:space="preserve">
+    <value>Column3</value>
+  </data>
+  <data name="&gt;&gt;Column3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn1</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn4</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colCheck.Name" xml:space="preserve">
+    <value>colCheck</value>
+  </data>
+  <data name="&gt;&gt;colCheck.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewDoubleInputColumn1.Name" xml:space="preserve">
+    <value>dataGridViewDoubleInputColumn1</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewDoubleInputColumn1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewDoubleInputColumn4.Name" xml:space="preserve">
+    <value>dataGridViewDoubleInputColumn4</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewDoubleInputColumn4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;Column5.Name" xml:space="preserve">
+    <value>Column5</value>
+  </data>
+  <data name="&gt;&gt;Column5.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;Format.Name" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="&gt;&gt;Format.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewLabelXColumn1.Name" xml:space="preserve">
+    <value>dataGridViewLabelXColumn1</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewLabelXColumn1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewLabelXColumn, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn2</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewLabelXColumn2.Name" xml:space="preserve">
+    <value>dataGridViewLabelXColumn2</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewLabelXColumn2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewLabelXColumn, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewIntegerInputColumn1.Name" xml:space="preserve">
+    <value>dataGridViewIntegerInputColumn1</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewIntegerInputColumn1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewDoubleInputColumn2.Name" xml:space="preserve">
+    <value>dataGridViewDoubleInputColumn2</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewDoubleInputColumn2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewDoubleInputColumn3.Name" xml:space="preserve">
+    <value>dataGridViewDoubleInputColumn3</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewDoubleInputColumn3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewDoubleInputColumn5.Name" xml:space="preserve">
+    <value>dataGridViewDoubleInputColumn5</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewDoubleInputColumn5.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewLabelXColumn3.Name" xml:space="preserve">
+    <value>dataGridViewLabelXColumn3</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewLabelXColumn3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewLabelXColumn, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;colCoefNo.Name" xml:space="preserve">
+    <value>colCoefNo</value>
+  </data>
+  <data name="&gt;&gt;colCoefNo.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewLabelXColumn, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;colCoefName.Name" xml:space="preserve">
+    <value>colCoefName</value>
+  </data>
+  <data name="&gt;&gt;colCoefName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colCoefChannel.Name" xml:space="preserve">
+    <value>colCoefChannel</value>
+  </data>
+  <data name="&gt;&gt;colCoefChannel.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewLabelXColumn, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;colCoefType.Name" xml:space="preserve">
+    <value>colCoefType</value>
+  </data>
+  <data name="&gt;&gt;colCoefType.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewIntegerInputColumn, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;colCoefSquare.Name" xml:space="preserve">
+    <value>colCoefSquare</value>
+  </data>
+  <data name="&gt;&gt;colCoefSquare.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;colCoefGain.Name" xml:space="preserve">
+    <value>colCoefGain</value>
+  </data>
+  <data name="&gt;&gt;colCoefGain.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;colCoefOffset.Name" xml:space="preserve">
+    <value>colCoefOffset</value>
+  </data>
+  <data name="&gt;&gt;colCoefOffset.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;colCoefKeyName.Name" xml:space="preserve">
+    <value>colCoefKeyName</value>
+  </data>
+  <data name="&gt;&gt;colCoefKeyName.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewLabelXColumn, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;tabiGainOffset.Name" xml:space="preserve">
+    <value>tabiGainOffset</value>
+  </data>
+  <data name="&gt;&gt;tabiGainOffset.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.SuperTabItem, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;tabiWaveLOP.Name" xml:space="preserve">
+    <value>tabiWaveLOP</value>
+  </data>
+  <data name="&gt;&gt;tabiWaveLOP.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.SuperTabItem, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;tabiFilter.Name" xml:space="preserve">
+    <value>tabiFilter</value>
+  </data>
+  <data name="&gt;&gt;tabiFilter.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.SuperTabItem, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;tabiToolSetting.Name" xml:space="preserve">
+    <value>tabiToolSetting</value>
+  </data>
+  <data name="&gt;&gt;tabiToolSetting.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.SuperTabItem, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;tabiVFCheck.Name" xml:space="preserve">
+    <value>tabiVFCheck</value>
+  </data>
+  <data name="&gt;&gt;tabiVFCheck.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.SuperTabItem, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmChannelCali</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

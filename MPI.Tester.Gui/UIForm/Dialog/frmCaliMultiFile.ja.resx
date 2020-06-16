@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnClearMultiStdFile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAACXwAA
+        Al8BvoUoWgAAA+ZJREFUSEu1le1PW2UYxhud0THRJbKQkE3ThMAYFIoUVspbRwtlLfSFtrQsusk21Bqj
+        pCMRuhYYflLnyzd1zj+E/wD4wkfWdtjT03POc9qqhJBs+7ByeZ+T0XKAjU+e5MqT0+fp777u+7lzHx0A
+        3f+hE6HcaZ2FP60L81W6CF/1Wow/cyrKvfuW/iQzLwXnqnROvur1VeH9WrAeE4rhcVIA8oAZQv158O+d
+        WRNq3pmBTnfquCBHwOSsjq9+Y128qMf2N1HsPvgVu38o+o30O3Yfkv58gO34HKSOFuTOn1sp1tRUH4Zr
+        wMUaXXX27JsbBb8bhblZyNGvsHP/O+z8SPrpe9IP2PmZ9Mt9FBIx/L0UR/H6JHL6ug2+8ULdQXgFTCnx
+        595eyTuskKan8GgyjOzyMjITfmwv3SXFsX0vge3lBITbU3gc+RzJ6x+DfRlBIeCG0KhfPxYs1J6dkUwG
+        SDc+wqPQBEpPn9I5IPvtMv4ac+GfO1/j39kZ5K6FkP7sU+w9f47Ss2dIkgEWmQYbsiJnaHDuw8uOqVbr
+        haAHgm8M2cVFFbr/ZJcWseWwg6e99PRtgKDlvXtLEChY8dYNqrlhVQPmPqjVCy0NKEz4UKDbf9xrBk8w
+        DTwRR/rWTQ2UJ+iW3Yri9CekKUhXeiF2d1oUuOpYaLgQFduaIDsGIY8OQx5zIGVqB0cwzVMqVZwuJJDu
+        MSM/GUD+WhD5sB/MPgCx73K4Ar5UHxOa6yEYGiGa28FsvZCpZqm2ZmRi81o4vWViMTWw7HVC9jjBRgbJ
+        bY/qmNn7IhVwa2NENDZBbG+GSL0pdrZBvNyO1KUGpG9OadJXomTm55E0NEEa7INkI9n7IQ0NQBq+Aslh
+        i5XBoqk1LHa2QuwyqkCxuwNpgm59QcEPpH/QOhe/iyRlJFH5pKs2MKcdzDUMaXQkWgF3Gy2ixQSxpxNS
+        bxdSLReRmb0D7O2VWYrLw2XJLixQSYxgYyNgnqtgXhfdz5g6R8rtJvV3r0pWCzKdRkp1TlNX1V27gdQK
+        Lq69UC6RAGcbAAt4wILetSN9zIb6nUqduD4zNr0elJ48UeGKq6Tiyk2O6KKSXR9Sny+oe8qZzXEfeJcD
+        cmhc0cwRsPID1WldqRPXb8Gmz6u2W6qrA2x8FIzmh+qKel1pM47aTYFyDtsLqG8FVmt50mmHkHuoTva6
+        NphvFNkRGzhqfkpv341mVYAVp/6NotutmXBHxqZyQA76Vl6kdiz00N56MezWTDbN5e3XRl0pJaVecnh8
+        7RUBVtmEvzx0NP8/2BWHN/bf5WBQnw/5oxQkRmtEDvnC+XBAnQev0onfvJMAL9v/DxIXMF8O07ThAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnClearMultiStdFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>320, 12</value>
+  </data>
+  <data name="btnClearMultiStdFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 35</value>
+  </data>
+  <data name="btnClearMultiStdFile.Text" xml:space="preserve">全部の基準ファイルを削除する</data>
+  <data name="btnClearMutilMsrtFile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAACXwAA
+        Al8BvoUoWgAAA+ZJREFUSEu1le1PW2UYxhud0THRJbKQkE3ThMAYFIoUVspbRwtlLfSFtrQsusk21Bqj
+        pCMRuhYYflLnyzd1zj+E/wD4wkfWdtjT03POc9qqhJBs+7ByeZ+T0XKAjU+e5MqT0+fp777u+7lzHx0A
+        3f+hE6HcaZ2FP60L81W6CF/1Wow/cyrKvfuW/iQzLwXnqnROvur1VeH9WrAeE4rhcVIA8oAZQv158O+d
+        WRNq3pmBTnfquCBHwOSsjq9+Y128qMf2N1HsPvgVu38o+o30O3Yfkv58gO34HKSOFuTOn1sp1tRUH4Zr
+        wMUaXXX27JsbBb8bhblZyNGvsHP/O+z8SPrpe9IP2PmZ9Mt9FBIx/L0UR/H6JHL6ug2+8ULdQXgFTCnx
+        595eyTuskKan8GgyjOzyMjITfmwv3SXFsX0vge3lBITbU3gc+RzJ6x+DfRlBIeCG0KhfPxYs1J6dkUwG
+        SDc+wqPQBEpPn9I5IPvtMv4ac+GfO1/j39kZ5K6FkP7sU+w9f47Ss2dIkgEWmQYbsiJnaHDuw8uOqVbr
+        haAHgm8M2cVFFbr/ZJcWseWwg6e99PRtgKDlvXtLEChY8dYNqrlhVQPmPqjVCy0NKEz4UKDbf9xrBk8w
+        DTwRR/rWTQ2UJ+iW3Yri9CekKUhXeiF2d1oUuOpYaLgQFduaIDsGIY8OQx5zIGVqB0cwzVMqVZwuJJDu
+        MSM/GUD+WhD5sB/MPgCx73K4Ar5UHxOa6yEYGiGa28FsvZCpZqm2ZmRi81o4vWViMTWw7HVC9jjBRgbJ
+        bY/qmNn7IhVwa2NENDZBbG+GSL0pdrZBvNyO1KUGpG9OadJXomTm55E0NEEa7INkI9n7IQ0NQBq+Aslh
+        i5XBoqk1LHa2QuwyqkCxuwNpgm59QcEPpH/QOhe/iyRlJFH5pKs2MKcdzDUMaXQkWgF3Gy2ixQSxpxNS
+        bxdSLReRmb0D7O2VWYrLw2XJLixQSYxgYyNgnqtgXhfdz5g6R8rtJvV3r0pWCzKdRkp1TlNX1V27gdQK
+        Lq69UC6RAGcbAAt4wILetSN9zIb6nUqduD4zNr0elJ48UeGKq6Tiyk2O6KKSXR9Sny+oe8qZzXEfeJcD
+        cmhc0cwRsPID1WldqRPXb8Gmz6u2W6qrA2x8FIzmh+qKel1pM47aTYFyDtsLqG8FVmt50mmHkHuoTva6
+        NphvFNkRGzhqfkpv341mVYAVp/6NotutmXBHxqZyQA76Vl6kdiz00N56MezWTDbN5e3XRl0pJaVecnh8
+        7RUBVtmEvzx0NP8/2BWHN/bf5WBQnw/5oxQkRmtEDvnC+XBAnQev0onfvJMAL9v/DxIXMF8O07ThAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnClearMutilMsrtFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>617, 12</value>
+  </data>
+  <data name="btnClearMutilMsrtFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 35</value>
+  </data>
+  <data name="btnClearMutilMsrtFile.Text" xml:space="preserve">全部の測定ファイルを削除する</data>
+  <data name="btnOpenMutiMsrtFile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAbBJREFUOE99k0tL
+        AlEUx2fTNsplhFb02PSw/FxBi6hFlGWE2ucIWjTYiK/UWhXYJizC1BiFSGdMLZ+VUXA65zp3cGzswJ87
+        9zLnd8//nnuFBXe0Nr0XBpszBNadIJPNGYSp3RDM7UdSi+6osOKNC45DcwmUPCiu5CqBjhlkEIB2pvBn
+        VCYprbL50JrIxkuEzLrCR0ueqGD3xJiWvTEdKFDJFOe5Clyg4nKFzVdPkjpkfDsAk2hpAjfTrIncmg5I
+        PL/CNYrGp/qHwdXohmSY91rTAclSA241JdU63CgoHCmG131wnu9Wxq0RBA9Z1AHZagtIj9pI3xkUByQK
+        tT/WyI4OKDY7oKDUVlf0TWsccF9uQKHxabBixXbrADFVhNMHxSBa44A8nssdWuy1Rg0QeBt9WrKUVrCV
+        XRCtcYD63gH5rc1scmsM8N9F4vWOYBfa3z/w0v4yWGOA+YNIkyDUY6qGX+mxrQBYNiWwYDLeQjiTy+DH
+        S0aVcWsMgGFHOfpFJ0wRy5VZciBb0gHcGm1m+kjoqs64Br8Rbo0qNwXQwzGzxi2SXUqmf8jCoDC11mfV
+        /gtcPrrvSGcA0AAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnOpenMutiMsrtFile.Text" xml:space="preserve">測定ファイルを開く</data>
+  <data name="btnOpenMutiFile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAbBJREFUOE99k0tL
+        AlEUx2fTNsplhFb02PSw/FxBi6hFlGWE2ucIWjTYiK/UWhXYJizC1BiFSGdMLZ+VUXA65zp3cGzswJ87
+        9zLnd8//nnuFBXe0Nr0XBpszBNadIJPNGYSp3RDM7UdSi+6osOKNC45DcwmUPCiu5CqBjhlkEIB2pvBn
+        VCYprbL50JrIxkuEzLrCR0ueqGD3xJiWvTEdKFDJFOe5Clyg4nKFzVdPkjpkfDsAk2hpAjfTrIncmg5I
+        PL/CNYrGp/qHwdXohmSY91rTAclSA241JdU63CgoHCmG131wnu9Wxq0RBA9Z1AHZagtIj9pI3xkUByQK
+        tT/WyI4OKDY7oKDUVlf0TWsccF9uQKHxabBixXbrADFVhNMHxSBa44A8nssdWuy1Rg0QeBt9WrKUVrCV
+        XRCtcYD63gH5rc1scmsM8N9F4vWOYBfa3z/w0v4yWGOA+YNIkyDUY6qGX+mxrQBYNiWwYDLeQjiTy+DH
+        S0aVcWsMgGFHOfpFJ0wRy5VZciBb0gHcGm1m+kjoqs64Br8Rbo0qNwXQwzGzxi2SXUqmf8jCoDC11mfV
+        /gtcPrrvSGcA0AAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnOpenMutiFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 12</value>
+  </data>
+  <data name="btnLoadStdFile.Text" xml:space="preserve">基準ファイルを開く</data>
+  <data name="btnMultiFileOK.Text" xml:space="preserve">完成</data>
+  <data name="colGainOffsetName.HeaderText" xml:space="preserve">基準ファイル</data>
+  <data name="colGainOffsetKeyName.HeaderText" xml:space="preserve">測定ファイル</data>
+  <data name="chkBySelectIndex.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 23</value>
+  </data>
+  <data name="chkBySelectIndex.Text" xml:space="preserve">何個目のデータを選択する</data>
+  <data name="$this.Text" xml:space="preserve">多重ファイルをロードする</data>
+  <data name="btnDeleteAllFile.Text" xml:space="preserve">全ファイルを削除する</data>
+  <data name="btnDeleteSingle.Text" xml:space="preserve">選択したファイルを削除する</data>
+</root>

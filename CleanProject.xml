@@ -1,0 +1,35 @@
+<PatternSetting>
+	<FolderPatterns>
+		<!--string>obj</string>
+		<string>bin</string>
+		<string>obj</string>
+		<string>debug</string>
+		<string>release</string>
+		<string>debug60</string>
+		<string>release60</string>
+		<string>System___Win32_RTSS_Debug</string>
+		<string>System___Win32_RTSS_Release</string>
+		<string>RTSSDebug</string>
+		<string>RTSSRelease</string-->
+	</FolderPatterns>
+	<FilePatterns>
+		<string>*.idb</string>
+		<string>*.log</string>
+		<string>*.tlog</string>
+		<string>*.sdf</string>
+	    <string>*.obj</string>
+		<string>*.ncb</string>
+		<string>*.bak</string>
+		<string>*.pdb</string>
+	</FilePatterns>
+</PatternSetting>
+
+
+
+
+
+
+
+
+
+

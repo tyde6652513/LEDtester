@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ERR_00203" xml:space="preserve">
+    <value>積分球_シリアル番号照合エラー</value>
+  </data>
+  <data name="ERR_00301" xml:space="preserve">
+    <value>テスター_ソースメータ初期化エラー</value>
+  </data>
+  <data name="ERR_00306" xml:space="preserve">
+    <value>テスター_出力信号(電流/電圧)制御エラー</value>
+  </data>
+  <data name="ERR_00305" xml:space="preserve">
+    <value>テスター_PMU設定が間違いました</value>
+  </data>
+  <data name="ERR_00304" xml:space="preserve">
+    <value>テスター_測定情報の設定が間違いました</value>
+  </data>
+  <data name="ERR_00208" xml:space="preserve">
+    <value>OPRS_分光器トリガー失敗</value>
+  </data>
+  <data name="ERR_00214" xml:space="preserve">
+    <value>分光器_計算機能の初期化エラー</value>
+  </data>
+  <data name="ERR_00205" xml:space="preserve">
+    <value>OPRS_分光器の自動カウント設定エラー</value>
+  </data>
+  <data name="ERR_00201" xml:space="preserve">
+    <value>分光器_初期化エラー</value>
+  </data>
+  <data name="ERR_00202" xml:space="preserve">
+    <value>分光器_シリアル番号照合エラー</value>
+  </data>
+  <data name="ERR_00302" xml:space="preserve">
+    <value>テスター_パラメータ設定データがない、または設定が間違いました</value>
+  </data>
+  <data name="ERR_00212" xml:space="preserve">
+    <value>分光器_背景ノイズ電流データ読取エラー</value>
+  </data>
+  <data name="ERR_00213" xml:space="preserve">
+    <value>分光器_校正ファイル読取エラー</value>
+  </data>
+  <data name="ERR_00204" xml:space="preserve">
+    <value>分光器_パラメータ設定データがありません</value>
+  </data>
+  <data name="ERR_00001" xml:space="preserve">
+    <value>定義されないエラーコード</value>
+  </data>
+  <data name="ERR_00210" xml:space="preserve">
+    <value>OPRS_分光器_保留</value>
+  </data>
+  <data name="ERR_00303" xml:space="preserve">
+    <value>テスター_出力データのインデックスが間違いました</value>
+  </data>
+  <data name="ERR_00211" xml:space="preserve">
+    <value>分光器_波長データ読取エラー</value>
+  </data>
+  <data name="ERR_00206" xml:space="preserve">
+    <value>OPRS_分光器との再度コネクトが失敗</value>
+  </data>
+  <data name="ERR_00207" xml:space="preserve">
+    <value>OPRS_分光器のデータ処理エラー</value>
+  </data>
+  <data name="ERR_00209" xml:space="preserve">
+    <value>OPRS_分光器の光度読取エラー</value>
+  </data>
+  <data name="ERR_01001" xml:space="preserve">
+    <value>システム_準備がまだ完成していない、テストを実行できません</value>
+  </data>
+  <data name="ERR_01002" xml:space="preserve">
+    <value>システム_テストデータのダイナミックセーブエラー</value>
+  </data>
+  <data name="ERR_01003" xml:space="preserve">
+    <value>システム_フィルタ位置設定が間違いました。実際の位置を確認してください</value>
+  </data>
+  <data name="ERR_10001" xml:space="preserve">
+    <value>_保留</value>
+  </data>
+  <data name="ERR_10002" xml:space="preserve">
+    <value>_保留</value>
+  </data>
+  <data name="ERR_10003" xml:space="preserve">
+    <value>インタフェース設定ファイルの読取エラー</value>
+  </data>
+  <data name="ERR_10004" xml:space="preserve">
+    <value>テスター設定ファイルの読取エラー</value>
+  </data>
+  <data name="ERR_10005" xml:space="preserve">
+    <value>産品設定ファイルの読取エラー</value>
+  </data>
+  <data name="ERR_10006" xml:space="preserve">
+    <value>ランキング設定ファイルの読取エラー</value>
+  </data>
+  <data name="ERR_10007" xml:space="preserve">
+    <value>ユーザーファイルの読取エラー</value>
+  </data>
+  <data name="ERR_10008" xml:space="preserve">
+    <value>生産条件の読取エラー</value>
+  </data>
+  <data name="ERR_10009" xml:space="preserve">
+    <value>ロードしたユーザー定義ファイルの再設定失敗</value>
+  </data>
+  <data name="ERR_10010" xml:space="preserve">
+    <value>マッチするユーザーフォーマットを見つかりません</value>
+  </data>
+  <data name="ERR_10011" xml:space="preserve">
+    <value>生産条件ファイルがすでに存在した</value>
+  </data>
+  <data name="ERR_10012" xml:space="preserve">
+    <value>テスト結果の出力ファイルがすでに存在した</value>
+  </data>
+  <data name="ERR_10013" xml:space="preserve">
+    <value>_保留</value>
+  </data>
+  <data name="ERR_10014" xml:space="preserve">
+    <value>ハードウェア設定ファイルに、適当の機器規格説明がありません</value>
+  </data>
+  <data name="ERR_10015" xml:space="preserve">
+    <value>_保留</value>
+  </data>
+  <data name="ERR_10016" xml:space="preserve">
+    <value>選択した光度単位がマッチできません</value>
+  </data>
+  <data name="ERR_10017" xml:space="preserve">
+    <value>ファイルセーブ失敗</value>
+  </data>
+  <data name="ERR_10018" xml:space="preserve">
+    <value>ファイル保存のファイルパス設定エラー</value>
+  </data>
+  <data name="ERR_10019" xml:space="preserve">
+    <value>入力したファイル名が無効</value>
+  </data>
+  <data name="ERR_10101" xml:space="preserve">
+    <value>WM_全部テストモードにおいて、mkファイルの読取りエラー</value>
+  </data>
+  <data name="ERR_10102" xml:space="preserve">
+    <value>WM_mkファイルの中に適当のデータを見つからない</value>
+  </data>
+  <data name="ERR_10103" xml:space="preserve">
+    <value>WM_ロット番号がマッチしていません</value>
+  </data>
+  <data name="ERR_10104" xml:space="preserve">
+    <value>WM_補正パラメータがマッチしていません</value>
+  </data>
+  <data name="ERR_00307" xml:space="preserve">
+    <value>テスター_ハードウェア装置エラー</value>
+  </data>
+  <data name="ERR_10020" xml:space="preserve">
+    <value>ランク表転換_適合の各項目表示情報を見つからない</value>
+  </data>
+  <data name="ERR_10021" xml:space="preserve">
+    <value>ランク表転換_適合のランキング設定項目を見当らない</value>
+  </data>
+  <data name="ERR_10022" xml:space="preserve">
+    <value>ランク表転換_転換失敗</value>
+  </data>
+  <data name="ERR_10023" xml:space="preserve">
+    <value>ランク表転換_転換、保存したカタログの設定エラー</value>
+  </data>
+  <data name="ERR_10024" xml:space="preserve">
+    <value>ランク表転換_テスト結果データのロード失敗</value>
+  </data>
+  <data name="ERR_10025" xml:space="preserve">
+    <value>ランク表転換_転換済みのデータ保存失敗</value>
+  </data>
+  <data name="ERR_10026" xml:space="preserve">
+    <value>CM_校正ファイル(.cal)ロード失敗</value>
+  </data>
+  <data name="ERR_10027" xml:space="preserve">
+    <value>CM_校正ファイル(.cal)セーブ失敗</value>
+  </data>
+  <data name="ERR_10105" xml:space="preserve">
+    <value>WM_サンプリングテストモードにおいて、mkファイルの読取りエラー</value>
+  </data>
+  <data name="ERR_10106" xml:space="preserve">
+    <value>WM_ウェハ番号がマッチしていません</value>
+  </data>
+  <data name="ERR_20001" xml:space="preserve">
+    <value>ツール_基準値ファイル読取エラー</value>
+  </data>
+  <data name="ERR_20002" xml:space="preserve">
+    <value>ツール_測定値ファイル読取エラー</value>
+  </data>
+  <data name="ERR_20003" xml:space="preserve">
+    <value>ツール_比較データがありません</value>
+  </data>
+  <data name="ERR_20004" xml:space="preserve">
+    <value>ツール_基準値と測定値のデータ比較エラー</value>
+  </data>
+  <data name="ERR_10031" xml:space="preserve">
+    <value>ランク表_選択項目が間違いました</value>
+  </data>
+  <data name="ERR_10040" xml:space="preserve">
+    <value>レポート出力に必要なメモリーを取れません</value>
+  </data>
+  <data name="ERR_00215" xml:space="preserve">
+    <value>分光器_信号受け取り異常</value>
+  </data>
+  <data name="ERR_10042" xml:space="preserve">
+    <value>通信モードが間違いました</value>
+  </data>
+  <data name="ERR_10043" xml:space="preserve">
+    <value>出力ファイルの拡張子がリピートしました</value>
+  </data>
+  <data name="ERR_00601" xml:space="preserve">
+    <value>DAQ_初期化失敗</value>
+  </data>
+  <data name="ERR_00602" xml:space="preserve">
+    <value>DAQ_信号測定時間超過</value>
+  </data>
+  <data name="ERR_10044" xml:space="preserve">
+    <value>TCP/IP_通信時間超過</value>
+  </data>
+  <data name="ERR_00317" xml:space="preserve">
+    <value>テスター_ソースメータとの通信エラー</value>
+  </data>
+  <data name="ERR_01101" xml:space="preserve">
+    <value>システム_プローバーのマルチチャンネル設定がテスターの設定とは一致ではない</value>
+  </data>
+  <data name="ERR_10060" xml:space="preserve">
+    <value>マルチチャンネル設定_産品ファイルの設定データがハードウェア配置に一致ではない</value>
+  </data>
+  <data name="ERR_00501" xml:space="preserve">
+    <value>MFB_初期化失敗</value>
+  </data>
+  <data name="ERR_00502" xml:space="preserve">
+    <value>"スイッチシステム, 刺し口にスイッチカードが無い"</value>
+  </data>
+  <data name="ERR_00503" xml:space="preserve">
+    <value>"スイッチシステム, 構成データが見つからない"</value>
+  </data>
+  <data name="ERR_00701" xml:space="preserve">
+    <value>LCRメーター　初期化失敗</value>
+  </data>
+  <data name="ERR_00318" xml:space="preserve">
+    <value>ソースメータデータ取得時間切れ</value>
+  </data>
+  <data name="ERR_00504" xml:space="preserve">
+    <value>"スイッチシステム, チャンネル設定エラー"</value>
+  </data>
+  <data name="ERR_00320" xml:space="preserve">
+    <value>ソースメータで検出器チャンネルが検出されない</value>
+  </data>
+</root>

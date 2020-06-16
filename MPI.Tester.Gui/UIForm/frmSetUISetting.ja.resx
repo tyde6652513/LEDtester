@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>セーブ</value>
+  </data>
+  <data name="chkIsEnableMergeAOIFile.Text" xml:space="preserve">
+    <value>併合用AOIファイルの出力ファイルを有効にする</value>
+  </data>
+  <data name="chkIsEnableDeletePBAOIFile.Text" xml:space="preserve">
+    <value>PB AOIファイルの削除を有効にする</value>
+  </data>
+  <data name="labelX7.Text" xml:space="preserve">
+    <value>AOIファイル設定</value>
+  </data>
+  <data name="chkShowReportComments.Text" xml:space="preserve">
+    <value>コメントの提示を有効にする</value>
+  </data>
+  <data name="chkIsEanbleConFormEnCheckBox.Text" xml:space="preserve">
+    <value>テスト条件のページで、｢実行｣の項目をチェックできる</value>
+  </data>
+  <data name="chkEnableAutoPopFourMapForm.Text" xml:space="preserve">
+    <value>生産中で自動的に四つウェハマップを一番上に表示する</value>
+  </data>
+  <data name="lblTestResultPath01.Text" xml:space="preserve">
+    <value>ファイル出力先(1)</value>
+  </data>
+  <data name="txtTestResultPath01.Text" xml:space="preserve">
+    <value>試験結果位置情報01</value>
+  </data>
+  <data name="lblTestResultExtTitle.Text" xml:space="preserve">
+    <value>拡張子</value>
+  </data>
+  <data name="txtTestResultExt.Text" xml:space="preserve">
+    <value>試験結果位置情報</value>
+  </data>
+  <data name="btnTestResultSelect01.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="lblTestResultPath02.Text" xml:space="preserve">
+    <value>出力ファイルパス(2)</value>
+  </data>
+  <data name="txtTestResultPath02.Text" xml:space="preserve">
+    <value>試験結果位置情報02</value>
+  </data>
+  <data name="btnTestResultSelect02.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="lblTestResultPath03.Text" xml:space="preserve">
+    <value>出力ファイルパス(3)</value>
+  </data>
+  <data name="txtTestResultPath03.Text" xml:space="preserve">
+    <value>試験結果位置情報03</value>
+  </data>
+  <data name="btnManualOutputPath03.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="txtManualOutputPath03.Text" xml:space="preserve">
+    <value>手動出力位置情報 03</value>
+  </data>
+  <data name="btnTestResultSelect03.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="lblManualOutputPath03.Text" xml:space="preserve">
+    <value>手動テスト保存位置(3)</value>
+  </data>
+  <data name="btnManualOutputPath02.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="txtManualOutputPath02.Text" xml:space="preserve">
+    <value>手動出力位置情報 02</value>
+  </data>
+  <data name="lblManualOutputPath02.Text" xml:space="preserve">
+    <value>手動テスト保存位置(2)</value>
+  </data>
+  <data name="lblManualOutputPath01.Text" xml:space="preserve">
+    <value>手動テスト保存位置(1)</value>
+  </data>
+  <data name="txtManualOutputPath01.Text" xml:space="preserve">
+    <value>手動出力位置情報 01</value>
+  </data>
+  <data name="btnManualOutputPath01.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="tabiSpecSetting.Text" xml:space="preserve">
+    <value>CSVファイル保存先</value>
+  </data>
+  <data name="tabiCustomer.Text" xml:space="preserve">
+    <value>作り変え</value>
+  </data>
+  <data name="lblAbsoluteSpectrumPath.Text" xml:space="preserve">
+    <value>絶対スペクトル出力情報(1)</value>
+  </data>
+  <data name="lblRelativeSpectrumPath.Text" xml:space="preserve">
+    <value>相対スペクトル出力位置情報(1)</value>
+  </data>
+  <data name="lblSaveSpectrumCount.Text" xml:space="preserve">
+    <value>保存されたスペクトル数</value>
+  </data>
+  <data name="txtSaveRelativeSpectrumPath.Text" xml:space="preserve">
+    <value>相対スペクトル位置情報</value>
+  </data>
+  <data name="txtSaveAbsoluteSpectrumPath.Text" xml:space="preserve">
+    <value>絶対スペクトル情報</value>
+  </data>
+  <data name="labelX15.Text" xml:space="preserve">
+    <value>チップ</value>
+  </data>
+  <data name="btntRelativeSpectrumSelect.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="btneAbsoluteSpectrumSelect.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="tabiSpectrumRawData.Text" xml:space="preserve">
+    <value>スペクトル出力位置情報</value>
+  </data>
+  <data name="lblWAFTestResultPath01.Text" xml:space="preserve">
+    <value>保存ファイルパス(1)</value>
+  </data>
+  <data name="txtWAFTestResultPath02.Text" xml:space="preserve">
+    <value>試験結果位置情報02</value>
+  </data>
+  <data name="btnWAFTestResultSelect03.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="lblWAFTestResultPath02.Text" xml:space="preserve">
+    <value>保存ファイルパス(2)</value>
+  </data>
+  <data name="txtWAFTestResultPath03.Text" xml:space="preserve">
+    <value>試験結果位置情報03</value>
+  </data>
+  <data name="btnWAFTestResultSelect02.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="lblWAFTestResultPath03.Text" xml:space="preserve">
+    <value>保存ファイルパス(3)</value>
+  </data>
+  <data name="txtWAFTestResultExt.Text" xml:space="preserve">
+    <value>試験結果位置情報</value>
+  </data>
+  <data name="txtWAFTestResultPath01.Text" xml:space="preserve">
+    <value>試験結果位置情報01</value>
+  </data>
+  <data name="lblWAFTestResultExtTitle.Text" xml:space="preserve">
+    <value>拡張子</value>
+  </data>
+  <data name="btnWAFTestResultSelect01.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="tabcFormatB.Text" xml:space="preserve">
+    <value>WAFファイル保存先</value>
+  </data>
+  <data name="lblSTATTestResultPath01.Text" xml:space="preserve">
+    <value>保存ファイルパス(1)</value>
+  </data>
+  <data name="txtSTATTestResultPath01.Text" xml:space="preserve">
+    <value>試験結果位置情報01</value>
+  </data>
+  <data name="txtSTATTestResultExt.Text" xml:space="preserve">
+    <value>試験結果位置情報</value>
+  </data>
+  <data name="btnSTATTestResultSelect01.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="lblSTATTestResultPath02.Text" xml:space="preserve">
+    <value>保存ファイルパス(2)</value>
+  </data>
+  <data name="txtSTATTestResultPath02.Text" xml:space="preserve">
+    <value>試験結果位置情報02</value>
+  </data>
+  <data name="btnSTATTestResultSelect02.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="lblSTATTestResultPath03.Text" xml:space="preserve">
+    <value>保存ファイルパス(3)</value>
+  </data>
+  <data name="txtSTATTestResultPath03.Text" xml:space="preserve">
+    <value>試験結果位置情報03</value>
+  </data>
+  <data name="btnSTATTestResultSelect03.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="lblSTATTestResultExtTitle.Text" xml:space="preserve">
+    <value>拡張子</value>
+  </data>
+  <data name="tabFormatStatistic.Text" xml:space="preserve">
+    <value>STATファイル保存先</value>
+  </data>
+  <data name="lblLCRSweepPath.Text" xml:space="preserve">
+    <value>LCR掃引位置情報</value>
+  </data>
+  <data name="txtSaveLCRSweepDataPath.Text" xml:space="preserve">
+    <value>LCR掃引データ位置情報</value>
+  </data>
+  <data name="btnLCRSweepSelect.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="lblIV_IVSweepPath.Text" xml:space="preserve">
+    <value>IV/VI 掃引位置情報</value>
+  </data>
+  <data name="txtSaveIV_VISweepDataPath.Text" xml:space="preserve">
+    <value>IV/VI 掃引データ位置情報</value>
+  </data>
+  <data name="btnIV_VISweepSelect.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="lblPivRawDataPath01.Text" xml:space="preserve">
+    <value>PIV/LIV 出力データ位置情報(1)</value>
+  </data>
+  <data name="txtSaveLIVRawDataPath.Text" xml:space="preserve">
+    <value>PIV / LIV データ位置情報</value>
+  </data>
+  <data name="btnLIVRawDataSelect.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="txtSaveLIVRawDataPath02.Text" xml:space="preserve">
+    <value>PIV / LIV データ位置情報</value>
+  </data>
+  <data name="btnLIVRawDataSelect02.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="lblPivRawDataPath02.Text" xml:space="preserve">
+    <value>PIV/LIV 出力データ位置情報(2)</value>
+  </data>
+  <data name="lblPivRawDataPath03.Text" xml:space="preserve">
+    <value>PIV/LIV 出力データ位置情報(3)</value>
+  </data>
+  <data name="txtSaveLIVRawDataPath03.Text" xml:space="preserve">
+    <value>PIV / LIV データ位置情報</value>
+  </data>
+  <data name="btnLIVRawDataSelect03.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="tabiSweepRawData.Text" xml:space="preserve">
+    <value>掃引出力位置情報</value>
+  </data>
+  <data name="tabcFormatA.Text" xml:space="preserve">
+    <value>結果</value>
+  </data>
+  <data name="chkEnableOutputPathByRecipe.Text" xml:space="preserve">
+    <value>処方による出力位置情報の設定を有効にする</value>
+  </data>
+  <data name="chkEnanleEndTestClearMap.Text" xml:space="preserve">
+    <value>テスト終了すると、自動的にウェハマップをクリアする</value>
+  </data>
+  <data name="chkPopFormTopMost.Text" xml:space="preserve">
+    <value>ウェハマップを一番上に表示する</value>
+  </data>
+  <data name="lblWaferMapConfigGroup.Text" xml:space="preserve">
+    <value>ウェハマップ設定</value>
+  </data>
+  <data name="chkClearHistoryWhenStartTest.Text" xml:space="preserve">
+    <value>ファイルを書き込みすると、元のヒストリーデータをクリアする</value>
+  </data>
+  <data name="lblUISelected.Text" xml:space="preserve">
+    <value>ユーザー情報</value>
+  </data>
+  <data name="lblFileNamePresentTitle.Text" xml:space="preserve">
+    <value>ファイル名基準</value>
+  </data>
+  <data name="lblTestResultFileSetting.Text" xml:space="preserve">
+    <value>テスト結果ファイル出力設定</value>
+  </data>
+  <data name="lblBasicSetting.Text" xml:space="preserve">
+    <value>インタフェース設定</value>
+  </data>
+  <data name="lblMultiLanguageTitle.Text" xml:space="preserve">
+    <value>言語</value>
+  </data>
+  <data name="txtMachineName.Text" xml:space="preserve">
+    <value>測定器-備品-01</value>
+  </data>
+  <data name="lblMachineNameTitle.Text" xml:space="preserve">
+    <value>マシーン名称</value>
+  </data>
+  <data name="lblSystemPath.Text" xml:space="preserve">
+    <value>システム各ファイルパスの設定</value>
+  </data>
+  <data name="lblUserInfoSetting.Text" xml:space="preserve">
+    <value>ユーザーフォーマット設定</value>
+  </data>
+  <data name="txtUserDataVersion.Text" xml:space="preserve">
+    <value>バージョン1.0</value>
+  </data>
+  <data name="lblUserDataVersionTitle.Text" xml:space="preserve">
+    <value>出力用フォーマットのバージョン</value>
+  </data>
+  <data name="lblUserIDTitle.Text" xml:space="preserve">
+    <value>ユーザーID</value>
+  </data>
+  <data name="lblFormatTitle.Text" xml:space="preserve">
+    <value>出力フォーマットの名称</value>
+  </data>
+  <data name="btnWaferMapSetting.Text" xml:space="preserve">
+    <value>ウェハマップ設定</value>
+  </data>
+  <data name="tabiBasic.Text" xml:space="preserve">
+    <value>基本設定</value>
+  </data>
+  <data name="labelX10.Text" xml:space="preserve">
+    <value>グループマップ位置情報</value>
+  </data>
+  <data name="labelX9.Text" xml:space="preserve">
+    <value>グループマップ</value>
+  </data>
+  <data name="checkBoxX3.Text" xml:space="preserve">
+    <value>標準処方のコピーを有効にする</value>
+  </data>
+  <data name="txtGroupMapPath.Text" xml:space="preserve">
+    <value>グループマップ位置情報</value>
+  </data>
+  <data name="btnSetGroupMapPath.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="btnUploadRecipeFile.Text" xml:space="preserve">
+    <value>使用者ID</value>
+  </data>
+  <data name="btnManualRunMES.Text" xml:space="preserve">
+    <value>自動レシピ手動実行</value>
+  </data>
+  <data name="labelX5.Text" xml:space="preserve">
+    <value>事前サンプリング検査</value>
+  </data>
+  <data name="checkBoxX2.Text" xml:space="preserve">
+    <value>標準処方のコピーを有効にする</value>
+  </data>
+  <data name="chkEnableMonitorPreSampingData.Text" xml:space="preserve">
+    <value>事前サンプリングデータの監視を有効にする</value>
+  </data>
+  <data name="labelX6.Text" xml:space="preserve">
+    <value>サンプリングデータ位置情報</value>
+  </data>
+  <data name="txtSampingDataPath.Text" xml:space="preserve">
+    <value>標準位置情報</value>
+  </data>
+  <data name="btnSetSampingDataPath.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>（単位：時間）</value>
+  </data>
+  <data name="chkIsEnableCheckDailyCheckingOverDue.Text" xml:space="preserve">
+    <value>モニタリング結果が有効時間に超過したかを検査する</value>
+  </data>
+  <data name="lblMesConnect.Text" xml:space="preserve">
+    <value>日毎検査画面</value>
+  </data>
+  <data name="lblDailyMonitorPath.Text" xml:space="preserve">
+    <value>モニタリングファイルのパス</value>
+  </data>
+  <data name="chkIsCheckDailyChecking.Text" xml:space="preserve">
+    <value>ウェハを乗せる時、モニタリングを実行したかを検査する</value>
+  </data>
+  <data name="txtMesMoitorPath.Text" xml:space="preserve">
+    <value>MES監視枠位置情報</value>
+  </data>
+  <data name="btnMesMonitorPath.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>日毎検査キーワード</value>
+  </data>
+  <data name="checkBoxX1.Text" xml:space="preserve">
+    <value>標準処方のコピーを有効にする</value>
+  </data>
+  <data name="chkIsEnableJudgeRunDailyCheck.Text" xml:space="preserve">
+    <value>ウェハIDに”キーワード”が含まれる　日毎検査を実行する</value>
+  </data>
+  <data name="chkEnableMesMonitor.Text" xml:space="preserve">
+    <value>ウェハ搭載後日毎検査を要求可能</value>
+  </data>
+  <data name="labelX4.Text" xml:space="preserve">
+    <value>日毎検査設定</value>
+  </data>
+  <data name="labelX3.Text" xml:space="preserve">
+    <value>標準処方検査</value>
+  </data>
+  <data name="chkEnableReCoverStdRecipe.Text" xml:space="preserve">
+    <value>標準処方のコピーを有効にする</value>
+  </data>
+  <data name="chkIsEnableCheckStandRecipe.Text" xml:space="preserve">
+    <value>標準処方の検査を有効にする</value>
+  </data>
+  <data name="buttonX1.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="txtBackupPath.Text" xml:space="preserve">
+    <value>バックアップ位置情報</value>
+  </data>
+  <data name="labelX8.Text" xml:space="preserve">
+    <value>バックアップ位置情報</value>
+  </data>
+  <data name="chkIsEnableCheckRecipe.Text" xml:space="preserve">
+    <value>産品ファイルの中身が正しいかを検査する</value>
+  </data>
+  <data name="btnMESTestCondition.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="txtMESTestConditionPath.Text" xml:space="preserve">
+    <value>試験状態位置情報</value>
+  </data>
+  <data name="txtStandRecipePath.Text" xml:space="preserve">
+    <value>標準位置情報</value>
+  </data>
+  <data name="btnMESStandRecipePathSelect.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="labelX1.Text" xml:space="preserve">
+    <value>標準処方位置情報</value>
+  </data>
+  <data name="labelX2.Text" xml:space="preserve">
+    <value>自動処方</value>
+  </data>
+  <data name="chkEnableMES.Text" xml:space="preserve">
+    <value>生産条件自動読取り機能を起動する</value>
+  </data>
+  <data name="lblMesRefPath2.Text" xml:space="preserve">
+    <value>テスト条件ファイルのロード先</value>
+  </data>
+  <data name="lbldeliverProberRecipe.Text" xml:space="preserve">
+    <value>プローバーの産品ファイルがテスター設定で指定する</value>
+  </data>
+  <data name="lblMesRefPath.Text" xml:space="preserve">
+    <value>ファイルのロード先</value>
+  </data>
+  <data name="chkEnableTransferProberRecipe.Text" xml:space="preserve">
+    <value>有効にする</value>
+  </data>
+  <data name="txtMESPath.Text" xml:space="preserve">
+    <value>MES位置情報</value>
+  </data>
+  <data name="btnMESDataPathSelect.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="tabiMES.Text" xml:space="preserve">
+    <value>生産条件読取り設定</value>
+  </data>
+  <data name="tabControl1.Text" xml:space="preserve">
+    <value>基本</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>UISetting</value>
+  </data>
+</root>

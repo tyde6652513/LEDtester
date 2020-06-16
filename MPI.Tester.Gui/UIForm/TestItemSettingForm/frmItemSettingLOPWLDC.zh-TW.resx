@@ -1,0 +1,644 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dinTrigDelayTime.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dinTrigDelayTime.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinTrigDelayTime.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinTrigDelayTime.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinTrigDelayTime.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinTrigDelayTime.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinTrigDelayTime.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinTrigDelayTime.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinTrigDelayTime.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinTrigDelayTime.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinTrigDelayTime.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinTrigDelayTime.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinTrigDelayTime.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinTrigDelayTime.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinTrigDelayTime.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinLimitIntegralTime.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinLimitIntegralTime.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinLimitIntegralTime.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinLimitIntegralTime.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinLimitIntegralTime.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinLimitIntegralTime.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinLimitIntegralTime.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinLimitIntegralTime.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinLimitIntegralTime.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinLimitIntegralTime.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinLimitIntegralTime.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinLimitIntegralTime.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinLimitIntegralTime.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinLimitIntegralTime.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinLimitIntegralTime.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinFixIntegralTime.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinFixIntegralTime.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinFixIntegralTime.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinFixIntegralTime.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinFixIntegralTime.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinFixIntegralTime.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinFixIntegralTime.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinFixIntegralTime.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinFixIntegralTime.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinFixIntegralTime.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinFixIntegralTime.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinFixIntegralTime.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinFixIntegralTime.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinFixIntegralTime.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinFixIntegralTime.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinForceTime.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinForceTime.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinForceTime.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinForceTime.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinForceTime.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinForceTime.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinForceTime.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinForceTime.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinForceTime.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinForceTime.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinForceTime.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinForceTime.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinForceTime.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinForceTime.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinForceTime.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinForceValue.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinForceValue.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinForceValue.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinForceValue.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinForceValue.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinForceValue.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinForceValue.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinForceValue.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinForceValue.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinForceValue.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinForceValue.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinForceValue.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinForceValue.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinForceValue.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinForceValue.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinForceDealy.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinForceDealy.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinForceDealy.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinForceDealy.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinForceDealy.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinForceDealy.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinForceDealy.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinForceDealy.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinForceDealy.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinForceDealy.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinForceDealy.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinForceDealy.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinForceDealy.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinForceDealy.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinForceDealy.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinMsrtClamp.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinMsrtClamp.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinMsrtClamp.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinMsrtClamp.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinMsrtClamp.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinMsrtClamp.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinMsrtClamp.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinMsrtClamp.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinMsrtClamp.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinMsrtClamp.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinMsrtClamp.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinMsrtClamp.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinMsrtClamp.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinMsrtClamp.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinMsrtClamp.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinMsrtRange.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinMsrtRange.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinMsrtRange.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinMsrtRange.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinMsrtRange.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinMsrtRange.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinMsrtRange.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinMsrtRange.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinMsrtRange.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinMsrtRange.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinMsrtRange.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinMsrtRange.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinMsrtRange.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinMsrtRange.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinMsrtRange.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numMsrtFilterCount.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numMsrtFilterCount.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numMsrtFilterCount.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numMsrtFilterCount.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numMsrtFilterCount.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numMsrtFilterCount.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numMsrtFilterCount.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numMsrtFilterCount.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numMsrtFilterCount.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numMsrtFilterCount.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numMsrtFilterCount.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numMsrtFilterCount.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numMsrtFilterCount.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numMsrtFilterCount.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numMsrtFilterCount.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinNPLC.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinNPLC.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinNPLC.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinNPLC.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinNPLC.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinNPLC.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinNPLC.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinNPLC.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinNPLC.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinNPLC.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinNPLC.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinNPLC.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dinNPLC.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dinNPLC.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dinNPLC.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkIsTestOptical.Text" xml:space="preserve">
+    <value>是否啟動光學量測</value>
+  </data>
+  <data name="grpApplySetting.Text" xml:space="preserve">
+    <value>電性輸出條件設定</value>
+  </data>
+  <data name="grpItemCondition.Text" xml:space="preserve">
+    <value>LOPWL (同時量測電性與光性)</value>
+  </data>
+  <data name="grpMsrtSetting.Text" xml:space="preserve">
+    <value>量測設定</value>
+  </data>
+  <data name="lblAutoForceRange.Text" xml:space="preserve">
+    <value>自動換檔位</value>
+  </data>
+  <data name="lblFixIntegralTime.Text" xml:space="preserve">
+    <value>(Fixed) 固定時間</value>
+  </data>
+  <data name="lblForceMode.Text" xml:space="preserve">
+    <value>驅動源</value>
+  </data>
+  <data name="lblForceRange.Text" xml:space="preserve">
+    <value>輸出範圍</value>
+  </data>
+  <data name="lblForceTime.Text" xml:space="preserve">
+    <value>脈衝時間</value>
+  </data>
+  <data name="lblForceValue.Text" xml:space="preserve">
+    <value>輸出電源值</value>
+  </data>
+  <data name="lblLimitIntegralTime.Text" xml:space="preserve">
+    <value>(Limit) 最大時間</value>
+  </data>
+  <data name="lblMsrtClamp.Text" xml:space="preserve">
+    <value>箝制值</value>
+  </data>
+  <data name="lblMsrtRange.Text" xml:space="preserve">
+    <value>量測範圍</value>
+  </data>
+  <data name="lblSensingMode.Text" xml:space="preserve">
+    <value>感光時間模式</value>
+  </data>
+  <data name="lblTrigDelayLOPWL.Text" xml:space="preserve">
+    <value>觸發延遲時間</value>
+  </data>
+  <data name="lblWaitTime.Text" xml:space="preserve">
+    <value>等待時間</value>
+  </data>
+  <data name="grpOpticalSetting.Text" xml:space="preserve">
+    <value>光性量測條件設定</value>
+  </data>
+  <data name="lblTurnOffTime.Text" xml:space="preserve">
+    <value>脈衝關閉時間</value>
+  </data>
+  <data name="lblDutyCycle.Text" xml:space="preserve">
+    <value>占空比(Duty)</value>
+  </data>
+  <data name="lblPulseCnt.Text" xml:space="preserve">
+    <value>脈衝次數</value>
+  </data>
+  <data name="lblSourceFunc.Text" xml:space="preserve">
+    <value>電源輸出型式</value>
+  </data>
+  <data name="lblPulseWidth.Text" xml:space="preserve">
+    <value>脈衝寬度</value>
+  </data>
+  <data name="lblMaxRefForceValue.Text" xml:space="preserve">
+    <value>最大輸出電源值</value>
+  </data>
+  <data name="lblRefForceValue.Text" xml:space="preserve">
+    <value>輸出電源值</value>
+  </data>
+</root>

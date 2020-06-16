@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ERR_00203" xml:space="preserve">
+    <value>Sphere, Serial number (S/N) error</value>
+  </data>
+  <data name="ERR_00301" xml:space="preserve">
+    <value>Sourcemeter, Initialization fail</value>
+  </data>
+  <data name="ERR_00306" xml:space="preserve">
+    <value>Sourcemeter, Force ouptut singal (current / voltage) control fail</value>
+  </data>
+  <data name="ERR_00305" xml:space="preserve">
+    <value>Sourcemeter, PMU index setting error</value>
+  </data>
+  <data name="ERR_00304" xml:space="preserve">
+    <value>Sourcemeter, Sweep setting data error</value>
+  </data>
+  <data name="ERR_00208" xml:space="preserve">
+    <value>OPRS Spectrometer trigger error</value>
+  </data>
+  <data name="ERR_00214" xml:space="preserve">
+    <value>Spectrometer, Calculation function initialization fail</value>
+  </data>
+  <data name="ERR_00205" xml:space="preserve">
+    <value>OPRS Spectrometer auto count setting error</value>
+  </data>
+  <data name="ERR_00201" xml:space="preserve">
+    <value>Spectrometer, Initialization fail</value>
+  </data>
+  <data name="ERR_00202" xml:space="preserve">
+    <value>Spectrometer, Serial number (S/N) error</value>
+  </data>
+  <data name="ERR_00302" xml:space="preserve">
+    <value>Sourcemeter,  No set parameter setting data</value>
+  </data>
+  <data name="ERR_00212" xml:space="preserve">
+    <value>Spectrometer, Get the dark data fail</value>
+  </data>
+  <data name="ERR_00213" xml:space="preserve">
+    <value>Spectrometer, Load calibration file fail</value>
+  </data>
+  <data name="ERR_00204" xml:space="preserve">
+    <value>Spectrometer, No set parameters setting data</value>
+  </data>
+  <data name="ERR_00001" xml:space="preserve">
+    <value>Undefined the error code</value>
+  </data>
+  <data name="ERR_00210" xml:space="preserve">
+    <value>OPRS_</value>
+  </data>
+  <data name="ERR_00303" xml:space="preserve">
+    <value>Sourcemeter, meter ouput data index error</value>
+  </data>
+  <data name="ERR_00211" xml:space="preserve">
+    <value>Spectrometer, Get wavelength fail</value>
+  </data>
+  <data name="ERR_00206" xml:space="preserve">
+    <value>OPRS Spectrometer re-try connect fail</value>
+  </data>
+  <data name="ERR_00207" xml:space="preserve">
+    <value>OPRS Calculation fail</value>
+  </data>
+  <data name="ERR_00209" xml:space="preserve">
+    <value>OPRS Get Intensity fail</value>
+  </data>
+  <data name="ERR_01001" xml:space="preserve">
+    <value>System,  Not ready for testing</value>
+  </data>
+  <data name="ERR_01002" xml:space="preserve">
+    <value>System, Not finish this one data saving</value>
+  </data>
+  <data name="ERR_01003" xml:space="preserve">
+    <value>System, Filter wheel setting error</value>
+  </data>
+  <data name="ERR_10001" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_10002" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_10003" xml:space="preserve">
+    <value>Load UI setting file fail</value>
+  </data>
+  <data name="ERR_10004" xml:space="preserve">
+    <value>Load tester system setting file fail</value>
+  </data>
+  <data name="ERR_10005" xml:space="preserve">
+    <value>Load product setting file fail</value>
+  </data>
+  <data name="ERR_10006" xml:space="preserve">
+    <value>Load bin setting file fail</value>
+  </data>
+  <data name="ERR_10007" xml:space="preserve">
+    <value>Load user defined data file fail</value>
+  </data>
+  <data name="ERR_10008" xml:space="preserve">
+    <value>Load task sheet file fail</value>
+  </data>
+  <data name="ERR_10009" xml:space="preserve">
+    <value>Reset user defined data fail</value>
+  </data>
+  <data name="ERR_10010" xml:space="preserve">
+    <value>Can't match the selected format of user data </value>
+  </data>
+  <data name="ERR_10011" xml:space="preserve">
+    <value>The task sheet file name has exited</value>
+  </data>
+  <data name="ERR_10012" xml:space="preserve">
+    <value>The result output file name has exited</value>
+  </data>
+  <data name="ERR_10013" xml:space="preserve">
+    <value>The machine configure setting error</value>
+  </data>
+  <data name="ERR_10014" xml:space="preserve">
+    <value>No matching device specification in machine config</value>
+  </data>
+  <data name="ERR_10015" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_10016" xml:space="preserve">
+    <value>Selected save LOP  item is not match</value>
+  </data>
+  <data name="ERR_10017" xml:space="preserve">
+    <value>Save file fail</value>
+  </data>
+  <data name="ERR_10018" xml:space="preserve">
+    <value>Save file, The path setting fail</value>
+  </data>
+  <data name="ERR_10019" xml:space="preserve">
+    <value>No save file name</value>
+  </data>
+  <data name="ERR_10101" xml:space="preserve">
+    <value>WM, Load mk file fail at fully auto mode</value>
+  </data>
+  <data name="ERR_10102" xml:space="preserve">
+    <value>WM, Content of mk file is not find</value>
+  </data>
+  <data name="ERR_10103" xml:space="preserve">
+    <value>WM, Lot Number is not matching</value>
+  </data>
+  <data name="ERR_10104" xml:space="preserve">
+    <value>WM, Calibration parameters is not matching</value>
+  </data>
+  <data name="ERR_00307" xml:space="preserve">
+    <value>Sourcemeter, Hardware device error</value>
+  </data>
+  <data name="ERR_10020" xml:space="preserve">
+    <value>BinTransfer, Can't find the title in the file</value>
+  </data>
+  <data name="ERR_10021" xml:space="preserve">
+    <value>BinTransfer, Can't find the bin column in the file</value>
+  </data>
+  <data name="ERR_10022" xml:space="preserve">
+    <value>BinTransfer, Transfer fail</value>
+  </data>
+  <data name="ERR_10023" xml:space="preserve">
+    <value>BinTransfer, Target path setting fail</value>
+  </data>
+  <data name="ERR_10024" xml:space="preserve">
+    <value>BinTransfer, Load tested data fail</value>
+  </data>
+  <data name="ERR_10025" xml:space="preserve">
+    <value>BinTransfer, Save transfered data fail</value>
+  </data>
+  <data name="ERR_10026" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_10027" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_10105" xml:space="preserve">
+    <value>WM, Load mk file fail at sampling mode</value>
+  </data>
+  <data name="ERR_10106" xml:space="preserve">
+    <value>WM, Wafer number is not matching</value>
+  </data>
+  <data name="ERR_20001" xml:space="preserve">
+    <value>Tools, Load Standard File Fail</value>
+  </data>
+  <data name="ERR_20002" xml:space="preserve">
+    <value>Tools,Load Measure File Fail</value>
+  </data>
+  <data name="ERR_20003" xml:space="preserve">
+    <value>Tools, No Compared Data</value>
+  </data>
+  <data name="ERR_20004" xml:space="preserve">
+    <value>Tools, Compared Data Fail</value>
+  </data>
+  <data name="ERR_10031" xml:space="preserve">
+    <value>Bin Table, Selected Items Error</value>
+  </data>
+  <data name="ERR_10040" xml:space="preserve">
+    <value>Can't Get Enough Memory For Saving Reports.</value>
+  </data>
+  <data name="ERR_00215" xml:space="preserve">
+    <value>Spectrometer, Connect Error</value>
+  </data>
+  <data name="ERR_10042" xml:space="preserve">
+    <value>Communication Mode Error</value>
+  </data>
+  <data name="ERR_10043" xml:space="preserve">
+    <value>Output Extend Filename Repeat</value>
+  </data>
+  <data name="ERR_00601" xml:space="preserve">
+    <value>DAQ, Initialization fail</value>
+  </data>
+  <data name="ERR_00602" xml:space="preserve">
+    <value>DAQ, Acquire Data Timeout</value>
+  </data>
+  <data name="ERR_10044" xml:space="preserve">
+    <value>TCP/IP Connect Timeout</value>
+  </data>
+  <data name="ERR_00317" xml:space="preserve">
+    <value>Sourcemeter, Disconnect</value>
+  </data>
+  <data name="ERR_01101" xml:space="preserve">
+    <value>System, DUT Channel Config Not Match</value>
+  </data>
+  <data name="ERR_10060" xml:space="preserve">
+    <value>Product Channel Data is not match to H/W Channel Setting</value>
+  </data>
+  <data name="ERR_00501" xml:space="preserve">
+    <value>Switch System, Initialization fail</value>
+  </data>
+  <data name="ERR_00502" xml:space="preserve">
+    <value>SwitchSystem, No Switch Card in Slot</value>
+  </data>
+  <data name="ERR_00503" xml:space="preserve">
+    <value>SwitchSystem, Config Data Missing</value>
+  </data>
+  <data name="ERR_00701" xml:space="preserve">
+    <value>LCR meter, Initialization fail</value>
+  </data>
+  <data name="ERR_00318" xml:space="preserve">
+    <value>Sourcemeter, Acquire Data Timeout</value>
+  </data>
+  <data name="ERR_00504" xml:space="preserve">
+    <value>SwitchSystem, Channel Setting Error</value>
+  </data>
+  <data name="ERR_00320" xml:space="preserve">
+    <value>Sourcemeter, Not Detected the Detector Channel</value>
+  </data>
+</root>

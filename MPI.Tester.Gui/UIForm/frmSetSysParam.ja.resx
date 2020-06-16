@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lblBoxCarTitle.Text" xml:space="preserve">
+    <value>Box Car ( Default =6 )</value>
+  </data>
+  <data name="lblMinCatchCountTitle.Text" xml:space="preserve">
+    <value>取れるの最小カウント</value>
+  </data>
+  <data name="chkIsSaveDarkSpectrum.Text" xml:space="preserve">
+    <value>暗スペクトルの保存を有効にする</value>
+  </data>
+  <data name="chkIsNonlinearityCorrect.Text" xml:space="preserve">
+    <value>非線形補正を有効にする</value>
+  </data>
+  <data name="chkIsCorrectBackLight.Text" xml:space="preserve">
+    <value>背景光補正を起動</value>
+  </data>
+  <data name="lblDarkCorrectTitle.Text" xml:space="preserve">
+    <value>背景ノイズ控除</value>
+  </data>
+  <data name="lblSptMeterFilterModeTitle.Text" xml:space="preserve">
+    <value>分光器フィルタリングモード</value>
+  </data>
+  <data name="lblSptMeterOpModeTitle.Text" xml:space="preserve">
+    <value>稼動モード</value>
+  </data>
+  <data name="chkSyncSpecAndBin.Text" xml:space="preserve">
+    <value>ランク表の同期</value>
+  </data>
+  <data name="lblGroupBinSorting.Text" xml:space="preserve">
+    <value>BINグループ並べ替え規則</value>
+  </data>
+  <data name="chkIsEnableFloatReport.Text" xml:space="preserve">
+    <value>フロートレポートを有効にする</value>
+  </data>
+  <data name="labelX1.Text" xml:space="preserve">
+    <value>初期BIN等級</value>
+  </data>
+  <data name="chkEnableSettingDefaultBin.Text" xml:space="preserve">
+    <value>初期バBIN設定を有効にする</value>
+  </data>
+  <data name="chkIsAdjacentError.Text" xml:space="preserve">
+    <value>隣のチップのテスト結果の差異が過大すれば、エラーを発信する</value>
+  </data>
+  <data name="chkBinSortingIncludeMinMax.Text" xml:space="preserve">
+    <value>BIN 最大/最小 を含む</value>
+  </data>
+  <data name="lblBinSortingRule.Text" xml:space="preserve">
+    <value>ランキング基準設定</value>
+  </data>
+  <data name="lblBinSorting.Text" xml:space="preserve">
+    <value>規則</value>
+  </data>
+  <data name="lblSingleTestSetting.Text" xml:space="preserve">
+    <value>繰り返しテストの設定</value>
+  </data>
+  <data name="lblCriterionSetting.Text" xml:space="preserve">
+    <value>Pass/Fail設定</value>
+  </data>
+  <data name="chkIsCountPassFaiByBinGrade.Text" xml:space="preserve">
+    <value>OK/NGの選別がランキング条件によって判断する</value>
+  </data>
+  <data name="chkIsCheckSpec2.Text" xml:space="preserve">
+    <value>Spec2でOK/NGを選別すること</value>
+  </data>
+  <data name="chkIsCheckRowCol.Text" xml:space="preserve">
+    <value>同じ座標のデータを上書きする</value>
+  </data>
+  <data name="lblCoordinateGroup.Text" xml:space="preserve">
+    <value>座標系設定</value>
+  </data>
+  <data name="lblTesterCoordSetUnit.Text" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblProberCoordSetUnit.Text" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblProberCoordSetTitle.Text" xml:space="preserve">
+    <value>プローバーの座標系</value>
+  </data>
+  <data name="lblTesterCoordSetTitle.Text" xml:space="preserve">
+    <value>テスターの座標系</value>
+  </data>
+  <data name="lblBasicSysParamSetting.Text" xml:space="preserve">
+    <value>システム基本パラメータ</value>
+  </data>
+  <data name="lblRepeatDelayTitle.Text" xml:space="preserve">
+    <value>繰り返しテストの時間間隔</value>
+  </data>
+  <data name="lblRepeatCountTitle.Text" xml:space="preserve">
+    <value>繰り返し回数</value>
+  </data>
+  <data name="lblRepeatDelayUnit.Text" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="lblRepeatCountUnit.Text" xml:space="preserve">
+    <value>数える</value>
+  </data>
+  <data name="comboItem4.Text" xml:space="preserve">
+    <value>≦項目＜</value>
+  </data>
+  <data name="comboItem5.Text" xml:space="preserve">
+    <value>≦項目≦</value>
+  </data>
+  <data name="comboItem6.Text" xml:space="preserve">
+    <value>＜項目≦</value>
+  </data>
+  <data name="lblCalibarationSetting.Text" xml:space="preserve">
+    <value>補正モード設定</value>
+  </data>
+  <data name="chkCalcBigFactorBeforeSmall.Text" xml:space="preserve">
+    <value>補正係数によって補正すると、対波長補正係数を使用して二重補正を行う</value>
+  </data>
+  <data name="chkIsUseNDFilterRatio.Text" xml:space="preserve">
+    <value>カスタマーのハロゲンランプ再校正で得られる係数を使用する</value>
+  </data>
+  <data name="labelX7.Text" xml:space="preserve">
+    <value>制限様式パラメーター設定</value>
+  </data>
+  <data name="labelX13.Text" xml:space="preserve">
+    <value>数える</value>
+  </data>
+  <data name="lblLimitStartTimeFactor.Text" xml:space="preserve">
+    <value>リミットモードのサーチ係数</value>
+  </data>
+  <data name="labelX17.Text" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="lblLimit02MinSTTime.Text" xml:space="preserve">
+    <value>リミット02モードの最小露光時間</value>
+  </data>
+  <data name="labelX8.Text" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="labelX16.Text" xml:space="preserve">
+    <value>"ST変更, DUT消電時間"</value>
+  </data>
+  <data name="labelX10.Text" xml:space="preserve">
+    <value>限界2　ピーク値％</value>
+  </data>
+  <data name="labelX14.Text" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="lblSpectrometerGroup.Text" xml:space="preserve">
+    <value>分光器パラメータ</value>
+  </data>
+  <data name="lblMaxWaveTitle.Text" xml:space="preserve">
+    <value>分光器感知の終点波長</value>
+  </data>
+  <data name="lblMinWaveTitle.Text" xml:space="preserve">
+    <value>分光器感知の起点波長</value>
+  </data>
+  <data name="labelX11.Text" xml:space="preserve">
+    <value>nm</value>
+  </data>
+  <data name="labelX12.Text" xml:space="preserve">
+    <value>nm</value>
+  </data>
+  <data name="chkIsCalcCCTAndCRI.Text" xml:space="preserve">
+    <value>"白光測定機能を起動する(CCT, CRI)"</value>
+  </data>
+  <data name="chkIsCalcCCTByCaliCIExy.Text" xml:space="preserve">
+    <value>補正済みの色度座標(CIE-x/y)を基いて色温度を計算する</value>
+  </data>
+  <data name="lblCCTCalcMode.Text" xml:space="preserve">
+    <value>相関色温度計算方法</value>
+  </data>
+  <data name="lblCalcSpecialWLPPlaceUnit.Text" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="chkIsCalcSpecailWLP.Text" xml:space="preserve">
+    <value>特殊WLPの計算</value>
+  </data>
+  <data name="lblNosieBase.Text" xml:space="preserve">
+    <value>基本ノイズ（初期値 = 0.0）</value>
+  </data>
+  <data name="lblSDCMSetting.Text" xml:space="preserve">
+    <value>SDCM設定</value>
+  </data>
+  <data name="chkIsCalcANSIAAndGB.Text" xml:space="preserve">
+    <value>米国規格協会(ANSI)及び中国標準規格(GB)の算出を有効にする</value>
+  </data>
+  <data name="lblANSICalcCCT.Text" xml:space="preserve">
+    <value>米国規格協会(ANSI)の相関色温度(CCT)算出</value>
+  </data>
+  <data name="lblGBCalcCCT.Text" xml:space="preserve">
+    <value>中国標準規格(GB)の相関色温度(CCT)算出</value>
+  </data>
+  <data name="lblPDDarkCorrectTitle.Text" xml:space="preserve">
+    <value>環境修正様式</value>
+  </data>
+  <data name="lblPDDetectorConfig.Text" xml:space="preserve">
+    <value>PD検出器構成</value>
+  </data>
+  <data name="comboItem1.Text" xml:space="preserve">
+    <value>≦項目＜</value>
+  </data>
+  <data name="comboItem2.Text" xml:space="preserve">
+    <value>≦項目≦</value>
+  </data>
+  <data name="comboItem3.Text" xml:space="preserve">
+    <value>＜項目≦</value>
+  </data>
+  <data name="comboItem7.Text" xml:space="preserve">
+    <value>＜量＜</value>
+  </data>
+  <data name="comboItem8.Text" xml:space="preserve">
+    <value>さまざま</value>
+  </data>
+  <data name="chkEnableSptModifyXCoeff.Text" xml:space="preserve">
+    <value>分光器の波長係数を産品によって修正する</value>
+  </data>
+  <data name="chkEnableSptModifyYweigth.Text" xml:space="preserve">
+    <value>分光器の測定強度結果を産品によって加重する</value>
+  </data>
+  <data name="chkEnableSptModifyYCoeff.Text" xml:space="preserve">
+    <value>分光器の測定強度係数を産品によって修正する</value>
+  </data>
+  <data name="chkIsFullyAutomatic.Text" xml:space="preserve">
+    <value>プローバーと通信し、フルオート生産を起動する</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>セーブ</value>
+  </data>
+  <data name="btnFAEFunc.Text" xml:space="preserve">
+    <value>FAF機能</value>
+  </data>
+  <data name="btnRDFunc.Text" xml:space="preserve">
+    <value>RD機能</value>
+  </data>
+  <data name="btnESDSysParam.Text" xml:space="preserve">
+    <value>ESDパラメーター</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>SysParam</value>
+  </data>
+</root>

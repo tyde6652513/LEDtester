@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6425A701-CA93-46F8-909C-3417C3C81BF9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MPI.Tester.GuiComponent</RootNamespace>
+    <AssemblyName>MPI.Tester.GuiComponent</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Assembly\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\Assembly\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Design, Version=9.5.0.8, Culture=neutral, PublicKeyToken=90f470f34c89ccaf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assembly\DevComponents.DotNetBar.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assembly\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="MPI.Tester.DeviceCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assembly\MPI.Tester.DeviceCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="MPI.Tester.Maths, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assembly\MPI.Tester.Maths.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PathUIComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PathUIComponent.Designer.cs">
+      <DependentUpon>PathUIComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TestItemComponent\CustomizeListComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TestItemComponent\CustomizeListComponent.designer.cs">
+      <DependentUpon>CustomizeListComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestItem\ForceRange\ForceRangeComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TestItem\ForceRange\ForceRangeComponent.Designer.cs">
+      <DependentUpon>ForceRangeComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestItem\ForceValue\UnitA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TestItem\ForceValue\UnitA.Designer.cs">
+      <DependentUpon>UnitA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestItem\ForceValue\UnitData.cs" />
+    <Compile Include="TestItem\ForceValue\UnitV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TestItem\ForceValue\UnitV.Designer.cs">
+      <DependentUpon>UnitV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestItem\ForceValue\UnitValueComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TestItem\ForceValue\UnitValueComponent.Designer.cs">
+      <DependentUpon>UnitValueComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnitMath.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PathUIComponent.resx">
+      <DependentUpon>PathUIComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestItemComponent\CustomizeListComponent.resx">
+      <DependentUpon>CustomizeListComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestItem\ForceRange\ForceRangeComponent.resx">
+      <DependentUpon>ForceRangeComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestItem\ForceValue\UnitA.resx">
+      <DependentUpon>UnitA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestItem\ForceValue\UnitV.resx">
+      <DependentUpon>UnitV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestItem\ForceValue\UnitValueComponent.resx">
+      <DependentUpon>UnitValueComponent.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MPI.Tester.Data\MPI.Tester.Data.csproj">
+      <Project>{33C2AD1C-45FE-4D42-86F2-E9685AEB51F3}</Project>
+      <Name>MPI.Tester.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

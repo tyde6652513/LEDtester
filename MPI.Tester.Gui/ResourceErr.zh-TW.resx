@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ERR_00001" xml:space="preserve">
+    <value>未定義的錯誤碼。(Undefined Error Code)</value>
+  </data>
+  <data name="ERR_00201" xml:space="preserve">
+    <value>光譜卡, 初始化失敗。</value>
+  </data>
+  <data name="ERR_00202" xml:space="preserve">
+    <value>光譜卡, 序號比對失敗。</value>
+  </data>
+  <data name="ERR_00203" xml:space="preserve">
+    <value>積分球, 序號比對失敗。</value>
+  </data>
+  <data name="ERR_00204" xml:space="preserve">
+    <value>光譜卡, 沒有參數設定資料。</value>
+  </data>
+  <data name="ERR_00205" xml:space="preserve">
+    <value>OPRS, 光譜卡自動 Count 設定失敗。</value>
+  </data>
+  <data name="ERR_00206" xml:space="preserve">
+    <value>OPRS, 光譜卡再連線失敗。</value>
+  </data>
+  <data name="ERR_00207" xml:space="preserve">
+    <value>OPRS, 光譜卡資料計算失敗。</value>
+  </data>
+  <data name="ERR_00208" xml:space="preserve">
+    <value>OPRS, 光譜卡觸發失敗。</value>
+  </data>
+  <data name="ERR_00209" xml:space="preserve">
+    <value>OPRS, 光譜卡讀取光強度失敗。</value>
+  </data>
+  <data name="ERR_00210" xml:space="preserve">
+    <value>OPRS, 光譜卡_保留。</value>
+  </data>
+  <data name="ERR_00211" xml:space="preserve">
+    <value>光譜卡, 讀取波長資料失敗。</value>
+  </data>
+  <data name="ERR_00212" xml:space="preserve">
+    <value>光譜卡, 讀取暗電流資料失敗。</value>
+  </data>
+  <data name="ERR_00213" xml:space="preserve">
+    <value>光譜卡, 載入校正檔失敗。</value>
+  </data>
+  <data name="ERR_00214" xml:space="preserve">
+    <value>光譜卡, 計算功能初始化失敗。</value>
+  </data>
+  <data name="ERR_00215" xml:space="preserve">
+    <value>光譜卡, 接收訊號異常</value>
+  </data>
+  <data name="ERR_00217" xml:space="preserve">
+    <value>光譜卡, 設定波長參數錯誤</value>
+  </data>
+  <data name="ERR_00218" xml:space="preserve">
+    <value>光譜卡, 設定校正頻譜錯誤</value>
+  </data>
+  <data name="ERR_00301" xml:space="preserve">
+    <value>測試機, 電流源初始化失敗。</value>
+  </data>
+  <data name="ERR_00302" xml:space="preserve">
+    <value>測試機, 沒有參數設定資料或設定資料錯誤。</value>
+  </data>
+  <data name="ERR_00303" xml:space="preserve">
+    <value>測試機, 輸出資料的 Index 錯誤。</value>
+  </data>
+  <data name="ERR_00304" xml:space="preserve">
+    <value>測試機, 掃描資料設定錯誤。</value>
+  </data>
+  <data name="ERR_00305" xml:space="preserve">
+    <value>測試機, PMU 設定錯誤。</value>
+  </data>
+  <data name="ERR_00306" xml:space="preserve">
+    <value>測試機, 輸出訊號(電流/電壓)的控制錯誤。</value>
+  </data>
+  <data name="ERR_00307" xml:space="preserve">
+    <value>測試機, 硬體裝置錯誤。</value>
+  </data>
+  <data name="ERR_00308" xml:space="preserve">
+    <value>測試機, 沒有對應的測試條件(Index 錯誤)。</value>
+  </data>
+  <data name="ERR_00309" xml:space="preserve">
+    <value>測試機, 箝制電壓設定錯誤。</value>
+  </data>
+  <data name="ERR_00310" xml:space="preserve">
+    <value>測試機, 掃描電壓檔位設定錯誤</value>
+  </data>
+  <data name="ERR_00311" xml:space="preserve">
+    <value>測試機, 掃描點數設定錯誤。</value>
+  </data>
+  <data name="ERR_00312" xml:space="preserve">
+    <value>測試機, 設定資料錯誤。</value>
+  </data>
+  <data name="ERR_00313" xml:space="preserve">
+    <value>測試機, 脈衝時間設定錯誤。</value>
+  </data>
+  <data name="ERR_00314" xml:space="preserve">
+    <value>測試機, 參數設定資料量超過額定上限。</value>
+  </data>
+  <data name="ERR_00315" xml:space="preserve">
+    <value>測試機, 硬體電壓/電流輸出錯誤。</value>
+  </data>
+  <data name="ERR_00317" xml:space="preserve">
+    <value>測試機, 電流源連線失敗。</value>
+  </data>
+  <data name="ERR_00319" xml:space="preserve">
+    <value>測試機, 訊號量測逾時。</value>
+  </data>
+  <data name="ERR_00320" xml:space="preserve">
+    <value>測試機, 未偵測到 Detector Channel。</value>
+  </data>
+  <data name="ERR_00401" xml:space="preserve">
+    <value>ESD, 初始化失敗。</value>
+  </data>
+  <data name="ERR_00402" xml:space="preserve">
+    <value>ESD, 寫入Relay Count檔案失敗。</value>
+  </data>
+  <data name="ERR_00403" xml:space="preserve">
+    <value>ESD, 讀取硬體序號失敗。</value>
+  </data>
+  <data name="ERR_00404" xml:space="preserve">
+    <value>ESD, 讀取教正檔案失敗。</value>
+  </data>
+  <data name="ERR_00405" xml:space="preserve">
+    <value>ESD, 比對校正檔案"序號"失敗。</value>
+  </data>
+  <data name="ERR_00406" xml:space="preserve">
+    <value>ESD, 比對校正檔案"型號"失敗。</value>
+  </data>
+  <data name="ERR_00407" xml:space="preserve">
+    <value>ESD, 比對校正檔案"版本"失敗。</value>
+  </data>
+  <data name="ERR_00408" xml:space="preserve">
+    <value>ESD, 比對校正檔案"流水號"失敗。</value>
+  </data>
+  <data name="ERR_00409" xml:space="preserve">
+    <value>ESD, 電壓設定錯誤。</value>
+  </data>
+  <data name="ERR_00410" xml:space="preserve">
+    <value>ESD, 參數設定資料量超過額定上限。</value>
+  </data>
+  <data name="ERR_00411" xml:space="preserve">
+    <value>ESD, 沒有參數設定資料。</value>
+  </data>
+  <data name="ERR_00412" xml:space="preserve">
+    <value>ESD, 電壓補償設定錯誤。</value>
+  </data>
+  <data name="ERR_00501" xml:space="preserve">
+    <value>Swtich系統, 初始化失敗。</value>
+  </data>
+  <data name="ERR_00502" xml:space="preserve">
+    <value>Switch系統, 開關卡未正確安裝。</value>
+  </data>
+  <data name="ERR_00503" xml:space="preserve">
+    <value>Switch系統, 設定參數檔案遺失。</value>
+  </data>
+  <data name="ERR_00504" xml:space="preserve">
+    <value>Switch系統, 設定切換通道錯誤。</value>
+  </data>
+  <data name="ERR_00601" xml:space="preserve">
+    <value>DAQ, 初始化失敗。</value>
+  </data>
+  <data name="ERR_00602" xml:space="preserve">
+    <value>DAQ, 訊號量測逾時。</value>
+  </data>
+  <data name="ERR_00701" xml:space="preserve">
+    <value>LCR 測試機, 初始化失敗。</value>
+  </data>
+  <data name="ERR_00702" xml:space="preserve">
+    <value>LCR 測試機, 設定資料錯誤。</value>
+  </data>
+  <data name="ERR_00703" xml:space="preserve">
+    <value>LAN, 訊號量測逾時。</value>
+  </data>
+  <data name="ERR_01001" xml:space="preserve">
+    <value>系統, 尚未準備完成，無法執行測試功能。</value>
+  </data>
+  <data name="ERR_01002" xml:space="preserve">
+    <value>系統, 測試資料動態儲存錯誤。</value>
+  </data>
+  <data name="ERR_01003" xml:space="preserve">
+    <value>系統, 硬體轉輪(衰減檔位)設定錯誤。請重新確認檔位</value>
+  </data>
+  <data name="ERR_01101" xml:space="preserve">
+    <value>系統, Prober多通道設定與Tester多通道設定不匹配</value>
+  </data>
+  <data name="ERR_10001" xml:space="preserve">
+    <value>_保留。</value>
+  </data>
+  <data name="ERR_10002" xml:space="preserve">
+    <value>_保留。</value>
+  </data>
+  <data name="ERR_10003" xml:space="preserve">
+    <value>載入人機介面設定檔失敗。</value>
+  </data>
+  <data name="ERR_10004" xml:space="preserve">
+    <value>載入測試機系統設定檔失敗。</value>
+  </data>
+  <data name="ERR_10005" xml:space="preserve">
+    <value>載入產品設定檔失敗。</value>
+  </data>
+  <data name="ERR_10006" xml:space="preserve">
+    <value>載入分Bin設定檔失敗。</value>
+  </data>
+  <data name="ERR_10007" xml:space="preserve">
+    <value>載入使用者定義資料檔失敗。</value>
+  </data>
+  <data name="ERR_10008" xml:space="preserve">
+    <value>載入工單檔失敗。</value>
+  </data>
+  <data name="ERR_10009" xml:space="preserve">
+    <value>重新設定載入的使用者定義資料失敗。</value>
+  </data>
+  <data name="ERR_10010" xml:space="preserve">
+    <value>無法找到匹配的使用者定義格式。</value>
+  </data>
+  <data name="ERR_10011" xml:space="preserve">
+    <value>工單檔案已經存在。</value>
+  </data>
+  <data name="ERR_10012" xml:space="preserve">
+    <value>測試結果輸出檔已經存在。</value>
+  </data>
+  <data name="ERR_10013" xml:space="preserve">
+    <value>_保留。</value>
+  </data>
+  <data name="ERR_10014" xml:space="preserve">
+    <value>沒有適合的儀器規格說明在機台硬體配置設定檔中。</value>
+  </data>
+  <data name="ERR_10015" xml:space="preserve">
+    <value>_保留。</value>
+  </data>
+  <data name="ERR_10016" xml:space="preserve">
+    <value>選擇的光亮度測試值單位無法匹配。</value>
+  </data>
+  <data name="ERR_10017" xml:space="preserve">
+    <value>儲存檔案失敗。</value>
+  </data>
+  <data name="ERR_10018" xml:space="preserve">
+    <value>儲存路徑目錄設定失敗。</value>
+  </data>
+  <data name="ERR_10019" xml:space="preserve">
+    <value>輸入的儲存檔檔名無效。</value>
+  </data>
+  <data name="ERR_10020" xml:space="preserve">
+    <value>轉換Bin表, 找不到適合匹配的各項資料欄位表示。</value>
+  </data>
+  <data name="ERR_10021" xml:space="preserve">
+    <value>轉換Bin表, 找不到適合匹配的Bin設定欄位。</value>
+  </data>
+  <data name="ERR_10022" xml:space="preserve">
+    <value>轉換Bin表, 轉換失敗。</value>
+  </data>
+  <data name="ERR_10023" xml:space="preserve">
+    <value>轉換Bin表, 轉換後儲存的目錄設定失敗。</value>
+  </data>
+  <data name="ERR_10024" xml:space="preserve">
+    <value>轉換Bin表, 載入測試資料失敗。</value>
+  </data>
+  <data name="ERR_10025" xml:space="preserve">
+    <value>轉換Bin表, 儲存轉換後的資料失敗。</value>
+  </data>
+  <data name="ERR_10026" xml:space="preserve">
+    <value>CM,載入校正檔(.cal)失敗</value>
+  </data>
+  <data name="ERR_10027" xml:space="preserve">
+    <value>CM,輸出校正檔(.cal)失敗</value>
+  </data>
+  <data name="ERR_10029" xml:space="preserve">
+    <value>CM,載入分選檔(.sr2)失敗</value>
+  </data>
+  <data name="ERR_10030" xml:space="preserve">
+    <value>CM,輸出分選檔(.sr2)失敗</value>
+  </data>
+  <data name="ERR_10031" xml:space="preserve">
+    <value>Bin表, 選擇項目錯誤。</value>
+  </data>
+  <data name="ERR_10037" xml:space="preserve">
+    <value>CM,載入光譜儀校正係數(.spt)失敗</value>
+  </data>
+  <data name="ERR_10038" xml:space="preserve">
+    <value>輸出檔案路徑不存在。</value>
+  </data>
+  <data name="ERR_10039" xml:space="preserve">
+    <value>自動儲存監控係數檔案失敗。</value>
+  </data>
+  <data name="ERR_10040" xml:space="preserve">
+    <value>無法取得足夠記憶體進行報表擋案輸出。</value>
+  </data>
+  <data name="ERR_10041" xml:space="preserve">
+    <value>載入分Map設定檔失敗。</value>
+  </data>
+  <data name="ERR_10042" xml:space="preserve">
+    <value>連線模式錯誤。</value>
+  </data>
+  <data name="ERR_10043" xml:space="preserve">
+    <value>輸出檔案副檔名重複</value>
+  </data>
+  <data name="ERR_10044" xml:space="preserve">
+    <value>TCP/IP, 連線逾時。</value>
+  </data>
+  <data name="ERR_10050" xml:space="preserve">
+    <value>依照Recipe建立的輸出檔案格式錯誤。</value>
+  </data>
+  <data name="ERR_10051" xml:space="preserve">
+    <value>接續點測，資料格式不符合</value>
+  </data>
+  <data name="ERR_10060" xml:space="preserve">
+    <value>多通道設定, 產品檔設定資料與硬體設定不匹配</value>
+  </data>
+  <data name="ERR_10101" xml:space="preserve">
+    <value>WM, 全測模式下, 載入 mk 檔案失敗。</value>
+  </data>
+  <data name="ERR_10102" xml:space="preserve">
+    <value>WM, 找不到 mk 檔內適合的資料。</value>
+  </data>
+  <data name="ERR_10103" xml:space="preserve">
+    <value>WM, 批號不匹配。</value>
+  </data>
+  <data name="ERR_10104" xml:space="preserve">
+    <value>WM, 校正參數不匹配。</value>
+  </data>
+  <data name="ERR_10105" xml:space="preserve">
+    <value>WM, 抽測模式下, 載入 mk 檔案失失敗。</value>
+  </data>
+  <data name="ERR_10106" xml:space="preserve">
+    <value>WM, 晶圓序號不匹配。</value>
+  </data>
+  <data name="ERR_10126" xml:space="preserve">
+    <value>載入校正檔(.cal)跟目前機台不吻合。</value>
+  </data>
+  <data name="ERR_20001" xml:space="preserve">
+    <value>Tools, 載入標準檔資料錯誤。</value>
+  </data>
+  <data name="ERR_20002" xml:space="preserve">
+    <value>Tools, 載入量測檔資料錯誤。</value>
+  </data>
+  <data name="ERR_20003" xml:space="preserve">
+    <value>Tools, 無比對資料。</value>
+  </data>
+  <data name="ERR_20004" xml:space="preserve">
+    <value>Tools, 比對量測和點測資料錯誤。</value>
+  </data>
+  <data name="ERR_20005" xml:space="preserve">
+    <value>Tools, 載入標準檔表頭不一致。</value>
+  </data>
+  <data name="ERR_20006" xml:space="preserve">
+    <value>Tools, 載入量測檔表頭不一致。</value>
+  </data>
+  <data name="ERR_20007" xml:space="preserve">
+    <value>Tools, 資料無定義Row/Col。</value>
+  </data>
+  <data name="ERR_20008" xml:space="preserve">
+    <value>Tools, 資料無定義Test。</value>
+  </data>
+  <data name="ERR_20101" xml:space="preserve">
+    <value>每日校正(自主校正)，讀取規格檔錯誤。</value>
+  </data>
+  <data name="ERR_20105" xml:space="preserve">
+    <value>每日校正(自主校正)，儲存比對後資料錯誤。</value>
+  </data>
+  <data name="ERR_20106" xml:space="preserve">
+    <value>每日校正(自主校正)，儲存校正紀錄錯誤。</value>
+  </data>
+  <data name="ERR_20110" xml:space="preserve">
+    <value>日校正程序發生錯誤，請確認資料是否正確 !!</value>
+  </data>
+  <data name="ERR_20111" xml:space="preserve">
+    <value>日校正結果超出規格</value>
+  </data>
+  <data name="ERR_20112" xml:space="preserve">
+    <value>日校正結果超出規格</value>
+  </data>
+  <data name="ERR_20113" xml:space="preserve">
+    <value>日校正結果超出規格</value>
+  </data>
+  <data name="ERR_30000" xml:space="preserve">
+    <value>MES,載入MES系統資料錯誤。</value>
+  </data>
+  <data name="ERR_30001" xml:space="preserve">
+    <value>MES,載入產品檔(Recipe)失敗。</value>
+  </data>
+  <data name="ERR_30002" xml:space="preserve">
+    <value>MES,CM,載入校正檔(.cal)失敗</value>
+  </data>
+  <data name="ERR_30003" xml:space="preserve">
+    <value>MES,載入輸出檔案錯誤</value>
+  </data>
+  <data name="ERR_30004" xml:space="preserve">
+    <value>MES,載入條碼格式不正確。</value>
+  </data>
+  <data name="ERR_30005" xml:space="preserve">
+    <value>MES,設定網路磁碟路徑不存在。</value>
+  </data>
+  <data name="ERR_30006" xml:space="preserve">
+    <value>MES,開啟MES系統資料錯誤。</value>
+  </data>
+  <data name="ERR_30007" xml:space="preserve">
+    <value>MES, 產品工單(Recipe)不存在。</value>
+  </data>
+  <data name="ERR_30008" xml:space="preserve">
+    <value>MES, 沒有相對應的產品工單(Recipe)。</value>
+  </data>
+  <data name="ERR_30009" xml:space="preserve">
+    <value>MES, 讀取客戶端資料格式失敗。</value>
+  </data>
+  <data name="ERR_30010" xml:space="preserve">
+    <value>MES,轉換格式錯誤。</value>
+  </data>
+  <data name="ERR_30011" xml:space="preserve">
+    <value>MES,儲存轉換資料錯誤。</value>
+  </data>
+  <data name="ERR_30012" xml:space="preserve">
+    <value>MES,載入Bin表失敗。</value>
+  </data>
+  <data name="ERR_30013" xml:space="preserve">
+    <value>MES,轉換參考檔案不存在。</value>
+  </data>
+  <data name="ERR_30014" xml:space="preserve">
+    <value>MES, 讀取 WaferID不符合。</value>
+  </data>
+  <data name="ERR_30015" xml:space="preserve">
+    <value>MES,(.rm2)檔案不存在</value>
+  </data>
+  <data name="ERR_30016" xml:space="preserve">
+    <value>每日校正 (自主校正) 沒有執行，請執行後再行生產</value>
+  </data>
+  <data name="ERR_30017" xml:space="preserve">
+    <value>MES, 機台端Recipe和標準Recipe內容不一致。</value>
+  </data>
+  <data name="ERR_40001" xml:space="preserve">
+    <value>標籤機, 執行軟體或tsclib.dll不存在。</value>
+  </data>
+  <data name="ERR_40002" xml:space="preserve">
+    <value>標籤機, 資料檔案(.xtmp)不存在或被其他程序使用中。</value>
+  </data>
+  <data name="ERR_40003" xml:space="preserve">
+    <value>標籤機, 資料檔案(.xslt)不存在或被其他程序使用中。</value>
+  </data>
+  <data name="ERR_40004" xml:space="preserve">
+    <value>標籤機, 轉換檔案失敗。</value>
+  </data>
+  <data name="ERR_40005" xml:space="preserve">
+    <value>標籤機, 執行列印失敗。</value>
+  </data>
+</root>

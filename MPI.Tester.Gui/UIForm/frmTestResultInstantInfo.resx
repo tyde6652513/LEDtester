@@ -1,0 +1,720 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblStartTimeData.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblStartTimeData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>369, 32</value>
+  </data>
+  <data name="lblStartTimeData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 25</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblStartTimeData.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="lblStartTimeData.Text" xml:space="preserve">
+    <value>0000/00/00 00:00:00</value>
+  </data>
+  <data name="&gt;&gt;lblStartTimeData.Name" xml:space="preserve">
+    <value>lblStartTimeData</value>
+  </data>
+  <data name="&gt;&gt;lblStartTimeData.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblStartTimeData.Parent" xml:space="preserve">
+    <value>gplProductionInfo</value>
+  </data>
+  <data name="&gt;&gt;lblStartTimeData.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblStartTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblStartTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 32</value>
+  </data>
+  <data name="lblStartTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 25</value>
+  </data>
+  <data name="lblStartTime.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="lblStartTime.Text" xml:space="preserve">
+    <value>Start Time</value>
+  </data>
+  <data name="&gt;&gt;lblStartTime.Name" xml:space="preserve">
+    <value>lblStartTime</value>
+  </data>
+  <data name="&gt;&gt;lblStartTime.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblStartTime.Parent" xml:space="preserve">
+    <value>gplProductionInfo</value>
+  </data>
+  <data name="&gt;&gt;lblStartTime.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblBinData.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblBinData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>449, 5</value>
+  </data>
+  <data name="lblBinData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 25</value>
+  </data>
+  <data name="lblBinData.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="lblBinData.Text" xml:space="preserve">
+    <value>000</value>
+  </data>
+  <data name="&gt;&gt;lblBinData.Name" xml:space="preserve">
+    <value>lblBinData</value>
+  </data>
+  <data name="&gt;&gt;lblBinData.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblBinData.Parent" xml:space="preserve">
+    <value>gplProductionInfo</value>
+  </data>
+  <data name="&gt;&gt;lblBinData.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblBin.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblBin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 5</value>
+  </data>
+  <data name="lblBin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 25</value>
+  </data>
+  <data name="lblBin.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="lblBin.Text" xml:space="preserve">
+    <value>Bin</value>
+  </data>
+  <data name="&gt;&gt;lblBin.Name" xml:space="preserve">
+    <value>lblBin</value>
+  </data>
+  <data name="&gt;&gt;lblBin.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblBin.Parent" xml:space="preserve">
+    <value>gplProductionInfo</value>
+  </data>
+  <data name="&gt;&gt;lblBin.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblFailCountData.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="lblFailCountData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1120, 36</value>
+  </data>
+  <data name="lblFailCountData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 25</value>
+  </data>
+  <data name="lblFailCountData.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="lblFailCountData.Text" xml:space="preserve">
+    <value>000000</value>
+  </data>
+  <data name="&gt;&gt;lblFailCountData.Name" xml:space="preserve">
+    <value>lblFailCountData</value>
+  </data>
+  <data name="&gt;&gt;lblFailCountData.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblFailCountData.Parent" xml:space="preserve">
+    <value>gplProductionInfo</value>
+  </data>
+  <data name="&gt;&gt;lblFailCountData.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblPassCountData.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="lblPassCountData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1120, 5</value>
+  </data>
+  <data name="lblPassCountData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 25</value>
+  </data>
+  <data name="lblPassCountData.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="lblPassCountData.Text" xml:space="preserve">
+    <value>000000</value>
+  </data>
+  <data name="&gt;&gt;lblPassCountData.Name" xml:space="preserve">
+    <value>lblPassCountData</value>
+  </data>
+  <data name="&gt;&gt;lblPassCountData.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblPassCountData.Parent" xml:space="preserve">
+    <value>gplProductionInfo</value>
+  </data>
+  <data name="&gt;&gt;lblPassCountData.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblTestCountData.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblTestCountData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>880, 5</value>
+  </data>
+  <data name="lblTestCountData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 25</value>
+  </data>
+  <data name="lblTestCountData.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="lblTestCountData.Text" xml:space="preserve">
+    <value>000000</value>
+  </data>
+  <data name="&gt;&gt;lblTestCountData.Name" xml:space="preserve">
+    <value>lblTestCountData</value>
+  </data>
+  <data name="&gt;&gt;lblTestCountData.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblTestCountData.Parent" xml:space="preserve">
+    <value>gplProductionInfo</value>
+  </data>
+  <data name="&gt;&gt;lblTestCountData.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblRowYData.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblRowYData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>654, 36</value>
+  </data>
+  <data name="lblRowYData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 25</value>
+  </data>
+  <data name="lblRowYData.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="lblRowYData.Text" xml:space="preserve">
+    <value>00000</value>
+  </data>
+  <data name="&gt;&gt;lblRowYData.Name" xml:space="preserve">
+    <value>lblRowYData</value>
+  </data>
+  <data name="&gt;&gt;lblRowYData.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblRowYData.Parent" xml:space="preserve">
+    <value>gplProductionInfo</value>
+  </data>
+  <data name="&gt;&gt;lblRowYData.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lblColXData.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblColXData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>654, 5</value>
+  </data>
+  <data name="lblColXData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 25</value>
+  </data>
+  <data name="lblColXData.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="lblColXData.Text" xml:space="preserve">
+    <value>00000</value>
+  </data>
+  <data name="&gt;&gt;lblColXData.Name" xml:space="preserve">
+    <value>lblColXData</value>
+  </data>
+  <data name="&gt;&gt;lblColXData.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblColXData.Parent" xml:space="preserve">
+    <value>gplProductionInfo</value>
+  </data>
+  <data name="&gt;&gt;lblColXData.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lblFailCount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblFailCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>979, 36</value>
+  </data>
+  <data name="lblFailCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 25</value>
+  </data>
+  <data name="lblFailCount.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lblFailCount.Text" xml:space="preserve">
+    <value>Fail</value>
+  </data>
+  <data name="&gt;&gt;lblFailCount.Name" xml:space="preserve">
+    <value>lblFailCount</value>
+  </data>
+  <data name="&gt;&gt;lblFailCount.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblFailCount.Parent" xml:space="preserve">
+    <value>gplProductionInfo</value>
+  </data>
+  <data name="&gt;&gt;lblFailCount.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lblPassCount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblPassCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>979, 5</value>
+  </data>
+  <data name="lblPassCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 25</value>
+  </data>
+  <data name="lblPassCount.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="lblPassCount.Text" xml:space="preserve">
+    <value>Pass</value>
+  </data>
+  <data name="&gt;&gt;lblPassCount.Name" xml:space="preserve">
+    <value>lblPassCount</value>
+  </data>
+  <data name="&gt;&gt;lblPassCount.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblPassCount.Parent" xml:space="preserve">
+    <value>gplProductionInfo</value>
+  </data>
+  <data name="&gt;&gt;lblPassCount.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lblTestCount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblTestCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>730, 5</value>
+  </data>
+  <data name="lblTestCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 25</value>
+  </data>
+  <data name="lblTestCount.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lblTestCount.Text" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="&gt;&gt;lblTestCount.Name" xml:space="preserve">
+    <value>lblTestCount</value>
+  </data>
+  <data name="&gt;&gt;lblTestCount.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblTestCount.Parent" xml:space="preserve">
+    <value>gplProductionInfo</value>
+  </data>
+  <data name="&gt;&gt;lblTestCount.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="lblRowY.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblRowY.Location" type="System.Drawing.Point, System.Drawing">
+    <value>512, 36</value>
+  </data>
+  <data name="lblRowY.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 25</value>
+  </data>
+  <data name="lblRowY.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lblRowY.Text" xml:space="preserve">
+    <value>Row ( Y )</value>
+  </data>
+  <data name="&gt;&gt;lblRowY.Name" xml:space="preserve">
+    <value>lblRowY</value>
+  </data>
+  <data name="&gt;&gt;lblRowY.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblRowY.Parent" xml:space="preserve">
+    <value>gplProductionInfo</value>
+  </data>
+  <data name="&gt;&gt;lblRowY.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="lblColX.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblColX.Location" type="System.Drawing.Point, System.Drawing">
+    <value>512, 5</value>
+  </data>
+  <data name="lblColX.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 25</value>
+  </data>
+  <data name="lblColX.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblColX.Text" xml:space="preserve">
+    <value>Col ( X )</value>
+  </data>
+  <data name="&gt;&gt;lblColX.Name" xml:space="preserve">
+    <value>lblColX</value>
+  </data>
+  <data name="&gt;&gt;lblColX.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblColX.Parent" xml:space="preserve">
+    <value>gplProductionInfo</value>
+  </data>
+  <data name="&gt;&gt;lblColX.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="lblPassRateData.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblPassRateData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>880, 36</value>
+  </data>
+  <data name="lblPassRateData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 25</value>
+  </data>
+  <data name="lblPassRateData.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblPassRateData.Text" xml:space="preserve">
+    <value>100.00 %</value>
+  </data>
+  <data name="&gt;&gt;lblPassRateData.Name" xml:space="preserve">
+    <value>lblPassRateData</value>
+  </data>
+  <data name="&gt;&gt;lblPassRateData.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblPassRateData.Parent" xml:space="preserve">
+    <value>gplProductionInfo</value>
+  </data>
+  <data name="&gt;&gt;lblPassRateData.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="lblRunTimeData.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblRunTimeData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 36</value>
+  </data>
+  <data name="lblRunTimeData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 25</value>
+  </data>
+  <data name="lblRunTimeData.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblRunTimeData.Text" xml:space="preserve">
+    <value>00:00:00</value>
+  </data>
+  <data name="&gt;&gt;lblRunTimeData.Name" xml:space="preserve">
+    <value>lblRunTimeData</value>
+  </data>
+  <data name="&gt;&gt;lblRunTimeData.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblRunTimeData.Parent" xml:space="preserve">
+    <value>gplProductionInfo</value>
+  </data>
+  <data name="&gt;&gt;lblRunTimeData.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="lblTestTimeData.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblTestTimeData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 7</value>
+  </data>
+  <data name="lblTestTimeData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 25</value>
+  </data>
+  <data name="lblTestTimeData.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblTestTimeData.Text" xml:space="preserve">
+    <value>00000</value>
+  </data>
+  <data name="&gt;&gt;lblTestTimeData.Name" xml:space="preserve">
+    <value>lblTestTimeData</value>
+  </data>
+  <data name="&gt;&gt;lblTestTimeData.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblTestTimeData.Parent" xml:space="preserve">
+    <value>gplProductionInfo</value>
+  </data>
+  <data name="&gt;&gt;lblTestTimeData.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="lblPassRate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblPassRate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>730, 36</value>
+  </data>
+  <data name="lblPassRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 25</value>
+  </data>
+  <data name="lblPassRate.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblPassRate.Text" xml:space="preserve">
+    <value>Pass Rate</value>
+  </data>
+  <data name="&gt;&gt;lblPassRate.Name" xml:space="preserve">
+    <value>lblPassRate</value>
+  </data>
+  <data name="&gt;&gt;lblPassRate.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblPassRate.Parent" xml:space="preserve">
+    <value>gplProductionInfo</value>
+  </data>
+  <data name="&gt;&gt;lblPassRate.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="lblRunTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblRunTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 36</value>
+  </data>
+  <data name="lblRunTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 25</value>
+  </data>
+  <data name="lblRunTime.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblRunTime.Text" xml:space="preserve">
+    <value>Running Time</value>
+  </data>
+  <data name="&gt;&gt;lblRunTime.Name" xml:space="preserve">
+    <value>lblRunTime</value>
+  </data>
+  <data name="&gt;&gt;lblRunTime.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblRunTime.Parent" xml:space="preserve">
+    <value>gplProductionInfo</value>
+  </data>
+  <data name="&gt;&gt;lblRunTime.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="lblTestTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblTestTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 5</value>
+  </data>
+  <data name="lblTestTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 25</value>
+  </data>
+  <data name="lblTestTime.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblTestTime.Text" xml:space="preserve">
+    <value>Die Test Time</value>
+  </data>
+  <data name="&gt;&gt;lblTestTime.Name" xml:space="preserve">
+    <value>lblTestTime</value>
+  </data>
+  <data name="&gt;&gt;lblTestTime.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblTestTime.Parent" xml:space="preserve">
+    <value>gplProductionInfo</value>
+  </data>
+  <data name="&gt;&gt;lblTestTime.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="gplProductionInfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 11.25pt, style=Bold</value>
+  </data>
+  <data name="gplProductionInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gplProductionInfo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="gplProductionInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1250, 69</value>
+  </data>
+  <data name="gplProductionInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gplProductionInfo.Name" xml:space="preserve">
+    <value>gplProductionInfo</value>
+  </data>
+  <data name="&gt;&gt;gplProductionInfo.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.GroupPanel, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;gplProductionInfo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gplProductionInfo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="tmrUpdate.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>49</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1250, 70</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>Manual</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Test Result</value>
+  </data>
+  <data name="&gt;&gt;tmrUpdate.Name" xml:space="preserve">
+    <value>tmrUpdate</value>
+  </data>
+  <data name="&gt;&gt;tmrUpdate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmTestResultInstantInfo</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

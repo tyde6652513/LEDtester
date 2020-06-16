@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{948C8B36-F5F9-4183-9592-B385E2CC1ACC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MPI.Tester.TestServer</RootNamespace>
+    <AssemblyName>MPI.Tester.TestServer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>C:\MPI\LEDTester\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Assembly\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MPI">
+      <HintPath>..\Assembly\MPI.dll</HintPath>
+    </Reference>
+    <Reference Include="MPI.IPC">
+      <HintPath>..\Assembly\MPI.IPC.dll</HintPath>
+    </Reference>
+    <Reference Include="MPI.MCF, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assembly\MPI.MCF.dll</HintPath>
+    </Reference>
+    <Reference Include="MPI.RemoteControl.MPIDS7600Command">
+      <HintPath>..\Assembly\MPI.RemoteControl.MPIDS7600Command.dll</HintPath>
+    </Reference>
+    <Reference Include="MPI.UCF.ControlServer">
+      <HintPath>..\Assembly\MPI.UCF.ControlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client.cs" />
+    <Compile Include="Enumerations.cs" />
+    <Compile Include="IOServer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerEventData.cs" />
+    <Compile Include="TCPTestServer.cs" />
+    <Compile Include="TestServer.cs" />
+    <Compile Include="TSEProtocal\Command.cs" />
+    <Compile Include="TSEProtocal\TSECommand.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MPI.RemoteControl.Tester\MPI.RemoteControl.Tester.csproj">
+      <Project>{342C9E98-0A7C-4515-AEDA-44C0972B6496}</Project>
+      <Name>MPI.RemoteControl.Tester</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester.Data\MPI.Tester.Data.csproj">
+      <Project>{33C2AD1C-45FE-4D42-86F2-E9685AEB51F3}</Project>
+      <Name>MPI.Tester.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester.Device2\MPI.Tester.Device2.csproj">
+      <Project>{2130CA87-A23D-4D40-AECE-30B87CFB1F41}</Project>
+      <Name>MPI.Tester.Device2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester.DeviceCommon\MPI.Tester.DeviceCommon.csproj">
+      <Project>{E1AEFEEE-68BB-47C5-B6CC-826BDA0DABAA}</Project>
+      <Name>MPI.Tester.DeviceCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester.TestKernel\MPI.Tester.TestKernel.csproj">
+      <Project>{FD9B1C73-4CCC-481F-B7A7-8E8BF4A834AB}</Project>
+      <Name>MPI.Tester.TestKernel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

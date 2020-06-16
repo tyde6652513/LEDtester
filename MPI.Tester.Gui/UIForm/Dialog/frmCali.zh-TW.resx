@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="txtMsrtPathAndFile.Text" xml:space="preserve">
+    <value>載入機台點測資料</value>
+  </data>
+  <data name="txtStdPathAndFile.Text" xml:space="preserve">
+    <value>載入原始標準資料</value>
+  </data>
+  <data name="btnConfirmFilterSets.Text" xml:space="preserve">
+    <value>儲存</value>
+  </data>
+  <data name="labelX25.Text" xml:space="preserve">
+    <value>增加 Gain 計算的精度位數</value>
+  </data>
+  <data name="labelX22.Text" xml:space="preserve">
+    <value>增加 Offset 計算的精度位數</value>
+  </data>
+  <data name="chkByRowCol.Text" xml:space="preserve">
+    <value>依據相同座標 (Row , Col) 比對</value>
+  </data>
+  <data name="labelX14.Text" xml:space="preserve">
+    <value>波長補償範圍的終點</value>
+  </data>
+  <data name="labelX13.Text" xml:space="preserve">
+    <value>波長補償範圍的起點</value>
+  </data>
+  <data name="labelX6.Text" xml:space="preserve">
+    <value>波長補償的延伸模式</value>
+  </data>
+  <data name="labelX29.Text" xml:space="preserve">
+    <value>係數計算集中範圍</value>
+  </data>
+  <data name="labelX5.Text" xml:space="preserve">
+    <value>波長延伸的點數</value>
+  </data>
+  <data name="labelX12.Text" xml:space="preserve">
+    <value>係數計算模式</value>
+  </data>
+  <data name="lblCompareDifferent.Text" xml:space="preserve">
+    <value>兩個檔案差值</value>
+  </data>
+  <data name="lblStdMsrtFilters.Text" xml:space="preserve">
+    <value>標準檔案和量測檔案個別上下限設定</value>
+  </data>
+  <data name="tabiFilter.Text" xml:space="preserve">
+    <value>篩選條件
+功能設定</value>
+  </data>
+  <data name="btnReloadGainOffset.Text" xml:space="preserve">
+    <value>重新載入
+Gain / Offset</value>
+  </data>
+  <data name="btnCombineToGainOffset2.Text" xml:space="preserve">
+    <value>合併單項係數</value>
+  </data>
+  <data name="labelX7.Text" xml:space="preserve">
+    <value>Gain Offset 補償表(2)</value>
+  </data>
+  <data name="btnCombineToGainOffset.Text" xml:space="preserve">
+    <value>合併單項係數</value>
+  </data>
+  <data name="btnCombineAllGainOffset.Text" xml:space="preserve">
+    <value>合併全部係數</value>
+  </data>
+  <data name="lblGainOffset1.Text" xml:space="preserve">
+    <value>Gain Offset 補償表(1)</value>
+  </data>
+  <data name="lblCalcGainOffset.Text" xml:space="preserve">
+    <value>計算修正的補償係數</value>
+  </data>
+  <data name="tabiNormal.Text" xml:space="preserve">
+    <value>一般模式</value>
+  </data>
+  <data name="btnCalcLineRegress.Text" xml:space="preserve">
+    <value>計算    y= ax+b</value>
+  </data>
+  <data name="btnCombineLinearResult.Text" xml:space="preserve">
+    <value>合併全部係數</value>
+  </data>
+  <data name="labelX3.Text" xml:space="preserve">
+    <value>計算項目</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tabpLinear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tabpLinear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>538, 585</value>
+  </data>
+  <data name="btnResetSysGainOffset.Text" xml:space="preserve">
+    <value>重設
+Gain / Offset</value>
+  </data>
+  <data name="btnSaveGainOffsetToSys.Text" xml:space="preserve">
+    <value>儲存
+Gain / Offset到系統</value>
+  </data>
+  <data name="lblSystemTableName.Text" xml:space="preserve">
+    <value>系統補償係數表</value>
+  </data>
+  <data name="tabiCalcGainOffset.Text" xml:space="preserve">
+    <value>補償係數表</value>
+  </data>
+  <data name="btnRefreshCoef.Text" xml:space="preserve">
+    <value>重畫補償曲線</value>
+  </data>
+  <data name="btnSaveCoefTableToSys.Text" xml:space="preserve">
+    <value>儲存多波段係數到系統</value>
+  </data>
+  <data name="tabiWaveLOP.Text" xml:space="preserve">
+    <value>多波段修正</value>
+  </data>
+  <data name="tabiVFCheck.Text" xml:space="preserve">
+    <value>電壓比對圖</value>
+  </data>
+  <data name="gpbCoefTable.Text" xml:space="preserve">
+    <value>係數表欄位設定</value>
+  </data>
+  <data name="lblStdFolderPath.Text" xml:space="preserve">
+    <value>標準檔案資料夾</value>
+  </data>
+  <data name="lblComparedPath.Text" xml:space="preserve">
+    <value>比對檔案資料夾</value>
+  </data>
+  <data name="lblMsrtFolderPath.Text" xml:space="preserve">
+    <value>量測檔案資料夾</value>
+  </data>
+  <data name="chkIsAutoClearChart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 23</value>
+  </data>
+  <data name="chkIsAutoClearChart.Text" xml:space="preserve">
+    <value>每次秀圖都自動清圖</value>
+  </data>
+  <data name="labelX16.Text" xml:space="preserve">
+    <value>畫出資料點</value>
+  </data>
+  <data name="labelX15.Text" xml:space="preserve">
+    <value>資料點顏色</value>
+  </data>
+  <data name="chkIsSetPlotColor.Text" xml:space="preserve">
+    <value>指定顏色</value>
+  </data>
+  <data name="colorPicker.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAC9JREFUOE9j+P//
+        PwMlGKwZCEAEyRisF2YAqa4AWThqwGgYDMd0QFFmIjUjIasHALEslYcYaMqwAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="labelX27.Text" xml:space="preserve">
+    <value>波長校正標準</value>
+  </data>
+  <data name="labelX17.Text" xml:space="preserve">
+    <value>亮度校正標準</value>
+  </data>
+  <data name="labelX4.Text" xml:space="preserve">
+    <value>電壓圖表的X軸設定</value>
+  </data>
+  <data name="labelX10.Text" xml:space="preserve">
+    <value>資料點外觀填滿</value>
+  </data>
+  <data name="labelX9.Text" xml:space="preserve">
+    <value>資料點外觀</value>
+  </data>
+  <data name="labelX34.Text" xml:space="preserve">
+    <value>畫出補償曲線</value>
+  </data>
+  <data name="labelX11.Text" xml:space="preserve">
+    <value>畫出邊界範圍</value>
+  </data>
+  <data name="labelX2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>680, 57</value>
+  </data>
+  <data name="labelX1.Text" xml:space="preserve">
+    <value>檔案資料夾路徑設定</value>
+  </data>
+  <data name="labelX106.Text" xml:space="preserve">
+    <value>基本圖形設定</value>
+  </data>
+  <data name="btnSaveToolsConfig.Text" xml:space="preserve">
+    <value>儲存</value>
+  </data>
+  <data name="tabiSetting.Text" xml:space="preserve">
+    <value>基本設定</value>
+  </data>
+  <data name="labelX8.Text" xml:space="preserve">
+    <value>各欄位資料與格式</value>
+  </data>
+  <data name="tabiFormat.Text" xml:space="preserve">
+    <value>資料格式</value>
+  </data>
+  <data name="labelX21.Text" xml:space="preserve">
+    <value>計算的係數表</value>
+  </data>
+  <data name="btnCompareCalcCoefTable.Text" xml:space="preserve">
+    <value>[B]  比對資料 / 計算
+( 校正 )</value>
+  </data>
+  <data name="btnOpenMultiFileForm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAbBJREFUOE99k0tL
+        AlEUx2fTNsplhFb02PSw/FxBi6hFlGWE2ucIWjTYiK/UWhXYJizC1BiFSGdMLZ+VUXA65zp3cGzswJ87
+        9zLnd8//nnuFBXe0Nr0XBpszBNadIJPNGYSp3RDM7UdSi+6osOKNC45DcwmUPCiu5CqBjhlkEIB2pvBn
+        VCYprbL50JrIxkuEzLrCR0ueqGD3xJiWvTEdKFDJFOe5Clyg4nKFzVdPkjpkfDsAk2hpAjfTrIncmg5I
+        PL/CNYrGp/qHwdXohmSY91rTAclSA241JdU63CgoHCmG131wnu9Wxq0RBA9Z1AHZagtIj9pI3xkUByQK
+        tT/WyI4OKDY7oKDUVlf0TWsccF9uQKHxabBixXbrADFVhNMHxSBa44A8nssdWuy1Rg0QeBt9WrKUVrCV
+        XRCtcYD63gH5rc1scmsM8N9F4vWOYBfa3z/w0v4yWGOA+YNIkyDUY6qGX+mxrQBYNiWwYDLeQjiTy+DH
+        S0aVcWsMgGFHOfpFJ0wRy5VZciBb0gHcGm1m+kjoqs64Br8Rbo0qNwXQwzGzxi2SXUqmf8jCoDC11mfV
+        /gtcPrrvSGcA0AAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnOpenMultiFileForm.Text" xml:space="preserve">
+    <value>多檔比對</value>
+  </data>
+  <data name="btnSaveCompareData.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAjFJREFUOE+NkkFo
+        E1EQhudavHnQk4dCU0spqCgYhFgUxC6oVIwStKAlRBtsIomh0q1paUAKhYKh4CEHe7AqCB68BPRiCagX
+        CVTsQUSsYmJoF2OTTbqbbDLOv7CLoEEffMx78+b/9719Q3NPQuSfnqbzMzOnhav/oOdcMklnVZWGJyep
+        z+cjgsHU0jjJxrWaZXHZNHmjXueCrvPXapW/VCo2z3I5Ro3gcQxgAoMVgTuReX6H3xcK/DCbZQwRjwke
+        iG2D1OMr9kangf21YpEXl5ddPIpyWyBA6oMAW22LEcHH4jvOvJi1507+Q6lkm+AkuM6pROK6QIDiS8Ns
+        tAxGXPv21o5gMau6+c+axo4JDIZisXGBAIUzJ1m3dM6vv2bM8+uv3Ig8ct+3ttgxwY89EYlEBAJ0+Z6P
+        y40yp56OMebgzaeXdkQeUZMXcUzwOsfD4RsCAbqQPsSb5ibfzy24IOfkEX/Uaq7JxvY2Hw2FYgIBOrMw
+        wJqlccko/QHy2P8pfeGYoE+OjI7GBQKkzO9dGZrv5U7cfHSJK/JVVVVtKo0GHx4ZSQgESIR0LHmADgYC
+        E21pBqvV4qZgSlcazSbXRaAbBt9NpzkajXJV1qgVoCHaf7GP9vn94Baaqd1udzQJBoNcE1PUQtMzOEj2
+        2OP1Uq+iTDnd+DeT2VSK86urXBcD1ELjjC6Z7Nrt9aZ+b2dcp4XTCLhSQzDkWqasUQuNAC3tFAa6urvj
+        O/r75/4H1EID7S/Xy39icQhknQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnSaveCompareData.Text" xml:space="preserve">
+    <value>輸出比對後資料</value>
+  </data>
+  <data name="btnCloseTools.Text" xml:space="preserve">
+    <value>離開回到主程式</value>
+  </data>
+  <data name="btnSelectMsrtFile.Text" xml:space="preserve">
+    <value>點測檔</value>
+  </data>
+  <data name="btnSelectStdFile.Text" xml:space="preserve">
+    <value>標準檔</value>
+  </data>
+  <data name="btnCompareCalcGainOffset.Text" xml:space="preserve">
+    <value>[A] 比對資料 / 計算
+(  驗證數值 )</value>
+  </data>
+  <data name="btnCancel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAACXwAA
+        Al8BvoUoWgAAA+ZJREFUSEu1le1PW2UYxhud0THRJbKQkE3ThMAYFIoUVspbRwtlLfSFtrQsusk21Bqj
+        pCMRuhYYflLnyzd1zj+E/wD4wkfWdtjT03POc9qqhJBs+7ByeZ+T0XKAjU+e5MqT0+fp777u+7lzHx0A
+        3f+hE6HcaZ2FP60L81W6CF/1Wow/cyrKvfuW/iQzLwXnqnROvur1VeH9WrAeE4rhcVIA8oAZQv158O+d
+        WRNq3pmBTnfquCBHwOSsjq9+Y128qMf2N1HsPvgVu38o+o30O3Yfkv58gO34HKSOFuTOn1sp1tRUH4Zr
+        wMUaXXX27JsbBb8bhblZyNGvsHP/O+z8SPrpe9IP2PmZ9Mt9FBIx/L0UR/H6JHL6ug2+8ULdQXgFTCnx
+        595eyTuskKan8GgyjOzyMjITfmwv3SXFsX0vge3lBITbU3gc+RzJ6x+DfRlBIeCG0KhfPxYs1J6dkUwG
+        SDc+wqPQBEpPn9I5IPvtMv4ac+GfO1/j39kZ5K6FkP7sU+w9f47Ss2dIkgEWmQYbsiJnaHDuw8uOqVbr
+        haAHgm8M2cVFFbr/ZJcWseWwg6e99PRtgKDlvXtLEChY8dYNqrlhVQPmPqjVCy0NKEz4UKDbf9xrBk8w
+        DTwRR/rWTQ2UJ+iW3Yri9CekKUhXeiF2d1oUuOpYaLgQFduaIDsGIY8OQx5zIGVqB0cwzVMqVZwuJJDu
+        MSM/GUD+WhD5sB/MPgCx73K4Ar5UHxOa6yEYGiGa28FsvZCpZqm2ZmRi81o4vWViMTWw7HVC9jjBRgbJ
+        bY/qmNn7IhVwa2NENDZBbG+GSL0pdrZBvNyO1KUGpG9OadJXomTm55E0NEEa7INkI9n7IQ0NQBq+Aslh
+        i5XBoqk1LHa2QuwyqkCxuwNpgm59QcEPpH/QOhe/iyRlJFH5pKs2MKcdzDUMaXQkWgF3Gy2ixQSxpxNS
+        bxdSLReRmb0D7O2VWYrLw2XJLixQSYxgYyNgnqtgXhfdz5g6R8rtJvV3r0pWCzKdRkp1TlNX1V27gdQK
+        Lq69UC6RAGcbAAt4wILetSN9zIb6nUqduD4zNr0elJ48UeGKq6Tiyk2O6KKSXR9Sny+oe8qZzXEfeJcD
+        cmhc0cwRsPID1WldqRPXb8Gmz6u2W6qrA2x8FIzmh+qKel1pM47aTYFyDtsLqG8FVmt50mmHkHuoTva6
+        NphvFNkRGzhqfkpv341mVYAVp/6NotutmXBHxqZyQA76Vl6kdiz00N56MezWTDbN5e3XRl0pJaVecnh8
+        7RUBVtmEvzx0NP8/2BWHN/bf5WBQnw/5oxQkRmtEDvnC+XBAnQev0onfvJMAL9v/DxIXMF8O07ThAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnSetParameter.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>計算補償係數</value>
+  </data>
+  <data name="rdCalibrationMode.Text" xml:space="preserve">
+    <value>校正模式</value>
+  </data>
+  <data name="rdVerifyMode.Text" xml:space="preserve">
+    <value>校正後確認</value>
+  </data>
+  <data name="chkT100OperatedMode.Text" xml:space="preserve">
+    <value>啟動T100 操作模式</value>
+  </data>
+  <data name="rdCompareByRowCol.Text" xml:space="preserve">
+    <value>按照Row/Col</value>
+  </data>
+  <data name="rdCompareDataBySeq.Text" xml:space="preserve">
+    <value>按照測試順序</value>
+  </data>
+  <data name="chkIsUseRecipeCriterion.Text" xml:space="preserve">
+    <value>刪除判斷晶粒條件由產品檔帶入</value>
+  </data>
+  <data name="gplConditionSetting.Text" xml:space="preserve">
+    <value>條件設定</value>
+  </data>
+  <data name="lblClacCoefBy.Text" xml:space="preserve">
+    <value>計算係數經由</value>
+  </data>
+  <data name="lblCoefficientExtendType.Text" xml:space="preserve">
+    <value>係數延伸類型</value>
+  </data>
+  <data name="lblCompareDataRule.Text" xml:space="preserve">
+    <value>比對資料模式</value>
+  </data>
+  <data name="lblType0.Text" xml:space="preserve">
+    <value>Type0 : 不補償</value>
+  </data>
+  <data name="lblType1.Text" xml:space="preserve">
+    <value>Type1 : 只補償Offset</value>
+  </data>
+  <data name="lblType2.Text" xml:space="preserve">
+    <value>Type2 : 只補償Gain</value>
+  </data>
+  <data name="lblType3.Text" xml:space="preserve">
+    <value>Type3 : 線性補償(y=ax+b)</value>
+  </data>
+  <data name="btnCompare.Text" xml:space="preserve">
+    <value> 比對</value>
+  </data>
+  <data name="btnTest.Text" xml:space="preserve">
+    <value>量測</value>
+  </data>
+  <data name="lblMst.Text" xml:space="preserve">
+    <value>量測值</value>
+  </data>
+  <data name="lblStd.Text" xml:space="preserve">
+    <value>標準值</value>
+  </data>
+  <data name="tabiCompareData.Text" xml:space="preserve">
+    <value>比對資料</value>
+  </data>
+  <data name="btnImportStdFile.Text" xml:space="preserve">
+    <value>載入標準檔</value>
+  </data>
+  <data name="lblCalCount.Text" xml:space="preserve">
+    <value>標準件數量</value>
+  </data>
+  <data name="btnClearMstData.Text" xml:space="preserve">
+    <value>清除量測值</value>
+  </data>
+  <data name="btnClearSTDData.Text" xml:space="preserve">
+    <value>清除標準值</value>
+  </data>
+  <data name="btnExportMstFile.Text" xml:space="preserve">
+    <value>匯出量測值</value>
+  </data>
+  <data name="btnExportStdFile.Text" xml:space="preserve">
+    <value>匯出標準值</value>
+  </data>
+  <data name="tabiPower.Text" xml:space="preserve">
+    <value>Pow.比對圖</value>
+  </data>
+</root>

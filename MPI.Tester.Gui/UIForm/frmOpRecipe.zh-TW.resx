@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="btnImport.Text" xml:space="preserve">
+    <value>匯入</value>
+  </data>
+  <data name="labelX29.Text" xml:space="preserve">
+    <value>Bin表檔(.gc2)</value>
+  </data>
+  <data name="labelX28.Text" xml:space="preserve">
+    <value>補償係數檔(.Cal)</value>
+  </data>
+  <data name="btnNewTaskSheetFile.Text" xml:space="preserve">
+    <value>建立新檔</value>
+  </data>
+  <data name="btnDelTaskSheetFile.Text" xml:space="preserve">
+    <value>刪除檔案</value>
+  </data>
+  <data name="btnSaveAsTaskSheetFile.Text" xml:space="preserve">
+    <value>另存新檔</value>
+  </data>
+  <data name="btnOpenTaskSheetFile.Text" xml:space="preserve">
+    <value>開啟舊檔</value>
+  </data>
+  <data name="lblBinFileTitle.Text" xml:space="preserve">
+    <value>分類設定檔</value>
+  </data>
+  <data name="txtWMSamples.Text" xml:space="preserve">
+    <value>999999</value>
+  </data>
+  <data name="txtWMTotalTested.Text" xml:space="preserve">
+    <value>999999</value>
+  </data>
+  <data name="txtWMSampleLevel.Text" xml:space="preserve">
+    <value>STANDARD</value>
+  </data>
+  <data name="txtWMSampleStandard.Text" xml:space="preserve">
+    <value>WEIMIN</value>
+  </data>
+  <data name="txtWMSampleBins.Text" xml:space="preserve">
+    <value>ALL</value>
+  </data>
+  <data name="labelX19.Text" xml:space="preserve">
+    <value>取樣數</value>
+  </data>
+  <data name="labelX21.Text" xml:space="preserve">
+    <value>取樣批量</value>
+  </data>
+  <data name="labelX22.Text" xml:space="preserve">
+    <value>檢驗水準</value>
+  </data>
+  <data name="labelX23.Text" xml:space="preserve">
+    <value>檢驗表</value>
+  </data>
+  <data name="labelX24.Text" xml:space="preserve">
+    <value>取樣類別</value>
+  </data>
+  <data name="btnWMNewTaskSheetFile.Text" xml:space="preserve">
+    <value>建立新檔</value>
+  </data>
+  <data name="btnWMDelTaskSheetFile.Text" xml:space="preserve">
+    <value>刪除檔案</value>
+  </data>
+  <data name="btnWMSaveTaskSheetFile.Text" xml:space="preserve">
+    <value>另存新檔</value>
+  </data>
+  <data name="btnWMOpenTaskSheetFile.Text" xml:space="preserve">
+    <value>開啟舊檔</value>
+  </data>
+  <data name="labelX20.Text" xml:space="preserve">
+    <value>規格名稱</value>
+  </data>
+  <data name="labelX18.Text" xml:space="preserve">
+    <value>客戶說明</value>
+  </data>
+  <data name="labelX17.Text" xml:space="preserve">
+    <value>客戶資料 3</value>
+  </data>
+  <data name="labelX16.Text" xml:space="preserve">
+    <value>客戶資料 2</value>
+  </data>
+  <data name="labelX15.Text" xml:space="preserve">
+    <value>客戶資料 1</value>
+  </data>
+  <data name="labelX14.Text" xml:space="preserve">
+    <value>客戶名稱</value>
+  </data>
+  <data name="labelX13.Text" xml:space="preserve">
+    <value>客戶簡稱</value>
+  </data>
+  <data name="labelX12.Text" xml:space="preserve">
+    <value>備註 4</value>
+  </data>
+  <data name="labelX11.Text" xml:space="preserve">
+    <value>備註 3</value>
+  </data>
+  <data name="labelX10.Text" xml:space="preserve">
+    <value>備註 2</value>
+  </data>
+  <data name="labelX9.Text" xml:space="preserve">
+    <value>備註 1</value>
+  </data>
+  <data name="labelX8.Text" xml:space="preserve">
+    <value>序號</value>
+  </data>
+  <data name="labelX7.Text" xml:space="preserve">
+    <value>班別</value>
+  </data>
+  <data name="labelX6.Text" xml:space="preserve">
+    <value>編號</value>
+  </data>
+  <data name="labelX4.Text" xml:space="preserve">
+    <value>批號</value>
+  </data>
+  <data name="labelX5.Text" xml:space="preserve">
+    <value>料號</value>
+  </data>
+  <data name="labelX3.Text" xml:space="preserve">
+    <value>規格說明</value>
+  </data>
+  <data name="labelX2.Text" xml:space="preserve">
+    <value>產品名稱</value>
+  </data>
+  <data name="labelX1.Text" xml:space="preserve">
+    <value>檔案名稱</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="rdbWMEngineerTest.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 22</value>
+  </data>
+  <data name="rdbWMEngineerTest.Text" xml:space="preserve">
+    <value>工程模式</value>
+  </data>
+  <data name="rdbWMESDTest.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 22</value>
+  </data>
+  <data name="rdbWMESDTest.Text" xml:space="preserve">
+    <value>ESD</value>
+  </data>
+  <data name="rdbWMSampleTest.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 22</value>
+  </data>
+  <data name="rdbWMSampleTest.Text" xml:space="preserve">
+    <value>抽測</value>
+  </data>
+  <data name="rdbWMFullyTest.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 22</value>
+  </data>
+  <data name="rdbWMFullyTest.Text" xml:space="preserve">
+    <value>全測</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>基本操作</value>
+  </data>
+  <data name="btnChuckCorrect.Text" xml:space="preserve">
+    <value>Chuck校正</value>
+  </data>
+  <data name="lblRemoteControl.Text" xml:space="preserve">
+    <value>產品檔由Barcode指定</value>
+  </data>
+  <data name="lblEMESEnable.Text" xml:space="preserve">
+    <value>啟動自動載入</value>
+  </data>
+  <data name="btnDailyCheckSetting.Text" xml:space="preserve">
+    <value>自主檢設定</value>
+  </data>
+  <data name="btnDailyWatch.Text" xml:space="preserve">
+    <value>Daily Check
+( 自主檢 )</value>
+  </data>
+  <data name="btnDailayCheckSpec.Text" xml:space="preserve">
+    <value>自主檢
+規格設定</value>
+  </data>
+</root>

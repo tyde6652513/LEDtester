@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ERR_00307" xml:space="preserve">
+    <value>1. ソースメータの電源が繋いでいたかを確認する。 2. IPCケーブルがIPCに繋いでいたかを確認する。 3. ソースメータの機器が正常ですかを確認してください。 4. 針先の接触状況を確認してください。</value>
+  </data>
+  <data name="ERR_10043" xml:space="preserve">
+    <value>CSV_WAF_STATの拡張子が重複しないことを確認して、出力ファイルが上書きされることを避けてください。</value>
+  </data>
+  <data name="MSG_001" xml:space="preserve">
+    <value>補正係数表をリセットしますか？</value>
+  </data>
+  <data name="MSG_002" xml:space="preserve">
+    <value>対波長補正係数をリセットしますか？</value>
+  </data>
+  <data name="MSG_003" xml:space="preserve">
+    <value>チャック補正係数をリセットしますか？</value>
+  </data>
+  <data name="MSG_004" xml:space="preserve">
+    <value>同じ名前のテスト結果ファイルが存在した。上書しますか？</value>
+  </data>
+  <data name="MSG_005" xml:space="preserve">
+    <value>システム設定を実行した。プログラムは自動終了するので、再起動してください。</value>
+  </data>
+  <data name="MSG_006" xml:space="preserve">
+    <value>ログアウトしますか？</value>
+  </data>
+  <data name="MSG_007" xml:space="preserve">
+    <value>今のシステム状況をクリアします。</value>
+  </data>
+  <data name="MSG_008" xml:space="preserve">
+    <value>データフォーマットの読取りエラー</value>
+  </data>
+  <data name="MSG_009" xml:space="preserve">
+    <value>この生産条件を削除しますか？</value>
+  </data>
+  <data name="MSG_010" xml:space="preserve">
+    <value>ここで新しいテスト項目を挿入しますか？</value>
+  </data>
+  <data name="MSG_011" xml:space="preserve">
+    <value>このテスト項目を削除しますか？</value>
+  </data>
+  <data name="MSG_101" xml:space="preserve">
+    <value>削除したデータ個数が多すぎる。データが間違いましたかを確認してください。</value>
+  </data>
+  <data name="MSG_102" xml:space="preserve">
+    <value>産品ファイルのゲイン/オフセット補正係数を上書しますか？</value>
+  </data>
+  <data name="MSG_103" xml:space="preserve">
+    <value>今の対波長補正係数をシステムに書き込みますか？</value>
+  </data>
+  <data name="MSG_104" xml:space="preserve">
+    <value>この項目のゲイン/オフセット補正係数を併合しますか？</value>
+  </data>
+  <data name="MSG_105" xml:space="preserve">
+    <value>全項目のゲイン/オフセット補正係数を併合しますか？</value>
+  </data>
+  <data name="MSG_106" xml:space="preserve">
+    <value>ゲイン/オフセット係数表をリセットしますか？</value>
+  </data>
+  <data name="MSG_204" xml:space="preserve">
+    <value>この産品ファイルに、すでに対波長補正係数を存在した。係数を上書しますか？</value>
+  </data>
+  <data name="MSG_999" xml:space="preserve">
+    <value>試験成功</value>
+  </data>
+</root>

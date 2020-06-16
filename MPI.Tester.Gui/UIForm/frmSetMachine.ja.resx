@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lblSptMeterConfigGroup.Text" xml:space="preserve">
+    <value>分光器設定</value>
+  </data>
+  <data name="lblSptMeterModelTitle.Text" xml:space="preserve">
+    <value>分光器型番</value>
+  </data>
+  <data name="btnResetSpectrometer.Text" xml:space="preserve">
+    <value>再設定</value>
+  </data>
+  <data name="lblLopMsrtType.Text" xml:space="preserve">
+    <value>受光モード</value>
+  </data>
+  <data name="lblSptMeterSNTitle.Text" xml:space="preserve">
+    <value>分光器シリアル番号</value>
+  </data>
+  <data name="lblInterface.Text" xml:space="preserve">
+    <value>分光器の通信モード</value>
+  </data>
+  <data name="txtSphereSN.Text" xml:space="preserve">
+    <value>123456789abcdefghijklmnop</value>
+  </data>
+  <data name="btnLoadSptCorrection.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="txtSptMeterSN.Text" xml:space="preserve">
+    <value>123456789abcdefghijklmnop</value>
+  </data>
+  <data name="btnSelectSptConfig.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="lblSphereSNTitle.Text" xml:space="preserve">
+    <value>積分球型番</value>
+  </data>
+  <data name="btnResetChannelData.Text" xml:space="preserve">
+    <value>マルチダイへの単一データ</value>
+  </data>
+  <data name="txtVoltMsrtUnitSN.Text" xml:space="preserve">
+    <value>123456789abcdefghijklmnop</value>
+  </data>
+  <data name="lblVoltMsrtUnitTitle.Text" xml:space="preserve">
+    <value>電圧測定経由</value>
+  </data>
+  <data name="txtSrcMeterSN2.Text" xml:space="preserve">
+    <value>123456789abcdefghijklmnop</value>
+  </data>
+  <data name="lblSrcMeterModelTitle2.Text" xml:space="preserve">
+    <value>型番 (2番目)</value>
+  </data>
+  <data name="btnSetLaser.Text" xml:space="preserve">
+    <value>レーザー設定</value>
+  </data>
+  <data name="txtOsaSN.Text" xml:space="preserve">
+    <value>123456789abcdefghijklmnop</value>
+  </data>
+  <data name="lblOsaModel.Text" xml:space="preserve">
+    <value>型番</value>
+  </data>
+  <data name="lblOsaConfigGroup.Text" xml:space="preserve">
+    <value>OSA構成</value>
+  </data>
+  <data name="lblDCBiasType.Text" xml:space="preserve">
+    <value>DCバイアス型式</value>
+  </data>
+  <data name="txtLCRDCBiasSourceSN.Text" xml:space="preserve">
+    <value>123456789abcdefghijklmnop</value>
+  </data>
+  <data name="lblDCBiasSource.Text" xml:space="preserve">
+    <value>DCバイアスソース</value>
+  </data>
+  <data name="txtLCRMeterSN.Text" xml:space="preserve">
+    <value>123456789abcdefghijklmnop</value>
+  </data>
+  <data name="lblLCRSetting.Text" xml:space="preserve">
+    <value>LCR構成</value>
+  </data>
+  <data name="lblLCRMeter.Text" xml:space="preserve">
+    <value>型番</value>
+  </data>
+  <data name="lblOthersGroup.Text" xml:space="preserve">
+    <value>その他設定</value>
+  </data>
+  <data name="chkSimulator.Text" xml:space="preserve">
+    <value>シミュレーター機能を起動</value>
+  </data>
+  <data name="chkSrcMeter.Text" xml:space="preserve">
+    <value>ソースメータを有効にする</value>
+  </data>
+  <data name="chkSptMeter.Text" xml:space="preserve">
+    <value>分光計を有効にする</value>
+  </data>
+  <data name="chkESDDevice.Text" xml:space="preserve">
+    <value>ESDデバイスを有効にする</value>
+  </data>
+  <data name="lblSwitchSystemConfigGroup.Text" xml:space="preserve">
+    <value>スイッチシステム設定</value>
+  </data>
+  <data name="lblSwitchSystemModel.Text" xml:space="preserve">
+    <value>スイッチの型番</value>
+  </data>
+  <data name="txtSwitchSystemSN.Text" xml:space="preserve">
+    <value>123456789abcdefghijklmnop</value>
+  </data>
+  <data name="lblTesterFunctionTitle.Text" xml:space="preserve">
+    <value>マルチチャンネル機能</value>
+  </data>
+  <data name="lblChannelConfigGroup.Text" xml:space="preserve">
+    <value>マルチチャンネル設定</value>
+  </data>
+  <data name="chkIsAutoChangeToOPMode.Text" xml:space="preserve">
+    <value>待機時、操作様式自動切換え</value>
+  </data>
+  <data name="chkEnablePdSourceHwTrig.Text" xml:space="preserve">
+    <value>ハードウェアトリガを有効にする</value>
+  </data>
+  <data name="txtPdDetectorSN.Text" xml:space="preserve">
+    <value>123456789abcdefghijklmnop</value>
+  </data>
+  <data name="lblPDConfigGroup.Text" xml:space="preserve">
+    <value>フォトダイオード検出器構成</value>
+  </data>
+  <data name="lblPDSensingModeTitle.Text" xml:space="preserve">
+    <value>チャンネル</value>
+  </data>
+  <data name="lblESDConfigGroup.Text" xml:space="preserve">
+    <value>ESD設定</value>
+  </data>
+  <data name="lblESDModelTitle.Text" xml:space="preserve">
+    <value>ESD型番</value>
+  </data>
+  <data name="lblDAQCalibrationBufferIDTitle.Text" xml:space="preserve">
+    <value>DAQ校正緩衝ID</value>
+  </data>
+  <data name="lblDAQConfigGroup.Text" xml:space="preserve">
+    <value>DAQ設定</value>
+  </data>
+  <data name="lblDAQCardModelTitle.Text" xml:space="preserve">
+    <value>型番</value>
+  </data>
+  <data name="lblDAQSampleRateTitle.Text" xml:space="preserve">
+    <value>DAQサンプリング割合</value>
+  </data>
+  <data name="lblTCPIPState.Text" xml:space="preserve">
+    <value>TCP/IP 状態</value>
+  </data>
+  <data name="btnReConnectTCPIP.Text" xml:space="preserve">
+    <value>再接続</value>
+  </data>
+  <data name="lblActiveState.Text" xml:space="preserve">
+    <value>Active state</value>
+  </data>
+  <data name="lblEQModel.Text" xml:space="preserve">
+    <value>組合設備の型番</value>
+  </data>
+  <data name="chkEnableMapShowGap.Text" xml:space="preserve">
+    <value>ウェハマップにチップ間のギャップを表示する</value>
+  </data>
+  <data name="chkBarcodePrintf.Text" xml:space="preserve">
+    <value>ファイル書き込みを終了すると、バーコードをプリントすることを起動する</value>
+  </data>
+  <data name="txtSrcMeterSN.Text" xml:space="preserve">
+    <value>123456789abcdefghijklmnop</value>
+  </data>
+  <data name="lblWheelMsrtSourceTitle.Text" xml:space="preserve">
+    <value>ND検出器</value>
+  </data>
+  <data name="lblSrcMeterModelTitle.Text" xml:space="preserve">
+    <value>型番</value>
+  </data>
+  <data name="lblSourceMeterConfigGroup.Text" xml:space="preserve">
+    <value>ソースメータ設定</value>
+  </data>
+  <data name="chkFilterWheelCheck.Text" xml:space="preserve">
+    <value>フィルタ検知機能を起動</value>
+  </data>
+  <data name="lblFunctionEnableGroup.Text" xml:space="preserve">
+    <value>機能起動</value>
+  </data>
+  <data name="lblCommunicateSetting.Text" xml:space="preserve">
+    <value>通信設定</value>
+  </data>
+  <data name="lblNetPort01Title.Text" xml:space="preserve">
+    <value>端子口</value>
+  </data>
+  <data name="lblipAddressInput01Title.Text" xml:space="preserve">
+    <value>IP Address</value>
+  </data>
+  <data name="lblTesterCommModeTitle.Text" xml:space="preserve">
+    <value>通信様式</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>セーブ</value>
+  </data>
+  <data name="lblTesterSN2.Text" xml:space="preserve">
+    <value>測定器シリアル番号</value>
+  </data>
+  <data name="lblInfoTesterSNTitle2.Text" xml:space="preserve">
+    <value>ソースメータ(EAM)</value>
+  </data>
+  <data name="lblLCRSN.Text" xml:space="preserve">
+    <value>LCRシリアル番号</value>
+  </data>
+  <data name="lblInfoLCRSNTitle.Text" xml:space="preserve">
+    <value>lLCR</value>
+  </data>
+  <data name="lblOsaSN.Text" xml:space="preserve">
+    <value>OSAシリアル番号</value>
+  </data>
+  <data name="lblInfoOsaSNTitle.Text" xml:space="preserve">
+    <value>OSA</value>
+  </data>
+  <data name="lblTesterSN.Text" xml:space="preserve">
+    <value>測定器シリアル番号</value>
+  </data>
+  <data name="lblInfoTesterSNTitle.Text" xml:space="preserve">
+    <value>ソースメータ(DUT)</value>
+  </data>
+  <data name="lblSwitchSystemSN.Text" xml:space="preserve">
+    <value>スイッチのシリアル番号</value>
+  </data>
+  <data name="lblInfoSwitchSystemSNTitle.Text" xml:space="preserve">
+    <value>スイッチシステム</value>
+  </data>
+  <data name="lblESDSN.Text" xml:space="preserve">
+    <value>ESDシリアル番号</value>
+  </data>
+  <data name="lblSphereSN.Text" xml:space="preserve">
+    <value>球形シリアル番号</value>
+  </data>
+  <data name="lblSpectrometerSN.Text" xml:space="preserve">
+    <value>分光器シリアル番号</value>
+  </data>
+  <data name="lblInfoESDSNTitle.Text" xml:space="preserve">
+    <value>ESD</value>
+  </data>
+  <data name="labelX2.Text" xml:space="preserve">
+    <value>球形</value>
+  </data>
+  <data name="lblInfoSpectrometerSNTitle.Text" xml:space="preserve">
+    <value>分光器</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>機械情報、シリアル番号</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Machine Config</value>
+  </data>
+</root>

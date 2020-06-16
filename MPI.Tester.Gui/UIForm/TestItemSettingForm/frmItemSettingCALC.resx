@@ -1,0 +1,1236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;dinGain.Name" xml:space="preserve">
+    <value>dinGain</value>
+  </data>
+  <data name="&gt;&gt;dinGain.Type" xml:space="preserve">
+    <value>DevComponents.Editors.DoubleInput, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dinGain.Parent" xml:space="preserve">
+    <value>gBxGain</value>
+  </data>
+  <data name="&gt;&gt;dinGain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblGain.Name" xml:space="preserve">
+    <value>lblGain</value>
+  </data>
+  <data name="&gt;&gt;lblGain.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblGain.Parent" xml:space="preserve">
+    <value>gBxGain</value>
+  </data>
+  <data name="&gt;&gt;lblGain.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblMulti.Name" xml:space="preserve">
+    <value>lblMulti</value>
+  </data>
+  <data name="&gt;&gt;lblMulti.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblMulti.Parent" xml:space="preserve">
+    <value>gBxGain</value>
+  </data>
+  <data name="&gt;&gt;lblMulti.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="gBxGain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>456, 54</value>
+  </data>
+  <data name="gBxGain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 224</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gBxGain.TabIndex" type="System.Int32, mscorlib">
+    <value>146</value>
+  </data>
+  <data name="&gt;&gt;gBxGain.Name" xml:space="preserve">
+    <value>gBxGain</value>
+  </data>
+  <data name="&gt;&gt;gBxGain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gBxGain.Parent" xml:space="preserve">
+    <value>grpApplySetting</value>
+  </data>
+  <data name="&gt;&gt;gBxGain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chbUseValA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 153</value>
+  </data>
+  <data name="chbUseValA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 23</value>
+  </data>
+  <data name="chbUseValA.TabIndex" type="System.Int32, mscorlib">
+    <value>148</value>
+  </data>
+  <data name="&gt;&gt;chbUseValA.Name" xml:space="preserve">
+    <value>chbUseValA</value>
+  </data>
+  <data name="&gt;&gt;chbUseValA.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;chbUseValA.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;chbUseValA.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dinValA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 153</value>
+  </data>
+  <data name="dinValA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 25</value>
+  </data>
+  <data name="dinValA.TabIndex" type="System.Int32, mscorlib">
+    <value>147</value>
+  </data>
+  <data name="&gt;&gt;dinValA.Name" xml:space="preserve">
+    <value>dinValA</value>
+  </data>
+  <data name="&gt;&gt;dinValA.Type" xml:space="preserve">
+    <value>DevComponents.Editors.DoubleInput, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dinValA.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;dinValA.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chbUseValB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>294, 150</value>
+  </data>
+  <data name="chbUseValB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 23</value>
+  </data>
+  <data name="chbUseValB.TabIndex" type="System.Int32, mscorlib">
+    <value>146</value>
+  </data>
+  <data name="&gt;&gt;chbUseValB.Name" xml:space="preserve">
+    <value>chbUseValB</value>
+  </data>
+  <data name="&gt;&gt;chbUseValB.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;chbUseValB.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;chbUseValB.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="dinValB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>322, 150</value>
+  </data>
+  <data name="dinValB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 25</value>
+  </data>
+  <data name="dinValB.TabIndex" type="System.Int32, mscorlib">
+    <value>145</value>
+  </data>
+  <data name="&gt;&gt;dinValB.Name" xml:space="preserve">
+    <value>dinValB</value>
+  </data>
+  <data name="&gt;&gt;dinValB.Type" xml:space="preserve">
+    <value>DevComponents.Editors.DoubleInput, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dinValB.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;dinValB.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="rdDeltaR.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="rdDeltaR.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="rdDeltaR.Location" type="System.Drawing.Point, System.Drawing">
+    <value>167, 183</value>
+  </data>
+  <data name="rdDeltaR.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 22</value>
+  </data>
+  <data name="rdDeltaR.TabIndex" type="System.Int32, mscorlib">
+    <value>142</value>
+  </data>
+  <data name="rdDeltaR.Text" xml:space="preserve">
+    <value>Delta R</value>
+  </data>
+  <data name="&gt;&gt;rdDeltaR.Name" xml:space="preserve">
+    <value>rdDeltaR</value>
+  </data>
+  <data name="&gt;&gt;rdDeltaR.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdDeltaR.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;rdDeltaR.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="rdSubtract.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdSubtract.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="rdSubtract.Location" type="System.Drawing.Point, System.Drawing">
+    <value>167, 63</value>
+  </data>
+  <data name="rdSubtract.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 22</value>
+  </data>
+  <data name="rdSubtract.TabIndex" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <data name="rdSubtract.Text" xml:space="preserve">
+    <value>subtract ( - )</value>
+  </data>
+  <data name="&gt;&gt;rdSubtract.Name" xml:space="preserve">
+    <value>rdSubtract</value>
+  </data>
+  <data name="&gt;&gt;rdSubtract.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdSubtract.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;rdSubtract.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblCalcType.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="lblCalcType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 24</value>
+  </data>
+  <data name="lblCalcType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 25</value>
+  </data>
+  <data name="lblCalcType.TabIndex" type="System.Int32, mscorlib">
+    <value>140</value>
+  </data>
+  <data name="lblCalcType.Text" xml:space="preserve">
+    <value>Calc Type</value>
+  </data>
+  <data name="&gt;&gt;lblCalcType.Name" xml:space="preserve">
+    <value>lblCalcType</value>
+  </data>
+  <data name="&gt;&gt;lblCalcType.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblCalcType.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblCalcType.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblAItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="lblAItem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 24</value>
+  </data>
+  <data name="lblAItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 25</value>
+  </data>
+  <data name="lblAItem.TabIndex" type="System.Int32, mscorlib">
+    <value>139</value>
+  </data>
+  <data name="lblAItem.Text" xml:space="preserve">
+    <value>Item A</value>
+  </data>
+  <data name="&gt;&gt;lblAItem.Name" xml:space="preserve">
+    <value>lblAItem</value>
+  </data>
+  <data name="&gt;&gt;lblAItem.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblAItem.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblAItem.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="cmbCalcAddItemB.ItemHeight" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="cmbCalcAddItemB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>304, 106</value>
+  </data>
+  <data name="cmbCalcAddItemB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 25</value>
+  </data>
+  <data name="cmbCalcAddItemB.TabIndex" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="&gt;&gt;cmbCalcAddItemB.Name" xml:space="preserve">
+    <value>cmbCalcAddItemB</value>
+  </data>
+  <data name="&gt;&gt;cmbCalcAddItemB.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;cmbCalcAddItemB.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;cmbCalcAddItemB.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="rdAdd.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdAdd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="rdAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>167, 123</value>
+  </data>
+  <data name="rdAdd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 22</value>
+  </data>
+  <data name="rdAdd.TabIndex" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <data name="rdAdd.Text" xml:space="preserve">
+    <value>add (+) </value>
+  </data>
+  <data name="&gt;&gt;rdAdd.Name" xml:space="preserve">
+    <value>rdAdd</value>
+  </data>
+  <data name="&gt;&gt;rdAdd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdAdd.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;rdAdd.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lblBItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="lblBItem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>304, 24</value>
+  </data>
+  <data name="lblBItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 25</value>
+  </data>
+  <data name="lblBItem.TabIndex" type="System.Int32, mscorlib">
+    <value>141</value>
+  </data>
+  <data name="lblBItem.Text" xml:space="preserve">
+    <value>Item B</value>
+  </data>
+  <data name="&gt;&gt;lblBItem.Name" xml:space="preserve">
+    <value>lblBItem</value>
+  </data>
+  <data name="&gt;&gt;lblBItem.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblBItem.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblBItem.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="rdDivide.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdDivide.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="rdDivide.Location" type="System.Drawing.Point, System.Drawing">
+    <value>167, 93</value>
+  </data>
+  <data name="rdDivide.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="rdDivide.TabIndex" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
+  <data name="rdDivide.Text" xml:space="preserve">
+    <value>divide by ( / )</value>
+  </data>
+  <data name="&gt;&gt;rdDivide.Name" xml:space="preserve">
+    <value>rdDivide</value>
+  </data>
+  <data name="&gt;&gt;rdDivide.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdDivide.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;rdDivide.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="cmbCalcAddItemA.ItemHeight" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="cmbCalcAddItemA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 106</value>
+  </data>
+  <data name="cmbCalcAddItemA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 25</value>
+  </data>
+  <data name="cmbCalcAddItemA.TabIndex" type="System.Int32, mscorlib">
+    <value>111</value>
+  </data>
+  <data name="&gt;&gt;cmbCalcAddItemA.Name" xml:space="preserve">
+    <value>cmbCalcAddItemA</value>
+  </data>
+  <data name="&gt;&gt;cmbCalcAddItemA.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;cmbCalcAddItemA.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;cmbCalcAddItemA.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="rdMultiple.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdMultiple.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="rdMultiple.Location" type="System.Drawing.Point, System.Drawing">
+    <value>167, 153</value>
+  </data>
+  <data name="rdMultiple.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 22</value>
+  </data>
+  <data name="rdMultiple.TabIndex" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
+  <data name="rdMultiple.Text" xml:space="preserve">
+    <value>Multiple ( * )</value>
+  </data>
+  <data name="&gt;&gt;rdMultiple.Name" xml:space="preserve">
+    <value>rdMultiple</value>
+  </data>
+  <data name="&gt;&gt;rdMultiple.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdMultiple.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;rdMultiple.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 11.25pt, style=Bold</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 54</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>441, 224</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>144</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>grpApplySetting</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblCalcFunc.Name" xml:space="preserve">
+    <value>lblCalcFunc</value>
+  </data>
+  <data name="&gt;&gt;lblCalcFunc.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblCalcFunc.Parent" xml:space="preserve">
+    <value>pnlCalcTitle</value>
+  </data>
+  <data name="&gt;&gt;lblCalcFunc.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblResultName.Name" xml:space="preserve">
+    <value>lblResultName</value>
+  </data>
+  <data name="&gt;&gt;lblResultName.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblResultName.Parent" xml:space="preserve">
+    <value>pnlCalcTitle</value>
+  </data>
+  <data name="&gt;&gt;lblResultName.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlCalcTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 17</value>
+  </data>
+  <data name="pnlCalcTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>578, 31</value>
+  </data>
+  <data name="pnlCalcTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>108</value>
+  </data>
+  <data name="&gt;&gt;pnlCalcTitle.Name" xml:space="preserve">
+    <value>pnlCalcTitle</value>
+  </data>
+  <data name="&gt;&gt;pnlCalcTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlCalcTitle.Parent" xml:space="preserve">
+    <value>grpApplySetting</value>
+  </data>
+  <data name="&gt;&gt;pnlCalcTitle.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="grpApplySetting.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="grpApplySetting.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="grpApplySetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="grpApplySetting.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="grpApplySetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1048, 377</value>
+  </data>
+  <data name="grpApplySetting.TabIndex" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="grpApplySetting.Text" xml:space="preserve">
+    <value>CALC SETTING</value>
+  </data>
+  <data name="&gt;&gt;grpApplySetting.Name" xml:space="preserve">
+    <value>grpApplySetting</value>
+  </data>
+  <data name="&gt;&gt;grpApplySetting.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.GroupPanel, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;grpApplySetting.Parent" xml:space="preserve">
+    <value>superTabControlPanel1</value>
+  </data>
+  <data name="&gt;&gt;grpApplySetting.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="superTabControlPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="superTabControlPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 32</value>
+  </data>
+  <data name="superTabControlPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1048, 377</value>
+  </data>
+  <data name="superTabControlPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tbiNormal.Text" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel1.Name" xml:space="preserve">
+    <value>superTabControlPanel1</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.SuperTabControlPanel, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel1.Parent" xml:space="preserve">
+    <value>superTabControl1</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="splitContainer2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="splitContainer2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="splitContainer2.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="rtbInput.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="rtbInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="rtbInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>879, 317</value>
+  </data>
+  <data name="rtbInput.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="rtbInput.Text" xml:space="preserve">
+    <value>Write your compute program</value>
+  </data>
+  <data name="&gt;&gt;rtbInput.Name" xml:space="preserve">
+    <value>rtbInput</value>
+  </data>
+  <data name="&gt;&gt;rtbInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rtbInput.Parent" xml:space="preserve">
+    <value>splitContainer2.Panel1</value>
+  </data>
+  <data name="&gt;&gt;rtbInput.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel1.Name" xml:space="preserve">
+    <value>splitContainer2.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="rtbOutput.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="rtbOutput.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 14.25pt, style=Bold</value>
+  </data>
+  <data name="rtbOutput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="rtbOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>879, 88</value>
+  </data>
+  <data name="rtbOutput.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="rtbOutput.Text" xml:space="preserve">
+    <value>Test result</value>
+  </data>
+  <data name="&gt;&gt;rtbOutput.Name" xml:space="preserve">
+    <value>rtbOutput</value>
+  </data>
+  <data name="&gt;&gt;rtbOutput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rtbOutput.Parent" xml:space="preserve">
+    <value>splitContainer2.Panel2</value>
+  </data>
+  <data name="&gt;&gt;rtbOutput.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel2.Name" xml:space="preserve">
+    <value>splitContainer2.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainer2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>879, 409</value>
+  </data>
+  <data name="splitContainer2.SplitterDistance" type="System.Int32, mscorlib">
+    <value>317</value>
+  </data>
+  <data name="splitContainer2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Name" xml:space="preserve">
+    <value>splitContainer2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnTestRun.Name" xml:space="preserve">
+    <value>btnTestRun</value>
+  </data>
+  <data name="&gt;&gt;btnTestRun.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;btnTestRun.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btnTestRun.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnCompile.Name" xml:space="preserve">
+    <value>btnCompile</value>
+  </data>
+  <data name="&gt;&gt;btnCompile.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;btnCompile.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btnCompile.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 409</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1048, 409</value>
+  </data>
+  <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
+    <value>879</value>
+  </data>
+  <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Parent" xml:space="preserve">
+    <value>superTabControlPanel3</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="superTabControlPanel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="superTabControlPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="superTabControlPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1048, 409</value>
+  </data>
+  <data name="superTabControlPanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tbiAdv.Text" xml:space="preserve">
+    <value>Advance</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel3.Name" xml:space="preserve">
+    <value>superTabControlPanel3</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.SuperTabControlPanel, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel3.Parent" xml:space="preserve">
+    <value>superTabControl1</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="superTabControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 4</value>
+  </data>
+  <data name="superTabControl2.SelectedTabFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 20.25pt, style=Bold</value>
+  </data>
+  <data name="superTabControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 100</value>
+  </data>
+  <data name="superTabControl2.TabFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 20.25pt, style=Bold</value>
+  </data>
+  <data name="superTabControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="superTabControl2.Text" xml:space="preserve">
+    <value>superTabControl2</value>
+  </data>
+  <data name="&gt;&gt;superTabControl2.Name" xml:space="preserve">
+    <value>superTabControl2</value>
+  </data>
+  <data name="&gt;&gt;superTabControl2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.SuperTabControl, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;superTabControl2.Parent" xml:space="preserve">
+    <value>superTabControl1</value>
+  </data>
+  <data name="&gt;&gt;superTabControl2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="superTabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="superTabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 35</value>
+  </data>
+  <data name="superTabControl1.SelectedTabFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="superTabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1048, 409</value>
+  </data>
+  <data name="superTabControl1.TabFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="superTabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>147</value>
+  </data>
+  <data name="superTabControl1.Text" xml:space="preserve">
+    <value>superTabControl1</value>
+  </data>
+  <data name="&gt;&gt;superTabControl1.Name" xml:space="preserve">
+    <value>superTabControl1</value>
+  </data>
+  <data name="&gt;&gt;superTabControl1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.SuperTabControl, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;superTabControl1.Parent" xml:space="preserve">
+    <value>grpItemCondition</value>
+  </data>
+  <data name="&gt;&gt;superTabControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="grpItemCondition.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="grpItemCondition.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 20.25pt, style=Bold</value>
+  </data>
+  <data name="grpItemCondition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="grpItemCondition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1054, 447</value>
+  </data>
+  <data name="grpItemCondition.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="grpItemCondition.Text" xml:space="preserve">
+    <value>CALCULATION</value>
+  </data>
+  <data name="&gt;&gt;grpItemCondition.Name" xml:space="preserve">
+    <value>grpItemCondition</value>
+  </data>
+  <data name="&gt;&gt;grpItemCondition.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpItemCondition.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grpItemCondition.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dinGain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>42, 105</value>
+  </data>
+  <data name="dinGain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 26</value>
+  </data>
+  <data name="dinGain.TabIndex" type="System.Int32, mscorlib">
+    <value>144</value>
+  </data>
+  <data name="&gt;&gt;dinGain.Name" xml:space="preserve">
+    <value>dinGain</value>
+  </data>
+  <data name="&gt;&gt;dinGain.Type" xml:space="preserve">
+    <value>DevComponents.Editors.DoubleInput, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dinGain.Parent" xml:space="preserve">
+    <value>gBxGain</value>
+  </data>
+  <data name="&gt;&gt;dinGain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblGain.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="lblGain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>42, 24</value>
+  </data>
+  <data name="lblGain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 25</value>
+  </data>
+  <data name="lblGain.TabIndex" type="System.Int32, mscorlib">
+    <value>143</value>
+  </data>
+  <data name="lblGain.Text" xml:space="preserve">
+    <value>Gain</value>
+  </data>
+  <data name="&gt;&gt;lblGain.Name" xml:space="preserve">
+    <value>lblGain</value>
+  </data>
+  <data name="&gt;&gt;lblGain.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblGain.Parent" xml:space="preserve">
+    <value>gBxGain</value>
+  </data>
+  <data name="&gt;&gt;lblGain.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblMulti.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 20.25pt, style=Bold</value>
+  </data>
+  <data name="lblMulti.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 106</value>
+  </data>
+  <data name="lblMulti.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 25</value>
+  </data>
+  <data name="lblMulti.TabIndex" type="System.Int32, mscorlib">
+    <value>145</value>
+  </data>
+  <data name="lblMulti.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblMulti.Name" xml:space="preserve">
+    <value>lblMulti</value>
+  </data>
+  <data name="&gt;&gt;lblMulti.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblMulti.Parent" xml:space="preserve">
+    <value>gBxGain</value>
+  </data>
+  <data name="&gt;&gt;lblMulti.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblCalcFunc.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="lblCalcFunc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 3</value>
+  </data>
+  <data name="lblCalcFunc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>435, 25</value>
+  </data>
+  <data name="lblCalcFunc.TabIndex" type="System.Int32, mscorlib">
+    <value>143</value>
+  </data>
+  <data name="lblCalcFunc.Text" xml:space="preserve">
+    <value>Calc Funtion</value>
+  </data>
+  <data name="&gt;&gt;lblCalcFunc.Name" xml:space="preserve">
+    <value>lblCalcFunc</value>
+  </data>
+  <data name="&gt;&gt;lblCalcFunc.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblCalcFunc.Parent" xml:space="preserve">
+    <value>pnlCalcTitle</value>
+  </data>
+  <data name="&gt;&gt;lblCalcFunc.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblResultName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="lblResultName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="lblResultName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 26</value>
+  </data>
+  <data name="lblResultName.TabIndex" type="System.Int32, mscorlib">
+    <value>142</value>
+  </data>
+  <data name="lblResultName.Text" xml:space="preserve">
+    <value>Calc Result</value>
+  </data>
+  <data name="&gt;&gt;lblResultName.Name" xml:space="preserve">
+    <value>lblResultName</value>
+  </data>
+  <data name="&gt;&gt;lblResultName.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblResultName.Parent" xml:space="preserve">
+    <value>pnlCalcTitle</value>
+  </data>
+  <data name="&gt;&gt;lblResultName.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnTestRun.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15.75pt, style=Bold</value>
+  </data>
+  <data name="btnTestRun.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 91</value>
+  </data>
+  <data name="btnTestRun.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 48</value>
+  </data>
+  <data name="btnTestRun.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnTestRun.Text" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="&gt;&gt;btnTestRun.Name" xml:space="preserve">
+    <value>btnTestRun</value>
+  </data>
+  <data name="&gt;&gt;btnTestRun.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;btnTestRun.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btnTestRun.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnCompile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15.75pt, style=Bold</value>
+  </data>
+  <data name="btnCompile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 15</value>
+  </data>
+  <data name="btnCompile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 48</value>
+  </data>
+  <data name="btnCompile.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnCompile.Text" xml:space="preserve">
+    <value>Compile</value>
+  </data>
+  <data name="&gt;&gt;btnCompile.Name" xml:space="preserve">
+    <value>btnCompile</value>
+  </data>
+  <data name="&gt;&gt;btnCompile.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;btnCompile.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btnCompile.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="superTabControlPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="superTabControlPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 46</value>
+  </data>
+  <data name="superTabControlPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 54</value>
+  </data>
+  <data name="superTabControlPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel2.Name" xml:space="preserve">
+    <value>superTabControlPanel2</value>
+  </data>
+  <data name="&gt;&gt;superTabControlPanel2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.SuperTabControlPanel, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1054, 447</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Item Setting</value>
+  </data>
+  <data name="&gt;&gt;tbiNormal.Name" xml:space="preserve">
+    <value>tbiNormal</value>
+  </data>
+  <data name="&gt;&gt;tbiNormal.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.SuperTabItem, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;tbiAdv.Name" xml:space="preserve">
+    <value>tbiAdv</value>
+  </data>
+  <data name="&gt;&gt;tbiAdv.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.SuperTabItem, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;superTabItem1.Name" xml:space="preserve">
+    <value>superTabItem1</value>
+  </data>
+  <data name="&gt;&gt;superTabItem1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.SuperTabItem, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmItemSettingCALC</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

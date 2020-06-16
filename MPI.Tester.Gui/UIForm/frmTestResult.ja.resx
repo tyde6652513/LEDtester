@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="progressBarX1.Text" xml:space="preserve">
+    <value>プログレスバーX</value>
+  </data>
+  <data name="colNo03.HeaderText" xml:space="preserve">
+    <value>NO.</value>
+  </data>
+  <data name="colName03.HeaderText" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="colValue03.HeaderText" xml:space="preserve">
+    <value>数値</value>
+  </data>
+  <data name="colMin03.HeaderText" xml:space="preserve">
+    <value>最小値</value>
+  </data>
+  <data name="colMax03.HeaderText" xml:space="preserve">
+    <value>最大値</value>
+  </data>
+  <data name="colAvg03.HeaderText" xml:space="preserve">
+    <value>平均値</value>
+  </data>
+  <data name="colStdev03.HeaderText" xml:space="preserve">
+    <value>標準偏差</value>
+  </data>
+  <data name="colPercent03.HeaderText" xml:space="preserve">
+    <value>パーセント(%)</value>
+  </data>
+  <data name="tabiStatistic3.Text" xml:space="preserve">
+    <value>単一項目集計(SPEC2)</value>
+  </data>
+  <data name="colNo01.HeaderText" xml:space="preserve">
+    <value>番号</value>
+  </data>
+  <data name="colName01.HeaderText" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="colValue01.HeaderText" xml:space="preserve">
+    <value>数値</value>
+  </data>
+  <data name="colMin01.HeaderText" xml:space="preserve">
+    <value>最小値</value>
+  </data>
+  <data name="colMax01.HeaderText" xml:space="preserve">
+    <value>最大値</value>
+  </data>
+  <data name="colAvg01.HeaderText" xml:space="preserve">
+    <value>平均値</value>
+  </data>
+  <data name="colStdev01.HeaderText" xml:space="preserve">
+    <value>標準偏差</value>
+  </data>
+  <data name="tabiStatistic.Text" xml:space="preserve">
+    <value>全部集計</value>
+  </data>
+  <data name="tabpStat01.Text" xml:space="preserve">
+    <value>統計値01</value>
+  </data>
+  <data name="colNo02.HeaderText" xml:space="preserve">
+    <value>番号</value>
+  </data>
+  <data name="colName02.HeaderText" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="colValue02.HeaderText" xml:space="preserve">
+    <value>数値</value>
+  </data>
+  <data name="colMin02.HeaderText" xml:space="preserve">
+    <value>最小値</value>
+  </data>
+  <data name="colMax02.HeaderText" xml:space="preserve">
+    <value>最大値</value>
+  </data>
+  <data name="colAvg02.HeaderText" xml:space="preserve">
+    <value>平均値</value>
+  </data>
+  <data name="colStdev02.HeaderText" xml:space="preserve">
+    <value>標準偏差</value>
+  </data>
+  <data name="colPercent02.HeaderText" xml:space="preserve">
+    <value>パーセント(%)</value>
+  </data>
+  <data name="tabiStatistic2.Text" xml:space="preserve">
+    <value>単一項目集計(SPEC1)</value>
+  </data>
+  <data name="colGradeNum.Text" xml:space="preserve">
+    <value>ランク</value>
+  </data>
+  <data name="colGradeCount.Text" xml:space="preserve">
+    <value>カウント</value>
+  </data>
+  <data name="colGradePercent.Text" xml:space="preserve">
+    <value>パーセント(%)</value>
+  </data>
+  <data name="colNo.HeaderText" xml:space="preserve">
+    <value>番号</value>
+  </data>
+  <data name="colName.HeaderText" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="colValue.HeaderText" xml:space="preserve">
+    <value>数値</value>
+  </data>
+  <data name="colUnit.HeaderText" xml:space="preserve">
+    <value>単位</value>
+  </data>
+  <data name="tabiResult.Text" xml:space="preserve">
+    <value>テストデータ</value>
+  </data>
+  <data name="tabpResult.Text" xml:space="preserve">
+    <value>結果</value>
+  </data>
+  <data name="tabiHistory.Text" xml:space="preserve">
+    <value>ヒストリー</value>
+  </data>
+  <data name="tabcResultInfo.Text" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="chkIsDefineContinousRowCol.Text" xml:space="preserve">
+    <value>特定の座標を指定して開始</value>
+  </data>
+  <data name="chkIsLastRowCol.Text" xml:space="preserve">
+    <value>前回の座標から開始</value>
+  </data>
+  <data name="btnContinousProbing.Text" xml:space="preserve">
+    <value>連続プロービング</value>
+  </data>
+  <data name="btnSettingContinousRowCol.Text" xml:space="preserve">
+    <value>有効にする</value>
+  </data>
+  <data name="lblPosY.Text" xml:space="preserve">
+    <value>Y軸</value>
+  </data>
+  <data name="lblPosX.Text" xml:space="preserve">
+    <value>X軸</value>
+  </data>
+  <data name="btnImportMap.Text" xml:space="preserve">
+    <value>ファイルロード</value>
+  </data>
+  <data name="btnBinColor.Text" xml:space="preserve">
+    <value>色分け設定</value>
+  </data>
+  <data name="btnShowMap.Text" xml:space="preserve">
+    <value>表れる</value>
+  </data>
+  <data name="btnSnapshot.Text" xml:space="preserve">
+    <value>画像保存</value>
+  </data>
+  <data name="btnArrangeWindow.Text" xml:space="preserve">
+    <value>ポップマップ配置</value>
+  </data>
+  <data name="tabiWaferMap.Text" xml:space="preserve">
+    <value>ウェハマップ</value>
+  </data>
+  <data name="tabpWaferMap.Text" xml:space="preserve">
+    <value>結果</value>
+  </data>
+  <data name="CieChartPanel.Text" xml:space="preserve">
+    <value>色度座標 図表1931</value>
+  </data>
+  <data name="checkBoxXWaveLength.Text" xml:space="preserve">
+    <value>波長</value>
+  </data>
+  <data name="checkBoxBinRange.Text" xml:space="preserve">
+    <value>ランク表</value>
+  </data>
+  <data name="checkBoxGridLine.Text" xml:space="preserve">
+    <value>グリッド線</value>
+  </data>
+  <data name="checkBoxPlankian.Text" xml:space="preserve">
+    <value>厚板</value>
+  </data>
+  <data name="checkBoxCIEColor.Text" xml:space="preserve">
+    <value>色</value>
+  </data>
+  <data name="btnImportCIE.Text" xml:space="preserve">
+    <value>ファイルロード</value>
+  </data>
+  <data name="btnSnapCIEChart.Text" xml:space="preserve">
+    <value>画像保存</value>
+  </data>
+  <data name="gplBinResult.Text" xml:space="preserve">
+    <value>ランク結果</value>
+  </data>
+  <data name="tabiCIEChart.Text" xml:space="preserve">
+    <value>色度座標 図表</value>
+  </data>
+  <data name="tabpCIEChart.Text" xml:space="preserve">
+    <value>統計値01</value>
+  </data>
+  <data name="tabcChartInfo.Text" xml:space="preserve">
+    <value>結果</value>
+  </data>
+  <data name="progressBar.Text" xml:space="preserve">
+    <value>プログレスバーX</value>
+  </data>
+  <data name="tabItem3.Text" xml:space="preserve">
+    <value>統計値02</value>
+  </data>
+  <data name="tabItem4.Text" xml:space="preserve">
+    <value>統計値03</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Test Result</value>
+  </data>
+</root>

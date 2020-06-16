@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lblRepeatCountTitle.Text" xml:space="preserve">
+    <value>儲存頻譜的晶粒數</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="numSpectrumCount.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="numSpectrumCount.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numSpectrumCount.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numSpectrumCount.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numSpectrumCount.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numSpectrumCount.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numSpectrumCount.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numSpectrumCount.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numSpectrumCount.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numSpectrumCount.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numSpectrumCount.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numSpectrumCount.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numSpectrumCount.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numSpectrumCount.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numSpectrumCount.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkIsSaveAbsoluteSpectrum.Text" xml:space="preserve">
+    <value>啟動儲存光譜卡的絕對頻譜值</value>
+  </data>
+  <data name="chkIsSaveRelativeSpectrum.Text" xml:space="preserve">
+    <value>啟動儲存光譜卡的相對頻譜值</value>
+  </data>
+  <data name="lblBasicSetting.Text" xml:space="preserve">
+    <value>使用者介面設定</value>
+  </data>
+  <data name="lblMultiLanguageTitle.Text" xml:space="preserve">
+    <value>使用語言</value>
+  </data>
+  <data name="lblCoefTablePathTitle.Text" xml:space="preserve">
+    <value>補償係數表路徑</value>
+  </data>
+  <data name="lblProductPathTitle.Text" xml:space="preserve">
+    <value>產品檔路徑</value>
+  </data>
+  <data name="txtCoefTableExportPath.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtCoefTableExportPath.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtCoefTableExportPath.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCoefTableExportPath.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtCoefTableExportPath.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtCoefTableExportPath.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtProductPath.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtProductPath.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtProductPath.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtProductPath.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtProductPath.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtProductPath.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSystemPath.Text" xml:space="preserve">
+    <value>系統各項路徑設定</value>
+  </data>
+  <data name="txtTestResultPath02.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtTestResultPath02.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtTestResultPath02.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTestResultPath02.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtTestResultPath02.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtTestResultPath02.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTestResultPath02.Text" xml:space="preserve">
+    <value>輸出路徑 (2)</value>
+  </data>
+  <data name="lblFileNamePresentTitle.Text" xml:space="preserve">
+    <value>檔名命名規則</value>
+  </data>
+  <data name="txtTestResultExt.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtTestResultExt.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtTestResultExt.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTestResultExt.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtTestResultExt.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtTestResultExt.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTestResultExtTitle.Text" xml:space="preserve">
+    <value>副檔名</value>
+  </data>
+  <data name="txtTestResultPath01.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtTestResultPath01.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtTestResultPath01.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTestResultPath01.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtTestResultPath01.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtTestResultPath01.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTestResultPath01.Text" xml:space="preserve">
+    <value>輸出路徑 (1)</value>
+  </data>
+  <data name="lblTestResultFileSetting.Text" xml:space="preserve">
+    <value>量測資料輸出檔設定資料</value>
+  </data>
+  <data name="lblUserInfoSetting.Text" xml:space="preserve">
+    <value>使用者報表設定</value>
+  </data>
+  <data name="txtUserDataVersion.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtUserDataVersion.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtUserDataVersion.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtUserDataVersion.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtUserDataVersion.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtUserDataVersion.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblUserDataVersionTitle.Text" xml:space="preserve">
+    <value>輸出格式版本</value>
+  </data>
+  <data name="txtMachineName.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtMachineName.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtMachineName.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMachineName.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtMachineName.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtMachineName.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMachineNameTitle.Text" xml:space="preserve">
+    <value>機台名稱</value>
+  </data>
+  <data name="lblUserIDTitle.Text" xml:space="preserve">
+    <value>使用者代號</value>
+  </data>
+  <data name="lblFormatTitle.Text" xml:space="preserve">
+    <value>輸出格式名稱</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>儲存</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>人機介面</value>
+  </data>
+  <data name="lblTestResultPath03.Text" xml:space="preserve">
+    <value>輸出路徑 (3)</value>
+  </data>
+  <data name="chkEnableMES.Text" xml:space="preserve">
+    <value>啟動自動載入工單(Recipe)功能</value>
+  </data>
+  <data name="lblCustomerMES.Text" xml:space="preserve">
+    <value>自動載入工單功能設定</value>
+  </data>
+  <data name="lbldeliverProberRecipe.Text" xml:space="preserve">
+    <value>Prober 產品檔由測試機指定</value>
+  </data>
+  <data name="lblMesRefPath.Text" xml:space="preserve">
+    <value>載入檔案路徑</value>
+  </data>
+  <data name="lblMesRefPath2.Text" xml:space="preserve">
+    <value>載入測試條件檔案路徑</value>
+  </data>
+  <data name="chkIsSetIFMsrtRange.Text" xml:space="preserve">
+    <value>啟動設定IF量測範圍</value>
+  </data>
+  <data name="chkIsSetIZMsrtRange.Text" xml:space="preserve">
+    <value>啟動設定IZ量測範圍</value>
+  </data>
+  <data name="chkIsSetVFMsrtRange.Text" xml:space="preserve">
+    <value>啟動設定VF量測範圍</value>
+  </data>
+  <data name="chkIsSetVRMsrtRange.Text" xml:space="preserve">
+    <value>啟動設定VR量測範圍</value>
+  </data>
+  <data name="lblUISelected.Text" xml:space="preserve">
+    <value>使用者資訊</value>
+  </data>
+  <data name="tabiBasic.Text" xml:space="preserve">
+    <value>基本設定</value>
+  </data>
+  <data name="tabiMES.Text" xml:space="preserve">
+    <value>載入工單設定</value>
+  </data>
+  <data name="tabiParam.Text" xml:space="preserve">
+    <value>參數設定</value>
+  </data>
+  <data name="lblManualOutputPath01.Text" xml:space="preserve">
+    <value>手動測試輸出路徑 (1)</value>
+  </data>
+  <data name="lblManualOutputPath02.Text" xml:space="preserve">
+    <value>手動測試輸出路徑 (2)</value>
+  </data>
+  <data name="lblManualOutputPath03.Text" xml:space="preserve">
+    <value>手動測試輸出路徑 (3)</value>
+  </data>
+  <data name="chkEnanleEndTestClearMap.Text" xml:space="preserve">
+    <value>啟動點測完自動清除Map</value>
+  </data>
+  <data name="chkPopFormTopMost.Text" xml:space="preserve">
+    <value>啟動Map 顯示置頂</value>
+  </data>
+  <data name="chkClearHistoryWhenStartTest.Text" xml:space="preserve">
+    <value>啟動開始寫檔時清空歷史資料</value>
+  </data>
+  <data name="lblBackupCoefTableExportPath.Text" xml:space="preserve">
+    <value>備份補償係數表路徑</value>
+  </data>
+  <data name="lblEnableWaferMapItem1.Text" xml:space="preserve">
+    <value>Wafer Map顯示項目1</value>
+  </data>
+  <data name="lblEnableWaferMapItem2.Text" xml:space="preserve">
+    <value>Wafer Map顯示項目2</value>
+  </data>
+  <data name="lblEnableWaferMapItem3.Text" xml:space="preserve">
+    <value>Wafer Map顯示項目3</value>
+  </data>
+  <data name="lblEnableWaferMapItem4.Text" xml:space="preserve">
+    <value>Wafer Map顯示項目4</value>
+  </data>
+  <data name="lblWaferMapConfigGroup.Text" xml:space="preserve">
+    <value>Wafer Map  設定</value>
+  </data>
+  <data name="btnWaferMapSetting.Text" xml:space="preserve">
+    <value>Wafer Map 設定</value>
+  </data>
+  <data name="chkEnableAllMsrtItem.Text" xml:space="preserve">
+    <value>啟用所有量測項目</value>
+  </data>
+  <data name="chkIsCheckDailyChecking.Text" xml:space="preserve">
+    <value>上片時 , 檢查日校正是否已經執行</value>
+  </data>
+  <data name="chkIsEnableCheckDailyCheckingOverDue.Text" xml:space="preserve">
+    <value>啟動檢查日校正是否過期</value>
+  </data>
+  <data name="lblDailyMonitorPath.Text" xml:space="preserve">
+    <value>日校正監控檔案路徑</value>
+  </data>
+  <data name="lblSTATTestResultExtTitle.Text" xml:space="preserve">
+    <value>副檔名</value>
+  </data>
+  <data name="lblSTATTestResultPath01.Text" xml:space="preserve">
+    <value>輸出路徑 (1)</value>
+  </data>
+  <data name="lblSTATTestResultPath02.Text" xml:space="preserve">
+    <value>輸出路徑 (2)</value>
+  </data>
+  <data name="lblSTATTestResultPath03.Text" xml:space="preserve">
+    <value>輸出路徑 (3)</value>
+  </data>
+  <data name="lblWAFTestResultExtTitle.Text" xml:space="preserve">
+    <value>副檔名</value>
+  </data>
+  <data name="lblWAFTestResultPath01.Text" xml:space="preserve">
+    <value>輸出路徑 (1)</value>
+  </data>
+  <data name="lblWAFTestResultPath02.Text" xml:space="preserve">
+    <value>輸出路徑 (2)</value>
+  </data>
+  <data name="lblWAFTestResultPath03.Text" xml:space="preserve">
+    <value>輸出路徑 (3)</value>
+  </data>
+  <data name="tabcFormatB.Text" xml:space="preserve">
+    <value>WAF輸出路徑</value>
+  </data>
+  <data name="tabFormatStatistic.Text" xml:space="preserve">
+    <value>STAT輸出路徑</value>
+  </data>
+  <data name="tabiSpecSetting.Text" xml:space="preserve">
+    <value>CSV輸出路徑</value>
+  </data>
+  <data name="chkIsEnableCheckRecipe.Text" xml:space="preserve">
+    <value>啟動檢查產品檔內容是否正確</value>
+  </data>
+  <data name="chkEnableAutoPopFourMapForm.Text" xml:space="preserve">
+    <value>生產時自動切換至四個Map顯示</value>
+  </data>
+  <data name="chkIsEanbleConFormEnCheckBox.Text" xml:space="preserve">
+    <value>啟動測試條件頁面En鍵可直接設定功能</value>
+  </data>
+  <data name="chkEnableOutputPathByRecipe.Text" xml:space="preserve">
+    <value>啟動由工單(Recipe)指定檔案輸出路徑</value>
+  </data>
+  <data name="chkShowReportComments.Text" xml:space="preserve">
+    <value>結束寫檔前, 顯示"Comments"視窗</value>
+  </data>
+  <data name="lblSweepOutputPath01.Text" xml:space="preserve">
+    <value>Sweep輸出路徑</value>
+  </data>
+  <data name="tabiSweepSetting.Text" xml:space="preserve">
+    <value>Sweep輸出路徑</value>
+  </data>
+</root>

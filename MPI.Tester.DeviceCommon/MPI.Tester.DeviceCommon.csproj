@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E1AEFEEE-68BB-47C5-B6CC-826BDA0DABAA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MPI.Tester.DeviceCommon</RootNamespace>
+    <AssemblyName>MPI.Tester.DeviceCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Assembly\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MPI">
+      <HintPath>..\Assembly\MPI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAQ\DAQSettingData.cs" />
+    <Compile Include="DAQ\IDAQ.cs" />
+    <Compile Include="DeviceLogger\DeviceRelayInfoBase.cs" />
+    <Compile Include="DeviceSpec\AttenuatorSpec.cs" />
+    <Compile Include="DeviceSpec\ChannelAssignmentData.cs" />
+    <Compile Include="DeviceSpec\IOConfigData.cs" />
+    <Compile Include="DeviceSpec\LANSettingData.cs" />
+    <Compile Include="DeviceSpec\LaserSourceSpec.cs" />
+    <Compile Include="DeviceSpec\LCRMeterSpec.cs" />
+    <Compile Include="DeviceSpec\MinMaxValuePair.cs" />
+    <Compile Include="DeviceSpec\OpticalSwitchSpec.cs" />
+    <Compile Include="DeviceSpec\PowerMeterSpec.cs" />
+    <Compile Include="DMM\DmmSettingData.cs" />
+    <Compile Include="DMM\EnumDMM.cs" />
+    <Compile Include="ESD\ESDGainTable.cs" />
+    <Compile Include="ESD\ESDHardwareInfo.cs" />
+    <Compile Include="HWConnector\IConnect.cs" />
+    <Compile Include="IOCard\IIOCard.cs" />
+    <Compile Include="LASER\Attenuator\AttenuatorSettingData.cs" />
+    <Compile Include="LASER\Attenuator\AutoTuneVOASettingData.cs" />
+    <Compile Include="LASER\Attenuator\IAttenuator.cs" />
+    <Compile Include="LASER\LaserSourceSysSettingData.cs" />
+    <Compile Include="LASER\LaserSource\ILaserSource.cs" />
+    <Compile Include="LASER\OpticalSwitch\IOpticalSwitch.cs" />
+    <Compile Include="LASER\OpticalSwitch\OpticalSwitchSettingData.cs" />
+    <Compile Include="LASER\PowerMeter\IPowerMeter.cs" />
+    <Compile Include="LASER\PowerMeter\PowerMeterSettingData.cs" />
+    <Compile Include="LCRMeter\LCRCaliData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OSA\EnumOSA.cs" />
+    <Compile Include="OSA\IOSA.cs" />
+    <Compile Include="OSA\OsaData.cs" />
+    <Compile Include="OSA\OsaDevSetting.cs" />
+    <Compile Include="SourceMeter\ElecTerminalSetting.cs" />
+    <Compile Include="LCRMeter\ILCRMeter.cs" />
+    <Compile Include="LCRMeter\LCRDevSetting.cs" />
+    <Compile Include="LCRMeter\LCRSettingData.cs" />
+    <Compile Include="SourceMeter\IOSettingData.cs" />
+    <Compile Include="SpectrometerHwSetting.cs" />
+    <Compile Include="SpectroMeter\CaliSpectrum.cs" />
+    <Compile Include="DeviceSpec\RangeSettingData.cs" />
+    <Compile Include="DeviceSpec\SourceMeterSpec.cs" />
+    <Compile Include="DeviceSpec\DeviceSpec.cs" />
+    <Compile Include="DeviceSpec\ESDSpec.cs" />
+    <Compile Include="DeviceSpec\RangeSpec.cs" />
+    <Compile Include="DeviceSpec\SourceMeterConfigData.cs" />
+    <Compile Include="DeviceSpec\SpectrometerSpec.cs" />
+    <Compile Include="SourceMeter\ElecDevSetting.cs" />
+    <Compile Include="SourceMeter\ElectSettingData.cs" />
+    <Compile Include="Enumeration.cs" />
+    <Compile Include="ESD\ESDDevSetting.cs" />
+    <Compile Include="DeviceSpec\GPIBSettingData.cs" />
+    <Compile Include="ESD\ESDSettingData.cs" />
+    <Compile Include="ESD\IESDCtrl.cs" />
+    <Compile Include="SourceMeter\ISourceMeter.cs" />
+    <Compile Include="SpectroMeter\ISpectroMeter.cs" />
+    <Compile Include="SpectroMeter\OptiData.cs" />
+    <Compile Include="SpectroMeter\OptiDevSetting.cs" />
+    <Compile Include="SpectroMeter\OptiSettingData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DeviceSpec\RS232SettingData.cs" />
+    <Compile Include="OSA\OsaSettingData.cs" />
+    <Compile Include="SwitchSystem\ISwitch.cs" />
+    <Compile Include="SwitchSystem\SwitchSettingData.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

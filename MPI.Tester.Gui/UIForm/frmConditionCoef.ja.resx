@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Column1.HeaderText" xml:space="preserve">
+    <value>ESDキー名称</value>
+  </data>
+  <data name="dataGridViewIntegerInputColumn7.HeaderText" xml:space="preserve">
+    <value>ESD項目</value>
+  </data>
+  <data name="Column3.HeaderText" xml:space="preserve">
+    <value>ESDゲイン</value>
+  </data>
+  <data name="Column4.HeaderText" xml:space="preserve">
+    <value>ESDオフセット</value>
+  </data>
+  <data name="tabiESD.Text" xml:space="preserve">
+    <value>ESD</value>
+  </data>
+  <data name="colGainOffsetNo.HeaderText" xml:space="preserve">
+    <value>番号</value>
+  </data>
+  <data name="colGainOffsetName.HeaderText" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="colGainOffsetType.HeaderText" xml:space="preserve">
+    <value>型式</value>
+  </data>
+  <data name="colSquare.HeaderText" xml:space="preserve">
+    <value>平方</value>
+  </data>
+  <data name="colGain.HeaderText" xml:space="preserve">
+    <value>ゲイン</value>
+  </data>
+  <data name="colOffset.HeaderText" xml:space="preserve">
+    <value>オフセット</value>
+  </data>
+  <data name="colGainOffsetKeyName.HeaderText" xml:space="preserve">
+    <value>キー名称</value>
+  </data>
+  <data name="tabGainOffset1.Text" xml:space="preserve">
+    <value>ゲインオフセット1</value>
+  </data>
+  <data name="dataGridViewIntegerInputColumn3.HeaderText" xml:space="preserve">
+    <value>番号</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="dataGridViewIntegerInputColumn4.HeaderText" xml:space="preserve">
+    <value>型式</value>
+  </data>
+  <data name="dataGridViewDoubleInputColumn2.HeaderText" xml:space="preserve">
+    <value>平方2</value>
+  </data>
+  <data name="dataGridViewDoubleInputColumn3.HeaderText" xml:space="preserve">
+    <value>ゲイン2</value>
+  </data>
+  <data name="dataGridViewDoubleInputColumn4.HeaderText" xml:space="preserve">
+    <value>オフセット2</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>キー名称</value>
+  </data>
+  <data name="tabGainOffset2.Text" xml:space="preserve">
+    <value>ゲインオフセット2</value>
+  </data>
+  <data name="dataGridViewIntegerInputColumn5.HeaderText" xml:space="preserve">
+    <value>番号</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="dataGridViewIntegerInputColumn6.HeaderText" xml:space="preserve">
+    <value>型式</value>
+  </data>
+  <data name="dataGridViewDoubleInputColumn5.HeaderText" xml:space="preserve">
+    <value>平方3</value>
+  </data>
+  <data name="dataGridViewDoubleInputColumn6.HeaderText" xml:space="preserve">
+    <value>ゲイン3</value>
+  </data>
+  <data name="dataGridViewDoubleInputColumn7.HeaderText" xml:space="preserve">
+    <value>オフセット3</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>キー名称</value>
+  </data>
+  <data name="tabGainOffset3.Text" xml:space="preserve">
+    <value>ゲインオフセット3</value>
+  </data>
+  <data name="tabGainOffset.Text" xml:space="preserve">
+    <value>ゲインオフセット1</value>
+  </data>
+  <data name="lblResistence.Text" xml:space="preserve">
+    <value>抵抗値(オーム)</value>
+  </data>
+  <data name="btnResetGainOffset.Text" xml:space="preserve">
+    <value>ゲイン/オフセットをクリアする</value>
+  </data>
+  <data name="tabiGainOffset.Text" xml:space="preserve">
+    <value>ゲインオフセット</value>
+  </data>
+  <data name="btnResetPIVCoef.Text" xml:space="preserve">
+    <value>ゲイン/オフセットの再設定</value>
+  </data>
+  <data name="colPivNo.HeaderText" xml:space="preserve">
+    <value>番号</value>
+  </data>
+  <data name="colPivName.HeaderText" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="colPivDesciption.HeaderText" xml:space="preserve">
+    <value>説明</value>
+  </data>
+  <data name="colPivGain.HeaderText" xml:space="preserve">
+    <value>ゲイン</value>
+  </data>
+  <data name="colPivOffset.HeaderText" xml:space="preserve">
+    <value>オフセット</value>
+  </data>
+  <data name="colPivKeyName.HeaderText" xml:space="preserve">
+    <value>キー名称</value>
+  </data>
+  <data name="tabiPIV.Text" xml:space="preserve">
+    <value>PIV</value>
+  </data>
+  <data name="chkEnableSystemCoefCompensate.Text" xml:space="preserve">
+    <value>システム補正係数を適用する</value>
+  </data>
+  <data name="dataGridViewLabelXColumn1.HeaderText" xml:space="preserve">
+    <value>番号</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn5.HeaderText" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="dataGridViewIntegerInputColumn8.HeaderText" xml:space="preserve">
+    <value>型式</value>
+  </data>
+  <data name="dataGridViewDoubleInputColumn8.HeaderText" xml:space="preserve">
+    <value>平方</value>
+  </data>
+  <data name="dataGridViewDoubleInputColumn9.HeaderText" xml:space="preserve">
+    <value>ゲイン</value>
+  </data>
+  <data name="dataGridViewDoubleInputColumn10.HeaderText" xml:space="preserve">
+    <value>オフセット</value>
+  </data>
+  <data name="dataGridViewLabelXColumn2.HeaderText" xml:space="preserve">
+    <value>キー名称</value>
+  </data>
+  <data name="tabiSysCoef.Text" xml:space="preserve">
+    <value>システム係数</value>
+  </data>
+  <data name="labelX1.Text" xml:space="preserve">
+    <value>光学補正</value>
+  </data>
+  <data name="labelX2.Text" xml:space="preserve">
+    <value>抵抗値補正</value>
+  </data>
+  <data name="dataGridViewIntegerInputColumn2.HeaderText" xml:space="preserve">
+    <value>チャック番号</value>
+  </data>
+  <data name="dataGridViewDoubleInputColumn1.HeaderText" xml:space="preserve">
+    <value>抵抗値</value>
+  </data>
+  <data name="btnRestChuckGainOffset.Text" xml:space="preserve">
+    <value>チャックのゲイン/オフセットをクリアする</value>
+  </data>
+  <data name="btnDailyWatch.Text" xml:space="preserve">
+    <value>チャック修正</value>
+  </data>
+  <data name="dataGridViewIntegerInputColumn1.HeaderText" xml:space="preserve">
+    <value>番号</value>
+  </data>
+  <data name="colLOPGain.HeaderText" xml:space="preserve">
+    <value>LOP_G</value>
+  </data>
+  <data name="colLOPOffset.HeaderText" xml:space="preserve">
+    <value>LOP_dc</value>
+  </data>
+  <data name="colWattGain.HeaderText" xml:space="preserve">
+    <value>MW_G</value>
+  </data>
+  <data name="colWattOffset.HeaderText" xml:space="preserve">
+    <value>MW_dc</value>
+  </data>
+  <data name="colLMGain.HeaderText" xml:space="preserve">
+    <value>LM_G</value>
+  </data>
+  <data name="colLMOffset.HeaderText" xml:space="preserve">
+    <value>LM_dc</value>
+  </data>
+  <data name="tabiChuck.Text" xml:space="preserve">
+    <value>チャック</value>
+  </data>
+  <data name="btnSetCoefRange.Text" xml:space="preserve">
+    <value>波長範囲を設定する</value>
+  </data>
+  <data name="btnResetCoef.Text" xml:space="preserve">
+    <value>係数表をリセット</value>
+  </data>
+  <data name="lblTableNum.Text" xml:space="preserve">
+    <value>フォーム</value>
+  </data>
+  <data name="lblStartWave.Text" xml:space="preserve">
+    <value>最小波長</value>
+  </data>
+  <data name="lblEndWave.Text" xml:space="preserve">
+    <value>最大波長</value>
+  </data>
+  <data name="tabiCoefTable.Text" xml:space="preserve">
+    <value>対波長補正係数表</value>
+  </data>
+  <data name="btnNormalizedByChannel.Text" xml:space="preserve">
+    <value>正規化</value>
+  </data>
+  <data name="lblNomalizedByChannel.Text" xml:space="preserve">
+    <value>チャンネル</value>
+  </data>
+  <data name="colByChannelCoefNO.HeaderText" xml:space="preserve">
+    <value>番号</value>
+  </data>
+  <data name="colByChannelCoefName.HeaderText" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="colByChannelCoefChannel.HeaderText" xml:space="preserve">
+    <value>チャンネル</value>
+  </data>
+  <data name="colByChannelCoefType.HeaderText" xml:space="preserve">
+    <value>型式</value>
+  </data>
+  <data name="colByChannelCoefSquare.HeaderText" xml:space="preserve">
+    <value>平方</value>
+  </data>
+  <data name="colByChannelCoefGain.HeaderText" xml:space="preserve">
+    <value>ゲイン</value>
+  </data>
+  <data name="colByChannelCoefOffset.HeaderText" xml:space="preserve">
+    <value>オフセット</value>
+  </data>
+  <data name="colByChannelCoefKeyName.HeaderText" xml:space="preserve">
+    <value>キー名称</value>
+  </data>
+  <data name="btnChannelCaliTool.Text" xml:space="preserve">
+    <value>チャンネル校正による</value>
+  </data>
+  <data name="chkEnableByChannelCompensate.Text" xml:space="preserve">
+    <value>チャンネル補正を起動する</value>
+  </data>
+  <data name="btnResetRcCoefTable.Text" xml:space="preserve">
+    <value>係数表をリセット</value>
+  </data>
+  <data name="tabiByChannelCoefTable.Text" xml:space="preserve">
+    <value>チャンネル補正係数</value>
+  </data>
+  <data name="tabcCoefTable.Text" xml:space="preserve">
+    <value>ツマミ管理1</value>
+  </data>
+  <data name="lblCalibrateFileName.Text" xml:space="preserve">
+    <value>校正ファイル</value>
+  </data>
+  <data name="btnUpdateCalibrationFile.Text" xml:space="preserve">
+    <value>校正ファイル</value>
+  </data>
+  <data name="btnShowSptCalibData.Text" xml:space="preserve">
+    <value>スペクトル校正ファイル表示</value>
+  </data>
+  <data name="btnCaliTool.Text" xml:space="preserve">
+    <value>校正</value>
+  </data>
+  <data name="lblImportPath.Text" xml:space="preserve">
+    <value>ファイルロード先</value>
+  </data>
+  <data name="btnConfirmCoef.Text" xml:space="preserve">
+    <value>セーブ</value>
+  </data>
+  <data name="btnImportCoef.Text" xml:space="preserve">
+    <value>ファイルロード</value>
+  </data>
+  <data name="btnExportCoef.Text" xml:space="preserve">
+    <value>ファイルセーブ</value>
+  </data>
+  <data name="lblCalibrateWave.Text" xml:space="preserve">
+    <value>基準波長種類</value>
+  </data>
+  <data name="lblCalibrateMode.Text" xml:space="preserve">
+    <value>補正モード選択</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Coef</value>
+  </data>
+</root>

@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnLogin.Tooltip" xml:space="preserve">
+    <value>使用者切換</value>
+  </data>
+  <data name="btnEndAndSave.Tooltip" xml:space="preserve">
+    <value>結束寫檔</value>
+  </data>
+  <data name="btnCycleRun.Tooltip" xml:space="preserve">
+    <value>單步測試</value>
+  </data>
+  <data name="btnStartAndOpen.Tooltip" xml:space="preserve">
+    <value>開始測試</value>
+  </data>
+  <data name="btnCIEMap.Tooltip" xml:space="preserve">
+    <value>色座標</value>
+  </data>
+  <data name="btnWaferMap.Tooltip" xml:space="preserve">
+    <value>晶圓圖</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="barLeft.Font" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="tabOperate.Text" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="tabBin.Text" xml:space="preserve">
+    <value>分類設定</value>
+  </data>
+  <data name="tabTools.Text" xml:space="preserve">
+    <value>工具</value>
+  </data>
+  <data name="tabSetting.Text" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="tabResult.Text" xml:space="preserve">
+    <value>量測讀值</value>
+  </data>
+  <data name="tabCondition.Text" xml:space="preserve">
+    <value>測試條件</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAIAEBAAAAEAIABoBAAAJgAAACAgAAABACAAqBAAAI4EAAAoAAAAEAAAACAAAAABACAAAAAAAAAE
+        AAASCwAAEgsAAAAAAAAAAAAA7+/v//X19f/////////////////l5eX/////////////////7u7u//X1
+        9f/////////////////o6Oj//////9vb2v/b2tr/3MrT/9zZ7//b3PP/2tvy/8nF2f/Y09j/2tna/9nD
+        2f/429n/39zT/9nY0v/Ox9b/0djX/93f3v/////////////+/v//4d7////////s6v/+8vH/4v/5////
+        ///9/f//xOL3//v//v/g4P///v7//////////////////////////////+Le////////4d3//////+P/
+        +f//////7f/7/9Tg/P//////4eH////////////////////////////////////i3////////+Le////
+        ///j//n//////+L/+f/h4f///////+Hh////////////////////////////////////4t/////////i
+        3///////4//5///////i//n/4+P///7+///h4f///////////////////////////////////+Lf///+
+        /v//4+D//////+P/+f//////4//5/+np///4+P//4uL////////////////////////////////////i
+        3///9vX//+vp///////j//n/+//+/+b/+v/5+f//6Oj//+Li////////////////////////////////
+        ////4+D//+Xi///8/P//////4//5/+7/+//0//3//v7//+Pj///i4v//////////////////////////
+        /////////+fl///d2f///////////+P/+f/j//n////////////e3v//5eX/////////////////////
+        ///////////////u7P//19L////////////o//r/3f/4////////////1tb//+3t////////////////
+        ////////////////////9vX//8/K////////////8P/8/9b/9v///////////9DQ///09P//////////
+        //////////////////////////v7///Jw/////////////b//f/P//T////////////MzP//9/f/////
+        ///////////////////////////////+/v//xr//////////////////xv/z////////////ycn///r6
+        //////////////////////////////////////////X0//////////////////f//f///////////8TE
+        ///9/f//////////////////////////////////////////////////////////////////////////
+        ///29v///////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAAIAAAAEAAAAABACAAAAAAAAAQAAASCwAAEgsAAAAA
+        AAAAAAAA//////b29v/5+fn///////////////////////////////////////T09P/5+fn/////////
+        //////////////////////////////X19f/5+fn///////////////////////////////////////f3
+        9//5+fn/////////////////ycnJ/97e3v/////////////////////////////////+/v7/yMjI/9/f
+        3//////////////////////////////////+/v7/yMjI/97e3v//////////////////////////////
+        ////////1NTU/93d3f////////////Dw8P/u7u7/8PDv//Dv8P/w8PL/8PDz/+7u8f/w8PP/8PDz//Hy
+        8//u7/H/8PDz//Dw8//w8PP/8vLz//Dw8P/w8PD/8fDv//Pw7//x7e3/8+/v//Pv7//z7+7/8+7t//Hr
+        6v/z7ez/8+7u//Pu7f/v6+v/8O/u//Du7f/08/P/x8fF/8fGxP/HxsT/xsTD/8e7vv/Hjqv/yLzm/8jJ
+        8//IyfP/wcbz/8LF8//FyPP/taXM/42Psv+6rbz/w77A/8XDwv/Dv8X/wabE/76KxP/7xsT//srE/9HK
+        uv/Fybf/xMm3/7u+uv+djLz/tbTA/7LBwf+0xsP/vMXD/9HV1P/////////////////////////////7
+        +///xsD////////////////////////r6f//zsn//P/+/8b/8///////////////////////9/f//8PH
+        /v+5//D/7v/7////////////w8P///r6////////////////////////////////////////////////
+        ///////////////Evv///fz//////////////////8W////9/f//////xf/y//3/////////////////
+        ////////m8Ly//j//v////////////7+///Bwf//////////////////////////////////////////
+        /////////////////////////9jU///r6f/////////////+/v//w7z////////////S//X/8//8////
+        /////////////+//+/+o1vX/6Oj/////////////8fH//9HR////////////////////////////////
+        ////////////////////////////////////6ef//9vX/////////////+nn///Z1f///////////+P/
+        +f/i//n/////////////////x//z//f7/v/Hx//////////////e3v//5OT/////////////////////
+        ///////////////////////////////////////////////19P//z8r/////////////zcj///b1////
+        ////////8v/8/9P/9f////////////7////E//L//////8PD/////////////9DQ///z8///////////
+        //////////////////////////////////////////////////////////v7///JxP/////////////F
+        v////v7////////////6//7/y//0////////////8//8/9H/9f//////xMT/////////////yMj///v7
+        /////////////////////////////////////////////////////////////////////v7//8bA////
+        /////////8W///////////////////7////I//P////////////V//b/7//8///////ExP///v7/////
+        ///Gxv///v7/////////////////////////////////////////////////////////////////////
+        ////xsD/////////////xb///////////////////////8b/8////////////8b/8////////////8fH
+        ///9/f///////8TE////////////////////////////////////////////////////////////////
+        ///////////////GwP////////7+///GwP//////////////////////x//z////////////xv/y////
+        ////////y8v///j4////////xMT/////////////////////////////////////////////////////
+        /////////////////////////8W//////////Pv//8jD///////////////////////G//P/////////
+        ///H//P////////////a2v//6Oj////////ExP//////////////////////////////////////////
+        ////////////////////////////////////xr/////////29f//z8r//////////////////////8f/
+        8////////P/+/8n/8////////////+zs///X1////////8TE////////////////////////////////
+        ///////////////////////////////////////////////Gv////////+Pg///h3v//////////////
+        ////////x//z///////z//z/0v/1////////////+Pj//8vL////////xMT/////////////////////
+        /////////////////////////////////////////////////////////8bA////////z8r///X0////
+        ///////////////////H//P//////+b/+f/g//j////////////7+///yMj////////ExP//////////
+        ////////////////////////////////////////////////////////////////////x8H///39///H
+        wf///f3//////////////////////8b/8///////0//1//L//P////////////7+///Fxf///v7//8bG
+        ///////////////////////////////////////////////////////////////////////////////M
+        xv//+fj//8a/////////////////////////////x//z///////I//P//f///////////////////8TE
+        ///6+v//ycn/////////////////////////////////////////////////////////////////////
+        /////////9TP///x7///xb/////////////////////////////J//P//f/+/8f/8///////////////
+        ////////xMT///X1///Pz///////////////////////////////////////////////////////////
+        ////////////////////2dX//+zq///Fv////////////////////////////87/9P/4//3/xv/z////
+        ///////////////////ExP//7Oz//9fX////////////////////////////////////////////////
+        ///////////////////////////////h3v//4+H//8bA////////////////////////////1f/2//H/
+        /P/H//P//////////////////////8TE///j4///4OD/////////////////////////////////////
+        /////////////////////////////////////////+nm///a1v//x8H/////////////////////////
+        ///d//f/6P/6/8b/8///////////////////////xcX//9vb///o6P//////////////////////////
+        ////////////////////////////////////////////////////7+7//9PO///Jw///////////////
+        /////////////+T/+f/h//j/x//z///////////////////////ExP//2tr//+np////////////////
+        ///////////////////////////////////////////////////////////////19P//ycT//8zG////
+        ////////////////////////6P/6/9r/9//K//P//////////////////////8XF///W1v//7e3/////
+        //////////////////////////////////////////////////////////////////////////n4//+9
+        tv//087////////////////////////////0//3/yv/z/87/9P//////////////////////xsb//9HR
+        ///x8f//////////////////////////////////////////////////////////////////////////
+        /////f3//6ui///i3/////////////////////////////7///+3/+//1f/2////////////////////
+        ///Hx///zc3///T0////////////////////////////////////////////////////////////////
+        ////////////////////lIn///X0/////////////////////////////////6v/7f/h//j/////////
+        /////////////8nJ///IyP//9/f/////////////////////////////////////////////////////
+        ///////////////////////////////X0///////////////////////////////////////5P/5//n/
+        /v//////////////////////zc3//8DA///6+v//////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////Y2P//rKz///7+////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////39///f3///////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="lblRecipeFileName.Text" xml:space="preserve">
+    <value>產品工單</value>
+  </data>
+  <data name="lblHWFilterWheel.Text" xml:space="preserve">
+    <value>衰減檔位位置</value>
+  </data>
+  <data name="lblSWFilterWheel.Text" xml:space="preserve">
+    <value>軟體設定檔位</value>
+  </data>
+  <data name="btnLoadTask.Text" xml:space="preserve">
+    <value>讀取</value>
+  </data>
+  <data name="btnGoProberUI.Tooltip" xml:space="preserve">
+    <value>回到Prober頁面</value>
+  </data>
+  <data name="btnResetState.Tooltip" xml:space="preserve">
+    <value>解除狀態鎖定</value>
+  </data>
+  <data name="btnUserMgr.Tooltip" xml:space="preserve">
+    <value>使用者權限設定使</value>
+  </data>
+  <data name="btnReSingleTest.Tooltip" xml:space="preserve">
+    <value>單點測試</value>
+  </data>
+  <data name="btnAlarmLog.Tooltip" xml:space="preserve">
+    <value>錯誤訊息歷史紀錄</value>
+  </data>
+  <data name="btnCreateTask.Text" xml:space="preserve">
+    <value>新增</value>
+  </data>
+  <data name="btnDelete.Text" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="btnSaveAs.Text" xml:space="preserve">
+    <value>另存</value>
+  </data>
+</root>

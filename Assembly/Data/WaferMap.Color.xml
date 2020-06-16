@@ -1,0 +1,185 @@
+﻿<WaferMapColor>
+	<setting>
+		<out-of-range>true</out-of-range>
+	</setting>
+	<item name="MVF_1" title="VF1">
+		<value min="0.1000" step="0.1000" max="2.0000" format="F4" />
+		<out-of-range minColor="ffff0000" maxColor="ff0000ff" />
+		<color value="0.0000">ffff0000</color>
+		<color value="0.0100">ffff1f00</color>
+		<color value="0.0200">ff00b7ef</color>
+		<color value="0.0300">ffff5f00</color>
+		<color value="0.0400">ffff7f00</color>
+		<color value="0.0500">ffff9f00</color>
+		<color value="0.0600">ffffbf00</color>
+		<color value="0.0700">ffffdf00</color>
+		<color value="0.0800">ffffff00</color>
+		<color value="0.0900">ffdfff00</color>
+		<color value="0.1000">ffbfff00</color>
+		<color value="0.1100">ff9fff00</color>
+		<color value="0.1200">ff7fff00</color>
+		<color value="0.1300">ff5fff00</color>
+		<color value="0.1400">ff3fff00</color>
+		<color value="0.1500">ff1fff00</color>
+		<color value="0.1600">ff00ff00</color>
+		<color value="0.1700">ff00ff1f</color>
+		<color value="0.1800">ff00ff3f</color>
+		<color value="0.1900">ff00ff5f</color>
+		<color value="0.2000">ff00ff7f</color>
+		<color value="0.2000">ff00ff9f</color>
+		<color value="0.2000">ff00ffbf</color>
+		<color value="0.2000">ff00ffdf</color>
+		<color value="0.2000">ff00ffff</color>
+		<color value="0.2000">ff00dfff</color>
+		<color value="0.2000">ff00bfff</color>
+		<color value="0.2000">ff009fff</color>
+		<color value="0.2000">ff007bff</color>
+		<color value="0.2000">ff005fff</color>
+		<color value="0.2000">ff003fff</color>
+		<color value="0.2000">ff001fff</color>
+	</item>
+	<item name="MVF_2" title="VF2">
+		<value min="2.5500" step="0.0500" max="10.0000" format="F4" />
+		<out-of-range minColor="ffff0000" maxColor="ff0000ff" />
+		<color value="0.0000">ffff0000</color>
+		<color value="0.0100">ffff1f00</color>
+		<color value="0.0200">ffff3f00</color>
+		<color value="0.0300">ffff5f00</color>
+		<color value="0.0400">ffff7f00</color>
+		<color value="0.0500">ffff9f00</color>
+		<color value="0.0600">ffffbf00</color>
+		<color value="0.0700">ffffdf00</color>
+		<color value="0.0800">ffffff00</color>
+		<color value="0.0900">ffdfff00</color>
+		<color value="0.1000">ffbfff00</color>
+		<color value="0.1100">ff9fff00</color>
+		<color value="0.1200">ff7fff00</color>
+		<color value="0.1300">ff5fff00</color>
+		<color value="0.1400">ff3fff00</color>
+		<color value="0.1500">ff1fff00</color>
+		<color value="0.1600">ff00ff00</color>
+		<color value="0.1700">ff00ff1f</color>
+		<color value="0.1800">ff00ff3f</color>
+		<color value="0.1900">ff00ff5f</color>
+		<color value="0.2000">ff00ff7f</color>
+		<color value="0.2000">ff00ff9f</color>
+		<color value="0.2000">ff00ffbf</color>
+		<color value="0.2000">ff00ffdf</color>
+		<color value="0.2000">ff00ffff</color>
+		<color value="0.2000">ff00dfff</color>
+		<color value="0.2000">ff00bfff</color>
+		<color value="0.2000">ff009fff</color>
+		<color value="0.2000">ff007bff</color>
+		<color value="0.2000">ff005fff</color>
+		<color value="0.2000">ff003fff</color>
+		<color value="0.2000">ff001fff</color>
+	</item>
+	<item name="WATT_1" title="LOP2">
+		<value min="1.0000" step="1.0000" max="50.0000" format="F4" />
+		<out-of-range minColor="fffff200" maxColor="ff400040" />
+		<color value="0.0000">ffff0000</color>
+		<color value="0.0100">ffff1f00</color>
+		<color value="0.0200">ffff3f00</color>
+		<color value="0.0300">ffff5f00</color>
+		<color value="0.0400">ffff7f00</color>
+		<color value="0.0500">ffff9f00</color>
+		<color value="0.0600">ffffbf00</color>
+		<color value="0.0700">ffffdf00</color>
+		<color value="0.0800">ffffff00</color>
+		<color value="0.0900">ffdfff00</color>
+		<color value="0.1000">ffbfff00</color>
+		<color value="0.1100">ff9fff00</color>
+		<color value="0.1200">ff7fff00</color>
+		<color value="0.1300">ff5fff00</color>
+		<color value="0.1400">ff3fff00</color>
+		<color value="0.1500">ff1fff00</color>
+		<color value="0.1600">ff00ff00</color>
+		<color value="0.1700">ff00ff1f</color>
+		<color value="0.1800">ff00ff3f</color>
+		<color value="0.1900">ff00ff5f</color>
+		<color value="0.2000">ff00ff7f</color>
+		<color value="0.2000">ff00ff9f</color>
+		<color value="0.2000">ff00ffbf</color>
+		<color value="0.2000">ff00ffdf</color>
+		<color value="0.2000">ff00ffff</color>
+		<color value="0.2000">ff00dfff</color>
+		<color value="0.2000">ff00bfff</color>
+		<color value="0.2000">ff009fff</color>
+		<color value="0.2000">ff007bff</color>
+		<color value="0.2000">ff005fff</color>
+		<color value="0.2000">ff003fff</color>
+		<color value="0.2000">ff001fff</color>
+	</item>
+	<item name="WLD_1" title="WLD1">
+		<value min="440.0000" step="1.0000" max="490.0000" format="F4" />
+		<out-of-range minColor="ff00ffff" maxColor="ff0000ff" />
+		<color value="0.0000">ffff0000</color>
+		<color value="0.0100">ffff1f00</color>
+		<color value="0.0200">ffff3f00</color>
+		<color value="0.0300">ffff5f00</color>
+		<color value="0.0400">ff6f3198</color>
+		<color value="0.0500">ffff9f00</color>
+		<color value="0.0600">ffffbf00</color>
+		<color value="0.0700">ffffdf00</color>
+		<color value="0.0800">ffffff00</color>
+		<color value="0.0900">ffdfff00</color>
+		<color value="0.1000">ffbfff00</color>
+		<color value="0.1100">ff9fff00</color>
+		<color value="0.1200">ff7fff00</color>
+		<color value="0.1300">ff5fff00</color>
+		<color value="0.1400">ff3fff00</color>
+		<color value="0.1500">ff1fff00</color>
+		<color value="0.1600">ff00ff00</color>
+		<color value="0.1700">ff00ff1f</color>
+		<color value="0.1800">ff00ff3f</color>
+		<color value="0.1900">ff00ff5f</color>
+		<color value="0.2000">ff00ff7f</color>
+		<color value="0.2000">ff00ff9f</color>
+		<color value="0.2000">ff00ffbf</color>
+		<color value="0.2000">ff00ffdf</color>
+		<color value="0.2000">ff00ffff</color>
+		<color value="0.2000">ff00dfff</color>
+		<color value="0.2000">ff00bfff</color>
+		<color value="0.2000">ff009fff</color>
+		<color value="0.2000">ff007bff</color>
+		<color value="0.2000">ff005fff</color>
+		<color value="0.2000">ff003fff</color>
+		<color value="0.2000">ff001fff</color>
+	</item>
+	<item name="MIR_1" title="IR1">
+		<value min="0.0000" step="0.0250" max="0.5000" format="F4" />
+		<out-of-range minColor="ff00ffff" maxColor="ff0000ff" />
+		<color value="0.0000">ffff0000</color>
+		<color value="0.0100">ffff1f00</color>
+		<color value="0.0200">ffff3f00</color>
+		<color value="0.0300">ffff5f00</color>
+		<color value="0.0400">ffff7f00</color>
+		<color value="0.0500">ffff9f00</color>
+		<color value="0.0600">ffffbf00</color>
+		<color value="0.0700">ffffdf00</color>
+		<color value="0.0800">ffffff00</color>
+		<color value="0.0900">ffdfff00</color>
+		<color value="0.1000">ffbfff00</color>
+		<color value="0.1100">ff9fff00</color>
+		<color value="0.1200">ff7fff00</color>
+		<color value="0.1300">ff5fff00</color>
+		<color value="0.1400">ff3fff00</color>
+		<color value="0.1500">ff1fff00</color>
+		<color value="0.1600">ff00ff00</color>
+		<color value="0.1700">ff00ff1f</color>
+		<color value="0.1800">ff00ff3f</color>
+		<color value="0.1900">ff00ff5f</color>
+		<color value="0.2000">ff00ff7f</color>
+		<color value="0.2000">ff00ff9f</color>
+		<color value="0.2000">ff00ffbf</color>
+		<color value="0.2000">ff00ffdf</color>
+		<color value="0.2000">ff00ffff</color>
+		<color value="0.2000">ff00dfff</color>
+		<color value="0.2000">ff00bfff</color>
+		<color value="0.2000">ff009fff</color>
+		<color value="0.2000">ff007bff</color>
+		<color value="0.2000">ff005fff</color>
+		<color value="0.2000">ff003fff</color>
+		<color value="0.2000">ff001fff</color>
+	</item>
+</WaferMapColor>

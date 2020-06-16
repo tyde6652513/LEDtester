@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<DotNETComponent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Visible>true</Visible>
+  <SupportedProjectTypes>
+    <string>CppCLI</string>
+    <string>WindowsFormsApplication</string>
+  </SupportedProjectTypes>
+  <SelectedByDefault>true</SelectedByDefault>
+  <Title>Measurement Studio Hardware Class Libraries/MAX Configuration Library</Title>
+  <Description>Contains methods that can be used to copy saved configuration data to or from a system or to generate system reports.</Description>
+  <Name>NationalInstruments.MaxConfiguration</Name>
+  <Licensed>false</Licensed>
+  <Dependencies>
+    <DotNETAssembly>
+      <Name>NationalInstruments.Common</Name>
+    </DotNETAssembly>
+  </Dependencies>
+  <Namespaces>
+    <string>NationalInstruments.Max</string>
+  </Namespaces>
+</DotNETComponent>

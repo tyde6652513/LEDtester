@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{33C2AD1C-45FE-4D42-86F2-E9685AEB51F3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MPI.Tester.Data</RootNamespace>
+    <AssemblyName>MPI.Tester.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Assembly\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MPI, Version=1.0.3706.32022, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assembly\MPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assembly\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BinData\SmartBin.cs" />
+    <Compile Include="BinData\SmartBinData.cs" />
+    <Compile Include="BinData\SmartBinDataBase.cs" />
+    <Compile Include="BinData\SmartBinning.cs" />
+    <Compile Include="BinData\SmartBinningData.cs" />
+    <Compile Include="BinData\SmartBoundary.cs" />
+    <Compile Include="BinData\SmartBoundaryData.cs" />
+    <Compile Include="BinData\SmartNGBin.cs" />
+    <Compile Include="BinData\SmartNGData.cs" />
+    <Compile Include="BinData\SmartSideBin.cs" />
+    <Compile Include="BinData\SmartSideData.cs" />
+    <Compile Include="CalibrateData\CalibarteData.cs" />
+    <Compile Include="CalibrateData\CalibrateChipValue.cs" />
+    <Compile Include="CalibrateData\CalibrationCtrl.cs" />
+    <Compile Include="ConditionData\ChannelConditionTable.cs" />
+    <Compile Include="ConditionData\ConditionCtrl.cs" />
+    <Compile Include="ConditionData\ConditionData.cs" />
+    <Compile Include="ConditionData\TestItemBase\GainOffsetData.cs" />
+    <Compile Include="ConditionData\TestItemBase\TestItemData.cs" />
+    <Compile Include="ConditionData\TestItemBase\TestItemDescription.cs" />
+    <Compile Include="ConditionData\TestItemBase\TestResultData.cs" />
+    <Compile Include="ConditionData\TestItem\CALCTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\ContactCheckTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\IOTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\LaserSourceTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\LCRSweepTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\DIBTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\DVFTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\ESDTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\IFHTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\IFTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\IVSweepTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\IZTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\LCRTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\LIVTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\LOPTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\LOPWLTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\PIVTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\PolarTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\RTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\RTHTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\TransistorTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\THYTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\VacTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\VFTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\VIScanTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\VISweepTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\VLRTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\VRTestItem.cs" />
+    <Compile Include="ConditionData\TestItem\OSATestItem.cs" />
+    <Compile Include="LaserData\ILaserPostCalc.cs" />
+    <Compile Include="LaserData\LaserCalcSetting.cs" />
+    <Compile Include="LaserData\LaserCharacteristicsData.cs" />
+    <Compile Include="LaserData\LaserCurveData.cs" />
+    <Compile Include="LaserData\LaserSource\Attenuator\AttenuatorConfig.cs" />
+    <Compile Include="LaserData\LaserSource\LaserSrcSysConfig.cs" />
+    <Compile Include="LaserData\LaserSource\Laser\LaserSourceConfig.cs" />
+    <Compile Include="LaserData\LaserSource\OpticalSwitch\OpticalSwitchConfig.cs" />
+    <Compile Include="LaserData\LaserSource\PowerMeter\PowerMeterConfig.cs" />
+    <Compile Include="MapData\MapColorFilterSpec.cs" />
+    <Compile Include="OutputPathManager.cs" />
+    <Compile Include="RawData\BaseData.cs" />
+    <Compile Include="RawData\BaseDataSet.cs" />
+    <Compile Include="RawData\DeviceRunTimeData.cs" />
+    <Compile Include="RawData\LCRData.cs" />
+    <Compile Include="RawData\LCRSweepSet.cs" />
+    <Compile Include="RawData\PIVData.cs" />
+    <Compile Include="RawData\PIVDataSet.cs" />
+    <Compile Include="RISpec.cs" />
+    <Compile Include="SimpleCompiler\Decoder\Decoder.cs" />
+    <Compile Include="SimpleCompiler\Parser\Grama.cs" />
+    <Compile Include="SimpleCompiler\Parser\Parser.cs" />
+    <Compile Include="SimpleCompiler\Scanner\Scanner.cs" />
+    <Compile Include="SimpleCompiler\SimpleCompiler.cs" />
+    <Compile Include="TesterSpecCtrl.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Enumeration.cs" />
+    <Compile Include="EnumErrMsgUserID.cs" />
+    <Compile Include="EnumUI.cs" />
+    <Compile Include="EnumUserID.cs" />
+    <Compile Include="GlobalFlag.cs" />
+    <Compile Include="CalibrateData\LOPWLCoeffTable.cs" />
+    <Compile Include="MachineData\ChannelConfig.cs" />
+    <Compile Include="MACAdressLocker.cs" />
+    <Compile Include="MachineData\Enumeration.cs" />
+    <Compile Include="MachineData\FuncEnable.cs" />
+    <Compile Include="MachineData\MachineConfig.cs" />
+    <Compile Include="MachineData\MachineInfoData.cs" />
+    <Compile Include="MapData\ColorSettingData.cs" />
+    <Compile Include="MapData\MapData.cs" />
+    <Compile Include="MsrtData.cs" />
+    <Compile Include="ProductData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RawData\ChannelResultData.cs" />
+    <Compile Include="RawData\ChannelResultDataSet.cs" />
+    <Compile Include="RawData\ChipInfo.cs" />
+    <Compile Include="RawData\ElecSweepData.cs" />
+    <Compile Include="RawData\ElecSweepDataSet.cs" />
+    <Compile Include="RawData\LIVData.cs" />
+    <Compile Include="RawData\LIVDataSet.cs" />
+    <Compile Include="RawData\SpectrumData.cs" />
+    <Compile Include="RawData\SpectrumDataSet.cs" />
+    <Compile Include="RDFunc.cs" />
+    <Compile Include="SystemCaliData.cs" />
+    <Compile Include="TestGroupCtrl.cs" />
+    <Compile Include="UserManage\UserManageCtrl.cs" />
+    <Compile Include="UserManage\UsersManageData.cs" />
+    <Compile Include="WMData.cs" />
+    <Compile Include="TesterSetting.cs" />
+    <Compile Include="UISetting.cs" />
+    <Compile Include="UserData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MPI.Tester.DeviceCommon\MPI.Tester.DeviceCommon.csproj">
+      <Project>{E1AEFEEE-68BB-47C5-B6CC-826BDA0DABAA}</Project>
+      <Name>MPI.Tester.DeviceCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester.Maths\MPI.Tester.Maths.csproj">
+      <Project>{F33CF83B-82FB-4E56-A0EC-DCC4869FB603}</Project>
+      <Name>MPI.Tester.Maths</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester\MPI.Tester.csproj">
+      <Project>{71A9C95D-A461-4742-8FDD-B41F58B91C8E}</Project>
+      <Name>MPI.Tester</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="obj\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

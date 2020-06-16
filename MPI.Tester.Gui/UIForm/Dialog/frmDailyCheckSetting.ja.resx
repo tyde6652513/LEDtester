@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtMsrFileDir.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtMsrFileDir.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtMsrFileDir.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMsrFileDir.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtMsrFileDir.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtMsrFileDir.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtStdFileDir.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtStdFileDir.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtStdFileDir.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtStdFileDir.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtStdFileDir.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtStdFileDir.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtConditionPath.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtConditionPath.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtConditionPath.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtConditionPath.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtConditionPath.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtConditionPath.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSaveReportPath.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtSaveReportPath.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtSaveReportPath.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSaveReportPath.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtSaveReportPath.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtSaveReportPath.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtOuputFileNameRule.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtOuputFileNameRule.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtOuputFileNameRule.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtOuputFileNameRule.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtOuputFileNameRule.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtOuputFileNameRule.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSaveReportPath2.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtSaveReportPath2.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtSaveReportPath2.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSaveReportPath2.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtSaveReportPath2.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtSaveReportPath2.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">終了</data>
+  <data name="btnConfirm.Text" xml:space="preserve">確認</data>
+  <data name="chkIsCheckEveryDieInSpec.Text" xml:space="preserve">追加判断：全チップの結果が規格に入る</data>
+  <data name="lblAutoLevel.Text" xml:space="preserve">自動稼動レベル</data>
+  <data name="lblBaseSetting.Text" xml:space="preserve">基本設定</data>
+  <data name="chkIsEnableSaveFileByMechineName.Text" xml:space="preserve">出力先(ネットディスク)</data>
+  <data name="lblCriterionPath.Text" xml:space="preserve">条件ファイルパス</data>
+  <data name="lblMsrtDir.Text" xml:space="preserve">測定ファイルのフォルダー</data>
+  <data name="lblOpenFolderPath.Text" xml:space="preserve">基準ファイルのフォルダー</data>
+  <data name="lblOutputFileRule.Text" xml:space="preserve">ファイルの名付け規則</data>
+  <data name="lblOutputPath.Text" xml:space="preserve">比較結果ファイルの出力先(IPC)</data>
+  <data name="lblOutputPath2.Text" xml:space="preserve">比較結果ファイルの出力先(ネットディスク)</data>
+  <data name="lblOutputSetting.Text" xml:space="preserve">ファイル出力先設定</data>
+  <data name="lblRecipeItem.Text" xml:space="preserve">産品ファイル</data>
+  <data name="lblTestName.Text" xml:space="preserve">出力ファイル名</data>
+  <data name="rdAutoCheck.Text" xml:space="preserve">座標位置による</data>
+  <data name="rdManualCheck.Text" xml:space="preserve">テスト順番による</data>
+  <data name="tabiDailayWatch.Text" xml:space="preserve">モニタリング</data>
+  <data name="tabiSetting.Text" xml:space="preserve">設定</data>
+  <data name="chkIsEnableCheckValid.Text" xml:space="preserve">テストを始める前に、モニタリングの校正ファイルが期限超過したかを検査する(設定値は0-23)</data>
+  <data name="combFileNameItem.Text" xml:space="preserve">測定ファイル</data>
+  <data name="combRecipeItem.Text" xml:space="preserve">生産条件ファイル</data>
+  <data name="gropCompareRule.Text" xml:space="preserve">比較規則</data>
+  <data name="lblAlreadyOutOfSpec.Text" xml:space="preserve">元で壊れたチップの数量</data>
+  <data name="lblAutoLevel" xml:space="preserve">起動後で自動的にモニタリングを実行する</data>
+  <data name="lblChipNumbers.Text" xml:space="preserve">チップ数</data>
+  <data name="lblCriteriorType.Text" xml:space="preserve">規格選択</data>
+  <data name="lblLoadStdFile.Text" xml:space="preserve">基準ファイルを選択する</data>
+  <data name="lblMinCountAccept.Text" xml:space="preserve">比較後の最少チップ個数</data>
+  <data name="lblOutOfSpecDieCount" xml:space="preserve">NGチップの上限個数</data>
+  <data name="lblResultDir.Text" xml:space="preserve">補正済みヒストリー記録のフォルダー</data>
+  <data name="lblSelectTestFile.Text" xml:space="preserve">測定ファイルを選択する</data>
+  <data name="lblToleranceOutOfSpec.Text" xml:space="preserve">規格超過データ個数の限界</data>
+  <data name="tabiSpecSetting.Text" xml:space="preserve">規格設定</data>
+  <data name="tabiWaferMap.Text" xml:space="preserve">基本設定</data>
+  <data name="lblFilterChips.Text" xml:space="preserve">削除したデータ個数</data>
+  <data name="lblTotalChips.Text" xml:space="preserve">基準ファイルのデータ数</data>
+  <data name="chkCheckTestFileIsOverDue.Text" xml:space="preserve">測定ファイルの有効時間</data>
+  <data name="chkIsEnableReNameMsrtFile.Text" xml:space="preserve">モニタリングを実行したと、ファイル名の中に時間を追加する (FileName_Time)</data>
+</root>

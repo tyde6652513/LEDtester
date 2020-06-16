@@ -1,0 +1,989 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="numLimitHighCount.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="numLimitHighCount.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numLimitHighCount.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numLimitHighCount.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numLimitHighCount.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numLimitHighCount.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numLimitHighCount.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numLimitHighCount.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numLimitHighCount.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numLimitHighCount.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numLimitHighCount.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numLimitHighCount.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numLimitHighCount.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numLimitHighCount.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numLimitHighCount.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numLimitLowCount.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numLimitLowCount.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numLimitLowCount.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numLimitLowCount.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numLimitLowCount.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numLimitLowCount.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numLimitLowCount.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numLimitLowCount.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numLimitLowCount.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numLimitLowCount.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numLimitLowCount.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numLimitLowCount.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numLimitLowCount.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numLimitLowCount.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numLimitLowCount.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numMinCatchCount.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numMinCatchCount.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numMinCatchCount.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numMinCatchCount.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numMinCatchCount.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numMinCatchCount.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numMinCatchCount.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numMinCatchCount.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numMinCatchCount.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numMinCatchCount.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numMinCatchCount.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numMinCatchCount.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numMinCatchCount.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numMinCatchCount.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numMinCatchCount.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMinCatchCountTitle.Text" xml:space="preserve">
+    <value>最小抓取的 Count</value>
+  </data>
+  <data name="numEndWave.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numEndWave.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numEndWave.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numEndWave.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numEndWave.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numEndWave.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numEndWave.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numEndWave.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numEndWave.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numEndWave.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numEndWave.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numEndWave.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numEndWave.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numEndWave.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numEndWave.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numStartWave.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numStartWave.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numStartWave.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numStartWave.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numStartWave.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numStartWave.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numStartWave.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numStartWave.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numStartWave.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numStartWave.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numStartWave.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numStartWave.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numStartWave.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numStartWave.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numStartWave.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkIsCheckRowCol.Text" xml:space="preserve">
+    <value>相同Row / Col ，啟動覆寫功能</value>
+  </data>
+  <data name="numCoefStartWL.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numCoefStartWL.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numCoefStartWL.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numCoefStartWL.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numCoefStartWL.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numCoefStartWL.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numCoefStartWL.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numCoefStartWL.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numCoefStartWL.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numCoefStartWL.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numCoefStartWL.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numCoefStartWL.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numCoefStartWL.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numCoefStartWL.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numCoefStartWL.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numCoefEndWL.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numCoefEndWL.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numCoefEndWL.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numCoefEndWL.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numCoefEndWL.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numCoefEndWL.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numCoefEndWL.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numCoefEndWL.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numCoefEndWL.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numCoefEndWL.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numCoefEndWL.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numCoefEndWL.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numCoefEndWL.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numCoefEndWL.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numCoefEndWL.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numCoefResolution.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numCoefResolution.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numCoefResolution.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numCoefResolution.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numCoefResolution.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numCoefResolution.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numCoefResolution.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numCoefResolution.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numCoefResolution.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numCoefResolution.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numCoefResolution.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numCoefResolution.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numCoefResolution.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numCoefResolution.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numCoefResolution.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkEnableSptModifyYweigth.Text" xml:space="preserve">
+    <value>啟動光譜儀Y軸權重隨產品修正</value>
+  </data>
+  <data name="chkEnableSptModifyXCoeff.Text" xml:space="preserve">
+    <value>啟動光譜儀X軸係數隨產品修正</value>
+  </data>
+  <data name="chkEnableSptModifyYCoeff.Text" xml:space="preserve">
+    <value>啟動光譜儀Y軸係數隨產品修正</value>
+  </data>
+  <data name="lblOthersSetting.Text" xml:space="preserve">
+    <value>光譜儀進階設定</value>
+  </data>
+  <data name="lblDarkCorrectTitle.Text" xml:space="preserve">
+    <value>背景雜訊扣除</value>
+  </data>
+  <data name="lblSptMeterFilterModeTitle.Text" xml:space="preserve">
+    <value>濾波模式</value>
+  </data>
+  <data name="chkIsCorrectBackLight.Text" xml:space="preserve">
+    <value>啟動背景光修正</value>
+  </data>
+  <data name="numScanAverage.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numScanAverage.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numScanAverage.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numScanAverage.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numScanAverage.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numScanAverage.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numScanAverage.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numScanAverage.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numScanAverage.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numScanAverage.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numScanAverage.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numScanAverage.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numScanAverage.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numScanAverage.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numScanAverage.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numBoxCar.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numBoxCar.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numBoxCar.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numBoxCar.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numBoxCar.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numBoxCar.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numBoxCar.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numBoxCar.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numBoxCar.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numBoxCar.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numBoxCar.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numBoxCar.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numBoxCar.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numBoxCar.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numBoxCar.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelX4.Text" xml:space="preserve">
+    <value>IZ 量測電性檔位</value>
+  </data>
+  <data name="labelX5.Text" xml:space="preserve">
+    <value>VR 量測電性檔位</value>
+  </data>
+  <data name="numIzPmuIndex.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numIzPmuIndex.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numIzPmuIndex.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numIzPmuIndex.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numIzPmuIndex.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numIzPmuIndex.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numIzPmuIndex.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numIzPmuIndex.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numIzPmuIndex.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numIzPmuIndex.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numIzPmuIndex.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numIzPmuIndex.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numIzPmuIndex.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numIzPmuIndex.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numIzPmuIndex.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numVrPmuIndex.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numVrPmuIndex.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numVrPmuIndex.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numVrPmuIndex.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numVrPmuIndex.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numVrPmuIndex.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numVrPmuIndex.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numVrPmuIndex.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numVrPmuIndex.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numVrPmuIndex.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numVrPmuIndex.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numVrPmuIndex.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numVrPmuIndex.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numVrPmuIndex.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numVrPmuIndex.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkIsFullyAutomatic.Text" xml:space="preserve">
+    <value>啟動全自動與Prober 整合連線生產</value>
+  </data>
+  <data name="lblMinWaveTitle.Text" xml:space="preserve">
+    <value>最小掃描波長</value>
+  </data>
+  <data name="lblMaxWaveTitle.Text" xml:space="preserve">
+    <value>最大掃描波長</value>
+  </data>
+  <data name="lblSptMeterOpModeTitle.Text" xml:space="preserve">
+    <value>工作模式</value>
+  </data>
+  <data name="lblSpectrometerGroup.Text" xml:space="preserve">
+    <value>光譜儀參數</value>
+  </data>
+  <data name="lblSpectrumOpModeTitle.Text" xml:space="preserve">
+    <value>操作模式</value>
+  </data>
+  <data name="lblLimitStartTimeTitle.Text" xml:space="preserve">
+    <value>Limit 模式的起始積分時間</value>
+  </data>
+  <data name="lblCoordinateGroup.Text" xml:space="preserve">
+    <value>座標系設定</value>
+  </data>
+  <data name="lblProberCoordSetTitle.Text" xml:space="preserve">
+    <value>點測機的座標系</value>
+  </data>
+  <data name="lblTesterCoordSetTitle.Text" xml:space="preserve">
+    <value>測試機的座標系</value>
+  </data>
+  <data name="numProberCoordSet.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numProberCoordSet.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numProberCoordSet.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numProberCoordSet.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numProberCoordSet.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numProberCoordSet.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numProberCoordSet.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numProberCoordSet.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numProberCoordSet.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numProberCoordSet.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numProberCoordSet.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numProberCoordSet.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numProberCoordSet.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numProberCoordSet.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numProberCoordSet.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numTesterCoordSet.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numTesterCoordSet.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numTesterCoordSet.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numTesterCoordSet.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numTesterCoordSet.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numTesterCoordSet.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numTesterCoordSet.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numTesterCoordSet.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numTesterCoordSet.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numTesterCoordSet.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numTesterCoordSet.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numTesterCoordSet.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numTesterCoordSet.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numTesterCoordSet.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numTesterCoordSet.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblBasicSysParamSetting.Text" xml:space="preserve">
+    <value>基本系統參數</value>
+  </data>
+  <data name="lblRepeatDelayTitle.Text" xml:space="preserve">
+    <value>每次重複測試的時間延遲</value>
+  </data>
+  <data name="lblRepeatCountTitle.Text" xml:space="preserve">
+    <value>單步測試的重複次數</value>
+  </data>
+  <data name="numRepeatCount.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numRepeatCount.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numRepeatCount.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numRepeatCount.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numRepeatCount.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numRepeatCount.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numRepeatCount.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numRepeatCount.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numRepeatCount.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numRepeatCount.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numRepeatCount.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numRepeatCount.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numRepeatCount.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numRepeatCount.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numRepeatCount.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numRepeatDelay.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numRepeatDelay.ButtonClear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numRepeatDelay.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numRepeatDelay.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numRepeatDelay.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numRepeatDelay.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numRepeatDelay.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numRepeatDelay.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numRepeatDelay.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numRepeatDelay.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numRepeatDelay.ButtonDropDown.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numRepeatDelay.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="numRepeatDelay.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="numRepeatDelay.ButtonFreeText.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="numRepeatDelay.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>儲存</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>系統參數</value>
+  </data>
+  <data name="chkIsCalcCCTAndCRI.Text" xml:space="preserve">
+    <value>啟動白光量測 (CRI,CCT)</value>
+  </data>
+  <data name="chkIsCheckSpec2.Text" xml:space="preserve">
+    <value>啟動 Spec2 判斷PASS / FAIL </value>
+  </data>
+  <data name="chkIsCountPassFaiByBinGrade.Text" xml:space="preserve">
+    <value>啟動 PASS / FAIL由BIN表判斷</value>
+  </data>
+  <data name="chkIsSaveAbsoluteSpectrum.Text" xml:space="preserve">
+    <value>啟動儲存絕對頻譜 ( uW/nm )</value>
+  </data>
+  <data name="chkIsSaveRelativeSpectrum.Text" xml:space="preserve">
+    <value>啟動儲存相對頻譜 ( Count )</value>
+  </data>
+  <data name="lblCriterionSetting.Text" xml:space="preserve">
+    <value>PASS / FAIL 設定</value>
+  </data>
+  <data name="lblSaveSpectrumCount.Text" xml:space="preserve">
+    <value>儲存頻譜的晶粒數</value>
+  </data>
+  <data name="lblSingleTestSetting.Text" xml:space="preserve">
+    <value>單步重複測試設定</value>
+  </data>
+  <data name="lblSpectrumSaveSetting.Text" xml:space="preserve">
+    <value>光譜存檔設定</value>
+  </data>
+  <data name="lblBinSorting.Text" xml:space="preserve">
+    <value>規則</value>
+  </data>
+  <data name="lblBinSortingRule.Text" xml:space="preserve">
+    <value>分BIN規則設定</value>
+  </data>
+  <data name="chkIsAdjacentError.Text" xml:space="preserve">
+    <value>啟動相鄰排數值差異過大時報錯</value>
+  </data>
+  <data name="btnResetSpectrometer.Text" xml:space="preserve">
+    <value>重啟光譜卡</value>
+  </data>
+  <data name="chkIsCalcCCTByCaliCIExy.Text" xml:space="preserve">
+    <value>啟動使用計算後的CIExy計算CCT</value>
+  </data>
+  <data name="chkCalcBigFactorBeforeSmall.Text" xml:space="preserve">
+    <value>啟動補償大係數後再依照波段補償小係數</value>
+  </data>
+  <data name="chkIsUseNDFilterRatio.Text" xml:space="preserve">
+    <value>啟動客戶鹵素燈再次校正得到的係數</value>
+  </data>
+  <data name="lblCalibarationSetting.Text" xml:space="preserve">
+    <value>校正模式設定</value>
+  </data>
+  <data name="lblLimit02MinSTTime.Text" xml:space="preserve">
+    <value>Limit02 搜尋積分時間下限</value>
+  </data>
+  <data name="lblLimitStartTimeFactor.Text" xml:space="preserve">
+    <value>Limit Mode 搜尋係數</value>
+  </data>
+  <data name="lblPDDarkCorrectTitle.Text" xml:space="preserve">
+    <value>PD背景雜訊扣除</value>
+  </data>
+  <data name="chkIsSaveLIVRawData.Text" xml:space="preserve">
+    <value>啟動儲存 PIV / LIV  掃描曲線</value>
+  </data>
+  <data name="chkIsSaveSweepRawData.Text" xml:space="preserve">
+    <value>啟動儲存 I-V 掃描曲線</value>
+  </data>
+  <data name="lblBigDataSaveSetting.Text" xml:space="preserve">
+    <value>掃描資料存檔設定</value>
+  </data>
+</root>

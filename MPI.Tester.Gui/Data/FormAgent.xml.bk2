@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Toolbar>
+
+	<item tag="Manage">
+	</item>
+  
+	<item tag="TestResult">
+		<form name="Result" title="Result" icon="tabItemResult.png" default="true">
+			<assembly>MPI.Tester.Gui.frmTestResult</assembly>
+		</form>
+		<form name="Spectrum" title="Spectrum" icon="tabItemSpectrum.png">
+			<assembly>MPI.Tester.Gui.frmTestResultSpectrum</assembly>
+		</form>
+    <form name="Analyze2" title="LIV" icon="tabItemSpectrum.png">
+      <assembly>MPI.Tester.Gui.frmTestResultAnalyze2</assembly>
+    </form>
+    <form name="CurveAnalysis" title="Analysis" icon="tabItemSpectrum.png">
+      <assembly>MPI.Tester.Gui.frmTestResultCurveAnalysis</assembly>
+    </form>
+  </item>
+
+
+	<item tag="Condition">
+		<form name="Condition" title="Condition" icon="tabItemParameter.png" default="true">
+			<assembly>MPI.Tester.Gui.frmCondition</assembly>
+		</form>
+		<form name="Coef" title="Coef Table " icon="tabItemCoef.png">
+			<assembly>MPI.Tester.Gui.frmConditionCoef</assembly>
+		</form>
+    <form name="BinSetting" title="Bin Setting" icon="btnBinSetting.Image.png" >
+      <assembly>MPI.Tester.Gui.frmBinSetting</assembly>
+    </form>
+    <form name="Product" title="Product" icon="btnBinSetting.Image.png" >
+      <assembly>MPI.Tester.Gui.frmSetProduct</assembly>
+    </form>
+	</item>
+
+
+	<item tag="Setting">
+    <form name="UISetting" title="UISetting" icon="tabItemSysParam.png" default="true">
+      <assembly>MPI.Tester.Gui.frmSetUISetting</assembly>
+    </form>
+		<form name="SysParam" title="SysParam" icon="tabItemSysParam.png">
+			<assembly>MPI.Tester.Gui.frmSetSysParam</assembly>
+		</form>
+		<form name="Setup" title="Setup" icon="tabItemSetup.png">
+			<assembly>MPI.Tester.Gui.frmSetMachine</assembly>
+		</form>
+		<form name="RDFunc" title="RDFunc" icon="tabItemParameter.png">
+			<assembly>MPI.Tester.Gui.frmSetRDFunc</assembly>
+		</form>
+  </item>
+
+	<item tag="Tools">
+    <form name="TO-CAN" title="TO-CAN" icon="tabItemPowerTool.png">
+      <assembly>MPI.Tester.Gui.frmToolTocan</assembly>
+    </form>
+  </item>
+</Toolbar>

@@ -1,0 +1,2068 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 40</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblTurnOffTime.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTurnOffTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblTurnOffTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 48</value>
+  </data>
+  <data name="lblTurnOffTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 19</value>
+  </data>
+  <data name="lblTurnOffTime.TabIndex" type="System.Int32, mscorlib">
+    <value>198</value>
+  </data>
+  <data name="lblTurnOffTime.Text" xml:space="preserve">
+    <value>Turn-Off Time</value>
+  </data>
+  <data name="&gt;&gt;lblTurnOffTime.Name" xml:space="preserve">
+    <value>lblTurnOffTime</value>
+  </data>
+  <data name="&gt;&gt;lblTurnOffTime.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblTurnOffTime.Parent" xml:space="preserve">
+    <value>grpApplySetting</value>
+  </data>
+  <data name="&gt;&gt;lblTurnOffTime.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dinTurnOffTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="dinTurnOffTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>117, 46</value>
+  </data>
+  <data name="dinTurnOffTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 22</value>
+  </data>
+  <data name="dinTurnOffTime.TabIndex" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="&gt;&gt;dinTurnOffTime.Name" xml:space="preserve">
+    <value>dinTurnOffTime</value>
+  </data>
+  <data name="&gt;&gt;dinTurnOffTime.Type" xml:space="preserve">
+    <value>DevComponents.Editors.DoubleInput, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dinTurnOffTime.Parent" xml:space="preserve">
+    <value>grpApplySetting</value>
+  </data>
+  <data name="&gt;&gt;dinTurnOffTime.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblTurnOffTimeUnit.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTurnOffTimeUnit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblTurnOffTimeUnit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 48</value>
+  </data>
+  <data name="lblTurnOffTimeUnit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 19</value>
+  </data>
+  <data name="lblTurnOffTimeUnit.TabIndex" type="System.Int32, mscorlib">
+    <value>199</value>
+  </data>
+  <data name="lblTurnOffTimeUnit.Text" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="&gt;&gt;lblTurnOffTimeUnit.Name" xml:space="preserve">
+    <value>lblTurnOffTimeUnit</value>
+  </data>
+  <data name="&gt;&gt;lblTurnOffTimeUnit.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblTurnOffTimeUnit.Parent" xml:space="preserve">
+    <value>grpApplySetting</value>
+  </data>
+  <data name="&gt;&gt;lblTurnOffTimeUnit.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblForceTime.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblForceTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblForceTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 25</value>
+  </data>
+  <data name="lblForceTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 19</value>
+  </data>
+  <data name="lblForceTime.TabIndex" type="System.Int32, mscorlib">
+    <value>195</value>
+  </data>
+  <data name="lblForceTime.Text" xml:space="preserve">
+    <value>Force Time</value>
+  </data>
+  <data name="&gt;&gt;lblForceTime.Name" xml:space="preserve">
+    <value>lblForceTime</value>
+  </data>
+  <data name="&gt;&gt;lblForceTime.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblForceTime.Parent" xml:space="preserve">
+    <value>grpApplySetting</value>
+  </data>
+  <data name="&gt;&gt;lblForceTime.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="dinForceTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="dinForceTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>117, 23</value>
+  </data>
+  <data name="dinForceTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 22</value>
+  </data>
+  <data name="dinForceTime.TabIndex" type="System.Int32, mscorlib">
+    <value>197</value>
+  </data>
+  <data name="&gt;&gt;dinForceTime.Name" xml:space="preserve">
+    <value>dinForceTime</value>
+  </data>
+  <data name="&gt;&gt;dinForceTime.Type" xml:space="preserve">
+    <value>DevComponents.Editors.DoubleInput, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dinForceTime.Parent" xml:space="preserve">
+    <value>grpApplySetting</value>
+  </data>
+  <data name="&gt;&gt;dinForceTime.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblForceTimeUnit.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblForceTimeUnit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblForceTimeUnit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 25</value>
+  </data>
+  <data name="lblForceTimeUnit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 19</value>
+  </data>
+  <data name="lblForceTimeUnit.TabIndex" type="System.Int32, mscorlib">
+    <value>196</value>
+  </data>
+  <data name="lblForceTimeUnit.Text" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="&gt;&gt;lblForceTimeUnit.Name" xml:space="preserve">
+    <value>lblForceTimeUnit</value>
+  </data>
+  <data name="&gt;&gt;lblForceTimeUnit.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblForceTimeUnit.Parent" xml:space="preserve">
+    <value>grpApplySetting</value>
+  </data>
+  <data name="&gt;&gt;lblForceTimeUnit.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblWaitTime.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblWaitTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblWaitTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 2</value>
+  </data>
+  <data name="lblWaitTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 19</value>
+  </data>
+  <data name="lblWaitTime.TabIndex" type="System.Int32, mscorlib">
+    <value>192</value>
+  </data>
+  <data name="lblWaitTime.Text" xml:space="preserve">
+    <value>Wait Time</value>
+  </data>
+  <data name="&gt;&gt;lblWaitTime.Name" xml:space="preserve">
+    <value>lblWaitTime</value>
+  </data>
+  <data name="&gt;&gt;lblWaitTime.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblWaitTime.Parent" xml:space="preserve">
+    <value>grpApplySetting</value>
+  </data>
+  <data name="&gt;&gt;lblWaitTime.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="dinForceDelay.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="dinForceDelay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>117, 0</value>
+  </data>
+  <data name="dinForceDelay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 22</value>
+  </data>
+  <data name="dinForceDelay.TabIndex" type="System.Int32, mscorlib">
+    <value>194</value>
+  </data>
+  <data name="&gt;&gt;dinForceDelay.Name" xml:space="preserve">
+    <value>dinForceDelay</value>
+  </data>
+  <data name="&gt;&gt;dinForceDelay.Type" xml:space="preserve">
+    <value>DevComponents.Editors.DoubleInput, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dinForceDelay.Parent" xml:space="preserve">
+    <value>grpApplySetting</value>
+  </data>
+  <data name="&gt;&gt;dinForceDelay.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lblWaitTimeUnit.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblWaitTimeUnit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblWaitTimeUnit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 2</value>
+  </data>
+  <data name="lblWaitTimeUnit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 19</value>
+  </data>
+  <data name="lblWaitTimeUnit.TabIndex" type="System.Int32, mscorlib">
+    <value>193</value>
+  </data>
+  <data name="lblWaitTimeUnit.Text" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="&gt;&gt;lblWaitTimeUnit.Name" xml:space="preserve">
+    <value>lblWaitTimeUnit</value>
+  </data>
+  <data name="&gt;&gt;lblWaitTimeUnit.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblWaitTimeUnit.Parent" xml:space="preserve">
+    <value>grpApplySetting</value>
+  </data>
+  <data name="&gt;&gt;lblWaitTimeUnit.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lblPoints.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPoints.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblPoints.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 71</value>
+  </data>
+  <data name="lblPoints.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 19</value>
+  </data>
+  <data name="lblPoints.TabIndex" type="System.Int32, mscorlib">
+    <value>189</value>
+  </data>
+  <data name="lblPoints.Text" xml:space="preserve">
+    <value>Points</value>
+  </data>
+  <data name="&gt;&gt;lblPoints.Name" xml:space="preserve">
+    <value>lblPoints</value>
+  </data>
+  <data name="&gt;&gt;lblPoints.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblPoints.Parent" xml:space="preserve">
+    <value>grpApplySetting</value>
+  </data>
+  <data name="&gt;&gt;lblPoints.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="dinPoints.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="dinPoints.Location" type="System.Drawing.Point, System.Drawing">
+    <value>117, 69</value>
+  </data>
+  <data name="dinPoints.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 22</value>
+  </data>
+  <data name="dinPoints.TabIndex" type="System.Int32, mscorlib">
+    <value>190</value>
+  </data>
+  <data name="&gt;&gt;dinPoints.Name" xml:space="preserve">
+    <value>dinPoints</value>
+  </data>
+  <data name="&gt;&gt;dinPoints.Type" xml:space="preserve">
+    <value>DevComponents.Editors.DoubleInput, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dinPoints.Parent" xml:space="preserve">
+    <value>grpApplySetting</value>
+  </data>
+  <data name="&gt;&gt;dinPoints.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lblPointsUnit.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPointsUnit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblPointsUnit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 71</value>
+  </data>
+  <data name="lblPointsUnit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 19</value>
+  </data>
+  <data name="lblPointsUnit.TabIndex" type="System.Int32, mscorlib">
+    <value>191</value>
+  </data>
+  <data name="lblPointsUnit.Text" xml:space="preserve">
+    <value>cnt</value>
+  </data>
+  <data name="&gt;&gt;lblPointsUnit.Name" xml:space="preserve">
+    <value>lblPointsUnit</value>
+  </data>
+  <data name="&gt;&gt;lblPointsUnit.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblPointsUnit.Parent" xml:space="preserve">
+    <value>grpApplySetting</value>
+  </data>
+  <data name="&gt;&gt;lblPointsUnit.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="lblNPLC.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblNPLC.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblNPLC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 94</value>
+  </data>
+  <data name="lblNPLC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 19</value>
+  </data>
+  <data name="lblNPLC.TabIndex" type="System.Int32, mscorlib">
+    <value>188</value>
+  </data>
+  <data name="lblNPLC.Text" xml:space="preserve">
+    <value>NPLC</value>
+  </data>
+  <data name="&gt;&gt;lblNPLC.Name" xml:space="preserve">
+    <value>lblNPLC</value>
+  </data>
+  <data name="&gt;&gt;lblNPLC.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblNPLC.Parent" xml:space="preserve">
+    <value>grpApplySetting</value>
+  </data>
+  <data name="&gt;&gt;lblNPLC.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="dinNPLC.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="dinNPLC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>117, 92</value>
+  </data>
+  <data name="dinNPLC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 22</value>
+  </data>
+  <data name="dinNPLC.TabIndex" type="System.Int32, mscorlib">
+    <value>187</value>
+  </data>
+  <data name="&gt;&gt;dinNPLC.Name" xml:space="preserve">
+    <value>dinNPLC</value>
+  </data>
+  <data name="&gt;&gt;dinNPLC.Type" xml:space="preserve">
+    <value>DevComponents.Editors.DoubleInput, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dinNPLC.Parent" xml:space="preserve">
+    <value>grpApplySetting</value>
+  </data>
+  <data name="&gt;&gt;dinNPLC.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="grpApplySetting.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="grpApplySetting.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="grpApplySetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="grpApplySetting.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="grpApplySetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 146</value>
+  </data>
+  <data name="grpApplySetting.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="grpApplySetting.Text" xml:space="preserve">
+    <value>APPLY SETTING</value>
+  </data>
+  <data name="&gt;&gt;grpApplySetting.Name" xml:space="preserve">
+    <value>grpApplySetting</value>
+  </data>
+  <data name="&gt;&gt;grpApplySetting.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.GroupPanel, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;grpApplySetting.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;grpApplySetting.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelX60.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelX60.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="labelX60.Location" type="System.Drawing.Point, System.Drawing">
+    <value>247, 5</value>
+  </data>
+  <data name="labelX60.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 17</value>
+  </data>
+  <data name="labelX60.TabIndex" type="System.Int32, mscorlib">
+    <value>810</value>
+  </data>
+  <data name="labelX60.Text" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="&gt;&gt;labelX60.Name" xml:space="preserve">
+    <value>labelX60</value>
+  </data>
+  <data name="&gt;&gt;labelX60.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;labelX60.Parent" xml:space="preserve">
+    <value>pnlLimitTime</value>
+  </data>
+  <data name="&gt;&gt;labelX60.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblLimitIntegralTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="lblLimitIntegralTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="lblLimitIntegralTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 21</value>
+  </data>
+  <data name="lblLimitIntegralTime.TabIndex" type="System.Int32, mscorlib">
+    <value>809</value>
+  </data>
+  <data name="lblLimitIntegralTime.Text" xml:space="preserve">
+    <value>Limit Time</value>
+  </data>
+  <data name="&gt;&gt;lblLimitIntegralTime.Name" xml:space="preserve">
+    <value>lblLimitIntegralTime</value>
+  </data>
+  <data name="&gt;&gt;lblLimitIntegralTime.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblLimitIntegralTime.Parent" xml:space="preserve">
+    <value>pnlLimitTime</value>
+  </data>
+  <data name="&gt;&gt;lblLimitIntegralTime.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dinLimitIntegralTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="dinLimitIntegralTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 3</value>
+  </data>
+  <data name="dinLimitIntegralTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 21</value>
+  </data>
+  <data name="dinLimitIntegralTime.TabIndex" type="System.Int32, mscorlib">
+    <value>811</value>
+  </data>
+  <data name="&gt;&gt;dinLimitIntegralTime.Name" xml:space="preserve">
+    <value>dinLimitIntegralTime</value>
+  </data>
+  <data name="&gt;&gt;dinLimitIntegralTime.Type" xml:space="preserve">
+    <value>DevComponents.Editors.DoubleInput, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dinLimitIntegralTime.Parent" xml:space="preserve">
+    <value>pnlLimitTime</value>
+  </data>
+  <data name="&gt;&gt;dinLimitIntegralTime.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pnlLimitTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="pnlLimitTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 75</value>
+  </data>
+  <data name="pnlLimitTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 28</value>
+  </data>
+  <data name="pnlLimitTime.TabIndex" type="System.Int32, mscorlib">
+    <value>813</value>
+  </data>
+  <data name="&gt;&gt;pnlLimitTime.Name" xml:space="preserve">
+    <value>pnlLimitTime</value>
+  </data>
+  <data name="&gt;&gt;pnlLimitTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlLimitTime.Parent" xml:space="preserve">
+    <value>grpOpticalSetting</value>
+  </data>
+  <data name="&gt;&gt;pnlLimitTime.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelX57.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelX57.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="labelX57.Location" type="System.Drawing.Point, System.Drawing">
+    <value>247, 5</value>
+  </data>
+  <data name="labelX57.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 17</value>
+  </data>
+  <data name="labelX57.TabIndex" type="System.Int32, mscorlib">
+    <value>809</value>
+  </data>
+  <data name="labelX57.Text" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="&gt;&gt;labelX57.Name" xml:space="preserve">
+    <value>labelX57</value>
+  </data>
+  <data name="&gt;&gt;labelX57.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;labelX57.Parent" xml:space="preserve">
+    <value>pnlFixedTime</value>
+  </data>
+  <data name="&gt;&gt;labelX57.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblFixIntegralTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="lblFixIntegralTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="lblFixIntegralTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 21</value>
+  </data>
+  <data name="lblFixIntegralTime.TabIndex" type="System.Int32, mscorlib">
+    <value>808</value>
+  </data>
+  <data name="lblFixIntegralTime.Text" xml:space="preserve">
+    <value>Fixed  Time</value>
+  </data>
+  <data name="&gt;&gt;lblFixIntegralTime.Name" xml:space="preserve">
+    <value>lblFixIntegralTime</value>
+  </data>
+  <data name="&gt;&gt;lblFixIntegralTime.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblFixIntegralTime.Parent" xml:space="preserve">
+    <value>pnlFixedTime</value>
+  </data>
+  <data name="&gt;&gt;lblFixIntegralTime.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dinFixIntegralTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="dinFixIntegralTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 3</value>
+  </data>
+  <data name="dinFixIntegralTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 21</value>
+  </data>
+  <data name="dinFixIntegralTime.TabIndex" type="System.Int32, mscorlib">
+    <value>810</value>
+  </data>
+  <data name="&gt;&gt;dinFixIntegralTime.Name" xml:space="preserve">
+    <value>dinFixIntegralTime</value>
+  </data>
+  <data name="&gt;&gt;dinFixIntegralTime.Type" xml:space="preserve">
+    <value>DevComponents.Editors.DoubleInput, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dinFixIntegralTime.Parent" xml:space="preserve">
+    <value>pnlFixedTime</value>
+  </data>
+  <data name="&gt;&gt;dinFixIntegralTime.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pnlFixedTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="pnlFixedTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 48</value>
+  </data>
+  <data name="pnlFixedTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 28</value>
+  </data>
+  <data name="pnlFixedTime.TabIndex" type="System.Int32, mscorlib">
+    <value>812</value>
+  </data>
+  <data name="&gt;&gt;pnlFixedTime.Name" xml:space="preserve">
+    <value>pnlFixedTime</value>
+  </data>
+  <data name="&gt;&gt;pnlFixedTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlFixedTime.Parent" xml:space="preserve">
+    <value>grpOpticalSetting</value>
+  </data>
+  <data name="&gt;&gt;pnlFixedTime.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblSensingMode.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="lblSensingMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="lblSensingMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 23</value>
+  </data>
+  <data name="lblSensingMode.TabIndex" type="System.Int32, mscorlib">
+    <value>807</value>
+  </data>
+  <data name="lblSensingMode.Text" xml:space="preserve">
+    <value>Sensing Mode</value>
+  </data>
+  <data name="&gt;&gt;lblSensingMode.Name" xml:space="preserve">
+    <value>lblSensingMode</value>
+  </data>
+  <data name="&gt;&gt;lblSensingMode.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblSensingMode.Parent" xml:space="preserve">
+    <value>pnlSensingMode</value>
+  </data>
+  <data name="&gt;&gt;lblSensingMode.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cmbSensingMode.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="cmbSensingMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>130, 3</value>
+  </data>
+  <data name="cmbSensingMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 23</value>
+  </data>
+  <data name="cmbSensingMode.TabIndex" type="System.Int32, mscorlib">
+    <value>808</value>
+  </data>
+  <data name="&gt;&gt;cmbSensingMode.Name" xml:space="preserve">
+    <value>cmbSensingMode</value>
+  </data>
+  <data name="&gt;&gt;cmbSensingMode.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;cmbSensingMode.Parent" xml:space="preserve">
+    <value>pnlSensingMode</value>
+  </data>
+  <data name="&gt;&gt;cmbSensingMode.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlSensingMode.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="pnlSensingMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 18</value>
+  </data>
+  <data name="pnlSensingMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 31</value>
+  </data>
+  <data name="pnlSensingMode.TabIndex" type="System.Int32, mscorlib">
+    <value>811</value>
+  </data>
+  <data name="&gt;&gt;pnlSensingMode.Name" xml:space="preserve">
+    <value>pnlSensingMode</value>
+  </data>
+  <data name="&gt;&gt;pnlSensingMode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlSensingMode.Parent" xml:space="preserve">
+    <value>grpOpticalSetting</value>
+  </data>
+  <data name="&gt;&gt;pnlSensingMode.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="chkIsTestOptical.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="chkIsTestOptical.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, -5</value>
+  </data>
+  <data name="chkIsTestOptical.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 25</value>
+  </data>
+  <data name="chkIsTestOptical.TabIndex" type="System.Int32, mscorlib">
+    <value>810</value>
+  </data>
+  <data name="chkIsTestOptical.Text" xml:space="preserve">
+    <value> Enable Optical Test</value>
+  </data>
+  <data name="&gt;&gt;chkIsTestOptical.Name" xml:space="preserve">
+    <value>chkIsTestOptical</value>
+  </data>
+  <data name="&gt;&gt;chkIsTestOptical.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;chkIsTestOptical.Parent" xml:space="preserve">
+    <value>grpOpticalSetting</value>
+  </data>
+  <data name="&gt;&gt;chkIsTestOptical.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="grpOpticalSetting.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="grpOpticalSetting.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="grpOpticalSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 144</value>
+  </data>
+  <data name="grpOpticalSetting.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="grpOpticalSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 135</value>
+  </data>
+  <data name="grpOpticalSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>108</value>
+  </data>
+  <data name="grpOpticalSetting.Text" xml:space="preserve">
+    <value>OPTICAL SETTING</value>
+  </data>
+  <data name="&gt;&gt;grpOpticalSetting.Name" xml:space="preserve">
+    <value>grpOpticalSetting</value>
+  </data>
+  <data name="&gt;&gt;grpOpticalSetting.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.GroupPanel, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;grpOpticalSetting.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;grpOpticalSetting.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblDetectorMsrtRangeUnit.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblDetectorMsrtRangeUnit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="lblDetectorMsrtRangeUnit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>247, 28</value>
+  </data>
+  <data name="lblDetectorMsrtRangeUnit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 17</value>
+  </data>
+  <data name="lblDetectorMsrtRangeUnit.TabIndex" type="System.Int32, mscorlib">
+    <value>811</value>
+  </data>
+  <data name="lblDetectorMsrtRangeUnit.Text" xml:space="preserve">
+    <value>mA</value>
+  </data>
+  <data name="&gt;&gt;lblDetectorMsrtRangeUnit.Name" xml:space="preserve">
+    <value>lblDetectorMsrtRangeUnit</value>
+  </data>
+  <data name="&gt;&gt;lblDetectorMsrtRangeUnit.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblDetectorMsrtRangeUnit.Parent" xml:space="preserve">
+    <value>pnlIsFixedMsrtRange</value>
+  </data>
+  <data name="&gt;&gt;lblDetectorMsrtRangeUnit.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dgvDetectorMsrtRange.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <metadata name="colRange.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colRange.HeaderText" xml:space="preserve">
+    <value>Msrt Range</value>
+  </data>
+  <data name="colRange.Width" type="System.Int32, mscorlib">
+    <value>180</value>
+  </data>
+  <data name="dgvDetectorMsrtRange.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 54</value>
+  </data>
+  <data name="dgvDetectorMsrtRange.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="dgvDetectorMsrtRange.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="dgvDetectorMsrtRange.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 166</value>
+  </data>
+  <data name="dgvDetectorMsrtRange.TabIndex" type="System.Int32, mscorlib">
+    <value>816</value>
+  </data>
+  <data name="&gt;&gt;dgvDetectorMsrtRange.Name" xml:space="preserve">
+    <value>dgvDetectorMsrtRange</value>
+  </data>
+  <data name="&gt;&gt;dgvDetectorMsrtRange.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dgvDetectorMsrtRange.Parent" xml:space="preserve">
+    <value>pnlIsFixedMsrtRange</value>
+  </data>
+  <data name="&gt;&gt;dgvDetectorMsrtRange.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblDetectorMsrtRange.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="lblDetectorMsrtRange.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 26</value>
+  </data>
+  <data name="lblDetectorMsrtRange.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 22</value>
+  </data>
+  <data name="lblDetectorMsrtRange.TabIndex" type="System.Int32, mscorlib">
+    <value>808</value>
+  </data>
+  <data name="lblDetectorMsrtRange.Text" xml:space="preserve">
+    <value>Msrt Range</value>
+  </data>
+  <data name="&gt;&gt;lblDetectorMsrtRange.Name" xml:space="preserve">
+    <value>lblDetectorMsrtRange</value>
+  </data>
+  <data name="&gt;&gt;lblDetectorMsrtRange.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblDetectorMsrtRange.Parent" xml:space="preserve">
+    <value>pnlIsFixedMsrtRange</value>
+  </data>
+  <data name="&gt;&gt;lblDetectorMsrtRange.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="dinDetectorMsrtRange.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="dinDetectorMsrtRange.Location" type="System.Drawing.Point, System.Drawing">
+    <value>127, 26</value>
+  </data>
+  <data name="dinDetectorMsrtRange.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 21</value>
+  </data>
+  <data name="dinDetectorMsrtRange.TabIndex" type="System.Int32, mscorlib">
+    <value>810</value>
+  </data>
+  <data name="&gt;&gt;dinDetectorMsrtRange.Name" xml:space="preserve">
+    <value>dinDetectorMsrtRange</value>
+  </data>
+  <data name="&gt;&gt;dinDetectorMsrtRange.Type" xml:space="preserve">
+    <value>DevComponents.Editors.DoubleInput, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dinDetectorMsrtRange.Parent" xml:space="preserve">
+    <value>pnlIsFixedMsrtRange</value>
+  </data>
+  <data name="&gt;&gt;dinDetectorMsrtRange.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="chkIsFixedMsrtRange.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="chkIsFixedMsrtRange.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 2</value>
+  </data>
+  <data name="chkIsFixedMsrtRange.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 23</value>
+  </data>
+  <data name="chkIsFixedMsrtRange.TabIndex" type="System.Int32, mscorlib">
+    <value>815</value>
+  </data>
+  <data name="chkIsFixedMsrtRange.Text" xml:space="preserve">
+    <value>Is Fixed Msrt Range</value>
+  </data>
+  <data name="&gt;&gt;chkIsFixedMsrtRange.Name" xml:space="preserve">
+    <value>chkIsFixedMsrtRange</value>
+  </data>
+  <data name="&gt;&gt;chkIsFixedMsrtRange.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;chkIsFixedMsrtRange.Parent" xml:space="preserve">
+    <value>pnlIsFixedMsrtRange</value>
+  </data>
+  <data name="&gt;&gt;chkIsFixedMsrtRange.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="pnlIsFixedMsrtRange.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 72</value>
+  </data>
+  <data name="pnlIsFixedMsrtRange.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 225</value>
+  </data>
+  <data name="pnlIsFixedMsrtRange.TabIndex" type="System.Int32, mscorlib">
+    <value>818</value>
+  </data>
+  <data name="&gt;&gt;pnlIsFixedMsrtRange.Name" xml:space="preserve">
+    <value>pnlIsFixedMsrtRange</value>
+  </data>
+  <data name="&gt;&gt;pnlIsFixedMsrtRange.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlIsFixedMsrtRange.Parent" xml:space="preserve">
+    <value>grpPDDetector</value>
+  </data>
+  <data name="&gt;&gt;pnlIsFixedMsrtRange.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chkIsEnableDetector.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="chkIsEnableDetector.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, -4</value>
+  </data>
+  <data name="chkIsEnableDetector.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 23</value>
+  </data>
+  <data name="chkIsEnableDetector.TabIndex" type="System.Int32, mscorlib">
+    <value>811</value>
+  </data>
+  <data name="chkIsEnableDetector.Text" xml:space="preserve">
+    <value>Enable Photodiode Detector</value>
+  </data>
+  <data name="&gt;&gt;chkIsEnableDetector.Name" xml:space="preserve">
+    <value>chkIsEnableDetector</value>
+  </data>
+  <data name="&gt;&gt;chkIsEnableDetector.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;chkIsEnableDetector.Parent" xml:space="preserve">
+    <value>grpPDDetector</value>
+  </data>
+  <data name="&gt;&gt;chkIsEnableDetector.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblDetectorBiasVoltageUnit.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblDetectorBiasVoltageUnit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="lblDetectorBiasVoltageUnit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>247, 5</value>
+  </data>
+  <data name="lblDetectorBiasVoltageUnit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 17</value>
+  </data>
+  <data name="lblDetectorBiasVoltageUnit.TabIndex" type="System.Int32, mscorlib">
+    <value>811</value>
+  </data>
+  <data name="lblDetectorBiasVoltageUnit.Text" xml:space="preserve">
+    <value>V</value>
+  </data>
+  <data name="&gt;&gt;lblDetectorBiasVoltageUnit.Name" xml:space="preserve">
+    <value>lblDetectorBiasVoltageUnit</value>
+  </data>
+  <data name="&gt;&gt;lblDetectorBiasVoltageUnit.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblDetectorBiasVoltageUnit.Parent" xml:space="preserve">
+    <value>pnlDetectorBiasVoltage</value>
+  </data>
+  <data name="&gt;&gt;lblDetectorBiasVoltageUnit.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblDetectorBiasVoltage.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="lblDetectorBiasVoltage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="lblDetectorBiasVoltage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 21</value>
+  </data>
+  <data name="lblDetectorBiasVoltage.TabIndex" type="System.Int32, mscorlib">
+    <value>808</value>
+  </data>
+  <data name="lblDetectorBiasVoltage.Text" xml:space="preserve">
+    <value>Bias Voltage</value>
+  </data>
+  <data name="&gt;&gt;lblDetectorBiasVoltage.Name" xml:space="preserve">
+    <value>lblDetectorBiasVoltage</value>
+  </data>
+  <data name="&gt;&gt;lblDetectorBiasVoltage.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblDetectorBiasVoltage.Parent" xml:space="preserve">
+    <value>pnlDetectorBiasVoltage</value>
+  </data>
+  <data name="&gt;&gt;lblDetectorBiasVoltage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dinDetectorBiasVoltage.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="dinDetectorBiasVoltage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>130, 3</value>
+  </data>
+  <data name="dinDetectorBiasVoltage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 21</value>
+  </data>
+  <data name="dinDetectorBiasVoltage.TabIndex" type="System.Int32, mscorlib">
+    <value>810</value>
+  </data>
+  <data name="&gt;&gt;dinDetectorBiasVoltage.Name" xml:space="preserve">
+    <value>dinDetectorBiasVoltage</value>
+  </data>
+  <data name="&gt;&gt;dinDetectorBiasVoltage.Type" xml:space="preserve">
+    <value>DevComponents.Editors.DoubleInput, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dinDetectorBiasVoltage.Parent" xml:space="preserve">
+    <value>pnlDetectorBiasVoltage</value>
+  </data>
+  <data name="&gt;&gt;dinDetectorBiasVoltage.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pnlDetectorBiasVoltage.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="pnlDetectorBiasVoltage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 19</value>
+  </data>
+  <data name="pnlDetectorBiasVoltage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 28</value>
+  </data>
+  <data name="pnlDetectorBiasVoltage.TabIndex" type="System.Int32, mscorlib">
+    <value>810</value>
+  </data>
+  <data name="&gt;&gt;pnlDetectorBiasVoltage.Name" xml:space="preserve">
+    <value>pnlDetectorBiasVoltage</value>
+  </data>
+  <data name="&gt;&gt;pnlDetectorBiasVoltage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlDetectorBiasVoltage.Parent" xml:space="preserve">
+    <value>grpPDDetector</value>
+  </data>
+  <data name="&gt;&gt;pnlDetectorBiasVoltage.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblDetectorNPLC.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblDetectorNPLC.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="lblDetectorNPLC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="lblDetectorNPLC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 17</value>
+  </data>
+  <data name="lblDetectorNPLC.TabIndex" type="System.Int32, mscorlib">
+    <value>184</value>
+  </data>
+  <data name="lblDetectorNPLC.Text" xml:space="preserve">
+    <value>NPLC (Detector)</value>
+  </data>
+  <data name="&gt;&gt;lblDetectorNPLC.Name" xml:space="preserve">
+    <value>lblDetectorNPLC</value>
+  </data>
+  <data name="&gt;&gt;lblDetectorNPLC.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblDetectorNPLC.Parent" xml:space="preserve">
+    <value>pnlDetectorNPLC</value>
+  </data>
+  <data name="&gt;&gt;lblDetectorNPLC.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dinDetectorNPLC.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="dinDetectorNPLC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>130, 3</value>
+  </data>
+  <data name="dinDetectorNPLC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 21</value>
+  </data>
+  <data name="dinDetectorNPLC.TabIndex" type="System.Int32, mscorlib">
+    <value>183</value>
+  </data>
+  <data name="&gt;&gt;dinDetectorNPLC.Name" xml:space="preserve">
+    <value>dinDetectorNPLC</value>
+  </data>
+  <data name="&gt;&gt;dinDetectorNPLC.Type" xml:space="preserve">
+    <value>DevComponents.Editors.DoubleInput, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dinDetectorNPLC.Parent" xml:space="preserve">
+    <value>pnlDetectorNPLC</value>
+  </data>
+  <data name="&gt;&gt;dinDetectorNPLC.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlDetectorNPLC.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="pnlDetectorNPLC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 46</value>
+  </data>
+  <data name="pnlDetectorNPLC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 28</value>
+  </data>
+  <data name="pnlDetectorNPLC.TabIndex" type="System.Int32, mscorlib">
+    <value>189</value>
+  </data>
+  <data name="&gt;&gt;pnlDetectorNPLC.Name" xml:space="preserve">
+    <value>pnlDetectorNPLC</value>
+  </data>
+  <data name="&gt;&gt;pnlDetectorNPLC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlDetectorNPLC.Parent" xml:space="preserve">
+    <value>grpPDDetector</value>
+  </data>
+  <data name="&gt;&gt;pnlDetectorNPLC.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="grpPDDetector.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="grpPDDetector.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="grpPDDetector.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 279</value>
+  </data>
+  <data name="grpPDDetector.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="grpPDDetector.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 326</value>
+  </data>
+  <data name="grpPDDetector.TabIndex" type="System.Int32, mscorlib">
+    <value>107</value>
+  </data>
+  <data name="grpPDDetector.Text" xml:space="preserve">
+    <value>PD DETECTOR SETTING</value>
+  </data>
+  <data name="&gt;&gt;grpPDDetector.Name" xml:space="preserve">
+    <value>grpPDDetector</value>
+  </data>
+  <data name="&gt;&gt;grpPDDetector.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.GroupPanel, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;grpPDDetector.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;grpPDDetector.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblSeqOrder.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblSeqOrder.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lblSeqOrder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 9</value>
+  </data>
+  <data name="lblSeqOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 19</value>
+  </data>
+  <data name="lblSeqOrder.TabIndex" type="System.Int32, mscorlib">
+    <value>218</value>
+  </data>
+  <data name="lblSeqOrder.Text" xml:space="preserve">
+    <value>Sequnce Order</value>
+  </data>
+  <data name="&gt;&gt;lblSeqOrder.Name" xml:space="preserve">
+    <value>lblSeqOrder</value>
+  </data>
+  <data name="&gt;&gt;lblSeqOrder.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;lblSeqOrder.Parent" xml:space="preserve">
+    <value>pnlSequenceOrder</value>
+  </data>
+  <data name="&gt;&gt;lblSeqOrder.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListBoxSeqOrder.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="ListBoxSeqOrder.ItemHeight" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="ListBoxSeqOrder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 34</value>
+  </data>
+  <data name="ListBoxSeqOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 114</value>
+  </data>
+  <data name="ListBoxSeqOrder.TabIndex" type="System.Int32, mscorlib">
+    <value>215</value>
+  </data>
+  <data name="&gt;&gt;ListBoxSeqOrder.Name" xml:space="preserve">
+    <value>ListBoxSeqOrder</value>
+  </data>
+  <data name="&gt;&gt;ListBoxSeqOrder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ListBoxSeqOrder.Parent" xml:space="preserve">
+    <value>pnlSequenceOrder</value>
+  </data>
+  <data name="&gt;&gt;ListBoxSeqOrder.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnSeqOrderDown.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="btnSeqOrderDown.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="btnSeqOrderDown.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnSeqOrderDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 97</value>
+  </data>
+  <data name="btnSeqOrderDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="btnSeqOrderDown.TabIndex" type="System.Int32, mscorlib">
+    <value>217</value>
+  </data>
+  <data name="&gt;&gt;btnSeqOrderDown.Name" xml:space="preserve">
+    <value>btnSeqOrderDown</value>
+  </data>
+  <data name="&gt;&gt;btnSeqOrderDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSeqOrderDown.Parent" xml:space="preserve">
+    <value>pnlSequenceOrder</value>
+  </data>
+  <data name="&gt;&gt;btnSeqOrderDown.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnSeqOrderUp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="btnSeqOrderUp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="btnSeqOrderUp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnSeqOrderUp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 61</value>
+  </data>
+  <data name="btnSeqOrderUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="btnSeqOrderUp.TabIndex" type="System.Int32, mscorlib">
+    <value>216</value>
+  </data>
+  <data name="&gt;&gt;btnSeqOrderUp.Name" xml:space="preserve">
+    <value>btnSeqOrderUp</value>
+  </data>
+  <data name="&gt;&gt;btnSeqOrderUp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSeqOrderUp.Parent" xml:space="preserve">
+    <value>pnlSequenceOrder</value>
+  </data>
+  <data name="&gt;&gt;btnSeqOrderUp.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pnlSequenceOrder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>583, 410</value>
+  </data>
+  <data name="pnlSequenceOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 160</value>
+  </data>
+  <data name="pnlSequenceOrder.TabIndex" type="System.Int32, mscorlib">
+    <value>219</value>
+  </data>
+  <data name="&gt;&gt;pnlSequenceOrder.Name" xml:space="preserve">
+    <value>pnlSequenceOrder</value>
+  </data>
+  <data name="&gt;&gt;pnlSequenceOrder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlSequenceOrder.Parent" xml:space="preserve">
+    <value>grpTermianlSetting</value>
+  </data>
+  <data name="&gt;&gt;pnlSequenceOrder.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtDrain.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Narrow, 9.75pt</value>
+  </data>
+  <data name="txtDrain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 3</value>
+  </data>
+  <data name="txtDrain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 130</value>
+  </data>
+  <data name="txtDrain.TabIndex" type="System.Int32, mscorlib">
+    <value>214</value>
+  </data>
+  <data name="txtDrain.Text" xml:space="preserve">
+    <value>Drain Info.</value>
+  </data>
+  <data name="&gt;&gt;txtDrain.Name" xml:space="preserve">
+    <value>txtDrain</value>
+  </data>
+  <data name="&gt;&gt;txtDrain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtDrain.Parent" xml:space="preserve">
+    <value>grpTermianlSetting</value>
+  </data>
+  <data name="&gt;&gt;txtDrain.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtGate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Narrow, 9.75pt</value>
+  </data>
+  <data name="txtGate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 221</value>
+  </data>
+  <data name="txtGate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 130</value>
+  </data>
+  <data name="txtGate.TabIndex" type="System.Int32, mscorlib">
+    <value>213</value>
+  </data>
+  <data name="txtGate.Text" xml:space="preserve">
+    <value>Gate Info.</value>
+  </data>
+  <data name="&gt;&gt;txtGate.Name" xml:space="preserve">
+    <value>txtGate</value>
+  </data>
+  <data name="&gt;&gt;txtGate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtGate.Parent" xml:space="preserve">
+    <value>grpTermianlSetting</value>
+  </data>
+  <data name="&gt;&gt;txtGate.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtBluk.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Narrow, 9.75pt</value>
+  </data>
+  <data name="txtBluk.Location" type="System.Drawing.Point, System.Drawing">
+    <value>464, 221</value>
+  </data>
+  <data name="txtBluk.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 130</value>
+  </data>
+  <data name="txtBluk.TabIndex" type="System.Int32, mscorlib">
+    <value>212</value>
+  </data>
+  <data name="txtBluk.Text" xml:space="preserve">
+    <value>Bluk Info.</value>
+  </data>
+  <data name="&gt;&gt;txtBluk.Name" xml:space="preserve">
+    <value>txtBluk</value>
+  </data>
+  <data name="&gt;&gt;txtBluk.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBluk.Parent" xml:space="preserve">
+    <value>grpTermianlSetting</value>
+  </data>
+  <data name="&gt;&gt;txtBluk.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtSource.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Narrow, 9.75pt</value>
+  </data>
+  <data name="txtSource.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 440</value>
+  </data>
+  <data name="txtSource.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 130</value>
+  </data>
+  <data name="txtSource.TabIndex" type="System.Int32, mscorlib">
+    <value>211</value>
+  </data>
+  <data name="txtSource.Text" xml:space="preserve">
+    <value>Source Info.</value>
+  </data>
+  <data name="&gt;&gt;txtSource.Name" xml:space="preserve">
+    <value>txtSource</value>
+  </data>
+  <data name="&gt;&gt;txtSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtSource.Parent" xml:space="preserve">
+    <value>grpTermianlSetting</value>
+  </data>
+  <data name="&gt;&gt;txtSource.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cmbSmuSource.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="cmbSmuSource.ItemHeight" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="cmbSmuSource.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 275</value>
+  </data>
+  <data name="cmbSmuSource.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 24</value>
+  </data>
+  <data name="cmbSmuSource.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="&gt;&gt;cmbSmuSource.Name" xml:space="preserve">
+    <value>cmbSmuSource</value>
+  </data>
+  <data name="&gt;&gt;cmbSmuSource.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;cmbSmuSource.Parent" xml:space="preserve">
+    <value>pnl4TSetting</value>
+  </data>
+  <data name="&gt;&gt;cmbSmuSource.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cmbSmuGate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="cmbSmuGate.ItemHeight" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="cmbSmuGate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 180</value>
+  </data>
+  <data name="cmbSmuGate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 24</value>
+  </data>
+  <data name="cmbSmuGate.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="&gt;&gt;cmbSmuGate.Name" xml:space="preserve">
+    <value>cmbSmuGate</value>
+  </data>
+  <data name="&gt;&gt;cmbSmuGate.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;cmbSmuGate.Parent" xml:space="preserve">
+    <value>pnl4TSetting</value>
+  </data>
+  <data name="&gt;&gt;cmbSmuGate.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cmbSmuBluk.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="cmbSmuBluk.ItemHeight" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="cmbSmuBluk.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 180</value>
+  </data>
+  <data name="cmbSmuBluk.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 24</value>
+  </data>
+  <data name="cmbSmuBluk.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="&gt;&gt;cmbSmuBluk.Name" xml:space="preserve">
+    <value>cmbSmuBluk</value>
+  </data>
+  <data name="&gt;&gt;cmbSmuBluk.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;cmbSmuBluk.Parent" xml:space="preserve">
+    <value>pnl4TSetting</value>
+  </data>
+  <data name="&gt;&gt;cmbSmuBluk.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnDrain.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="btnDrain.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnDrain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 7</value>
+  </data>
+  <data name="btnDrain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 45</value>
+  </data>
+  <data name="btnDrain.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="btnDrain.Text" xml:space="preserve">
+    <value>Drain</value>
+  </data>
+  <data name="&gt;&gt;btnDrain.Name" xml:space="preserve">
+    <value>btnDrain</value>
+  </data>
+  <data name="&gt;&gt;btnDrain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDrain.Parent" xml:space="preserve">
+    <value>pnl4TSetting</value>
+  </data>
+  <data name="&gt;&gt;btnDrain.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cmbSmuDrain.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt, style=Bold</value>
+  </data>
+  <data name="cmbSmuDrain.ItemHeight" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="cmbSmuDrain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 58</value>
+  </data>
+  <data name="cmbSmuDrain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 24</value>
+  </data>
+  <data name="cmbSmuDrain.TabIndex" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="&gt;&gt;cmbSmuDrain.Name" xml:space="preserve">
+    <value>cmbSmuDrain</value>
+  </data>
+  <data name="&gt;&gt;cmbSmuDrain.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;cmbSmuDrain.Parent" xml:space="preserve">
+    <value>pnl4TSetting</value>
+  </data>
+  <data name="&gt;&gt;cmbSmuDrain.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnBluk.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="btnBluk.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnBluk.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 129</value>
+  </data>
+  <data name="btnBluk.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 45</value>
+  </data>
+  <data name="btnBluk.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btnBluk.Text" xml:space="preserve">
+    <value>Bluk</value>
+  </data>
+  <data name="&gt;&gt;btnBluk.Name" xml:space="preserve">
+    <value>btnBluk</value>
+  </data>
+  <data name="&gt;&gt;btnBluk.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnBluk.Parent" xml:space="preserve">
+    <value>pnl4TSetting</value>
+  </data>
+  <data name="&gt;&gt;btnBluk.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnSource.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="btnSource.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnSource.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 224</value>
+  </data>
+  <data name="btnSource.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 45</value>
+  </data>
+  <data name="btnSource.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btnSource.Text" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="&gt;&gt;btnSource.Name" xml:space="preserve">
+    <value>btnSource</value>
+  </data>
+  <data name="&gt;&gt;btnSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSource.Parent" xml:space="preserve">
+    <value>pnl4TSetting</value>
+  </data>
+  <data name="&gt;&gt;btnSource.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnGate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt, style=Bold</value>
+  </data>
+  <data name="btnGate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnGate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 129</value>
+  </data>
+  <data name="btnGate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 45</value>
+  </data>
+  <data name="btnGate.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btnGate.Text" xml:space="preserve">
+    <value>Gate</value>
+  </data>
+  <data name="&gt;&gt;btnGate.Name" xml:space="preserve">
+    <value>btnGate</value>
+  </data>
+  <data name="&gt;&gt;btnGate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGate.Parent" xml:space="preserve">
+    <value>pnl4TSetting</value>
+  </data>
+  <data name="&gt;&gt;btnGate.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="picDUT.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="picDUT.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picDUT.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 88</value>
+  </data>
+  <data name="picDUT.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 130</value>
+  </data>
+  <data name="picDUT.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;picDUT.Name" xml:space="preserve">
+    <value>picDUT</value>
+  </data>
+  <data name="&gt;&gt;picDUT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picDUT.Parent" xml:space="preserve">
+    <value>pnl4TSetting</value>
+  </data>
+  <data name="&gt;&gt;picDUT.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="pnl4TSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>153, 133</value>
+  </data>
+  <data name="pnl4TSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>310, 307</value>
+  </data>
+  <data name="pnl4TSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>210</value>
+  </data>
+  <data name="&gt;&gt;pnl4TSetting.Name" xml:space="preserve">
+    <value>pnl4TSetting</value>
+  </data>
+  <data name="&gt;&gt;pnl4TSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnl4TSetting.Parent" xml:space="preserve">
+    <value>grpTermianlSetting</value>
+  </data>
+  <data name="&gt;&gt;pnl4TSetting.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="grpTermianlSetting.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="grpTermianlSetting.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="grpTermianlSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="grpTermianlSetting.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="grpTermianlSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>734, 605</value>
+  </data>
+  <data name="grpTermianlSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="grpTermianlSetting.Text" xml:space="preserve">
+    <value>TERMINAL SETTING</value>
+  </data>
+  <data name="&gt;&gt;grpTermianlSetting.Name" xml:space="preserve">
+    <value>grpTermianlSetting</value>
+  </data>
+  <data name="&gt;&gt;grpTermianlSetting.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.GroupPanel, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;grpTermianlSetting.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;grpTermianlSetting.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1054, 605</value>
+  </data>
+  <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
+    <value>316</value>
+  </data>
+  <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Parent" xml:space="preserve">
+    <value>grpItemCondition</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="grpItemCondition.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="grpItemCondition.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 20.25pt, style=Bold</value>
+  </data>
+  <data name="grpItemCondition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="grpItemCondition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1090, 656</value>
+  </data>
+  <data name="grpItemCondition.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="grpItemCondition.Text" xml:space="preserve">
+    <value>Transistor (Multi-Terminal)</value>
+  </data>
+  <data name="&gt;&gt;grpItemCondition.Name" xml:space="preserve">
+    <value>grpItemCondition</value>
+  </data>
+  <data name="&gt;&gt;grpItemCondition.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpItemCondition.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grpItemCondition.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1090, 656</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Item Setting</value>
+  </data>
+  <data name="&gt;&gt;colRange.Name" xml:space="preserve">
+    <value>colRange</value>
+  </data>
+  <data name="&gt;&gt;colRange.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmItemSettingTransistor</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

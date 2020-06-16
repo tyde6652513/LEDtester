@@ -1,0 +1,1806 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9DFEF289-03AB-4CB4-A46C-1B74D7F17C45}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MPI.Tester.Gui</RootNamespace>
+    <AssemblyName>LEDTester</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>C:\MPI\LEDTester\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DebugVer</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>C:\MPI\LEDTester\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>StartIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>MPI.Tester.Gui.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Design">
+      <HintPath>..\Assembly\DevComponents.DotNetBar.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assembly\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MPI">
+      <HintPath>..\Assembly\MPI.dll</HintPath>
+    </Reference>
+    <Reference Include="MPI.Tester.GuiComponent, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assembly\MPI.Tester.GuiComponent.dll</HintPath>
+    </Reference>
+    <Reference Include="MPI.UCF, Version=2.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assembly\MPI.UCF.dll</HintPath>
+    </Reference>
+    <Reference Include="MPI.UCF.ControlServer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assembly\MPI.UCF.ControlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MPI.Windows.Forms">
+      <HintPath>..\Assembly\MPI.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph">
+      <HintPath>..\Assembly\ZedGraph.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSystem.cs" />
+    <Compile Include="AuthorityCenter.cs" />
+    <Compile Include="AutoCalibChannelGain.cs" />
+    <Compile Include="DataCenter.cs" />
+    <Compile Include="DataXmlSerializer.cs" />
+    <Compile Include="DebugStream.cs" />
+    <Compile Include="Enumeration\Enumerations.cs" />
+    <Compile Include="frmAlarmMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlarmMessage.Designer.cs">
+      <DependentUpon>frmAlarmMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChannelCompare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChannelCompare.Designer.cs">
+      <DependentUpon>frmChannelCompare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputIdleTime.cs" />
+    <Compile Include="UIForm\Dialog\frmAutoCalibChannel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmAutoCalibChannel.Designer.cs">
+      <DependentUpon>frmAutoCalibChannel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceMeassage.ja.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceMeassage.ja.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmChannelCali.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmChannelCali.Designer.cs">
+      <DependentUpon>frmChannelCali.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmViewWLGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmViewWLGraph.Designer.cs">
+      <DependentUpon>frmViewWLGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\frmAttenuator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\frmAttenuator.Designer.cs">
+      <DependentUpon>frmAttenuator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\frmDevRelay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\frmDevRelay.Designer.cs">
+      <DependentUpon>frmDevRelay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\frmIODefault.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\frmIODefault.Designer.cs">
+      <DependentUpon>frmIODefault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\frmLaserSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\frmLaserSystem.Designer.cs">
+      <DependentUpon>frmLaserSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\frmLaserSysV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\frmLaserSysV2.Designer.cs">
+      <DependentUpon>frmLaserSysV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\frmLCRCali.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\frmLCRCali.Designer.cs">
+      <DependentUpon>frmLCRCali.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmOsaCoupling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmOsaCoupling.Designer.cs">
+      <DependentUpon>frmOsaCoupling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmReportComments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmReportComments.Designer.cs">
+      <DependentUpon>frmReportComments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutputDataSet.cs" />
+    <Compile Include="PreSamplingCheck.cs" />
+    <Compile Include="ProduceInfo.cs" />
+    <Compile Include="ResourceErr.zh-TW.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceErr.zh-TW.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceMeassage.Designer.cs" />
+    <Compile Include="ResourceMeassage.zh-TW1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceMeassage.zh-TW.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmChannelCali2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmChannelCali2.Designer.cs">
+      <DependentUpon>frmChannelCali2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HiTimer.cs" />
+    <Compile Include="MESControl.cs" />
+    <Compile Include="UIForm\Dialog\frmDailyCheckSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmDailyCheckSetting.Designer.cs">
+      <DependentUpon>frmDailyCheckSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmDailyVerify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmDailyVerify.Designer.cs">
+      <DependentUpon>frmDailyVerify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmDeviceVerify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmDeviceVerify.Designer.cs">
+      <DependentUpon>frmDeviceVerify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmPopWaferMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmPopWaferMap.Designer.cs">
+      <DependentUpon>frmPopWaferMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmProgressBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmProgressBar.designer.cs">
+      <DependentUpon>frmProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmSetESDSysParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmSetESDSysParam.Designer.cs">
+      <DependentUpon>frmSetESDSysParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmSetFAEFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmSetFAEFunc.Designer.cs">
+      <DependentUpon>frmSetFAEFunc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmSetRDFuncTestItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmSetRDFuncTestItems.Designer.cs">
+      <DependentUpon>frmSetRDFuncTestItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmSptCalibData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmSptCalibData.Designer.cs">
+      <DependentUpon>frmSptCalibData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmSetTaskSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmSetTaskSheet.Designer.cs">
+      <DependentUpon>frmSetTaskSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmCaliMultiFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmCaliMultiFile.Designer.cs">
+      <DependentUpon>frmCaliMultiFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmChuckCorrection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmChuckCorrection.Designer.cs">
+      <DependentUpon>frmChuckCorrection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmCali.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmCali.Designer.cs">
+      <DependentUpon>frmCali.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAgent.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmUploadRecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmUploadRecipe.Designer.cs">
+      <DependentUpon>frmUploadRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmViewPIVGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmViewPIVGraph.Designer.cs">
+      <DependentUpon>frmViewPIVGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmWaferMapSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmWaferMapSetting.Designer.cs">
+      <DependentUpon>frmWaferMapSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmDefaultValueSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmDefaultValueSetting.Designer.cs">
+      <DependentUpon>frmDefaultValueSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\frmLCRCaliVer2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\frmLCRCaliVer2.Designer.cs">
+      <DependentUpon>frmLCRCaliVer2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\frmSMUChannelSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\frmSMUChannelSetting.Designer.cs">
+      <DependentUpon>frmSMUChannelSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\LaserSource\frmAttenuatorComp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\LaserSource\frmAttenuatorComp.Designer.cs">
+      <DependentUpon>frmAttenuatorComp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\LaserSource\frmAutoVOAComp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\LaserSource\frmAutoVOAComp.Designer.cs">
+      <DependentUpon>frmAutoVOAComp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\LaserSource\frmOpticalSwitchComp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\LaserSource\frmOpticalSwitchComp.Designer.cs">
+      <DependentUpon>frmOpticalSwitchComp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\LaserSource\frmPowerMeterComp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\HardWareSetting\LaserSource\frmPowerMeterComp.Designer.cs">
+      <DependentUpon>frmPowerMeterComp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\frmBarcodeSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmBarcodeSetting.Designer.cs">
+      <DependentUpon>frmBarcodeSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmBoxPlot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmBoxPlot.Designer.cs">
+      <DependentUpon>frmBoxPlot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\frmChannelCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmChannelCondition.designer.cs">
+      <DependentUpon>frmChannelCondition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\frmSetProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmSetProduct.Designer.cs">
+      <DependentUpon>frmSetProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\frmSetUISetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmSetUISetting.Designer.cs">
+      <DependentUpon>frmSetUISetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Host.cs" />
+    <Compile Include="ResourceErr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceErr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PlotGraph.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceImage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceImage.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceImage\ImageResource.Designer.cs">
+      <DependentUpon>ImageResource.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Storage.cs" />
+    <Compile Include="UIForm\Dialog\AlertCustom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmSetParameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmSetParameter.Designer.cs">
+      <DependentUpon>frmSetParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\TopMessageBox.cs" />
+    <Compile Include="UIForm\frmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmBase.Designer.cs">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\frmBinSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmBinSetting.designer.cs">
+      <DependentUpon>frmBinSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\frmCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmCondition.Designer.cs">
+      <DependentUpon>frmCondition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\frmConditionCoef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmConditionCoef.Designer.cs">
+      <DependentUpon>frmConditionCoef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\frmMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmMap.Designer.cs">
+      <DependentUpon>frmMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\frmSetMachine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmSetMachine.Designer.cs">
+      <DependentUpon>frmSetMachine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\frmOpRecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmOpRecipe.Designer.cs">
+      <DependentUpon>frmOpRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\frmSetReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmSetReport.Designer.cs">
+      <DependentUpon>frmSetReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmSetRDFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmSetRDFunc.Designer.cs">
+      <DependentUpon>frmSetRDFunc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\frmSetSysParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmSetSysParam.Designer.cs">
+      <DependentUpon>frmSetSysParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\frmTestResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmTestResult.Designer.cs">
+      <DependentUpon>frmTestResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\frmTestResultAnalyze.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmTestResultAnalyze.Designer.cs">
+      <DependentUpon>frmTestResultAnalyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\frmTestResultAnalyze2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmTestResultAnalyze2.designer.cs">
+      <DependentUpon>frmTestResultAnalyze2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\frmTestResultChannelData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmTestResultChannelData.Designer.cs">
+      <DependentUpon>frmTestResultChannelData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\frmTestResultChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmTestResultChart.Designer.cs">
+      <DependentUpon>frmTestResultChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\frmTestResultCurveAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmTestResultCurveAnalysis.Designer.cs">
+      <DependentUpon>frmTestResultCurveAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\frmTestResultData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmTestResultData.Designer.cs">
+      <DependentUpon>frmTestResultData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\frmTestResultInstantInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmTestResultInstantInfo.Designer.cs">
+      <DependentUpon>frmTestResultInstantInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\frmTestResultSpectrum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\frmTestResultSpectrum.Designer.cs">
+      <DependentUpon>frmTestResultSpectrum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmUserManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\Dialog\frmUserManager.Designer.cs">
+      <DependentUpon>frmUserManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\GraphComponent\frmLCRGraphComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\GraphComponent\frmLCRGraphComponent.Designer.cs">
+      <DependentUpon>frmLCRGraphComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\GraphComponent\frmLIVGraphComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\GraphComponent\frmLIVGraphComponent.Designer.cs">
+      <DependentUpon>frmLIVGraphComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\GraphComponent\frmPIVGraphComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\GraphComponent\frmPIVGraphComponent.Designer.cs">
+      <DependentUpon>frmPIVGraphComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\GraphComponent\frmSpectrumGraphComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\GraphComponent\frmSpectrumGraphComponent.Designer.cs">
+      <DependentUpon>frmSpectrumGraphComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\GraphComponent\frmSweepGraphComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\GraphComponent\frmSweepGraphComponent.Designer.cs">
+      <DependentUpon>frmSweepGraphComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\GraphComponent\GraphCurveItem.cs" />
+    <Compile Include="UIForm\TestItemSettingForm\frmConditionItemSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmConditionItemSetting.Designer.cs">
+      <DependentUpon>frmConditionItemSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemContactCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemContactCheck.Designer.cs">
+      <DependentUpon>frmItemContactCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingCALC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingCALC.Designer.cs">
+      <DependentUpon>frmItemSettingCALC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingDIB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingDIB.Designer.cs">
+      <DependentUpon>frmItemSettingDIB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingDVF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingDVF.Designer.cs">
+      <DependentUpon>frmItemSettingDVF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingESD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingESD.Designer.cs">
+      <DependentUpon>frmItemSettingESD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingIF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingIF.Designer.cs">
+      <DependentUpon>frmItemSettingIF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingIFH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingIFH.Designer.cs">
+      <DependentUpon>frmItemSettingIFH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingIO.Designer.cs">
+      <DependentUpon>frmItemSettingIO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingIVSWEEP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingIVSWEEP.Designer.cs">
+      <DependentUpon>frmItemSettingIVSWEEP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingIZ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingIZ.Designer.cs">
+      <DependentUpon>frmItemSettingIZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingLaserSource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingLaserSource.Designer.cs">
+      <DependentUpon>frmItemSettingLaserSource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingLCR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingLCR.designer.cs">
+      <DependentUpon>frmItemSettingLCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingLCRSweep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingLCRSweep.Designer.cs">
+      <DependentUpon>frmItemSettingLCRSweep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingLIV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingLIV.Designer.cs">
+      <DependentUpon>frmItemSettingLIV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingLOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingLOP.Designer.cs">
+      <DependentUpon>frmItemSettingLOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingLOPWLAC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingLOPWLAC.Designer.cs">
+      <DependentUpon>frmItemSettingLOPWLAC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingLOPWLDC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingLOPWLDC.Designer.cs">
+      <DependentUpon>frmItemSettingLOPWLDC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingOSA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingOSA.Designer.cs">
+      <DependentUpon>frmItemSettingOSA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingPIV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingPIV.Designer.cs">
+      <DependentUpon>frmItemSettingPIV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingPOLAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingPOLAR.Designer.cs">
+      <DependentUpon>frmItemSettingPOLAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingR.Designer.cs">
+      <DependentUpon>frmItemSettingR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingRTH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingRTH.Designer.cs">
+      <DependentUpon>frmItemSettingRTH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingTHY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingTHY.Designer.cs">
+      <DependentUpon>frmItemSettingTHY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingTransistor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingTransistor.Designer.cs">
+      <DependentUpon>frmItemSettingTransistor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingVAC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingVAC.Designer.cs">
+      <DependentUpon>frmItemSettingVAC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingVF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingVF.Designer.cs">
+      <DependentUpon>frmItemSettingVF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingVISCAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingVISCAN.Designer.cs">
+      <DependentUpon>frmItemSettingVISCAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingVISWEEP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingVISWEEP.Designer.cs">
+      <DependentUpon>frmItemSettingVISWEEP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingVR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmItemSettingVR.Designer.cs">
+      <DependentUpon>frmItemSettingVR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmTerminalSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\frmTerminalSetting.Designer.cs">
+      <DependentUpon>frmTerminalSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\GuiCommon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\IConditionElecCtrl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UIForm\TestItemSettingForm\IConditionUICtrl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UIForm\UIComponent\frmPathInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\UIComponent\frmPathInfo.Designer.cs">
+      <DependentUpon>frmPathInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\UIComponent\frmSysPathSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\UIComponent\frmSysPathSet.Designer.cs">
+      <DependentUpon>frmSysPathSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\UserForm\Condition\frmWAVETEC00Condition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\UserForm\Condition\frmWAVETEC00Condition.Designer.cs">
+      <DependentUpon>frmWAVETEC00Condition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\UserForm\Condition\IfrmCusConditin.cs" />
+    <Compile Include="UIForm\UserForm\frmChangeLight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\UserForm\frmChangeLight.designer.cs">
+      <DependentUpon>frmChangeLight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\UserForm\frmInfiniLED.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\UserForm\frmInfiniLED.Designer.cs">
+      <DependentUpon>frmInfiniLED.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\UserForm\UISetting\frmDOWAPath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\UserForm\UISetting\frmDOWAPath.Designer.cs">
+      <DependentUpon>frmDOWAPath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\UserForm\UISetting\frmOptoTechPath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\UserForm\UISetting\frmOptoTechPath.Designer.cs">
+      <DependentUpon>frmOptoTechPath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\UserForm\UISetting\frmWAVETEK00Path.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\UserForm\UISetting\frmWAVETEK00Path.Designer.cs">
+      <DependentUpon>frmWAVETEK00Path.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UILog.cs" />
+    <Compile Include="UIForm\UserForm\frmDefault.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\UserForm\frmDefault.Designer.cs">
+      <DependentUpon>frmDefault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\UserForm\frmEpiLEDs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\UserForm\frmEpiLEDs.Designer.cs">
+      <DependentUpon>frmEpiLEDs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\UserForm\frmHelio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\UserForm\frmHelio.Designer.cs">
+      <DependentUpon>frmHelio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\UserForm\frmKAISTAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\UserForm\frmKAISTAR.Designer.cs">
+      <DependentUpon>frmKAISTAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\UserForm\frmLPC00.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\UserForm\frmLPC00.designer.cs">
+      <DependentUpon>frmLPC00.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\UserForm\frmTSMC00.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\UserForm\frmTSMC00.designer.cs">
+      <DependentUpon>frmTSMC00.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WMOperate.cs" />
+    <EmbeddedResource Include="frmAlarmMessage.resx">
+      <DependentUpon>frmAlarmMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChannelCompare.resx">
+      <DependentUpon>frmChannelCompare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmAutoCalibChannel.resx">
+      <DependentUpon>frmAutoCalibChannel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmAutoCalibChannel.zh-TW.resx">
+      <DependentUpon>frmAutoCalibChannel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.ja.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceMeassage.ja.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceMeassage.ja.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmCali.ja.resx">
+      <DependentUpon>frmCali.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmCaliMultiFile.ja.resx">
+      <DependentUpon>frmCaliMultiFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmChannelCali.ja.resx">
+      <DependentUpon>frmChannelCali.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmChannelCali.resx">
+      <DependentUpon>frmChannelCali.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmChannelCali.zh-TW.resx">
+      <DependentUpon>frmChannelCali.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmChannelCali2.ja.resx">
+      <DependentUpon>frmChannelCali2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmChuckCorrection.ja.resx">
+      <DependentUpon>frmChuckCorrection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmDailyCheckSetting.ja.resx">
+      <DependentUpon>frmDailyCheckSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmDailyVerify.ja.resx">
+      <DependentUpon>frmDailyVerify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\HardWareSetting\frmAttenuator.resx">
+      <DependentUpon>frmAttenuator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\HardWareSetting\frmDevRelay.resx">
+      <DependentUpon>frmDevRelay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\HardWareSetting\frmIODefault.resx">
+      <DependentUpon>frmIODefault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\HardWareSetting\frmIODefault.zh-TW.resx">
+      <DependentUpon>frmIODefault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\HardWareSetting\frmLaserSystem.resx">
+      <DependentUpon>frmLaserSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\HardWareSetting\frmLaserSysV2.resx">
+      <DependentUpon>frmLaserSysV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\HardWareSetting\frmLCRCali.resx">
+      <DependentUpon>frmLCRCali.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmLogin.ja.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmOsaCoupling.resx">
+      <DependentUpon>frmOsaCoupling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmReportComments.resx">
+      <DependentUpon>frmReportComments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmChannelCali2.resx">
+      <DependentUpon>frmChannelCali2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmChannelCali2.zh-TW.resx">
+      <DependentUpon>frmChannelCali2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmDailyCheckSetting.resx">
+      <DependentUpon>frmDailyCheckSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmDailyCheckSetting.zh-TW.resx">
+      <DependentUpon>frmDailyCheckSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmDailyVerify.resx">
+      <DependentUpon>frmDailyVerify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmDailyVerify.zh-TW.resx">
+      <DependentUpon>frmDailyVerify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmDeviceVerify.resx">
+      <DependentUpon>frmDeviceVerify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmPopWaferMap.resx">
+      <DependentUpon>frmPopWaferMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmProgressBar.resx">
+      <DependentUpon>frmProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmSetESDSysParam.resx">
+      <DependentUpon>frmSetESDSysParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmSetFAEFunc.ja.resx">
+      <DependentUpon>frmSetFAEFunc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmSetFAEFunc.resx">
+      <DependentUpon>frmSetFAEFunc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmSetFAEFunc.zh-TW.resx">
+      <DependentUpon>frmSetFAEFunc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmSetRDFuncTestItems.resx">
+      <DependentUpon>frmSetRDFuncTestItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmSetTaskSheet.ja.resx">
+      <DependentUpon>frmSetTaskSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmSptCalibData.ja.resx">
+      <DependentUpon>frmSptCalibData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmSptCalibData.resx">
+      <DependentUpon>frmSptCalibData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmSptCalibData.zh-TW.resx">
+      <DependentUpon>frmSptCalibData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmSetTaskSheet.resx">
+      <DependentUpon>frmSetTaskSheet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceErr.zh-TW.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceErr.zh-TW.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmCali.zh-TW.resx">
+      <DependentUpon>frmCali.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmCaliMultiFile.resx">
+      <DependentUpon>frmCaliMultiFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmCaliMultiFile.zh-TW.resx">
+      <DependentUpon>frmCaliMultiFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmChuckCorrection.resx">
+      <DependentUpon>frmChuckCorrection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmChuckCorrection.zh-TW.resx">
+      <DependentUpon>frmChuckCorrection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmLogin.zh-TW.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmCali.resx">
+      <DependentUpon>frmCali.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceMeassage.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceMeassage1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceMeassage.zh-TW.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceMeassage.zh-TW1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmUploadRecipe.resx">
+      <DependentUpon>frmUploadRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmUploadRecipe.zh-TW.resx">
+      <DependentUpon>frmUploadRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmUserManager.ja.resx">
+      <DependentUpon>frmUserManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmViewPIVGraph.resx">
+      <DependentUpon>frmViewPIVGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmViewWLGraph.resx">
+      <DependentUpon>frmViewWLGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmWaferMapSetting.ja.resx">
+      <DependentUpon>frmWaferMapSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmWaferMapSetting.resx">
+      <DependentUpon>frmWaferMapSetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmWaferMapSetting.zh-TW.resx">
+      <DependentUpon>frmWaferMapSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmDefaultValueSetting.resx">
+      <DependentUpon>frmDefaultValueSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\HardWareSetting\frmLCRCaliVer2.resx">
+      <DependentUpon>frmLCRCaliVer2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\HardWareSetting\frmSMUChannelSetting.resx">
+      <DependentUpon>frmSMUChannelSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\HardWareSetting\LaserSource\frmAttenuatorComp.resx">
+      <DependentUpon>frmAttenuatorComp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\HardWareSetting\LaserSource\frmAutoVOAComp.resx">
+      <DependentUpon>frmAutoVOAComp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\HardWareSetting\LaserSource\frmOpticalSwitchComp.resx">
+      <DependentUpon>frmOpticalSwitchComp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\HardWareSetting\LaserSource\frmPowerMeterComp.resx">
+      <DependentUpon>frmPowerMeterComp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmBarcodeSetting.resx">
+      <DependentUpon>frmBarcodeSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmBase.ja.resx">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmBinSetting.ja.resx">
+      <DependentUpon>frmBinSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmBoxPlot.resx">
+      <DependentUpon>frmBoxPlot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmChannelCondition.ja.resx">
+      <DependentUpon>frmChannelCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmChannelCondition.resx">
+      <DependentUpon>frmChannelCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmChannelCondition.zh-TW.resx">
+      <DependentUpon>frmChannelCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmCondition.ja.resx">
+      <DependentUpon>frmCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmConditionCoef.ja.resx">
+      <DependentUpon>frmConditionCoef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmOpRecipe.ja.resx">
+      <DependentUpon>frmOpRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmSetMachine.ja.resx">
+      <DependentUpon>frmSetMachine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmSetProduct.ja.resx">
+      <DependentUpon>frmSetProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmSetProduct.zh-TW.resx">
+      <DependentUpon>frmSetProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmSetReport.ja.resx">
+      <DependentUpon>frmSetReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmSetSysParam.ja.resx">
+      <DependentUpon>frmSetSysParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmSetUISetting.ja.resx">
+      <DependentUpon>frmSetUISetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmSetUISetting.zh-TW.resx">
+      <DependentUpon>frmSetUISetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.zh-TW.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceErr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceErr.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceImage.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceImage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceImage\ImageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ImageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\AlertCustom.resx">
+      <DependentUpon>AlertCustom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmSetParameter.resx">
+      <DependentUpon>frmSetParameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmBase.resx">
+      <DependentUpon>frmBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmBase.zh-TW.resx">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmBinSetting.resx">
+      <DependentUpon>frmBinSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmBinSetting.zh-TW.resx">
+      <DependentUpon>frmBinSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmCondition.resx">
+      <DependentUpon>frmCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmCondition.zh-TW.resx">
+      <DependentUpon>frmCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmConditionCoef.resx">
+      <DependentUpon>frmConditionCoef.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmConditionCoef.zh-TW.resx">
+      <DependentUpon>frmConditionCoef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmMap.resx">
+      <DependentUpon>frmMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmSetMachine.resx">
+      <DependentUpon>frmSetMachine.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmSetMachine.zh-TW.resx">
+      <DependentUpon>frmSetMachine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmSetProduct.resx">
+      <DependentUpon>frmSetProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmOpRecipe.resx">
+      <DependentUpon>frmOpRecipe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmOpRecipe.zh-TW.resx">
+      <DependentUpon>frmOpRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmSetReport.resx">
+      <DependentUpon>frmSetReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmSetReport.zh-TW.resx">
+      <DependentUpon>frmSetReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmSetRDFunc.resx">
+      <DependentUpon>frmSetRDFunc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmSetSysParam.resx">
+      <DependentUpon>frmSetSysParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmSetSysParam.zh-TW.resx">
+      <DependentUpon>frmSetSysParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmSetUISetting.resx">
+      <DependentUpon>frmSetUISetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResult.ja.resx">
+      <DependentUpon>frmTestResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResult.resx">
+      <DependentUpon>frmTestResult.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResult.zh-TW.resx">
+      <DependentUpon>frmTestResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResultAnalyze.ja.resx">
+      <DependentUpon>frmTestResultAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResultAnalyze.resx">
+      <DependentUpon>frmTestResultAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResultAnalyze.zh-TW.resx">
+      <DependentUpon>frmTestResultAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResultAnalyze2.ja.resx">
+      <DependentUpon>frmTestResultAnalyze2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResultAnalyze2.resx">
+      <DependentUpon>frmTestResultAnalyze2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResultAnalyze2.zh-TW.resx">
+      <DependentUpon>frmTestResultAnalyze2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResultChannelData.resx">
+      <DependentUpon>frmTestResultChannelData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResultChart.ja.resx">
+      <DependentUpon>frmTestResultChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResultChart.resx">
+      <DependentUpon>frmTestResultChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResultChart.zh-TW.resx">
+      <DependentUpon>frmTestResultChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResultCurveAnalysis.resx">
+      <DependentUpon>frmTestResultCurveAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResultCurveAnalysis.zh-TW.resx">
+      <DependentUpon>frmTestResultCurveAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResultData.resx">
+      <DependentUpon>frmTestResultData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResultInstantInfo.ja.resx">
+      <DependentUpon>frmTestResultInstantInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResultInstantInfo.resx">
+      <DependentUpon>frmTestResultInstantInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResultInstantInfo.zh-TW.resx">
+      <DependentUpon>frmTestResultInstantInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResultSpectrum.ja.resx">
+      <DependentUpon>frmTestResultSpectrum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResultSpectrum.resx">
+      <DependentUpon>frmTestResultSpectrum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\frmTestResultSpectrum.zh-TW.resx">
+      <DependentUpon>frmTestResultSpectrum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmUserManager.resx">
+      <DependentUpon>frmUserManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\Dialog\frmUserManager.zh-TW.resx">
+      <DependentUpon>frmUserManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\GraphComponent\frmLCRGraphComponent.resx">
+      <DependentUpon>frmLCRGraphComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\GraphComponent\frmLIVGraphComponent.resx">
+      <DependentUpon>frmLIVGraphComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\GraphComponent\frmPIVGraphComponent.resx">
+      <DependentUpon>frmPIVGraphComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\GraphComponent\frmSpectrumGraphComponent.resx">
+      <DependentUpon>frmSpectrumGraphComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\GraphComponent\frmSweepGraphComponent.resx">
+      <DependentUpon>frmSweepGraphComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmConditionItemSetting.resx">
+      <DependentUpon>frmConditionItemSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmConditionItemSetting.zh-TW.resx">
+      <DependentUpon>frmConditionItemSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemContactCheck.resx">
+      <DependentUpon>frmItemContactCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemContactCheck.zh-TW.resx">
+      <DependentUpon>frmItemContactCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingCALC.resx">
+      <DependentUpon>frmItemSettingCALC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingCALC.zh-TW.resx">
+      <DependentUpon>frmItemSettingCALC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingDIB.resx">
+      <DependentUpon>frmItemSettingDIB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingDIB.zh-TW.resx">
+      <DependentUpon>frmItemSettingDIB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingDVF.resx">
+      <DependentUpon>frmItemSettingDVF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingDVF.zh-TW.resx">
+      <DependentUpon>frmItemSettingDVF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingESD.resx">
+      <DependentUpon>frmItemSettingESD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingESD.zh-TW.resx">
+      <DependentUpon>frmItemSettingESD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingIF.resx">
+      <DependentUpon>frmItemSettingIF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingIF.zh-TW.resx">
+      <DependentUpon>frmItemSettingIF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingIFH.resx">
+      <DependentUpon>frmItemSettingIFH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingIFH.zh-TW.resx">
+      <DependentUpon>frmItemSettingIFH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingIO.resx">
+      <DependentUpon>frmItemSettingIO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingIVSWEEP.resx">
+      <DependentUpon>frmItemSettingIVSWEEP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingIVSWEEP.zh-TW.resx">
+      <DependentUpon>frmItemSettingIVSWEEP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingIZ.resx">
+      <DependentUpon>frmItemSettingIZ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingIZ.zh-TW.resx">
+      <DependentUpon>frmItemSettingIZ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingLaserSource.resx">
+      <DependentUpon>frmItemSettingLaserSource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingLCR.resx">
+      <DependentUpon>frmItemSettingLCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingLCR.zh-TW.resx">
+      <DependentUpon>frmItemSettingLCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingLCRSweep.resx">
+      <DependentUpon>frmItemSettingLCRSweep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingLIV.resx">
+      <DependentUpon>frmItemSettingLIV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingLIV.zh-TW.resx">
+      <DependentUpon>frmItemSettingLIV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingLOP.resx">
+      <DependentUpon>frmItemSettingLOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingLOP.zh-TW.resx">
+      <DependentUpon>frmItemSettingLOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingLOPWLAC.resx">
+      <DependentUpon>frmItemSettingLOPWLAC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingLOPWLAC.zh-TW.resx">
+      <DependentUpon>frmItemSettingLOPWLAC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingLOPWLDC.resx">
+      <DependentUpon>frmItemSettingLOPWLDC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingLOPWLDC.zh-TW.resx">
+      <DependentUpon>frmItemSettingLOPWLDC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingOSA.resx">
+      <DependentUpon>frmItemSettingOSA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingOSA.zh-TW.resx">
+      <DependentUpon>frmItemSettingOSA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingPIV.resx">
+      <DependentUpon>frmItemSettingPIV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingPIV.zh-TW.resx">
+      <DependentUpon>frmItemSettingPIV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingPOLAR.resx">
+      <DependentUpon>frmItemSettingPOLAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingPOLAR.zh-TW.resx">
+      <DependentUpon>frmItemSettingPOLAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingR.resx">
+      <DependentUpon>frmItemSettingR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingR.zh-TW.resx">
+      <DependentUpon>frmItemSettingR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingRTH.resx">
+      <DependentUpon>frmItemSettingRTH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingRTH.zh-TW.resx">
+      <DependentUpon>frmItemSettingRTH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingTHY.resx">
+      <DependentUpon>frmItemSettingTHY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingTHY.zh-TW.resx">
+      <DependentUpon>frmItemSettingTHY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingTransistor.resx">
+      <DependentUpon>frmItemSettingTransistor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingTransistor.zh-TW.resx">
+      <DependentUpon>frmItemSettingTransistor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingVAC.resx">
+      <DependentUpon>frmItemSettingVAC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingVAC.zh-TW.resx">
+      <DependentUpon>frmItemSettingVAC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingVF.resx">
+      <DependentUpon>frmItemSettingVF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingVF.zh-TW.resx">
+      <DependentUpon>frmItemSettingVF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingVISCAN.resx">
+      <DependentUpon>frmItemSettingVISCAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingVISCAN.zh-TW.resx">
+      <DependentUpon>frmItemSettingVISCAN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingVISWEEP.resx">
+      <DependentUpon>frmItemSettingVISWEEP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingVISWEEP.zh-TW.resx">
+      <DependentUpon>frmItemSettingVISWEEP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingVR.resx">
+      <DependentUpon>frmItemSettingVR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmItemSettingVR.zh-TW.resx">
+      <DependentUpon>frmItemSettingVR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\TestItemSettingForm\frmTerminalSetting.resx">
+      <DependentUpon>frmTerminalSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UIComponent\frmPathInfo.resx">
+      <DependentUpon>frmPathInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UIComponent\frmSysPathSet.resx">
+      <DependentUpon>frmSysPathSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\Condition\frmWAVETEC00Condition.resx">
+      <DependentUpon>frmWAVETEC00Condition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\frmChangeLight.resx">
+      <DependentUpon>frmChangeLight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\frmDefault.ja.resx">
+      <DependentUpon>frmDefault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\frmDefault.resx">
+      <DependentUpon>frmDefault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\frmDefault.zh-TW.resx">
+      <DependentUpon>frmDefault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\frmEpiLEDs.ja.resx">
+      <DependentUpon>frmEpiLEDs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\frmEpiLEDs.resx">
+      <DependentUpon>frmEpiLEDs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\frmEpiLEDs.zh-TW.resx">
+      <DependentUpon>frmEpiLEDs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\frmHelio.ja.resx">
+      <DependentUpon>frmHelio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\frmHelio.resx">
+      <DependentUpon>frmHelio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\frmHelio.zh-TW.resx">
+      <DependentUpon>frmHelio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\frmInfiniLED.resx">
+      <DependentUpon>frmInfiniLED.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\frmKAISTAR.ja.resx">
+      <DependentUpon>frmKAISTAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\frmKAISTAR.resx">
+      <DependentUpon>frmKAISTAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\frmKAISTAR.zh-TW.resx">
+      <DependentUpon>frmKAISTAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\frmLPC00.ja.resx">
+      <DependentUpon>frmLPC00.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\frmLPC00.resx">
+      <DependentUpon>frmLPC00.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\frmLPC00.zh-TW.resx">
+      <DependentUpon>frmLPC00.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\frmTSMC00.ja.resx">
+      <DependentUpon>frmTSMC00.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\frmTSMC00.resx">
+      <DependentUpon>frmTSMC00.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\frmTSMC00.zh-TW.resx">
+      <DependentUpon>frmTSMC00.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\UISetting\frmDOWAPath.resx">
+      <DependentUpon>frmDOWAPath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\UISetting\frmOptoTechPath.resx">
+      <DependentUpon>frmOptoTechPath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\UISetting\frmWAVETEK00Path.resx">
+      <DependentUpon>frmWAVETEK00Path.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\FormAgent.xml.bk">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Data\FormAgent.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="obj\Icon\btnBinSetting.Image.png" />
+    <Content Include="obj\Icon\btnCIEMap.Image.png" />
+    <Content Include="obj\Icon\btnCondition.Image.png" />
+    <Content Include="obj\Icon\btnCycleRun.Image.png" />
+    <Content Include="obj\Icon\btnExit.Image.png" />
+    <Content Include="obj\Icon\btnSysRun.Image.png" />
+    <Content Include="obj\Icon\btnSysStop.png" />
+    <Content Include="obj\Icon\btnTestResult.Image.png" />
+    <Content Include="obj\Icon\btnTool.Image.png" />
+    <Content Include="obj\Icon\btnTool.ImageLarge.png" />
+    <Content Include="obj\Icon\btnUserManager.Image.png" />
+    <Content Include="obj\Icon\btnWaferMap.Image.png" />
+    <Content Include="obj\Icon\tabItemAnalyze.png" />
+    <Content Include="obj\Icon\tabItemCoef.png" />
+    <Content Include="obj\Icon\tabItemParameter.png" />
+    <Content Include="obj\Icon\tabItemPowerTool.png" />
+    <Content Include="obj\Icon\tabItemReportFile.png" />
+    <Content Include="obj\Icon\tabItemReportFormat.png" />
+    <Content Include="obj\Icon\tabItemResult.png" />
+    <Content Include="obj\Icon\tabItemSetup.png" />
+    <Content Include="obj\Icon\tabItemSpectrum.png" />
+    <Content Include="obj\Icon\tabItemSysParam.png" />
+    <None Include="ResourceImage\btnZoom_in.png" />
+    <None Include="ResourceImage\btnZoom_out.png" />
+    <None Include="Resources\other_social.png" />
+    <None Include="Resources\people.png" />
+    <None Include="Resources\edit-user.png" />
+    <None Include="ResourceImage\btnClear.png" />
+    <None Include="ResourceImage\btnExport.png" />
+    <None Include="ResourceImage\btnDivide.png" />
+    <None Include="ResourceImage\AddToDB_32.png" />
+    <Content Include="ResourceImage\btnLift.png" />
+    <Content Include="ResourceImage\btnRight.png" />
+    <None Include="Resources\arrow-right.png" />
+    <None Include="Resources\arrow-left.png" />
+    <None Include="Resources\navigation-up-button.png" />
+    <None Include="Resources\link.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\site-map.png" />
+    <None Include="Resources\btnCurve.png" />
+    <None Include="Resources\btnAutoScale.png" />
+    <None Include="Resources\btnAutoScale2.png" />
+    <None Include="Resources\Lamp-Blue.png" />
+    <None Include="Resources\Lamp-Green.png" />
+    <None Include="Resources\Lamp-Red.png" />
+    <None Include="Resources\document-edit.png" />
+    <None Include="Resources\gears.png" />
+    <None Include="Resources\btnExitApp.png" />
+    <None Include="Resources\logo5.png" />
+    <None Include="Resources\btnAlramList1.png" />
+    <None Include="ResourceImage\mini-hero-bg.png" />
+    <None Include="Resources\btnSetWork.png" />
+    <None Include="Resources\btnSetWork1.png" />
+    <None Include="Resources\m-01.png" />
+    <None Include="ResourceImage\C101.png" />
+    <Content Include="StartIcon.ico" />
+    <None Include="ResourceImage\btnRepeatTest.png" />
+    <None Include="ResourceImage\btnReTest.png" />
+    <None Include="ResourceImage\btnSwitch.png" />
+    <None Include="ResourceImage\btnKey.png" />
+    <None Include="ResourceImage\btnDown.png" />
+    <None Include="ResourceImage\btnUp.png" />
+    <None Include="ResourceImage\MPILEDTesterLogin.jpg" />
+    <None Include="ResourceImage\btnOperation_16.png" />
+    <None Include="ResourceImage\btnOperation_32.png" />
+    <None Include="ResourceImage\btnSetColor.png" />
+    <None Include="ResourceImage\btnPowerTool_16.png" />
+    <None Include="ResourceImage\btnTestResult_16.png" />
+    <None Include="ResourceImage\btnBinSetting_16.png" />
+    <None Include="ResourceImage\btnTestItem_16.png" />
+    <None Include="ResourceImage\btnSetting_16.png" />
+    <None Include="ResourceImage\btnUserManager_16.png" />
+    <None Include="ResourceImage\btnExitApp_32.png" />
+    <None Include="ResourceImage\btnPowerTool_32.png" />
+    <None Include="ResourceImage\btnTestResult_32.png" />
+    <None Include="ResourceImage\btnBinSetting_32.png" />
+    <None Include="ResourceImage\btnTestItem_32.png" />
+    <None Include="ResourceImage\btnSetting_32.png" />
+    <None Include="ResourceImage\btnUserManager_32.png" />
+    <None Include="ResourceImage\btnSaveFile_b.png" />
+    <None Include="ResourceImage\btnBlueStart_32.png" />
+    <None Include="ResourceImage\btnBlueStop_32.png" />
+    <None Include="ResourceImage\btnCycleRun_32.png" />
+    <None Include="ResourceImage\btnWaferMap_32.png" />
+    <None Include="ResourceImage\btnCIEMap_32.png" />
+    <None Include="ResourceImage\btnUndo.png" />
+    <None Include="ResourceImage\btnNewAdd.png" />
+    <None Include="ResourceImage\btnSnapshot.png" />
+    <None Include="ResourceImage\btnArrangeWindow.png" />
+    <None Include="ResourceImage\btnSetting.png" />
+    <None Include="ResourceImage\btnCancel.png" />
+    <None Include="ResourceImage\btnEditBin.png" />
+    <None Include="ResourceImage\btnImport.png" />
+    <None Include="ResourceImage\btnSaveAs.png" />
+    <None Include="ResourceImage\btnSelectSource.png" />
+    <None Include="ResourceImage\btnSaveFile.png" />
+    <None Include="ResourceImage\btnConfirm.png" />
+    <None Include="ResourceImage\btnClose.png" />
+    <None Include="ResourceImage\btnDataOK.png" />
+    <None Include="ResourceImage\btnDataCancel.png" />
+    <None Include="ResourceImage\btnInsertItem.png" />
+    <None Include="ResourceImage\btnUpdateItem.png" />
+    <Content Include="obj\Icon\StartIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MPI.Tester.Data\MPI.Tester.Data.csproj">
+      <Project>{33C2AD1C-45FE-4D42-86F2-E9685AEB51F3}</Project>
+      <Name>MPI.Tester.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester.DeviceCommon\MPI.Tester.DeviceCommon.csproj">
+      <Project>{E1AEFEEE-68BB-47C5-B6CC-826BDA0DABAA}</Project>
+      <Name>MPI.Tester.DeviceCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester.GuiComponent\MPI.Tester.GuiComponent.csproj">
+      <Project>{643D3CB4-DAF4-4915-B868-318F9354AC68}</Project>
+      <Name>MPI.Tester.GuiComponent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester.Maths\MPI.Tester.Maths.csproj">
+      <Project>{F33CF83B-82FB-4E56-A0EC-DCC4869FB603}</Project>
+      <Name>MPI.Tester.Maths</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester.MES\MPI.Tester.MES.csproj">
+      <Project>{EE0C64C9-0957-432A-8E5A-23FA01825100}</Project>
+      <Name>MPI.Tester.MES</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester.Report\MPI.Tester.Report.csproj">
+      <Project>{7BDBC493-7469-4545-B793-AD812E0E2DCE}</Project>
+      <Name>MPI.Tester.Report</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester.TestKernel\MPI.Tester.TestKernel.csproj">
+      <Project>{FD9B1C73-4CCC-481F-B7A7-8E8BF4A834AB}</Project>
+      <Name>MPI.Tester.TestKernel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester.TestServer\MPI.Tester.TestServer.csproj">
+      <Project>{948C8B36-F5F9-4183-9592-B385E2CC1ACC}</Project>
+      <Name>MPI.Tester.TestServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester.Tools\MPI.Tester.Tools.csproj">
+      <Project>{79982B67-8173-449C-9A4F-1A6B767CB979}</Project>
+      <Name>MPI.Tester.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Tester\MPI.Tester.csproj">
+      <Project>{71A9C95D-A461-4742-8FDD-B41F58B91C8E}</Project>
+      <Name>MPI.Tester</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MPI.Windows.Forms.WaferMap\MPI.Windows.Forms.WaferMap.csproj">
+      <Project>{7EBA8775-DED9-4AB0-B62C-2F496A24FD1B}</Project>
+      <Name>MPI.Windows.Forms.WaferMap</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UIForm\Boxes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
