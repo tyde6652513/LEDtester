@@ -57,7 +57,7 @@ namespace MPI.Tester.TestServer
 		public delegate void StateChangeHandler(ETCPClientState state);
 		public StateChangeHandler StateChangeEvent;
 
-        //protected MPI.PerformanceTimer _pt1;
+        protected MPI.PerformanceTimer _pt1;
 
 
         //public ClientRole(ArrayList log)
@@ -107,7 +107,9 @@ namespace MPI.Tester.TestServer
         /// </summary>
         private void notifyData(IAsyncResult ar)
 		{
-            Console.WriteLine("[Client],GetStream() get something");
+            Console.WriteLine("[ClientRole],notifyData()");
+            _pt1 = new PerformanceTimer();
+            _pt1.Start();
 			if (xMailManOut.Connected == false)
 				return;
 
@@ -173,9 +175,26 @@ namespace MPI.Tester.TestServer
                     {
                         byte[] outpacket = ModifyBuffer(packet, headerIndex, tarPackageLen);
 
+                        _pt1.Stop();
+                        //double timeLen = _pt1.GetTimeSpan(ETimeSpanUnit.MilliSecond);
+                        int packLen = outpacket.Length;
                         
-                        TriggeReciveEvent(outpacket);
                         this.beginWait();
+                        int delayTime =0;
+
+                        
+                        if (cmdID != (int)ETSECommand.ID_SOT)
+                        {
+                            delayTime = 50;
+                        }
+                        else
+                        {
+                            delayTime = 10;
+                        }
+                        
+                         
+                        TriggeReciveEvent(outpacket,delayTime);
+                        
                     }
                     else
                     {
@@ -193,11 +212,14 @@ namespace MPI.Tester.TestServer
                             packet = bList.ToArray();
                             if (bList.Count == tarPackageLen)
                             {
+                                _pt1.Stop();
+                                double timeLen = _pt1.GetTimeSpan(ETimeSpanUnit.MilliSecond);
+                                int packLen = packet.Length;
+                                Console.WriteLine("[ClientRole],time test,len:" + packLen.ToString() + "," + timeLen.ToString());
                                 xMailManOut.GetStream().ReadTimeout = System.Threading.Timeout.Infinite;
-                               
-                                
-                                TriggeReciveEvent(packet);
                                 this.beginWait();
+                                TriggeReciveEvent(packet);
+                                xMailManOut.GetStream().Flush();
                                 
                                 break;
                             }
@@ -279,7 +301,6 @@ namespace MPI.Tester.TestServer
 		/// </summary>
         private void beginWait()
 		{
-            xMailManOut.GetStream().Flush();
             byte[] echo = new byte[DATA_LEN];
 			xMailManOut.GetStream().BeginRead(echo, 0, echo.Length, fOnData, echo);
             this.StateChange(ETCPClientState.READING);
@@ -317,11 +338,12 @@ namespace MPI.Tester.TestServer
 			this._lastState = state;
 		}
 
-        private void TriggeReciveEvent(byte[] outpacket)
+        private void TriggeReciveEvent(byte[] outpacket,int delayInms = 0)
         {
             EventHandler<TCPClientReceiveEventArgs> handlerInstance = TCPClientReceiveEvent;
             if (handlerInstance != null)
             {
+                System.Threading.Thread.Sleep(delayInms);
                 xMailManOut.GetStream().ReadTimeout = System.Threading.Timeout.Infinite;
                 TCPClientReceiveEventArgs theArg = new TCPClientReceiveEventArgs(outpacket);
                 handlerInstance(this, theArg);
@@ -527,6 +549,11 @@ namespace MPI.Tester.TestServer
                 this.StateChange(ETCPClientState.SENDING);
                 xMailManOut.GetStream().Write(data, 0, data.Length);
                 this.StateChange(ETCPClientState.SENDED);
+
+                if (xMailManOut.GetStream().DataAvailable)
+                {
+                    Console.WriteLine("[ClientRole],DataAvailable!!!!!!!!!!!!");
+                }
             }
 		}
 
