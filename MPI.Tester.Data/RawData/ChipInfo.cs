@@ -42,6 +42,7 @@ namespace MPI.Tester.Data
 
         private DateTime _startTime;
         private DateTime _endTime;
+        private string _aoiSign;
 
         #endregion
 
@@ -100,6 +101,8 @@ namespace MPI.Tester.Data
             this._startTime = DateTime.Now;
 
             this._endTime = DateTime.Now;
+
+            this._aoiSign = "";
         }
 
         #endregion
@@ -249,6 +252,12 @@ namespace MPI.Tester.Data
             set { lock (_lockObj) { this._testGroupIndex = value; } }            
         }
 
+        public string AOISign
+        {
+            get { return this._aoiSign; }
+            set { lock (this._lockObj) { this._aoiSign = value; } }
+        }
+
         public double ChuckTemp
         {
             set
@@ -358,6 +367,7 @@ namespace MPI.Tester.Data
 
             data._chipIndex = this._chipIndex;
 
+            data.AOISign = this.AOISign;
 
             data._startTime = this._startTime;
 

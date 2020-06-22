@@ -22,34 +22,34 @@ namespace MPI.Tester.TestServer
     {
         private readonly object _lockObj;
 
-        private Thread _thrdTCPIP;
+        protected Thread _thrdTCPIP;
 
-        private static EventWaitHandle _signal;
-        private ClientRole _myClient;
+        protected static EventWaitHandle _signal;
+        protected ClientRole _myClient;
 
-        private ETCPTestSeverState _lastState;
-        private bool _isConnected;
+        protected ETCPTestSeverState _lastState;
+        protected bool _isConnected;
 
-        private static byte[] _buffer;
+        protected static byte[] _buffer;
 
-        private TesterKernelBase _testerSys;
-        private TesterCommandAgent _cmdAgent;
+        protected TesterKernelBase _testerSys;
+        protected TesterCommandAgent _cmdAgent;
 
-        private bool _isAutoRunStart;
-        private string[] _binGradeNames;
+        protected bool _isAutoRunStart;
+        protected string[] _binGradeNames;
 
-        private bool _isBusy;
-        private ArrayList _txtLog;
+        protected bool _isBusy;
+        protected ArrayList _txtLog;
 
-        private MPI.PerformanceTimer _pt1;
+        protected MPI.PerformanceTimer _pt1;
 
         public event EventHandler<ServerQueryEventArg> ServerQueryEvent;
         public ClientRole.StateChangeHandler TCPIPStateChangeEvent;
 
-        private bool _isTCPIPSendEnableResultItem;
+        protected bool _isTCPIPSendEnableResultItem;
 
-        private string _ipAddress;
-        private int _port;
+        protected string _ipAddress;
+        protected int _port;
 
         public TCPTestServer()
         {
@@ -114,18 +114,18 @@ namespace MPI.Tester.TestServer
 
         #region >>> Private Methods <<<
 
-        private void TCPClientReceiveEventHandler(object sender, TCPClientReceiveEventArgs e)
+        protected void TCPClientReceiveEventHandler(object sender, TCPClientReceiveEventArgs e)
         {
             _buffer = e.Data;
             _signal.Set();
         }
 
-        private void Fire_ServerQueryEvent(EServerQueryCmd cmd)
+        protected void Fire_ServerQueryEvent(EServerQueryCmd cmd)
         {
             Fire_ServerQueryEvent(cmd, null, null);
         }
 
-        private void Fire_ServerQueryEvent(EServerQueryCmd cmd, double[] buffer, string[] strData)
+        protected void Fire_ServerQueryEvent(EServerQueryCmd cmd, double[] buffer, string[] strData)
         {
             EventHandler<ServerQueryEventArg> handlerInstance = ServerQueryEvent;
             if (handlerInstance != null)
@@ -138,7 +138,7 @@ namespace MPI.Tester.TestServer
             }
         }
 
-        private int CommandProc()
+        protected virtual int CommandProc()
         {
             bool rtn = false;
             AcquireData acquireData;
@@ -1285,7 +1285,7 @@ namespace MPI.Tester.TestServer
             this.Fire_ServerQueryEvent(EServerQueryCmd.CMD_SHOW_ERROR, dData, sData);
         }
 
-        private void ThreadProc()
+        protected void ThreadProc()
         {
             while (true)
             {
@@ -1300,7 +1300,7 @@ namespace MPI.Tester.TestServer
             }
         }
 
-        private void OnTCPIPStateChange(ETCPClientState state)
+        protected void OnTCPIPStateChange(ETCPClientState state)
         {
             if (this.TCPIPStateChangeEvent != null)
             {

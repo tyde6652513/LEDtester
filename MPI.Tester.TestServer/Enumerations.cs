@@ -44,7 +44,8 @@ namespace MPI.Tester.TestServer
         TS_CMD_USER_LOGOUT                  = 19,
         TS_CMD_APPEND_TESTER_OUTPUT_FILE    = 20,
         TS_CMD_RUN_DAILY_CHECK              = 21,
-
+		TS_CMD_SOURCE_METER_POWER_ON		= 22,
+		TS_CMD_SOURCE_METER_POWER_OFF		= 23,
 		TS_CMD_REQUEST_PRODUCTION_INFO      = 24,
         TS_CMD_CHECK_SPECTROMETER_STATE    = 25,
 
@@ -53,6 +54,8 @@ namespace MPI.Tester.TestServer
         TS_CMD_AUTO_CH_CALIB_END        =32,
 
         TS_CMD_AUTO_CONTINUE_PROBING=33,
+
+        TS_CMD_CHANGE_NEEDLE_EXECUTION = 36,
 
         TS_CMD_LOAD_CALIBRATION_DATA=101,
         TS_CMD_CHECK_RCONTACT_STATE_START =103,
@@ -89,7 +92,12 @@ namespace MPI.Tester.TestServer
 		PB_ERROR_AUTO_CONTINUES_PROBING = 37,
 		PB_ERROR_APPEND_OUTPUT_FILENAME_FAIL = 38,
 		PB_ERROR_OUTPUT_FILENAME_EXIST_FORMAT_ERR = 39,
+        PB_ERROR_SAMPLING_PASS_RATE_FAIL = 40,
+        PB_ERROR_SAMPLING_CONTINUES_ERR = 41,
         PB_ERROR_MULTIDIE_SETTING_NOT_READY=101,
+
+        PB_ERROR_IMPORT_CALIB_DATA_FAIL = 201,
+        PB_ERROR_CSV_FILE_IS_NOT_EXISTENCE=202,
     }
 
     public enum EMPIIOTestServerCmd : int
@@ -173,7 +181,7 @@ namespace MPI.Tester.TestServer
 		ProbingCount2		= 43,
 		ProbingCount3		= 44,
 		ProbingCount4		= 45,
-
+		ProbingValidCounts=  46,
         StartTemp           = 47,
         EndTemp             = 48,
 
@@ -200,7 +208,7 @@ namespace MPI.Tester.TestServer
         ReTestRowY              = 66,
 
         OUT_TUBE_PULL_NUM       = 67,
-
+ 		 CurrentIndex = 77,
 		BoundarySampleTestMode	= 97,
 		TestChipGroup			= 98,
 
@@ -227,6 +235,8 @@ namespace MPI.Tester.TestServer
 
 		IsPreSampling			= 127,
 
+        IsReProbe       = 130, // For Lextar miniLed ReProbe計次
+
 		SamplingDiePitchCol = 133,
 		SamplingDiePitchRow = 134,
 
@@ -242,6 +252,22 @@ namespace MPI.Tester.TestServer
 		XPitch5 = 145,
 		YPitch5 = 146,
 
+		F1Force1 = 147,
+        F1Force2 = 148,
+        F1Force3 = 149,
+        F1Force4 = 150,
+        F1Force5 = 151,
+        F1Force6 = 152,
+        F1Force7 = 153,
+        F1Force8 = 154,
+
+        IsProberMultiRecipe = 155,
+
+        // 0: Normal, 一般模式
+        // 1: Sampling, 預抽一排模式
+        // 2: IndependentReport, 個別拋檔模式
+        ProberFunctionMode = 156,
+
 
         //PD200 Test Group
         IsSingleProbingInMultiDie = 158,    //還不確定定義，姑且先1=true 0=false
@@ -250,12 +276,27 @@ namespace MPI.Tester.TestServer
         TestGroupStr = 160,                 //GroupTest
         TestTemperature = 176,              //Chuch Temperature
 
+		IsIntervalTestMode = 194,
+
+        OSRAM_OffsetX = 192, //For Edata Output Offset   2107.12.12
+        OSRAM_OffsetY = 193, //For Edata Output Offset
+        ReTestMode = 195, //2017.12.04 Ricky 0:Disable !~4  Enable
+        OSRAM_TranferType = 196, //For Edata Output
+        OSRAM_FlipType = 197, //For Edata Output
+        OSRAM_RotationType = 198,     //For Edata Output
+
         //-----------------------------------------------------------
         // Prober(System)  -> Test Setver  for Multi-Die channel info
         //-----------------------------------------------------------
         ProberChannel_ColX       = 200,  // Roy, Multi-Die Testing
         ProberChannel_RowY      = 201,
         ProberChannel_Rotation  = 202,
+
+        JustTestOneChannel =203, // Paul , 支援OSRAM 抬腳功能
+        NewSubBin = 210,         // 210+31=241  (32 X 8 = 256 Char) 共有256個char, [SOT] Channel 上的Group, 以逗點區隔, ex: 1,1,2,2
+
+        NewProberBin = 242,      //  242+31=273  (32 X 8 = 256 Char) 共有256個char, [SOT] Channel 上的Group, 以逗點區隔, ex: 1,1,2,2
+
 
 		SubBin					= 650,	// 650~652, (3 X 8 = 24 Char) [SOT] Channel 上的Group, 以逗點區隔, ex: 1,1,2,2
 		ProberBin				= 653,	// 653~655, (3 X 8 = 24 Char) [SOT] Channel 上的ProbeBin, 以逗點區隔, ex: 1,1,2,2
@@ -290,6 +331,9 @@ namespace MPI.Tester.TestServer
         BarCodeFileName			= 1008,		
 		// 1008 + 16 = 1024 ( final bit )
 
+        //Jeemo, Multi-Die channel info , 超過16 Channel
+        ProberChannelStatusExceed16 = 1024,   // 1024~1087, (64 X 8 = 512 Char) [SOT] Channel 上有無Die 
+        ChannelResultPFExceed16 = 1088,   // 1088~1151, (64 X 8 = 512 Char) [REOT] Chips pass/fail
     }
        
 
@@ -317,10 +361,12 @@ namespace MPI.Tester.TestServer
         CMD_USER_LOGOUT                = 19,
         CMD_CHECK_RCONTACT_STATE       = 20,
         CMD_SEND_BARCODE_TO_PROBER     = 21,
+		CMD_WAFER_BEGIN                = 22,
+        CMD_WAFER_FINISH               = 23,
 
-        CMD_CHECK_AVALIABLE_MODE       = 22,
-        CMD_LOAD_FILE_TO_TEMP          = 23,
-        CMD_CREATE_MAP_FROM_TEMP       = 24,
+        CMD_CHECK_AVALIABLE_MODE       = 24,
+        CMD_LOAD_FILE_TO_TEMP          = 25,
+        CMD_CREATE_MAP_FROM_TEMP       = 26,
 
         CMD_AUTO_CH_CALIB_START = 31,
 
@@ -338,15 +384,17 @@ namespace MPI.Tester.TestServer
         CMD_LASER_BAR_INFO = 48,
         CMD_SUB_RECIPE_INFO = 49,
 
-		CMD_LOT_END=50,
+		CMD_TESTING_PROPERTY = 50,
+        CMD_MAPPING_TABLE = 51,
+		
 
         CMD_QUERY_PRE_OVERLOAD_TEST_INFO = 60,
         CMD_QUERY_PRE_CHUCK_TEMP_INFO = 61,
         CMD_QUERY_CHECK_LASER_POWER_INFO = 62,
 
-        CMD_WAFER_BEGIN = 70,
-        CMD_WAFER_FINISH = 71,
-
+		CMD_LOT_END=80,
+		
+		CMD_LOAD_CALIBRATION_DATA=101,
         CMD_SHOW_ERROR = 200,
     }
 	

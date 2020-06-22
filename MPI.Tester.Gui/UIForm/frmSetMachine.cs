@@ -503,6 +503,7 @@ namespace MPI.Tester.Gui
                         break;
                     }
                 case ETesterCommMode.TCPIP:
+                case ETesterCommMode.TCPIP_MPI:
                     {
                         this.lblipAddressInput01Title.Enabled = true;
 

@@ -2431,6 +2431,19 @@ namespace MPI.Tester.Gui
 
                     break;
                 //---------------------------------------------------------------------------
+                //TCPIP_MPI
+                case ETesterCommMode.TCPIP_MPI:
+                    {
+                        _MPITCPTestServer = new TCPTestServer2(_MPITesterKernel, DataCenter._uiSetting.IsTCPIPSendEnableResultItem);
+
+                        _MPITCPTestServer.TCPIPStateChangeEvent += new ClientRole.StateChangeHandler(TCPIPStateChangeHandker);
+
+                        _MPITCPTestServer.Open("TCP_TEST_SERVER", DataCenter._machineConfig.IPAddr01, DataCenter._machineConfig.NetPort01);
+
+                        _MPITCPTestServer.ServerQueryEvent += new EventHandler<ServerQueryEventArg>(ServerQueryEventHandler);
+                    }
+                    break;
+                //---------------------------------------------------------------------------
                 default:
 
                     _MPITCPTestServer = null;

@@ -18,6 +18,7 @@ namespace MPI.Tester.Data
         private int _col;
         private bool _isPass;
         private int _binGrade;
+        private string _aoiSign;
 
         private string _binGradeName;
 
@@ -148,6 +149,12 @@ namespace MPI.Tester.Data
             set { lock (this._lockObj) { this._binGradeName = value; } }
         }
 
+        public string AOISign
+        {
+            get { return this._aoiSign; }
+            set { lock (this._lockObj) { this._aoiSign = value; } }
+        }
+
         public TestResultData this[string keyName]
         {
             get
@@ -263,6 +270,8 @@ namespace MPI.Tester.Data
             cloneObj._binGrade = this._binGrade;
 
             cloneObj._binGradeName = this._binGradeName.ToString();
+
+            cloneObj.AOISign = this.AOISign;
 
             foreach (var item in this._channelResultData)
             {

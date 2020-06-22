@@ -49,6 +49,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,11 +63,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerEventData.cs" />
     <Compile Include="TCPTestServer.cs" />
+    <Compile Include="TCPTestServer2.cs" />
     <Compile Include="TestServer.cs" />
     <Compile Include="TSEProtocal\Command.cs" />
     <Compile Include="TSEProtocal\TSECommand.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MPI.RemoteControl.Tester2\MPI.RemoteControl2.Tester.csproj">
+      <Project>{DF7F56BE-3B27-4F79-B5EC-DB73C5935D09}</Project>
+      <Name>MPI.RemoteControl2.Tester</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MPI.RemoteControl.Tester\MPI.RemoteControl.Tester.csproj">
       <Project>{342C9E98-0A7C-4515-AEDA-44C0972B6496}</Project>
       <Name>MPI.RemoteControl.Tester</Name>

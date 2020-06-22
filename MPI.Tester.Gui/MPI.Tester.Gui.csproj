@@ -1717,6 +1717,10 @@
     <Content Include="obj\Icon\StartIcon.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MPI.RemoteControl.Tester2\MPI.RemoteControl2.Tester.csproj">
+      <Project>{DF7F56BE-3B27-4F79-B5EC-DB73C5935D09}</Project>
+      <Name>MPI.RemoteControl2.Tester</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MPI.Tester.Data\MPI.Tester.Data.csproj">
       <Project>{33C2AD1C-45FE-4D42-86F2-E9685AEB51F3}</Project>
       <Name>MPI.Tester.Data</Name>

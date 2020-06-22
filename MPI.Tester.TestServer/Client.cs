@@ -107,6 +107,7 @@ namespace MPI.Tester.TestServer
         /// </summary>
         private void notifyData(IAsyncResult ar)
 		{
+            Console.WriteLine("[Client],GetStream() get something");
 			if (xMailManOut.Connected == false)
 				return;
 
@@ -172,9 +173,9 @@ namespace MPI.Tester.TestServer
                     {
                         byte[] outpacket = ModifyBuffer(packet, headerIndex, tarPackageLen);
 
-                        this.beginWait();
-                        TriggeReciveEvent(outpacket);
                         
+                        TriggeReciveEvent(outpacket);
+                        this.beginWait();
                     }
                     else
                     {
@@ -194,9 +195,9 @@ namespace MPI.Tester.TestServer
                             {
                                 xMailManOut.GetStream().ReadTimeout = System.Threading.Timeout.Infinite;
                                
-                                this.beginWait();
-                                TriggeReciveEvent(packet);
                                 
+                                TriggeReciveEvent(packet);
+                                this.beginWait();
                                 
                                 break;
                             }

@@ -82,6 +82,9 @@ namespace MPI.Tester.Data
 
         [XmlEnum(Name = "2")]
         IO = 2,
+
+        [XmlEnum(Name = "3")]
+        TCPIP_MPI = 3,
     }
 
     public enum EOptiMsrtType : int
@@ -705,13 +708,28 @@ namespace MPI.Tester.Data
 		TransCOL = 11,
 		MLIResult = 12,
 		TestChipGroup = 13,
-        
-        ReticleX = 14,
-        ReticleY = 15,
-        DutNumber = 16,
-        DutOffset = 17,
-        DZPosition = 18,
-        PZPosition = 19,
+
+        JustTestOneChannel = 14,
+
+        F1Force1 = 15,
+        F1Force2 = 16,
+        F1Force3 = 17,
+        F1Force4 = 18,
+        F1Force5 = 19,
+        F1Force6 = 20,
+        F1Force7 = 21,
+        F1Force8 = 22,
+
+        SubROW = 23,        //  0-base
+        SubCOL = 24,
+        GroupROW = 25,
+        GroupCOL = 26,
+        SUBDIEINDEX = 27,
+        Temprature = 28,
+
+        DX_INDEX = 29,
+        DY_INDEX = 30,
+
 		IsSingleProbingInMultiDie = 50, //還不確定定義，姑且先1=true 0=false
 
 	}
