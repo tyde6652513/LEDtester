@@ -51,6 +51,8 @@ namespace MPI.Tester.TestServer
         protected string _ipAddress;
         protected int _port;
 
+        protected bool _isEnableREOT;
+
         public TCPTestServer()
         {
             this._lockObj = new object();
@@ -58,6 +60,7 @@ namespace MPI.Tester.TestServer
             this._lastState = ETCPTestSeverState.NOT_READY;
             this._isBusy = false;
             this._isAutoRunStart = false;
+            this._isEnableREOT = false;
 
 
             this._thrdTCPIP = new Thread(new ThreadStart(this.ThreadProc));
@@ -80,9 +83,11 @@ namespace MPI.Tester.TestServer
             _myClient.StateChangeEvent += new ClientRole.StateChangeHandler(this.OnTCPIPStateChange);
 
             this._isTCPIPSendEnableResultItem = false;
+
+            _isEnableREOT = false;
         }
 
-        public TCPTestServer(TesterKernelBase kernel, bool IsTCPIPSendEnableResultItem)
+        public TCPTestServer(TesterKernelBase kernel, bool IsTCPIPSendEnableResultItem,bool isEnableREOT = false)
             : this()
         {
             this._testerSys = kernel;
@@ -90,6 +95,8 @@ namespace MPI.Tester.TestServer
             this._cmdAgent = new TesterCommandAgent();
 
             this._isTCPIPSendEnableResultItem = IsTCPIPSendEnableResultItem;
+
+            this._isEnableREOT = isEnableREOT;
         }
 
         #region >>> Public Proberty <<<

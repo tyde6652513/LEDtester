@@ -24,7 +24,7 @@ namespace MPI.Tester.TestServer
 
         #region
 
-        public TCPTestServer2(TesterKernelBase kernel, ETCPIPSendResultItemMode IsTCPIPSendEnableResultItem, bool isEnableREOT)
+        public TCPTestServer2(TesterKernelBase kernel ,bool IsTCPIPSendEnableResultItem, bool isEnableREOT = false)
             : base(kernel, IsTCPIPSendEnableResultItem, isEnableREOT)
         {
             List<int> cmdIDList = new List<int>();
