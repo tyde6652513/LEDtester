@@ -17,5 +17,19 @@ namespace MPI.RemoteControl2.Tester.Mpi.Command.Base
         ProcessInformation   = 100005,
         TestingProperties    = 100006,
 		MappingTable         = 100007,
+
+
+        //SubRecipeInformation = 100101,  // P10T		
+        PreSOTInformationForDP = 100102,  // LDP80V
+        PreWaferINInformation = 100103,  // AWSC
+        PreSOTInformationForProber = 100104,  // AWSC
+
+        PreOverloadTestInfo = 100201,  // Emcore
+        ChuckTemperatureInfo = 100202,
+
+        PreWaferInForAMS = 100301,//AMS
+        TesterOutputRelativePath = 100302,
+
+        CheckLaserPower = 100401,
     }
 }

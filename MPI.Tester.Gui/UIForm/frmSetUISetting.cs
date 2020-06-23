@@ -145,7 +145,9 @@ namespace MPI.Tester.Gui
                     {
                         if (customerFrm == null)
                         {
-                            customerFrm = new MPI.Tester.Gui.UIForm.UserForm.UISetting.frmDowaPath(DataCenter._uiSetting.UIMapPathInfo);
+                            //customerFrm = new MPI.Tester.Gui.UIForm.UserForm.UISetting.frmDowaPath(DataCenter._uiSetting.UIMapPathInfo);
+
+                            customerFrm = new MPI.Tester.Gui.UIForm.UserForm.UISetting.frmDowaPath();
                         }
                     }
                      #endregion
@@ -557,7 +559,8 @@ namespace MPI.Tester.Gui
                     break;
                 case (EUserID.DOWA):
                     {
-                        (customerFrm as MPI.Tester.Gui.UIForm.UserForm.UISetting.frmDowaPath).SetData(DataCenter._uiSetting.UIMapPathInfo.Clone() as PathInfo);
+                        //(customerFrm as MPI.Tester.Gui.UIForm.UserForm.UISetting.frmDowaPath).SetData(DataCenter._uiSetting.UIMapPathInfo.Clone() as PathInfo);
+                        (customerFrm as MPI.Tester.Gui.UIForm.UserForm.UISetting.frmDowaPath).LoadDataFromDataCenter();
                     }
                     break;
                 case (EUserID.OptoTech):
@@ -919,9 +922,11 @@ namespace MPI.Tester.Gui
                     {
                         if (customerFrm != null)
                         {
-                            PathInfo pInfo = (customerFrm as MPI.Tester.Gui.UIForm.UserForm.UISetting.frmDowaPath).GetData();                            
+                            //PathInfo pInfo = (customerFrm as MPI.Tester.Gui.UIForm.UserForm.UISetting.frmDowaPath).GetData();                            
 
-                            DataCenter._uiSetting.UIMapPathInfo = pInfo;
+                            //DataCenter._uiSetting.UIMapPathInfo = pInfo;
+
+                            (customerFrm as MPI.Tester.Gui.UIForm.UserForm.UISetting.frmDowaPath).SaveDataToDataCenter();
                         }
                     }
                     break;

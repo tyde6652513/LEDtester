@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.ComponentModel.Design;
 using System.Drawing.Design;
+using System.IO;
 
 using System.Reflection;
 using MPI.Tester.Data;
@@ -23,25 +24,42 @@ namespace MPI.Tester.Gui.UIForm.UserForm.UISetting
             InitializeComponent();
         }
 
-        public frmDowaPath(PathInfo pInfo)
-            : this()
-        {
-            SetData(pInfo);
-            //SetData(pArr);
+        //public frmDowaPath(PathInfo pInfo)
+        //    : this()
+        //{
+        //    //SetData(pInfo);
+        //    //SetData(pArr);
 
-            //SetLabelColumnWidth(pgdPath, 10);
+        //    //SetLabelColumnWidth(pgdPath, 10);
+        //}
+
+        public bool LoadDataFromDataCenter()
+        {
+            pathUIComponent1.PathInfomation = TD2UIPath(DataCenter._uiSetting.UIMapPathInfo.Clone() as MPI.Tester.Data.PathInfo);
+            pathUIComponent1.PathInfomation.PathName = "Binマップ保存位置";
+            pucMergeFilePath.PathInfomation = TD2UIPath(DataCenter._uiSetting.MergeFilePath.Clone() as MPI.Tester.Data.PathInfo);
+            pucLaserPower.PathInfomation = TD2UIPath(DataCenter._uiSetting.LaserPowerLogPath.Clone() as MPI.Tester.Data.PathInfo);
+            return true;
+        }
+        public bool SaveDataToDataCenter()
+        {
+            DataCenter._uiSetting.UIMapPathInfo = UI2TDPath(pathUIComponent1.PathInfomation);
+            DataCenter._uiSetting.MergeFilePath = UI2TDPath(pucMergeFilePath.PathInfomation);
+            DataCenter._uiSetting.LaserPowerLogPath = UI2TDPath(pucLaserPower.PathInfomation);
+
+            return true;
         }
 
-        public void SetData(PathInfo pInfo)
-        {
-            pathUIComponent1.PathInfomation = TD2UIPath(pInfo);
-        }
+        //public void SetData(PathInfo pInfo)
+        //{
+        //    pathUIComponent1.PathInfomation = TD2UIPath(pInfo);
+        //}
 
-        public PathInfo GetData()
-        {
-            PathInfo pInfo = UI2TDPath(pathUIComponent1.PathInfomation);
-            return pInfo;
-        }
+        //public PathInfo GetData()
+        //{
+        //    PathInfo pInfo = UI2TDPath(pathUIComponent1.PathInfomation);
+        //    return pInfo;
+        //}
 
         private static MPI.Tester.GuiComponent.PathInfo TD2UIPath(MPI.Tester.Data.PathInfo pInfo)
         {
@@ -53,6 +71,7 @@ namespace MPI.Tester.Gui.UIForm.UserForm.UISetting
             MPI.Tester.GuiComponent.ETesterResultCreatFolderType foo = (MPI.Tester.GuiComponent.ETesterResultCreatFolderType)Enum.Parse(typeof(MPI.Tester.GuiComponent.ETesterResultCreatFolderType), enumName);
             uiPInfo.FolderType = foo;
             uiPInfo.PathName = "Binマップ保存位置";
+            uiPInfo.PathName = pInfo.PathName;
             uiPInfo.TestResultPath = pInfo.TestResultPath;
 
             return uiPInfo;
@@ -72,6 +91,32 @@ namespace MPI.Tester.Gui.UIForm.UserForm.UISetting
             pInfo.TestResultPath = uiPInfo.TestResultPath;
 
             return pInfo;
+        }
+
+        private void btnMerge_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog od = new OpenFileDialog())
+            {
+                od.Multiselect = true;
+                if (od.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    List<string> fileList = new List<string>();
+                    if (od.FileNames != null && od.FileNames.Length > 1)
+                    {
+
+                        string folderName = DataCenter._uiSetting.GetPathWithFolder(UI2TDPath(pathUIComponent1.PathInfomation));
+
+                        string mapFileName = DataCenter._uiSetting.TestResultFileName;
+                        string file = Path.Combine(folderName, mapFileName) + "." + DataCenter._uiSetting.TestResultFileExt;
+
+                        List<string> sList = new List<string>();
+                        sList.AddRange(od.FileNames);
+                        AppSystem.MergeFile(file, sList);
+                    }
+                    //AppSystem.MergeFile()
+                }
+            }
+
         }
 
 

@@ -933,6 +933,7 @@ namespace MPI.Tester.Data
             {
                 if (data.Type == itemType && data.SubItemIndex > delIndex)
                 {
+                    data.IsNewCreateItem = true;//否則刪除測試項目的時候 name = key
                     data.SubItemIndex -= 1;
                 }
             }

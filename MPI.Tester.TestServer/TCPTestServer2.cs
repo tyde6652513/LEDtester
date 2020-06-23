@@ -492,6 +492,106 @@ namespace MPI.Tester.TestServer
                                         }
                                     }
                                     break;
+                                case ((int)ETransferableCommonObject.PreOverloadTestInfo):
+                                    {
+                                        #region >>> PreOverloadTestInfo <<<
+                                        Console.WriteLine("[EMPITestServer2Cmd], ID_QUERY_INFORMATION,PreOverloadTestInfo");
+
+
+                                        PreOverloadTestInfo preOverload = new PreOverloadTestInfo();
+                                        (cmd as CmdQueryInformation).GetTransferableItem(preOverload);
+
+                                        string[] strData = new string[20];
+                                        double[] buffer = new double[2];
+
+                                        buffer[0] = (int)preOverload.TestMode;
+                                        int refDataCoubt = 0;
+                                        int p2trefDataCoubt = 0;
+                                        try
+                                        {
+                                            p2trefDataCoubt = preOverload.Prober2TesterRefTable.Table.Count;
+											refDataCoubt = preOverload.RefTable.Table.Count;
+                                        }
+                                        catch (Exception e)
+                                        {
+                                            Console.WriteLine("[EMPITestServerCmd], PreOverloadTestInfo, refTable is count fail");
+                                        }
+
+                                        string pointInfo = "";
+
+
+                                        for (int i = 0; i < 10; ++i)//max get 10 refPoint
+                                        {
+                                            if (i < p2trefDataCoubt)
+                                            {
+                                                pointInfo = preOverload.Prober2TesterRefTable.Table[i].BaseX.ToString() + "," +
+                                                    preOverload.Prober2TesterRefTable.Table[i].BaseY.ToString() + "," +
+                                                     preOverload.Prober2TesterRefTable.Table[i].NewX.ToString() + "," +
+                                                      preOverload.Prober2TesterRefTable.Table[i].NewY.ToString() + "," +
+                                                       preOverload.Prober2TesterRefTable.Table[i].ChipName.ToString() + "," +
+                                                        preOverload.Prober2TesterRefTable.Table[i].Remark.ToString();
+                                                Console.WriteLine("[EMPITestServerCmd], PreOverloadTestInfo, Prober2TesterRefTable Info:" + pointInfo);
+                                            }
+                                            else
+                                            {
+                                                pointInfo = "";
+                                            }
+
+                                            strData[i ] = pointInfo;
+                                        }
+
+                                        for (int i = 0; i < 10; ++i)//max get 10 refPoint
+                                        {
+                                            if (i < refDataCoubt)
+                                            {
+                                                pointInfo = preOverload.RefTable.Table[i].BaseX.ToString() + "," +
+                                                    preOverload.RefTable.Table[i].BaseY.ToString() + "," +
+                                                     preOverload.RefTable.Table[i].NewX.ToString() + "," +
+                                                      preOverload.RefTable.Table[i].NewY.ToString() + "," +
+                                                       preOverload.RefTable.Table[i].ChipName.ToString() + "," +
+                                                        preOverload.RefTable.Table[i].Remark.ToString();
+                                                Console.WriteLine("[EMPITestServerCmd], PreOverloadTestInfo, RefPoint Info:" + pointInfo);
+                                            }
+                                            else
+                                            {
+                                                pointInfo = "";
+                                            }
+
+                                            strData[i + 10] = pointInfo;
+                                        }
+
+                                        Fire_ServerQueryEvent(EServerQueryCmd.CMD_QUERY_PRE_OVERLOAD_TEST_INFO, buffer, strData);                                        
+
+                                        (echoTSECmd as CmdQueryInformation).SetTransferableItem(preOverload); 
+
+                                        #endregion
+                                    }
+                                    break;
+                                case ((int)ETransferableCommonObject.CheckLaserPower):
+                                    {
+                                        #region >>> CheckLaserPower <<<
+                                        Console.WriteLine("[EMPITestServer2Cmd], ID_QUERY_INFORMATION,CheckLaserPower");
+
+
+                                        CheckLaserPower cTempInfo = new CheckLaserPower();
+                                        (cmd as CmdQueryInformation).GetTransferableItem(cTempInfo);
+
+                                        string[] strData = new string[1];
+                                        double[] buffer = new double[1];
+
+                                        buffer[0] = cTempInfo.AutoSetLaserPower ? 1 : 0;
+                                        if (cTempInfo.Remark != null)
+                                        { strData[0] = cTempInfo.Remark; }
+                                        else { strData[0] = ""; }
+
+                                        Fire_ServerQueryEvent(EServerQueryCmd.CMD_QUERY_CHECK_LASER_POWER_INFO, buffer, strData);
+
+                                        cTempInfo.IsPowerCheckPass = buffer[0] == 100 ? true : false;
+
+                                        (echoTSECmd as CmdQueryInformation).SetTransferableItem(cTempInfo);
+                                        #endregion
+                                    }
+                                    break;
                                 case -1:
                                     {
                                         ShowErrorMsg((int)EErrorCode.TCPIP2_TransferableItem_Err, "ID_QUERY_INFORMATION ,hash =-1");

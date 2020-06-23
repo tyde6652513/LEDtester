@@ -125,11 +125,14 @@
     <Compile Include="Command\TransferableData\Basic\KeyValueSerializePair.cs" />
     <Compile Include="Command\TransferableData\Basic\KeyValueSerializeTable.cs" />
     <Compile Include="Command\TransferableData\Basic\LayerDescriptor.cs" />
+    <Compile Include="Command\TransferableData\Basic\RefPointsTable.cs" />
     <Compile Include="Command\TransferableData\Basic\TransferableDataObject.cs" />
     <Compile Include="Command\TransferableData\Basic\TransferableDataObjectBase.cs" />
+    <Compile Include="Command\TransferableData\Customized\CheckLaserPower.cs" />
     <Compile Include="Command\TransferableData\Customized\DP76Data.cs" />
     <Compile Include="Command\TransferableData\Customized\LaserBarProberInfo.cs" />
     <Compile Include="Command\TransferableData\Customized\MappingTable.cs" />
+    <Compile Include="Command\TransferableData\Customized\PreOverloadTestInfo.cs" />
     <Compile Include="Command\TransferableData\Customized\ProcessInformation.cs" />
     <Compile Include="Command\TransferableData\Customized\SubRecipeInformation.cs" />
     <Compile Include="Command\TransferableData\Customized\TestData.cs" />
