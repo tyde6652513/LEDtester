@@ -39,6 +39,7 @@ namespace MPI.Tester.Tools
         public List<RefPoint> RefList;
         public string TransCoordName = "";
         public bool IsValid = false;
+        public bool IsDefaultTrans = false;
 
         //MPI.Tester.Maths.ma
 
@@ -58,6 +59,7 @@ namespace MPI.Tester.Tools
             TransCoordName = refData.TransCoordName;
             IsValid = refData.IsValid;
             _convertMatrix = refData._convertMatrix.Clone() as Matrix;
+            IsDefaultTrans = false;
 
         }
 
@@ -151,6 +153,7 @@ namespace MPI.Tester.Tools
 				}
 
                 IsValid = true;
+                IsDefaultTrans = false;
             }
 
             return _convertMatrix;
@@ -298,14 +301,22 @@ namespace MPI.Tester.Tools
 
         public Matrix Matrix
         {
-            set { _convertMatrix = value; }
+            set
+            {
+                _convertMatrix = value;
+                IsDefaultTrans = false;
+            }
             get { return _convertMatrix; }
             
         }
 
         public Matrix I_Matrix
         {
-            set { _inverseMatrix = value; }
+            set
+            {
+                _inverseMatrix = value;
+                IsDefaultTrans = false;
+            }
             get { return _inverseMatrix; }
 
         }
@@ -318,7 +329,10 @@ namespace MPI.Tester.Tools
             obj.TransCoordName = this.TransCoordName;
             obj.IsValid = this.IsValid;
             obj._convertMatrix = this._convertMatrix.Clone() as Matrix;
-
+            if (this._inverseMatrix != null)
+            {
+                obj._inverseMatrix = this._inverseMatrix.Clone() as Matrix;
+            }
             return obj;
         }
 
@@ -327,6 +341,7 @@ namespace MPI.Tester.Tools
             RefList = new List<RefPoint>();
             _convertMatrix = new Matrix(3);
             IsValid = true;
+            IsDefaultTrans = true;
         }
 
         public void Dispose()

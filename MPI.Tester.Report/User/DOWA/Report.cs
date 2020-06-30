@@ -30,6 +30,7 @@ namespace MPI.Tester.Report.User.DOWA
             this.ResultTitleInfo.SetResultData(knDic);
 
             _stg = this.Product.TestCondition.TestStage;
+            //CoordTransTool
         }
 
         protected override EErrorCode WriteReportHeadByUser()
@@ -557,7 +558,7 @@ namespace MPI.Tester.Report.User.DOWA
                 List<int> cList = new List<int>();
                 cList.Add(0);
                 cList.Add(1);
-                PosKeyMakerBase pMaker = new PosKeyMakerBase(cList);
+                PosKeyMakerBase pMaker = new PosKeyMakerBase(0,1,this.CoordTransTool);
                 List<string> sList = new List<string>();
                 sList.Add("X");
                 sList.Add("Y");
@@ -592,9 +593,14 @@ namespace MPI.Tester.Report.User.DOWA
             public bool SetRowData(string str, List<string> refColList)
             {
                 int index = refColList.IndexOf("AOI_SIGN");
+                int indexX = refColList.IndexOf("X");
+                int indexY = refColList.IndexOf("Y");
                 string[] strArr = str.Split(',');
-                if (strArr != null && strArr.Length > index)
-                    SIGN = strArr[index];
+                if (index >= 0 && indexX >= 0 && indexY >= 0)
+                {
+                    if (strArr != null && strArr.Length > index)
+                        SIGN = strArr[index];
+                }
                 return true;
             }
 

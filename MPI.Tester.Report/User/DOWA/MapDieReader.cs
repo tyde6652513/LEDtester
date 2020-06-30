@@ -69,7 +69,6 @@ namespace MPI.Tester.Report.User.DOWA
                         if (isRawData)
                         {
                             string[] rawData = line.Split(this._splitChar);
-                            string posKey = _posMaker.GetPosKey(rawData);
                             T dut = new T();
                             dut.SetRowData(line, HeaderItemList);
                             string pos = _posMaker.GetPosKey(rawData);

@@ -457,18 +457,18 @@ namespace MPI.Tester.Report
             }
         }
 
-        protected string ColRowKeyMaker(string[] rawData)
+        protected virtual string ColRowKeyMaker(string[] rawData)
         {
             if (_crKeyMaker == null)
             {
                 List<int> colList = new List<int>();
-                colList.Add(this._resultTitleInfo.ColIndex);
-                colList.Add(this._resultTitleInfo.RowIndex);
+                //colList.Add(this._resultTitleInfo.ColIndex);
+                //colList.Add(this._resultTitleInfo.RowIndex);
                 if (this._resultTitleInfo.ChipIndexIndex >= 0)
                 {
                     colList.Add(this._resultTitleInfo.ChipIndexIndex);
                 }
-                _crKeyMaker = new PosKeyMakerBase(colList);
+                _crKeyMaker = new PosKeyMakerBase(this._resultTitleInfo.ColIndex, this._resultTitleInfo.RowIndex, colList);
             }
 
             return _crKeyMaker.GetPosKey(rawData);

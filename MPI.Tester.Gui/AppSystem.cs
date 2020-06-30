@@ -833,10 +833,20 @@ namespace MPI.Tester.Gui
                             _oriboundaryDic.Add("colMax", colMax);
                             _oriboundaryDic.Add("rowMax", rowMax);
 
+
+                            //if (_p2TcoordTransTool != null && _p2TcoordTransTool.IsCleared)
+                            
                             DataCenter.ChangeMapRowCol(colMin, rowMin, colMax, rowMax, refCol, refRow, tProberChannel);
-                            if (_p2TcoordTransTool != null && _p2TcoordTransTool.Matrix != null)
+
+
+                            if (_p2TcoordTransTool != null )
                             {
-                                ChangeMapRowColByMatrix(_p2TcoordTransTool);
+                                if (_p2TcoordTransTool.IsDefaultTrans)
+                                {
+                                    _p2TcoordTransTool = SetCoordinatTool( colMin,  rowMin,  colMax,  rowMax);
+                                }
+                                if (_p2TcoordTransTool.Matrix != null)
+                                    ChangeMapRowColByMatrix(_p2TcoordTransTool);
                             }
 
 
@@ -3044,6 +3054,8 @@ namespace MPI.Tester.Gui
             else
             {
                 Console.WriteLine("[AppSystem], ManualRun(), Start, Repeat={0} Delay={1}", RepeatCount, RepeatDelay);
+
+                SetCoordTransToolForManualTest(cycleCount, RepeatCount);
                 //--------------------------------------------------------------------
                 // 20131205 ESD High Speed 為了電容充電 需在執行 SetDataToSystem()
                 //--------------------------------------------------------------------            
@@ -3059,6 +3071,11 @@ namespace MPI.Tester.Gui
                 _MPITesterKernel.CmdData.IntData[1] = (int)RepeatCount;
                 _MPITesterKernel.CmdData.IntData[2] = (int)RepeatDelay;
 
+                if (_p2TcoordTransTool != null)
+                {
+                    ReportProcess.CoordTransferTool = _p2TcoordTransTool.Clone() as CoordTransferTool;
+                }
+
                 //ProduceInfo.SaveProduceInfo(DataCenter._uiSetting, EServerQueryCmd.CMD_TESTER_START);  // For Dubug
 
                 if (_MPITesterKernel.RunCommand((int)ETesterKernelCmd.ManualRun) == false)
@@ -3073,6 +3090,66 @@ namespace MPI.Tester.Gui
             }
             
             _MPITesterKernel.Stop();
+        }
+
+        private static CoordTransferTool SetCoordinatTool(int colMin, int rowMin, int colMax, int rowMax)
+        {
+            int refcolMin = colMin;
+            int refrowMin = rowMin;
+            int refcolMax = colMax;
+            int refrowMax = rowMax;
+
+            DataCenter.ChangeRowColToProbe(ref  refcolMin, ref  refrowMin);
+            DataCenter.ChangeRowColToProbe(ref  refcolMax, ref  refrowMax);
+
+            System.Drawing.Rectangle pRect = new System.Drawing.Rectangle(colMin, rowMin, (colMax - colMin), (rowMax - rowMin));
+            System.Drawing.Rectangle tRect = new System.Drawing.Rectangle(refcolMin, refrowMin, (refcolMax - refcolMin), (refrowMax - refrowMin));//map因UI座標系關係Y會多轉一次
+
+            return  new CoordTransferTool(pRect, tRect);
+        }
+
+        private static void SetCoordTransToolForManualTest(uint cycleCount, uint RepeatCount)
+        {
+            _oriboundaryDic = new Dictionary<string, int>();
+            _oriboundaryDic.Add("tProberChannel", DataCenter._machineConfig.ChannelConfig.ChannelCount);
+            _oriboundaryDic.Add("refCol", 0);
+            _oriboundaryDic.Add("refRow", 0);
+            _oriboundaryDic.Add("colMin", 0);
+            _oriboundaryDic.Add("rowMin", 0);
+
+            int colMax = 0, rowMax = 0, colMin = 0, rowMin = 0;
+            if (DataCenter._machineConfig.TesterFunctionType == ETesterFunctionType.Multi_Die)
+            {
+                int shiftColX = DataCenter._machineConfig.ChannelConfig.ColXCount;
+
+                int shiftRowY = DataCenter._machineConfig.ChannelConfig.RowYCount;
+
+                colMax = (int)cycleCount * shiftColX;
+                rowMax = (int)RepeatCount * shiftRowY + 1;
+
+                _oriboundaryDic.Add("colMax", colMax);
+                _oriboundaryDic.Add("rowMax", rowMax);
+            }
+            else
+            {
+                int len = (int)Math.Floor(Math.Sqrt(RepeatCount));
+                colMax = (int)Math.Ceiling(1 + len * 1.5);
+                rowMax = (int)Math.Ceiling(1 + len * 1.5);
+                _oriboundaryDic.Add("colMax", colMax);
+                _oriboundaryDic.Add("rowMax", rowMax);
+            }
+
+
+            if (_p2TcoordTransTool != null )
+            {
+                _p2TcoordTransTool = SetCoordinatTool(colMin, rowMin, colMax, rowMax);
+                if (_p2TcoordTransTool.Matrix != null)
+                {
+                    ChangeMapRowColByMatrix(_p2TcoordTransTool);
+                    ReportProcess.CoordTransferTool = _p2TcoordTransTool.Clone() as CoordTransferTool;
+
+                }
+            }
         }
 
         public static void RunCommand(ETesterKernelCmd cmd)

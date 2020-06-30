@@ -1572,7 +1572,7 @@ namespace MPI.Tester.TestKernel
                 //////////////////////////////////////////////////////////////////////////////////////////
                 this._cmdData.DoubleData[(uint)EProberDataIndex.COL] = colX;
                 this._cmdData.DoubleData[(uint)EProberDataIndex.ROW] = rowY;
-                this.ChangeRowColCoord();
+                //this.ChangeRowColCoord();
                 //--------------------------------------------------------------------------------
                 // In manul run loop, the first chip do "DarkIntensity Correct"
                 //--------------------------------------------------------------------------------
@@ -1603,7 +1603,7 @@ namespace MPI.Tester.TestKernel
 
                 if (_isTriggerSptErr == true)
                 {
-                    this.ChangeRowColCoord();
+                    this.ChangeRowColCoord();//把座標洗回來
 
                     this._darkCorrectCount--;
 
@@ -2841,7 +2841,7 @@ namespace MPI.Tester.TestKernel
 
                         if (_isTriggerSptErr == true)
                         {
-                            this.ChangeRowColCoord();
+                            this.ChangeRowColCoord();//把座標洗回來
 
                             this._darkCorrectCount--;
 
