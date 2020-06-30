@@ -612,6 +612,7 @@ namespace MPI.Tester.TestServer
                             this._testerSys.CmdData.DoubleData[(uint)EProberDataIndex.COL] = Convert.ToDouble((cmd as CmdSOT).WaferPositionX);
                             this._testerSys.CmdData.DoubleData[(uint)EProberDataIndex.ROW] = Convert.ToDouble((cmd as CmdSOT).WaferPositionY);
                             this._testerSys.CmdData.DoubleData[(uint)EProberDataIndex.PROBE_INDEX] = Convert.ToDouble((cmd as CmdSOT).ProbeIndex);
+                            this._testerSys.CmdData.DoubleData[(uint)EProberDataIndex.Temprature] = 25;//預設值
                             this._testerSys.CmdData.DoubleData[2] = (cmd as CmdSOT).ChipIndex;//SOT時沒有用到DoubleData[2]，先拿來用一下
 
                             rtn = this._testerSys.RunCommand((int)ETesterKernelCmd.RunTest);

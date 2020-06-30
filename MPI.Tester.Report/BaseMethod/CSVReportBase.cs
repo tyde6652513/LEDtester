@@ -10,6 +10,7 @@ using MPI.Tester.Maths;
 using MPI.Tester.TestKernel;
 
 using MPI.Tester.DeviceCommon;
+using MPI.Tester.Report.BaseMethod.HeaderFinder;
 
 namespace MPI.Tester.Report
 {

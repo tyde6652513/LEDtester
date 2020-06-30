@@ -53,6 +53,9 @@ namespace MPI.Tester.Data
 
 		[XmlEnum(Name = "5")]
 		Customer02			= 5,
+
+        [XmlEnum(Name = "6")]
+        WaferNum_Stage = 6,
 	}
 
 	public enum EUIDisplayType : int    // 0-base

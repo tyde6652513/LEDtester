@@ -161,12 +161,12 @@ namespace MPI.Tester.Report.User.Emcore
                         break;
                     case "ChipID":
                         {
-                            if (CoordTransTool != null && CoordTransTool.IsValid)
+                            if (CustomizeCoordTransTool != null && CustomizeCoordTransTool.IsValid)
                             {
                                 int x, y;
                                 x = (int)data["COL"];
                                 y = (int)data["ROW"];
-                                Matrix mat = CoordTransTool.TransCoord(x, y);
+                                Matrix mat = CustomizeCoordTransTool.TransCoord(x, y);
 
                                 string IDStr = XY2ChipID((int)mat[0, 0], (int)mat[1, 0]);
 

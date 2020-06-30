@@ -1117,9 +1117,10 @@ namespace MPI.Tester.Data
 
     public enum ETestStage : int
     {
-        LIV = 0,
+        IV = 0,
         NFT = 1,
         FFT = 2,
+        LCR= 3,
     }
 
 

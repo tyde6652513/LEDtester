@@ -537,7 +537,25 @@ namespace MPI.Tester.Report
 			}
 		}
 
-        public static CoordTransferTool CoordTransTool
+        public static CoordTransferTool CustomizeCoordTransTool
+        {
+            get
+            {
+                if (_report == null)
+                {
+                    return null;
+                }
+
+                return _report.CustomizeCoordTransTool;
+            }
+
+            set 
+            {
+                _report.CustomizeCoordTransTool = value;
+            }
+        }
+
+        public static CoordTransferTool CoordTransferTool
         {
             get
             {
@@ -554,6 +572,8 @@ namespace MPI.Tester.Report
                 _report.CoordTransTool = value;
             }
         }
+
+        
 		#endregion
 	}
 }

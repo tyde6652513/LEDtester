@@ -6,6 +6,7 @@ using System.IO;
 
 using MPI.Tester.Data;
 using MPI.Tester.TestServer;
+using MPI.Tester.Report.BaseMethod.HeaderFinder;
 
 namespace MPI.Tester.Report.User.WAVETEK00
 {

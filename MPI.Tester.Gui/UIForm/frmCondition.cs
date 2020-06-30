@@ -68,6 +68,10 @@ namespace MPI.Tester.Gui
             string[] attenuatorItems = new string[] { "1", "2", "3", "4", "5" };
             this.cmbFilterPosition.Items.AddRange(attenuatorItems);
 
+            this.cmbStage.Items.Clear();
+            this.cmbStage.Items.Add(ETestStage.IV.ToString());
+            this.cmbStage.Items.Add(ETestStage.LCR.ToString());
+
             if (DataCenter._machineConfig.OSAModel != EOSAModel.NONE)
             {
                 this.btnOsaCoupling.Visible = true;
@@ -347,6 +351,8 @@ namespace MPI.Tester.Gui
             // update Cond. Para
             //===================
             this.cmbPolarity.SelectedItem = DataCenter._product.TestCondition.ChipPolarity.ToString();
+
+            this.cmbStage.SelectedItem = DataCenter._product.TestCondition.TestStage.ToString();
 
             this.cmbFilterPosition.SelectedIndex = (int)DataCenter._product.ProductFilterWheelPos;
 
@@ -2439,6 +2445,8 @@ namespace MPI.Tester.Gui
             DataCenter._product.TestCondition.ChipPolarity = (EPolarity)Enum.Parse(typeof(EPolarity), this.cmbPolarity.SelectedItem.ToString(), true);
 
             DataCenter._product.ProductFilterWheelPos = (uint)this.cmbFilterPosition.SelectedIndex;
+
+            DataCenter._product.TestCondition.TestStage = (ETestStage)Enum.Parse(typeof(ETestStage), this.cmbStage.SelectedItem.ToString(), true);
 
             if (DataCenter._product.LOPSaveItem.ToString() != this.cmbLopSaveItem.SelectedItem.ToString())
             {

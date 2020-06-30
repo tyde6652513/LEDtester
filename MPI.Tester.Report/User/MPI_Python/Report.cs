@@ -10,6 +10,8 @@ using System.Linq;
 using System.Diagnostics;
 using MPI.Tester.TestServer;
 
+using MPI.Tester.Report.BaseMethod.HeaderFinder;
+
 
 namespace MPI.Tester.Report.User.MPI_Python
 {

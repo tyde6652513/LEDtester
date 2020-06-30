@@ -62,6 +62,8 @@ namespace MPI.Tester.Gui
 			}
 
 			this.cmbFileNamePresent.Items.AddRange(Enum.GetNames(typeof(EOutputFileNamePresent)));
+
+            this.cmbFileNamePresent.SelectedIndex = 0;
 			this.cmbMultiLanguage.Items.AddRange(Enum.GetNames(typeof(EMultiLanguage)));
 			this.cmbUIDisplaySelect.Items.AddRange(Enum.GetNames(typeof(EUIDisplayType)));
 
@@ -436,11 +438,24 @@ namespace MPI.Tester.Gui
             this.chkIsSaveAbsoluteSpectrum.Checked = DataCenter._uiSetting.IsEnableSaveAbsoluteSpectrum;
             this.txtSaveAbsoluteSpectrumPath.Text = DataCenter._uiSetting.AbsoluteSpectrumPath;
 
+            //this.cmbAbsSptCreatFolderType01.SelectedIndex = (int)DataCenter._uiSetting.SptAbsCreatFolderType;
+
             this.cmbAbsSptCreatFolderType01.SelectedIndex = (int)DataCenter._uiSetting.SptAbsCreatFolderType;
 
             this.numSpectrumCount.Value = (int)DataCenter._uiSetting.SaveSpectrumMaxCount;
 
-			this.cmbFileNamePresent.SelectedIndex = (int)DataCenter._uiSetting.FileNameFormatPresent;
+			//this.cmbFileNamePresent.SelectedIndex = (int)DataCenter._uiSetting.FileNameFormatPresent;
+
+           // this.cmbFileNamePresent.SelectedItem = DataCenter._uiSetting.FileNameFormatPresent;
+
+            try {
+
+                this.cmbFileNamePresent.SelectedItem =( (EOutputFileNamePresent)DataCenter._uiSetting.FileNameFormatPresent).ToString();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("[frmSetUISetting], ChangeAuthority(),EOutputFileNamePresent parse fail Err:"+e.Message);
+            }
 	
 			this.cmbUIDisplaySelect.SelectedIndex = DataCenter._uiSetting.UIDisplayType;    
             //NFP/FFP-----------------------------------------------------------------------------------------------------
@@ -864,7 +879,9 @@ namespace MPI.Tester.Gui
 
             DataCenter._uiSetting.IsDeliverProberRecipe = this.chkEnableTransferProberRecipe.Checked;
 
-			DataCenter._uiSetting.FileNameFormatPresent = (int)this.cmbFileNamePresent.SelectedIndex;
+			//DataCenter._uiSetting.FileNameFormatPresent = (int)this.cmbFileNamePresent.SelectedIndex;
+            DataCenter._uiSetting.FileNameFormatPresent = (int)Enum.Parse(typeof(EOutputFileNamePresent), this.cmbFileNamePresent.SelectedItem.ToString(), true);
+
 
             DataCenter._sysSetting.IsAutoPopFourMapForm = this.chkEnableAutoPopFourMapForm.Checked;
 

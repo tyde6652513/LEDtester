@@ -9,6 +9,8 @@ using MPI.Tester.TestServer;
 using MPI.Tester.Maths;
 using MPI.Tester.TestKernel;
 using MPI.Tester.Tools;
+using MPI.Tester.Report.BaseMethod.HeaderFinder;
+using MPI.Tester.Report.BaseMethod.PosKeyMaker;
 
 namespace MPI.Tester.Report
 {
@@ -73,11 +75,13 @@ namespace MPI.Tester.Report
         //private ConditionCtrl _conditionData;
         protected SystemCali _sysCali;
 
-        protected CoordTransferTool _coordTransferTool;
+        protected CoordTransferTool _customizeCoordTransferTool;
+        protected CoordTransferTool _p2tCoordTransferTool;
  		protected int TitleStrShift = 0;
         protected char _spiltChar;
         protected string _titleStrKey; // When reload temp file, use this key to find title row.
         protected bool _saveMapAtAbort = true;
+        protected PosKeyMakerBase _crKeyMaker = null;
         //protected bool _isRetest = false;
 
 		#endregion
@@ -173,11 +177,13 @@ namespace MPI.Tester.Report
 
 			this._optiReportData = new OptiReportData(this.ResultTitleInfo);
 
-            this._coordTransferTool = new CoordTransferTool();
+            this._customizeCoordTransferTool = new CoordTransferTool();
 
             RemarkList = new List<string>();
 
             IsLogFileCreated = false;
+
+            _crKeyMaker = null ;
 
             //_isRetest = false;
 		}
@@ -453,13 +459,19 @@ namespace MPI.Tester.Report
 
         protected string ColRowKeyMaker(string[] rawData)
         {
-            string colrowKey = rawData[this._resultTitleInfo.ColIndex].ToString() + "_" + rawData[this._resultTitleInfo.RowIndex].ToString();
-
-            if (this._resultTitleInfo.ChipIndexIndex >= 0)
+            if (_crKeyMaker == null)
             {
-                colrowKey += "_" + rawData[this._resultTitleInfo.ChipIndexIndex].ToString();
+                List<int> colList = new List<int>();
+                colList.Add(this._resultTitleInfo.ColIndex);
+                colList.Add(this._resultTitleInfo.RowIndex);
+                if (this._resultTitleInfo.ChipIndexIndex >= 0)
+                {
+                    colList.Add(this._resultTitleInfo.ChipIndexIndex);
+                }
+                _crKeyMaker = new PosKeyMakerBase(colList);
             }
-            return colrowKey;
+
+            return _crKeyMaker.GetPosKey(rawData);
         }
 
         // Roy++
@@ -1346,36 +1358,7 @@ namespace MPI.Tester.Report
 
 		#region >>> Protected Method <<<
 
-		protected class HeaderFinder
-        {
-            public string TarStr = "";
-            public int ShidftRow = 0;
-            bool startCount = false;
-
-            public HeaderFinder(string tarStr, int shift)
-            {
-                TarStr = tarStr;
-                ShidftRow = shift;
-            }
-
-            public virtual bool CheckIfRowData(string str)
-            {
-                if(str == TarStr)
-                {
-                    startCount = true;                   
-                }
-
-                if (startCount)
-                {
-                    ShidftRow--;
-                    if (ShidftRow <= 0)
-                    {
-                        return true;
-                    }
-                }
-                return false;
-            }
-        }
+		
 
 		#endregion
 
@@ -1624,6 +1607,14 @@ namespace MPI.Tester.Report
                 //-------------------------------------------------------------------------
                 case (int)EOutputFileNamePresent.LotNum_WaferNum:
                     UISetting.TestResultFileName = UISetting.LotNumber + "_" + UISetting.WaferNumber;
+                    break;
+                //-------------------------------------------------------------------------
+                case (int)EOutputFileNamePresent.WaferNum_Stage:
+                    UISetting.TestResultFileName = UISetting.WaferNumber;
+                    if (this.Product.TestCondition != null)
+                    {
+                        UISetting.TestResultFileName += "_" + this.Product.TestCondition.TestStage.ToString();
+                    }
                     break;
                 //-------------------------------------------------------------------------
                 case (int)EOutputFileNamePresent.Customer01:
@@ -2686,13 +2677,21 @@ namespace MPI.Tester.Report
 			get { return this._isImplementPIVDataReport; }
 		}
 
-        public CoordTransferTool CoordTransTool
+        public CoordTransferTool CustomizeCoordTransTool
         {
-            get { return _coordTransferTool; }
+            get { return _customizeCoordTransferTool; }
 
-            set {  _coordTransferTool = value; }
+            set {  _customizeCoordTransferTool = value; }
         }
 
+        public CoordTransferTool CoordTransTool
+        {
+            get { return _p2tCoordTransferTool; }
+
+            set { _p2tCoordTransferTool = value; }
+        }
+
+        
 		#endregion
 
 		#region >>> StatisticSet <<<

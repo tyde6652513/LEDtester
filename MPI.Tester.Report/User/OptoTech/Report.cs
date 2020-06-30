@@ -8,6 +8,7 @@ using MPI.Tester.Data;
 
 using MPI.Tester.DeviceCommon;
 using MPI.Tester.Maths;
+using MPI.Tester.Report.BaseMethod.HeaderFinder;
 
 namespace MPI.Tester.Report.User.OptoTech
 {
@@ -614,6 +615,7 @@ namespace MPI.Tester.Report.User.OptoTech
             return lcrInfo;
 
         }
+
         private string GetAttSetStr()
         {
             string attSet = "";
@@ -1033,35 +1035,6 @@ this.Product.TestCondition.TestItemArray != null)
         
         #region
 
-        protected class HeaderFinder_ByEndStr : HeaderFinder
-        {
-            bool startCount = false;
-
-            public HeaderFinder_ByEndStr(string tarStr, int shift)
-                : base(tarStr, shift)
-            {
-                TarStr = tarStr;
-                ShidftRow = shift;
-            }
-
-            public override bool CheckIfRowData(string str)
-            {
-                if (str.EndsWith(TarStr))
-                {
-                    startCount = true;
-                }
-
-                if (startCount)
-                {
-                    ShidftRow--;
-                    if (ShidftRow <= 0)
-                    {
-                        return true;
-                    }
-                }
-                return false;
-            }
-        }
         #endregion
     }
 }

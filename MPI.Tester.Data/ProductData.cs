@@ -72,6 +72,8 @@ namespace MPI.Tester.Data
 
         private string _productName;
 
+        
+
 
 
 		public ProductData()
@@ -165,6 +167,8 @@ namespace MPI.Tester.Data
             _productName = "";
 
             PathManager = null;
+
+            
 		}
 
         #region >>> Public property <<<
@@ -426,6 +430,8 @@ namespace MPI.Tester.Data
         }
 
         public OutputPathManager PathManager;
+
+
         #endregion
 
         #region >>> Public Method <<<

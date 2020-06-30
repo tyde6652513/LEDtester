@@ -286,8 +286,13 @@ namespace MPI.Tester.TestServer
 
                             this._testerSys.CmdData.CmdID = (int)ETesterKernelCmd.EndTest;
                             rtn = this._testerSys.RunCommand((int)ETesterKernelCmd.EndTest);
-
-                            double[] buffer = new double[44];
+                            string[] strArr = new string[1];
+                            strArr[0] = "";
+                            double[] buffer = new double[45];
+                            for (int i = 0; i < 45; ++i)
+                            {
+                                buffer[i] = 0;
+                            }
                             buffer[0] = (double)(cmd as CmdWaferScanEnd).XMin; //ColX min
                             buffer[1] = (double)(cmd as CmdWaferScanEnd).YMin; //RowY min
                             buffer[2] = (double)(cmd as CmdWaferScanEnd).XMax; //ColX max
@@ -302,7 +307,7 @@ namespace MPI.Tester.TestServer
                             //this._testerSys.CmdData.CmdID = (int)ETesterKernelCmd.SourceMeterPowerOn;
                             //this._testerSys.RunCommand((int)ETesterKernelCmd.SourceMeterPowerOn);
 
-                            Fire_ServerQueryEvent(EServerQueryCmd.CMD_TESTER_START, buffer, null);
+                            Fire_ServerQueryEvent(EServerQueryCmd.CMD_TESTER_START, buffer, strArr);
                             echoTSECmd = cmd;//new CmdWaferScanEnd();
 
                             break;

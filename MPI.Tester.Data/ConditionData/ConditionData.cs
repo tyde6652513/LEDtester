@@ -21,7 +21,9 @@ namespace MPI.Tester.Data
 		private ECalMode _calMode;
 		private ECalBaseWave _calByWLType;
 		private ECalLookupWave _calLookupWave;
-		private ESensingMode _sensingMode;   
+		private ESensingMode _sensingMode;
+        private ETestStage _testStage;
+
 		      
 		private TestItemData[] _testItemArray;
 		private bool _isUseDefinedName;
@@ -58,6 +60,7 @@ namespace MPI.Tester.Data
             this._channelCondiTable = new ChannelConditionTable();
 
             this._numberOfEnableTestItem = 0;
+            _testStage = ETestStage.IV;
 
 		}
 
@@ -92,7 +95,12 @@ namespace MPI.Tester.Data
 			get { return this._sensingMode; }
 			set { lock (this._lockObj) { this._sensingMode = value; } }
 		}
-
+        public ETestStage TestStage
+        {
+            get { return this._testStage; }
+            set { lock (this._lockObj) { this._testStage = value; } }
+        }
+        
 		//[System.Xml.Serialization.XmlIgnore]
 		[XmlArrayItem(typeof(TestItemData)),
 		XmlArrayItem(typeof(IFHTestItem)), 

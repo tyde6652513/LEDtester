@@ -3526,6 +3526,15 @@ namespace MPI.Tester.Gui
                 case (int)EOutputFileNamePresent.LotNum_WaferNum:
                     DataCenter._uiSetting.TestResultFileName = DataCenter._uiSetting.LotNumber + "_" + DataCenter._uiSetting.WaferNumber;
                     break;
+                    
+                //-------------------------------------------------------------------------
+                case (int)EOutputFileNamePresent.WaferNum_Stage:
+                    DataCenter._uiSetting.TestResultFileName = DataCenter._uiSetting.WaferNumber;
+                    if (DataCenter._product.TestCondition != null)
+                    {
+                        DataCenter._uiSetting.TestResultFileName += "_" + DataCenter._product.TestCondition.TestStage.ToString();
+                    }
+                    break;
                 //-------------------------------------------------------------------------
                 case (int)EOutputFileNamePresent.Customer01:
                     DataCenter._uiSetting.TestResultFileName = ParseOutputFileName(1);

@@ -99,7 +99,7 @@ namespace MPI.Tester.Gui
 
         private static string _lastProdcutRecipe = string.Empty;
 
-        private static CoordTransferTool _coordTransTool = new CoordTransferTool();
+        private static CoordTransferTool _customizeCoordTransTool = new CoordTransferTool();
 
         private static CoordTransferTool _p2TcoordTransTool = new CoordTransferTool();
 
@@ -113,7 +113,7 @@ namespace MPI.Tester.Gui
 
             ResetDataList();
 
-            _coordTransTool = new CoordTransferTool();
+            _customizeCoordTransTool = new CoordTransferTool();
             _p2TcoordTransTool = new CoordTransferTool();
             _oriboundaryDic = new Dictionary<string, int>();
             _laserCheckCnt = 0;
@@ -988,7 +988,7 @@ namespace MPI.Tester.Gui
 
                                 ProduceInfo.SaveProduceInfo(DataCenter._uiSetting, EServerQueryCmd.CMD_TESTER_END);
 
-                                _coordTransTool.Clear();
+                                _customizeCoordTransTool.Clear();
 
                                 SaveBinMapImg();
 
@@ -1049,7 +1049,7 @@ namespace MPI.Tester.Gui
 
                         _preSamplingCheck.End();
 
-                        _coordTransTool.Clear();
+                        _customizeCoordTransTool.Clear();
                         
                         DataCenter._uiSetting.IsManualSettingContiousProbingRowCol = false;
 
@@ -1436,7 +1436,7 @@ namespace MPI.Tester.Gui
                         if (e.StrData != null && e.StrData.Length == 20)
                         {
                             
-                            _coordTransTool.Clear();
+                            _customizeCoordTransTool.Clear();
                             _p2TcoordTransTool.Clear();
                             for (int i = 0; i < 10; ++i)
                             {
@@ -1445,7 +1445,7 @@ namespace MPI.Tester.Gui
 
                             for (int i = 10; i < 20; ++i)
                             {
-								SetCoordTool( e, i, ref _coordTransTool );
+								SetCoordTool( e, i, ref _customizeCoordTransTool );
                             }
 
                             _p2TcoordTransTool.CalcConvertMatrix(true);
@@ -1457,11 +1457,11 @@ namespace MPI.Tester.Gui
                                 Console.WriteLine("[ServerQueryEventHandler], CMD_QUERY_PRE_OVERLOAD_TEST_INFO,_p2TcoordTransTool" + _p2TcoordTransTool.Matrix.ToString(format: "0.00"));
                             }
 
-                            _coordTransTool.CalcConvertMatrix(true);
+                            _customizeCoordTransTool.CalcConvertMatrix(true);
 
-                            if (_coordTransTool.Matrix != null)
+                            if (_customizeCoordTransTool.Matrix != null)
                             {
-                                Console.WriteLine("[ServerQueryEventHandler], CMD_QUERY_PRE_OVERLOAD_TEST_INFO,_coordTransTool" + _coordTransTool.Matrix.ToString(format: "0.00"));
+                                Console.WriteLine("[ServerQueryEventHandler], CMD_QUERY_PRE_OVERLOAD_TEST_INFO,_coordTransTool" + _customizeCoordTransTool.Matrix.ToString(format: "0.00"));
                             }
 
                         }
@@ -1703,10 +1703,17 @@ namespace MPI.Tester.Gui
                 }
             }
 
-            if ((EServerQueryCmd)e.CmdID == EServerQueryCmd.CMD_TESTER_START &&
-                _coordTransTool != null)//CMD_TESTER_START 後 CoordTransTool才存在
+            if ((EServerQueryCmd)e.CmdID == EServerQueryCmd.CMD_TESTER_START )//CMD_TESTER_START 後 CoordTransTool才存在
             {
-                ReportProcess.CoordTransTool = _coordTransTool.Clone() as CoordTransferTool;
+                if (_customizeCoordTransTool != null)
+                {
+                    ReportProcess.CustomizeCoordTransTool = _customizeCoordTransTool.Clone() as CoordTransferTool;
+                }
+
+                if( _p2TcoordTransTool != null)
+                {
+                    ReportProcess.CoordTransferTool = _p2TcoordTransTool.Clone() as CoordTransferTool;
+                }
             }
 
             if ((EServerQueryCmd)e.CmdID == EServerQueryCmd.CMD_WAFER_FINISH)

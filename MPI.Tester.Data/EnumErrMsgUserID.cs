@@ -344,6 +344,9 @@ namespace MPI.Tester.Data
         REPORT_File3_Create_Fail                = 50023,
 
         REPORT_Customize_File_Create_Fail        = 50024,
+
+
+        REPORT_Create_Map_Fail                  = 50031,
 	}
 
     public enum EMessageCode : int

@@ -100,18 +100,28 @@ namespace MPI.Tester.Gui.UIForm.UserForm.UISetting
                 od.Multiselect = true;
                 if (od.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                    List<string> fileList = new List<string>();
-                    if (od.FileNames != null && od.FileNames.Length > 1)
+                    using (SaveFileDialog sd = new SaveFileDialog())
                     {
+                        sd.Filter = DataCenter._uiSetting.TestResultFileExt.ToUpper() +
+                            " (*." + DataCenter._uiSetting.TestResultFileExt + ")|*." + DataCenter._uiSetting.TestResultFileExt;
+                        sd.DefaultExt = DataCenter._uiSetting.TestResultFileExt;
+                        sd.AddExtension = true;
 
-                        string folderName = DataCenter._uiSetting.GetPathWithFolder(UI2TDPath(pathUIComponent1.PathInfomation));
+                        if (sd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                        {
+                            string saveFilePAth = sd.FileName;
+                            List<string> fileList = new List<string>();
+                            if (od.FileNames != null && od.FileNames.Length > 1)
+                            {
+                                //string folderName = DataCenter._uiSetting.GetPathWithFolder(UI2TDPath(pathUIComponent1.PathInfomation));
+                                //string mapFileName = DataCenter._uiSetting.TestResultFileName;
+                                //string file = Path.Combine(folderName, mapFileName) + "." + DataCenter._uiSetting.TestResultFileExt;
 
-                        string mapFileName = DataCenter._uiSetting.TestResultFileName;
-                        string file = Path.Combine(folderName, mapFileName) + "." + DataCenter._uiSetting.TestResultFileExt;
-
-                        List<string> sList = new List<string>();
-                        sList.AddRange(od.FileNames);
-                        AppSystem.MergeFile(file, sList);
+                                List<string> sList = new List<string>();
+                                sList.AddRange(od.FileNames);
+                                AppSystem.MergeFile(saveFilePAth, sList);
+                            }
+                        }
                     }
                     //AppSystem.MergeFile()
                 }

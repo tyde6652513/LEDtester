@@ -5,13 +5,22 @@ using System.Text;
 using System.IO;
 using MPI.Tester.Data;
 
+using MPI.Tester.Report.BaseMethod.HeaderFinder;
+using MPI.Tester.Report.BaseMethod.PosKeyMaker;
+
 namespace MPI.Tester.Report.User.DOWA
 {
     class Report : ReportBase
     {
+        ETestStage _stg = ETestStage.IV;
+        Dictionary<string, AOISignItem> _posAOIDic = new Dictionary<string, AOISignItem>();
+
+       // Dictionary<string, MapDieBase> _keyMDic;
+
         public Report(List<object> objs, bool isReStatistic)
             : base(objs, isReStatistic)
         {
+           // _keyMDic = new Dictionary<string, MapDieBase>();
         }
 
         protected override void SetResultTitle()
@@ -19,6 +28,8 @@ namespace MPI.Tester.Report.User.DOWA
             Dictionary<string, string> knDic = GetKeyHeaderDic(this.UISetting.UserDefinedData.ResultItemNameDic);
 
             this.ResultTitleInfo.SetResultData(knDic);
+
+            _stg = this.Product.TestCondition.TestStage;
         }
 
         protected override EErrorCode WriteReportHeadByUser()
@@ -49,16 +60,36 @@ namespace MPI.Tester.Report.User.DOWA
 
             this.WriteLine("Samples" );
 
+            this.WriteLine("Stage" + this.SpiltChar.ToString()+_stg.ToString());
+
             this.WriteLine("");
 
-            this.WriteLine("Item,Bias,BiasUnit,Time(ms),Compliance,CompUnit,Lower,Upper,RltUnit");
+            this.WriteLine("Item,Bias,BiasUnit,Time(ms),Compliance,CompUnit,Lower,Upper,RltUnit,Wavelengh");
 
+
+            string lastWaveLength = "";
             if (this.Product.TestCondition != null &&
                 this.Product.TestCondition.TestItemArray != null &&
                 this.Product.TestCondition.TestItemArray.Length > 0)
             {
                 foreach (var testItem in this.Product.TestCondition.TestItemArray)
                 {
+                    if (testItem.Type == ETestType.LaserSource)
+                    {
+                        int ch = (testItem as LaserSourceTestItem).LaserSourceSet.SysChannel;
+                        try
+                        {
+                            foreach (var lSet in this.MachineConfig.LaserSrcSysConfig.ChConfigList)
+                            {
+                                if (lSet.SysChannel == ch)
+                                {
+                                    lastWaveLength = lSet.ChannelName;
+                                }
+                            }
+                        }
+                        catch (Exception e)
+                        { }
+                    }
                     if (testItem.MsrtResult == null || testItem.MsrtResult.Length == 0 || testItem.GainOffsetSetting == null)
                     {
                         continue;
@@ -69,19 +100,25 @@ namespace MPI.Tester.Report.User.DOWA
                         string line = string.Empty;
                         if (!msrtItem.IsEnable || !msrtItem.IsVision || testItem.ElecSetting == null)
                         {
-                            if (testItem.Type == ETestType.CALC)
+                            switch (testItem.Type)
                             {
-                                line += msrtItem.Name;
+                                case ETestType.CALC:
+                                    {
+                                        line += msrtItem.Name;
 
-                                line += this.SpiltChar.ToString() + this.SpiltChar.ToString() + this.SpiltChar.ToString() + this.SpiltChar.ToString() + this.SpiltChar.ToString();
+                                        line += this.SpiltChar.ToString() + this.SpiltChar.ToString() + this.SpiltChar.ToString() + this.SpiltChar.ToString() + this.SpiltChar.ToString();
 
-                                line += this.SpiltChar.ToString() + msrtItem.MinLimitValue;
+                                        line += this.SpiltChar.ToString() + msrtItem.MinLimitValue;
 
-                                line += this.SpiltChar.ToString() + msrtItem.MaxLimitValue;
+                                        line += this.SpiltChar.ToString() + msrtItem.MaxLimitValue;
 
-                                line += this.SpiltChar.ToString() + msrtItem.Unit;
+                                        line += this.SpiltChar.ToString() + msrtItem.Unit;
 
-                                this.WriteLine(line);
+                                        line += this.SpiltChar.ToString() + "\"" + GetCalcItemDescription(testItem as CALCTestItem) + "\"";
+                                        
+                                        this.WriteLine(line);
+                                    }
+                                    break;
                             }
 
                             continue;
@@ -104,6 +141,8 @@ namespace MPI.Tester.Report.User.DOWA
                         line += this.SpiltChar.ToString() + msrtItem.MaxLimitValue;
 
                         line += this.SpiltChar.ToString() + testItem.ElecSetting[0].MsrtUnit;
+
+                        line += this.SpiltChar.ToString() + lastWaveLength;
 
                         this.WriteLine(line);
                     }
@@ -140,25 +179,53 @@ namespace MPI.Tester.Report.User.DOWA
 
             foreach (var item in this._resultTitleInfo)
             {
-                if (item.Key == "BIN_CODE")
-                {
-                    line += binCode;
-                }
-                else if (item.Key == "BIN_NUMBER")
-                {
-                    line += binNumber.ToString();
-                }
-                else if (data.ContainsKey(item.Key))
-                {
-                    string format = string.Empty;
+                string format = string.Empty;
 
-                    if (this.UISetting.UserDefinedData[item.Key] != null)
-                    {
-                        format = this.UISetting.UserDefinedData[item.Key].Formate;
-                    }
-
-                    line += data[item.Key].ToString(format);
+                if (this.UISetting.UserDefinedData[item.Key] != null)
+                {
+                    format = this.UISetting.UserDefinedData[item.Key].Formate;
                 }
+
+                switch (item.Key)
+                {
+                    case "TestTemp1":
+                        {
+                            if (_stg == ETestStage.IV)
+                            {
+                                line += this.AcquireData.ChipInfo.ChuckTemp.ToString(format);
+                            }
+                        }
+                        break;
+                    case "TestTemp2":
+                        {
+                            if (_stg == ETestStage.LCR)
+                            {
+                                line += this.AcquireData.ChipInfo.ChuckTemp.ToString(format);
+                            }
+                        }
+                        break;
+                    case "BinCV":
+                        {
+                            if (_stg == ETestStage.LCR)
+                            {
+                                line += this.AcquireData.ChipInfo.ChuckTemp.ToString(format);
+                            }
+                        }
+                        break;
+                    //case "AOISIGN":
+                    //    {
+                    //        line += this.AcquireData.ChipInfo.AOISign;
+                    //    }
+                    default:
+                        {
+                            if (data.ContainsKey(item.Key))
+                            {
+                                line += data[item.Key].ToString(format);
+                            }
+                        }
+                        break;
+                }
+
 
                 index++;
 
@@ -175,6 +242,16 @@ namespace MPI.Tester.Report.User.DOWA
 
         protected override EErrorCode RewriteReportByUser()
         {
+
+            string outputFile = UISetting.MapPath;
+
+            string fileName = UISetting.WaferNumber + ".tmap";
+            string mapFolder = "";
+            ETesterResultCreatFolderType ftype = UISetting.MapPathInfo.FolderType;
+            mapFolder = GetPathWithFolder(outputFile, ftype, "tmap");
+
+            GetRefDieData(mapFolder, fileName);
+
             Dictionary<string, string> replaceData = new Dictionary<string, string>();
 
             string endTime = "EndTime" + this.SpiltChar.ToString() + this.TesterSetting.EndTestTime.ToString("yyyy/MM/dd HH:mm") ;
@@ -188,6 +265,158 @@ namespace MPI.Tester.Report.User.DOWA
             this.ReplaceReport(replaceData);
 
             return EErrorCode.NONE;
+        }
+
+
+        protected override void ReplaceReportData(Dictionary<string, string> replaceData, string inputFile, string outputFile, bool isSkipWritingTestCount = false)
+        {
+            ///////////////////////////////////////////////////////
+            //Set Statistic Data
+            ///////////////////////////////////////////////////////
+            Dictionary<string, double> data = new Dictionary<string, double>();
+
+            if (this._isReStatistic)
+            {     
+
+                foreach (string keyName in Enum.GetNames(typeof(ESysResultItem)))
+                {
+                    data.Add(keyName, 0);
+                }
+
+                for (int i = 0; i < this._resultTitleInfo.ResultCount; i++)
+                {
+                    string keyName = string.Empty;
+
+                    int index = 0;
+
+                    foreach (var item in this._resultTitleInfo)
+                    {
+                        if (index == i)
+                        {
+                            keyName = item.Key;
+                        }
+
+                        index++;
+                    }
+
+                    if (!data.ContainsKey(keyName))
+                    {
+                        data.Add(keyName, 0);
+                    }
+                }
+            }
+
+            ///////////////////////////////////////////////////////
+            //Replace Data And Check Row Col
+            ///////////////////////////////////////////////////////
+            if (outputFile == string.Empty)
+            {
+                return;
+            }
+
+            StreamWriter sw = new StreamWriter(outputFile, false, this._reportData.Encoding);
+
+            StreamReader sr = new StreamReader(inputFile, this._reportData.Encoding);
+
+            bool isRawData = false;
+
+            int rawLineCount = 0;
+
+            int testCount = this.UISetting.UserDefinedData.TestStartIndex;
+
+            int shiftCount = TitleStrShift;
+
+            int colAOI_SIGN = _resultTitleInfo.GetIndexOfKey("AOISIGN");
+
+            HeaderFinder hf = new HeaderFinder(this.TitleStrKey, TitleStrShift);
+            // 開始比對ColRowKey並寫檔
+            while (sr.Peek() >= 0)
+            {
+                string line = sr.ReadLine();
+
+                if (isRawData)
+                {
+                    //if (this.TesterSetting.IsCheckRowCol)
+                    {
+                        rawLineCount++;
+
+                        string[] rawData = line.Split(this.SpiltChar);
+
+                        string colrowKey = ColRowKeyMaker(rawData);
+
+                        // 把 row.col 和 checkRowCol "raw line count " 相同時, 才會push資料,解決當點重測row,col的問題
+                        if (((this._checkColRowKey.ContainsKey(colrowKey) && this._checkColRowKey[colrowKey] == rawLineCount) && this.TesterSetting.IsCheckRowCol)
+                            || !this.TesterSetting.IsCheckRowCol)
+                        {
+                            //Rewrite TEST
+                            if (this._resultTitleInfo.TestIndex >= 0)
+                            {
+                                rawData[this._resultTitleInfo.TestIndex] = testCount.ToString();
+
+                                line = string.Empty;
+
+                                for (int i = 0; i < rawData.Length; i++)
+                                {
+                                    if (isSkipWritingTestCount)
+                                    {
+                                        if (this._resultTitleInfo.TestIndex != i)
+                                        {
+                                            line += rawData[i];
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (i == colAOI_SIGN)
+                                        {
+                                            line += GetAOISign(colrowKey);
+                                        }
+                                        else
+                                        {
+                                            line += rawData[i];
+                                        }
+                                    }
+
+                                    if (i != rawData.Length - 1)
+                                    {
+                                        line += this.SpiltChar;
+                                    }
+                                }
+                            }
+
+                            testCount++;
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    }
+
+                }
+                else
+                {
+                    if (hf.CheckIfRowData(line))
+                    {
+                        isRawData = true;
+                    }
+                    else
+                    {
+                        if (replaceData.ContainsKey(line))
+                        {
+                            line = replaceData[line];
+                        }
+                    }
+                }
+
+                sw.WriteLine(line);
+            }
+
+            sr.Close();
+
+            sr.Dispose();
+
+            sw.Close();
+
+            sw.Dispose();
         }
 
         #region >>private mehtod<<
@@ -230,6 +459,145 @@ namespace MPI.Tester.Report.User.DOWA
                 }
             }
             return kvDic;
+        }
+
+        private string GetCalcItemDescription(CALCTestItem cItem)
+        {           
+
+            string cmd = cItem.UserCommand;
+            if (!cItem.IsAdvanceMode)
+            {
+                double gain = cItem.Gain;
+                cmd = gain == 1 ? "" : "(";
+                string AStr = cItem.IsAConst ? cItem.ValA.ToString() : cItem.ItemNameA;
+                string BStr = cItem.IsBConst ? cItem.ValB.ToString() : cItem.ItemNameB;
+
+                switch (cItem.CalcType)
+                {
+                    case ECalcType.Add:
+                        cmd += AStr + "+" + BStr;
+                        break;
+                    case ECalcType.Subtract:
+                        cmd += AStr + "-" + BStr;
+                        break;
+                    case ECalcType.Multiple:
+                        cmd += AStr + "*" + BStr;
+                        break;
+                    case ECalcType.DivideBy:
+                        cmd += AStr + "/" + BStr;
+                        break;
+                    case ECalcType.DeltaR:
+                        cmd += "Resistance (" + AStr + "," + BStr + ")";
+                        break;
+                }
+
+                cmd = gain == 1 ? cmd : cmd + ")";
+            }
+            else
+            {
+                cmd = cmd.Replace("\n"," ");
+            }
+            return cmd;
+        }
+
+        private EErrorCode GetRefDieData(string refFileFolder, string refFileNameWithNoExt)
+        {
+            EErrorCode err = Data.EErrorCode.NONE;
+            Console.WriteLine("[DOWAReport], GetRefDieData");
+            if (!MPIFile.IsAccessableIP(refFileFolder))
+            {
+                Console.WriteLine("[DOWAReport], GetRefDieData  IsAccessableIP fail.");
+                return EErrorCode.REPORT_ReplaceDataFail;
+            }
+
+            string waferIdKey = UISetting.WaferNumber;
+
+            List<string> strExt = new List<string>();
+            strExt.Add("");
+
+            switch (Product.TestCondition.TestStage)
+            {
+                case ETestStage.IV:
+
+                    strExt.Add("_IV");
+                    strExt.Add("_LIV");
+                    break;
+                case ETestStage.LCR:
+                    strExt.Add("_LCR");
+                    strExt.Add("_CV");
+                    break;
+
+            }
+
+            string tarFileName = "";
+            bool isFound = false;
+            foreach (string str in strExt)
+            {
+                tarFileName = Path.Combine(refFileFolder, waferIdKey + str + ".tmap");
+                if (File.Exists(tarFileName))
+                {
+                    isFound = true;
+                    break;
+                }
+            }
+
+            if (!isFound)
+            {
+                Console.WriteLine("[DOWAReport], GetRefDieData,dobule check inputFile :" + tarFileName + ": not Exist");
+                return EErrorCode.NONE;
+            }
+
+
+            string proberTmap = Path.Combine(Constants.Paths.MPI_TEMP_DIR2, "proberTmap.csv");
+            Console.WriteLine("[DOWAReport], GetRefDieData, clone to proberTmap.csv");
+            if (MPIFile.CopyFile(tarFileName, proberTmap))
+            {
+
+                HeaderFinder_ByStartStr hf = new HeaderFinder_ByStartStr("X,Y,Bin", 0);
+                List<int> cList = new List<int>();
+                cList.Add(0);
+                cList.Add(1);
+                PosKeyMakerBase pMaker = new PosKeyMakerBase(cList);
+                List<string> sList = new List<string>();
+                sList.Add("X");
+                sList.Add("Y");
+                MapDieReader<AOISignItem> mReader = new MapDieReader<AOISignItem>(hf, pMaker, sList);
+
+                _posAOIDic = mReader.ReadMapFromFile(proberTmap);
+            }
+
+            return err;
+        }
+
+        private string GetAOISign(string colrowKey)
+        {
+            if (_posAOIDic.ContainsKey(colrowKey))
+            { return _posAOIDic[colrowKey].SIGN; }
+            return "";
+        }
+
+
+        #endregion
+
+        #region
+
+        internal class AOISignItem : IMapItem//最基本的紀錄型別
+        {
+            public string SIGN;
+
+            public AOISignItem()
+            {
+            }
+
+            public bool SetRowData(string str, List<string> refColList)
+            {
+                int index = refColList.IndexOf("AOI_SIGN");
+                string[] strArr = str.Split(',');
+                if (strArr != null && strArr.Length > index)
+                    SIGN = strArr[index];
+                return true;
+            }
+
         }
 
         #endregion
