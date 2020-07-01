@@ -28,12 +28,19 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSetRDFunc));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvItemBoundary = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.colpropKeyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colIsVisible = new DevComponents.DotNetBar.Controls.DataGridViewCheckBoxXColumn();
+            this.colpropMin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colpropMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colpropDefault = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colpropUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colpropFormat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.numESDPrechargeWaitTime = new DevComponents.Editors.IntegerInput();
             this.lblESDPrechargeWaitTime = new DevComponents.DotNetBar.LabelX();
@@ -43,9 +50,6 @@
             this.numMDSeriesDelayTime = new DevComponents.Editors.IntegerInput();
             this.lblMDSeriesDelayTime = new DevComponents.DotNetBar.LabelX();
             this.lblMDParallelDelayTime = new DevComponents.DotNetBar.LabelX();
-            this.dinRTHTdTime = new DevComponents.Editors.DoubleInput();
-            this.lblRTHTdTime = new DevComponents.DotNetBar.LabelX();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.chkIsEnableAbsMsrtIR = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.chkIsEnableKeepRecoveryData = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.numVRDelayTime = new DevComponents.Editors.IntegerInput();
@@ -54,9 +58,6 @@
             this.lblHighSpeedModeDelayTime = new DevComponents.DotNetBar.LabelX();
             this.numHighSpeedModeDelayTime = new DevComponents.Editors.IntegerInput();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.ipRthAddress = new DevComponents.Editors.IpAddressInput();
-            this.lblrthIPAddress = new DevComponents.DotNetBar.LabelX();
-            this.chkIsEnableRTHTestItem = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.lblESDHighSpeedDelayTime = new DevComponents.DotNetBar.LabelX();
             this.numESDHighSpeedDelayTime = new DevComponents.Editors.IntegerInput();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
@@ -75,24 +76,18 @@
             this.lstBoxEnableTestItems = new System.Windows.Forms.ListBox();
             this.lblItemBoundaryTitle = new System.Windows.Forms.Label();
             this.lblUserID = new System.Windows.Forms.Label();
-            this.colpropKeyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colIsVisible = new DevComponents.DotNetBar.Controls.DataGridViewCheckBoxXColumn();
-            this.colpropMin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colpropMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colpropDefault = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colpropUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colpropFormat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numOpticalSwitchDelay = new DevComponents.Editors.IntegerInput();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItemBoundary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numESDPrechargeWaitTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMDParallelDelayTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMDSeriesDelayTime)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dinRTHTdTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numVRDelayTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHighSpeedModeDelayTime)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ipRthAddress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numESDHighSpeedDelayTime)).BeginInit();
             this.gpParameterSetting.SuspendLayout();
             this.gpTestItemSpecSetting.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numOpticalSwitchDelay)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvItemBoundary
@@ -101,8 +96,8 @@
             this.dgvItemBoundary.AllowUserToDeleteRows = false;
             this.dgvItemBoundary.AllowUserToResizeColumns = false;
             this.dgvItemBoundary.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("PMingLiU", 9F);
-            this.dgvItemBoundary.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("PMingLiU", 9F);
+            this.dgvItemBoundary.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvItemBoundary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvItemBoundary.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colpropKeyName,
@@ -112,26 +107,77 @@
             this.colpropDefault,
             this.colpropUnit,
             this.colpropFormat});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 9.75F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvItemBoundary.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 9.75F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvItemBoundary.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvItemBoundary.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             resources.ApplyResources(this.dgvItemBoundary, "dgvItemBoundary");
             this.dgvItemBoundary.MultiSelect = false;
             this.dgvItemBoundary.Name = "dgvItemBoundary";
             this.dgvItemBoundary.RowHeadersVisible = false;
             this.dgvItemBoundary.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.dgvItemBoundary.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.dgvItemBoundary.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvItemBoundary.RowTemplate.Height = 24;
             this.dgvItemBoundary.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvItemBoundary.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItemBoundary_CellEndEdit);
             this.dgvItemBoundary.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItemBoundary_CellEndEdit);
+            // 
+            // colpropKeyName
+            // 
+            resources.ApplyResources(this.colpropKeyName, "colpropKeyName");
+            this.colpropKeyName.Name = "colpropKeyName";
+            this.colpropKeyName.ReadOnly = true;
+            this.colpropKeyName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colIsVisible
+            // 
+            this.colIsVisible.Checked = true;
+            this.colIsVisible.CheckState = System.Windows.Forms.CheckState.Indeterminate;
+            this.colIsVisible.CheckValue = "N";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colIsVisible.DefaultCellStyle = dataGridViewCellStyle6;
+            this.colIsVisible.FillWeight = 30F;
+            resources.ApplyResources(this.colIsVisible, "colIsVisible");
+            this.colIsVisible.Name = "colIsVisible";
+            // 
+            // colpropMin
+            // 
+            resources.ApplyResources(this.colpropMin, "colpropMin");
+            this.colpropMin.Name = "colpropMin";
+            this.colpropMin.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colpropMin.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colpropMax
+            // 
+            resources.ApplyResources(this.colpropMax, "colpropMax");
+            this.colpropMax.Name = "colpropMax";
+            this.colpropMax.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colpropMax.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colpropDefault
+            // 
+            resources.ApplyResources(this.colpropDefault, "colpropDefault");
+            this.colpropDefault.Name = "colpropDefault";
+            this.colpropDefault.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colpropDefault.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colpropUnit
+            // 
+            resources.ApplyResources(this.colpropUnit, "colpropUnit");
+            this.colpropUnit.Name = "colpropUnit";
+            this.colpropUnit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colpropFormat
+            // 
+            resources.ApplyResources(this.colpropFormat, "colpropFormat");
+            this.colpropFormat.Name = "colpropFormat";
+            this.colpropFormat.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // labelX3
             // 
@@ -139,7 +185,7 @@
             // 
             // 
             // 
-            this.labelX3.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10026;
+            this.labelX3.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             resources.ApplyResources(this.labelX3, "labelX3");
             this.labelX3.ForeColor = System.Drawing.Color.Black;
@@ -168,7 +214,7 @@
             // 
             // 
             // 
-            this.lblESDPrechargeWaitTime.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10026;
+            this.lblESDPrechargeWaitTime.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
             this.lblESDPrechargeWaitTime.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             resources.ApplyResources(this.lblESDPrechargeWaitTime, "lblESDPrechargeWaitTime");
             this.lblESDPrechargeWaitTime.ForeColor = System.Drawing.Color.Black;
@@ -197,7 +243,7 @@
             // 
             // 
             // 
-            this.labelX7.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10026;
+            this.labelX7.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
             this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             resources.ApplyResources(this.labelX7, "labelX7");
             this.labelX7.ForeColor = System.Drawing.Color.Black;
@@ -210,7 +256,7 @@
             // 
             // 
             // 
-            this.labelX5.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10026;
+            this.labelX5.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             resources.ApplyResources(this.labelX5, "labelX5");
             this.labelX5.ForeColor = System.Drawing.Color.Black;
@@ -239,7 +285,7 @@
             // 
             // 
             // 
-            this.lblMDSeriesDelayTime.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10026;
+            this.lblMDSeriesDelayTime.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
             this.lblMDSeriesDelayTime.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             resources.ApplyResources(this.lblMDSeriesDelayTime, "lblMDSeriesDelayTime");
             this.lblMDSeriesDelayTime.ForeColor = System.Drawing.Color.Black;
@@ -252,55 +298,12 @@
             // 
             // 
             // 
-            this.lblMDParallelDelayTime.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10026;
+            this.lblMDParallelDelayTime.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
             this.lblMDParallelDelayTime.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             resources.ApplyResources(this.lblMDParallelDelayTime, "lblMDParallelDelayTime");
             this.lblMDParallelDelayTime.ForeColor = System.Drawing.Color.Black;
             this.lblMDParallelDelayTime.Name = "lblMDParallelDelayTime";
             this.lblMDParallelDelayTime.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
-            // 
-            // dinRTHTdTime
-            // 
-            // 
-            // 
-            // 
-            this.dinRTHTdTime.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dinRTHTdTime.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dinRTHTdTime.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.dinRTHTdTime.DisplayFormat = "0.0";
-            resources.ApplyResources(this.dinRTHTdTime, "dinRTHTdTime");
-            this.dinRTHTdTime.Increment = 0.5D;
-            this.dinRTHTdTime.MaxValue = 10000D;
-            this.dinRTHTdTime.MinValue = 0D;
-            this.dinRTHTdTime.Name = "dinRTHTdTime";
-            this.dinRTHTdTime.ShowUpDown = true;
-            this.dinRTHTdTime.Value = 1.6D;
-            // 
-            // lblRTHTdTime
-            // 
-            this.lblRTHTdTime.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.lblRTHTdTime.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10026;
-            this.lblRTHTdTime.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(this.lblRTHTdTime, "lblRTHTdTime");
-            this.lblRTHTdTime.ForeColor = System.Drawing.Color.Black;
-            this.lblRTHTdTime.Name = "lblRTHTdTime";
-            this.lblRTHTdTime.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
-            // 
-            // labelX4
-            // 
-            this.labelX4.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX4.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10026;
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(this.labelX4, "labelX4");
-            this.labelX4.ForeColor = System.Drawing.Color.Black;
-            this.labelX4.Name = "labelX4";
-            this.labelX4.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // chkIsEnableAbsMsrtIR
             // 
@@ -308,7 +311,7 @@
             // 
             // 
             // 
-            this.chkIsEnableAbsMsrtIR.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10026;
+            this.chkIsEnableAbsMsrtIR.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
             this.chkIsEnableAbsMsrtIR.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.chkIsEnableAbsMsrtIR.CheckSignSize = new System.Drawing.Size(15, 15);
             resources.ApplyResources(this.chkIsEnableAbsMsrtIR, "chkIsEnableAbsMsrtIR");
@@ -322,7 +325,7 @@
             // 
             // 
             // 
-            this.chkIsEnableKeepRecoveryData.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10026;
+            this.chkIsEnableKeepRecoveryData.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
             this.chkIsEnableKeepRecoveryData.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.chkIsEnableKeepRecoveryData.CheckSignSize = new System.Drawing.Size(15, 15);
             resources.ApplyResources(this.chkIsEnableKeepRecoveryData, "chkIsEnableKeepRecoveryData");
@@ -352,7 +355,7 @@
             // 
             // 
             // 
-            this.labelX2.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10026;
+            this.labelX2.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             resources.ApplyResources(this.labelX2, "labelX2");
             this.labelX2.ForeColor = System.Drawing.Color.Black;
@@ -365,7 +368,7 @@
             // 
             // 
             // 
-            this.chkIsEnableVRDelayTime.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10026;
+            this.chkIsEnableVRDelayTime.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
             this.chkIsEnableVRDelayTime.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.chkIsEnableVRDelayTime.CheckSignSize = new System.Drawing.Size(15, 15);
             resources.ApplyResources(this.chkIsEnableVRDelayTime, "chkIsEnableVRDelayTime");
@@ -379,7 +382,7 @@
             // 
             // 
             // 
-            this.lblHighSpeedModeDelayTime.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10026;
+            this.lblHighSpeedModeDelayTime.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
             this.lblHighSpeedModeDelayTime.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             resources.ApplyResources(this.lblHighSpeedModeDelayTime, "lblHighSpeedModeDelayTime");
             this.lblHighSpeedModeDelayTime.ForeColor = System.Drawing.Color.Red;
@@ -409,53 +412,12 @@
             // 
             // 
             // 
-            this.labelX1.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10026;
+            this.labelX1.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             resources.ApplyResources(this.labelX1, "labelX1");
             this.labelX1.ForeColor = System.Drawing.Color.Black;
             this.labelX1.Name = "labelX1";
             this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // ipRthAddress
-            // 
-            this.ipRthAddress.AutoOverwrite = true;
-            // 
-            // 
-            // 
-            this.ipRthAddress.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.ipRthAddress.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ipRthAddress.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.ipRthAddress.ButtonFreeText.Visible = true;
-            resources.ApplyResources(this.ipRthAddress, "ipRthAddress");
-            this.ipRthAddress.Name = "ipRthAddress";
-            this.ipRthAddress.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // lblrthIPAddress
-            // 
-            this.lblrthIPAddress.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.lblrthIPAddress.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10026;
-            this.lblrthIPAddress.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(this.lblrthIPAddress, "lblrthIPAddress");
-            this.lblrthIPAddress.ForeColor = System.Drawing.Color.Black;
-            this.lblrthIPAddress.Name = "lblrthIPAddress";
-            this.lblrthIPAddress.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
-            // 
-            // chkIsEnableRTHTestItem
-            // 
-            this.chkIsEnableRTHTestItem.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.chkIsEnableRTHTestItem.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10026;
-            this.chkIsEnableRTHTestItem.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.chkIsEnableRTHTestItem.CheckSignSize = new System.Drawing.Size(15, 15);
-            resources.ApplyResources(this.chkIsEnableRTHTestItem, "chkIsEnableRTHTestItem");
-            this.chkIsEnableRTHTestItem.Name = "chkIsEnableRTHTestItem";
-            this.chkIsEnableRTHTestItem.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
-            this.chkIsEnableRTHTestItem.TabStop = false;
             // 
             // lblESDHighSpeedDelayTime
             // 
@@ -463,7 +425,7 @@
             // 
             // 
             // 
-            this.lblESDHighSpeedDelayTime.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10026;
+            this.lblESDHighSpeedDelayTime.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
             this.lblESDHighSpeedDelayTime.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             resources.ApplyResources(this.lblESDHighSpeedDelayTime, "lblESDHighSpeedDelayTime");
             this.lblESDHighSpeedDelayTime.ForeColor = System.Drawing.Color.Black;
@@ -492,7 +454,7 @@
             // 
             // 
             // 
-            this.labelX6.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10026;
+            this.labelX6.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             resources.ApplyResources(this.labelX6, "labelX6");
             this.labelX6.ForeColor = System.Drawing.Color.Black;
@@ -505,7 +467,7 @@
             // 
             // 
             // 
-            this.chkIsEnableESDHighSpeedMode.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10026;
+            this.chkIsEnableESDHighSpeedMode.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
             this.chkIsEnableESDHighSpeedMode.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.chkIsEnableESDHighSpeedMode.CheckSignSize = new System.Drawing.Size(15, 15);
             resources.ApplyResources(this.chkIsEnableESDHighSpeedMode, "chkIsEnableESDHighSpeedMode");
@@ -541,22 +503,18 @@
             // 
             // gpParameterSetting
             // 
+            this.gpParameterSetting.Controls.Add(this.labelX4);
+            this.gpParameterSetting.Controls.Add(this.numOpticalSwitchDelay);
             this.gpParameterSetting.Controls.Add(this.btnSetIO);
             this.gpParameterSetting.Controls.Add(this.cmbTesterConfigType);
             this.gpParameterSetting.Controls.Add(this.lblTesterType);
             this.gpParameterSetting.Controls.Add(this.labelX3);
             this.gpParameterSetting.Controls.Add(this.lblHighSpeedModeDelayTime);
             this.gpParameterSetting.Controls.Add(this.numESDPrechargeWaitTime);
-            this.gpParameterSetting.Controls.Add(this.chkIsEnableRTHTestItem);
-            this.gpParameterSetting.Controls.Add(this.labelX4);
             this.gpParameterSetting.Controls.Add(this.chkIsEnableESDHighSpeedMode);
-            this.gpParameterSetting.Controls.Add(this.lblRTHTdTime);
             this.gpParameterSetting.Controls.Add(this.lblESDPrechargeWaitTime);
-            this.gpParameterSetting.Controls.Add(this.dinRTHTdTime);
             this.gpParameterSetting.Controls.Add(this.labelX6);
-            this.gpParameterSetting.Controls.Add(this.ipRthAddress);
             this.gpParameterSetting.Controls.Add(this.numMDParallelDelayTime);
-            this.gpParameterSetting.Controls.Add(this.lblrthIPAddress);
             this.gpParameterSetting.Controls.Add(this.numESDHighSpeedDelayTime);
             this.gpParameterSetting.Controls.Add(this.labelX7);
             this.gpParameterSetting.Controls.Add(this.lblESDHighSpeedDelayTime);
@@ -601,7 +559,7 @@
             // 
             // 
             // 
-            this.lblTesterType.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10026;
+            this.lblTesterType.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
             this.lblTesterType.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             resources.ApplyResources(this.lblTesterType, "lblTesterType");
             this.lblTesterType.ForeColor = System.Drawing.Color.Green;
@@ -667,56 +625,33 @@
             resources.ApplyResources(this.lblUserID, "lblUserID");
             this.lblUserID.Name = "lblUserID";
             // 
-            // colpropKeyName
+            // numOpticalSwitchDelay
             // 
-            resources.ApplyResources(this.colpropKeyName, "colpropKeyName");
-            this.colpropKeyName.Name = "colpropKeyName";
-            this.colpropKeyName.ReadOnly = true;
-            this.colpropKeyName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.numOpticalSwitchDelay.AntiAlias = true;
             // 
-            // colIsVisible
             // 
-            this.colIsVisible.Checked = true;
-            this.colIsVisible.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.colIsVisible.CheckValue = "N";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colIsVisible.DefaultCellStyle = dataGridViewCellStyle2;
-            this.colIsVisible.FillWeight = 30F;
-            resources.ApplyResources(this.colIsVisible, "colIsVisible");
-            this.colIsVisible.Name = "colIsVisible";
             // 
-            // colpropMin
+            this.numOpticalSwitchDelay.BackgroundStyle.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.numOpticalSwitchDelay.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.numOpticalSwitchDelay.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.numOpticalSwitchDelay, "numOpticalSwitchDelay");
+            this.numOpticalSwitchDelay.MaxValue = 1000;
+            this.numOpticalSwitchDelay.MinValue = 0;
+            this.numOpticalSwitchDelay.Name = "numOpticalSwitchDelay";
+            this.numOpticalSwitchDelay.ShowUpDown = true;
             // 
-            resources.ApplyResources(this.colpropMin, "colpropMin");
-            this.colpropMin.Name = "colpropMin";
-            this.colpropMin.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colpropMin.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // labelX4
             // 
-            // colpropMax
+            this.labelX4.BackColor = System.Drawing.Color.Transparent;
             // 
-            resources.ApplyResources(this.colpropMax, "colpropMax");
-            this.colpropMax.Name = "colpropMax";
-            this.colpropMax.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colpropMax.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // colpropDefault
             // 
-            resources.ApplyResources(this.colpropDefault, "colpropDefault");
-            this.colpropDefault.Name = "colpropDefault";
-            this.colpropDefault.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colpropDefault.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colpropUnit
-            // 
-            resources.ApplyResources(this.colpropUnit, "colpropUnit");
-            this.colpropUnit.Name = "colpropUnit";
-            this.colpropUnit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colpropFormat
-            // 
-            resources.ApplyResources(this.colpropFormat, "colpropFormat");
-            this.colpropFormat.Name = "colpropFormat";
-            this.colpropFormat.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.labelX4.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
+            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.labelX4, "labelX4");
+            this.labelX4.ForeColor = System.Drawing.Color.Black;
+            this.labelX4.Name = "labelX4";
+            this.labelX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             // 
             // frmSetRDFunc
             // 
@@ -737,14 +672,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.numESDPrechargeWaitTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMDParallelDelayTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMDSeriesDelayTime)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dinRTHTdTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numVRDelayTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHighSpeedModeDelayTime)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ipRthAddress)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numESDHighSpeedDelayTime)).EndInit();
             this.gpParameterSetting.ResumeLayout(false);
             this.gpTestItemSpecSetting.ResumeLayout(false);
             this.gpTestItemSpecSetting.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numOpticalSwitchDelay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -758,9 +692,6 @@
         private DevComponents.DotNetBar.LabelX lblESDHighSpeedDelayTime;
         private DevComponents.Editors.IntegerInput numESDHighSpeedDelayTime;
         private DevComponents.DotNetBar.LabelX labelX6;
-        private DevComponents.DotNetBar.Controls.CheckBoxX chkIsEnableRTHTestItem;
-        private DevComponents.Editors.IpAddressInput ipRthAddress;
-		private DevComponents.DotNetBar.LabelX lblrthIPAddress;
 		private DevComponents.DotNetBar.LabelX lblHighSpeedModeDelayTime;
 		private DevComponents.Editors.IntegerInput numHighSpeedModeDelayTime;
 		private DevComponents.DotNetBar.LabelX labelX1;
@@ -769,9 +700,6 @@
 		private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.Controls.CheckBoxX chkIsEnableKeepRecoveryData;
         private DevComponents.DotNetBar.Controls.CheckBoxX chkIsEnableAbsMsrtIR;
-        private DevComponents.DotNetBar.LabelX lblRTHTdTime;
-        private DevComponents.DotNetBar.LabelX labelX4;
-        private DevComponents.Editors.DoubleInput dinRTHTdTime;
         private DevComponents.Editors.IntegerInput numMDParallelDelayTime;
         private DevComponents.DotNetBar.LabelX labelX7;
         private DevComponents.DotNetBar.LabelX labelX5;
@@ -801,5 +729,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colpropDefault;
         private System.Windows.Forms.DataGridViewTextBoxColumn colpropUnit;
         private System.Windows.Forms.DataGridViewTextBoxColumn colpropFormat;
+        private DevComponents.Editors.IntegerInput numOpticalSwitchDelay;
+        private DevComponents.DotNetBar.LabelX labelX4;
 	}
 }

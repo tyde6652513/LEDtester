@@ -177,24 +177,26 @@ namespace MPI.Tester.Data
         private bool _b0001;
         private bool _b0002;
        // private bool _b0003;  // 原本為 isEnableLIVItem
-        private bool _b0004;
+        //private bool _b0004;
         private double _d0001;
 		private double _d0002;
 		private double _d0003;
-        private string _s0001;
+        
+        //private string _s0001;
         private bool _b0006;
         private bool _b0007;
         private bool _b0008;
         private bool _b0009;
         private bool _b0010;
 
-        private double _d0004;
+        //private double _d0004;
         private double _d0005;
  		private double _d0006;
 
         private double _d0010;
         private double _d0011;
 		private double _d0012;
+        private double _d0013; //optical switch delay
 
         private int _i0001;
 
@@ -220,7 +222,7 @@ namespace MPI.Tester.Data
 
             //this._b0003 = false;
 
-            this._b0004 = false;
+            //this._b0004 = false;
 
             this._b0006 = false;
 
@@ -234,17 +236,19 @@ namespace MPI.Tester.Data
 
             this._i0001 = 0;
 
-            this._d0001 = 15.0d;
+            //this._d0001 = 15.0d;
 
             this._d0002 = 8.0d;
 
             this._d0003 = 5.0d;
 
-            this._d0004 = 1.6d;
+            this._d0013 = 0.0d;
+
+            //this._d0004 = 1.6d;
 
             this._d0005 = 100.0d;
 
-            this._s0001 = "192.168.50.99";
+            //this._s0001 = "192.168.50.99";
 
             this._d0006 = 100.0d;
 
@@ -290,11 +294,11 @@ namespace MPI.Tester.Data
             set { this._b0002 = value; }
         }
 
-        public bool IsEnableRTHTestItem
-        {
-            get { return this._b0004; }
-            set { this._b0004 = value; }
-        }
+        //public bool IsEnableRTHTestItem
+        //{
+        //    get { return this._b0004; }
+        //    set { this._b0004 = value; }
+        //}
 
 		public bool IsKeepRecoveryData
 		{
@@ -332,17 +336,22 @@ namespace MPI.Tester.Data
 			set { this._d0003 = value; }
 		}
 
-        public string RTHSrcMeterIPAddress
+        public double OpticalSwitchDelay
         {
-            get { return this._s0001; }
-            set { this._s0001 = value; }
+            get { return this._d0013; }
+            set { this._d0013 = value; }
         }
+        //public string RTHSrcMeterIPAddress
+        //{
+        //    get { return this._s0001; }
+        //    set { this._s0001 = value; }
+        //}
 
-        public double RTHTdTime
-        {
-            get { return this._d0004; }
-            set { this._d0004 = value; }
-        }
+        //public double RTHTdTime
+        //{
+        //    get { return this._d0004; }
+        //    set { this._d0004 = value; }
+        //}
 
         public double ESDPrechargeWaitTime
         {

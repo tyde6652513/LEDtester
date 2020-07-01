@@ -214,7 +214,7 @@ namespace MPI.Tester.Device.LaserSourceSys.OpticalSwitch
 
         public bool SetParamToOS(int sysCh )
         {
-            //if (_nowSysCh != sysCh)
+            if (_nowSysCh != sysCh)
             {
                 _nowSysCh = sysCh;
                 List<IOpticalSwitch> oList = GetOpticalSwitchFromSysCh(sysCh);
@@ -231,6 +231,10 @@ namespace MPI.Tester.Device.LaserSourceSys.OpticalSwitch
                                 return false;
                             }
                         }
+                    }
+                    if (_laserSysCfg.OSDelayInms > 0)
+                    {
+                        System.Threading.Thread.Sleep((int)_laserSysCfg.OSDelayInms);
                     }
                 }
             }

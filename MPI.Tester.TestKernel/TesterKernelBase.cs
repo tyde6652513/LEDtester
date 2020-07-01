@@ -2529,9 +2529,9 @@ namespace MPI.Tester.TestKernel
 
             devSetting.DAQModel = this._machineConfig.DAQModel;
 
-            devSetting.IsEnableRTH = this._rdFunc.RDFuncData.IsEnableRTHTestItem;
+            //devSetting.IsEnableRTH = this._rdFunc.RDFuncData.IsEnableRTHTestItem;
 
-            devSetting.RTHDeviceIP = this._rdFunc.RDFuncData.RTHSrcMeterIPAddress;
+            //devSetting.RTHDeviceIP = this._rdFunc.RDFuncData.RTHSrcMeterIPAddress;
 
             devSetting.DAQSampleRate = this._machineConfig.DAQSampleRate;
 
@@ -3194,6 +3194,8 @@ namespace MPI.Tester.TestKernel
             {
                 _machineConfig.LaserSrcSysConfig.ModifyDevSetCh();
             }
+            _machineConfig.LaserSrcSysConfig.OSDelayInms = _rdFunc.RDFuncData.OpticalSwitchDelay;
+
             if (_laserSrcSys.Init(_machineConfig.LaserSrcSysConfig, keyObjDic))
             {
                 //if()

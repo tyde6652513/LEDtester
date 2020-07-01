@@ -45,9 +45,11 @@ namespace MPI.Tester.Gui
 
             this.numESDHighSpeedDelayTime.Value = (int)DataCenter._rdFunc.RDFuncData.ESDHighSpeedDelayTime;
 
-            this.chkIsEnableRTHTestItem.Checked = DataCenter._rdFunc.RDFuncData.IsEnableRTHTestItem;
+            // this.chkIsEnableRTHTestItem.Checked = DataCenter._rdFunc.RDFuncData.IsEnableRTHTestItem;
 
-            this.ipRthAddress.Value = DataCenter._rdFunc.RDFuncData.RTHSrcMeterIPAddress;
+            //this.ipRthAddress.Value = DataCenter._rdFunc.RDFuncData.RTHSrcMeterIPAddress;
+
+            numOpticalSwitchDelay.Value = (int)DataCenter._rdFunc.RDFuncData.OpticalSwitchDelay;
 
 			this.chkIsEnableVRDelayTime.Checked = DataCenter._rdFunc.RDFuncData.IsEnableVRDelayTime;
 
@@ -57,7 +59,7 @@ namespace MPI.Tester.Gui
 
             this.chkIsEnableAbsMsrtIR.Checked = DataCenter._rdFunc.RDFuncData.IsEnableAbsMsrtIR;
 
-            this.dinRTHTdTime.Value = DataCenter._rdFunc.RDFuncData.RTHTdTime;
+            //this.dinRTHTdTime.Value = DataCenter._rdFunc.RDFuncData.RTHTdTime;
 
             this.numMDSeriesDelayTime.Value = (int)DataCenter._rdFunc.RDFuncData.MDSeriesTypeDelayTime;
 
@@ -101,9 +103,10 @@ namespace MPI.Tester.Gui
 
             DataCenter._rdFunc.RDFuncData.ESDHighSpeedDelayTime = this.numESDHighSpeedDelayTime.Value;
 
-            DataCenter._rdFunc.RDFuncData.IsEnableRTHTestItem = this.chkIsEnableRTHTestItem.Checked;
+            //DataCenter._rdFunc.RDFuncData.IsEnableRTHTestItem = this.chkIsEnableRTHTestItem.Checked;
 
-            DataCenter._rdFunc.RDFuncData.RTHSrcMeterIPAddress = this.ipRthAddress.Value;
+            //DataCenter._rdFunc.RDFuncData.RTHSrcMeterIPAddress = this.ipRthAddress.Value;
+            DataCenter._rdFunc.RDFuncData.OpticalSwitchDelay = numOpticalSwitchDelay.Value;
 
 			DataCenter._rdFunc.RDFuncData.IsEnableVRDelayTime = this.chkIsEnableVRDelayTime.Checked;
 
@@ -113,7 +116,7 @@ namespace MPI.Tester.Gui
 
             DataCenter._rdFunc.RDFuncData.IsEnableAbsMsrtIR = this.chkIsEnableAbsMsrtIR.Checked;
 
-            DataCenter._rdFunc.RDFuncData.RTHTdTime = this.dinRTHTdTime.Value;
+            //DataCenter._rdFunc.RDFuncData.RTHTdTime = this.dinRTHTdTime.Value;
 
             DataCenter._rdFunc.RDFuncData.MDSeriesTypeDelayTime = this.numMDSeriesDelayTime.Value;
 

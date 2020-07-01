@@ -22,7 +22,7 @@ namespace MPI.Tester.Device.LaserSourceSys
         public ILaserSource LaserSource { set; get; }
         public bool UseSMUPdMonitor { set; get; }
         public EDevErrorNumber ErrorNumber { set; get; }
-        
+                
         #region >>constuctor<<
         public LaserSourceSystem()
         {
@@ -31,6 +31,7 @@ namespace MPI.Tester.Device.LaserSourceSys
             AttManager = null;
             //Attenuator = null;
             UseSMUPdMonitor = false;
+            ErrorNumber = 0;
             _config = new LaserSrcSysConfig();
         }
         #endregion
@@ -234,7 +235,8 @@ namespace MPI.Tester.Device.LaserSourceSys
                 {
                     ErrorNumber = OSManager.ErrorNumber;
                     return false;
-                }                
+                }
+                
             }
             return true;
         }

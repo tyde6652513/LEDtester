@@ -20,8 +20,7 @@ namespace MPI.Tester.Data.LaserData.LaserSource
         private SourceMeterAssignmentData _moniterPDSmu;
 
         private List< LaserSrcChConfig> _chConfigList;
-
-
+        
         #endregion
 
         public LaserSrcSysConfig()
@@ -32,6 +31,7 @@ namespace MPI.Tester.Data.LaserData.LaserSource
             _chConfigList = new List<LaserSrcChConfig>();
             //IsAutoAttInPreheat =false;
             AutoAttPerCntCheck = 1;
+            OSDelayInms = 0;
         }
 
 
@@ -216,6 +216,10 @@ namespace MPI.Tester.Data.LaserData.LaserSource
         /// Auto tune Att when "laser check times" % AutoAttPerCheck == 0
         /// </summary>
         public int AutoAttPerCntCheck { get; set; }
+
+        [XmlIgnore]
+        public double OSDelayInms { get; set; }
+        
         #endregion
 
         #region >>public method<<
@@ -235,6 +239,7 @@ namespace MPI.Tester.Data.LaserData.LaserSource
             }
             //obj.IsAutoAttInPreheat = this.IsAutoAttInPreheat;
             obj.AutoAttPerCntCheck = this.AutoAttPerCntCheck;
+            obj.OSDelayInms = this.OSDelayInms;
             return obj;
         }
 

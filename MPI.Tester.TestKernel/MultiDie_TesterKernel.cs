@@ -87,7 +87,7 @@ namespace MPI.Tester.TestKernel
             this._repeatTestIndexs = new List<int>();
             this._skipCount = 0;
 
-            this._rdFunc = new RDFunc();
+            //this._rdFunc = new RDFunc();
 
             this._srcSyncTrigger = new List<uint>();
 
