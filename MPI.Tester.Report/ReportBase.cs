@@ -1585,13 +1585,18 @@ namespace MPI.Tester.Report
             return err;
         }
 
-        public virtual string GetOutputFileName()
+        public virtual string GetOutputFileName(int namedRuleNum = -1)
         {
             TesterSetting.StartTestTime = DateTime.Now;
 
             UISetting.TestResultFileName = "";
 
-            switch (UISetting.FileNameFormatPresent)
+            if (namedRuleNum < 0)
+            {
+                namedRuleNum = UISetting.FileNameFormatPresent;
+            }
+
+            switch (namedRuleNum)
             {
                 case (int)EOutputFileNamePresent.WaferNum:
                     UISetting.TestResultFileName = UISetting.WaferNumber;

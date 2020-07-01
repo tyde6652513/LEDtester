@@ -3091,6 +3091,8 @@ namespace MPI.Tester.TestKernel
 
             this._acquireData.ChipInfo.IsDieTestStatePass = true;
 
+            this._acquireData.ChipInfo.ChuckTemp = this._cmdData.DoubleData[(uint)EProberDataIndex.Temprature];
+
             lock (this._lockObj)
             {
                 switch (command)

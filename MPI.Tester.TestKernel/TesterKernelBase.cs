@@ -159,7 +159,7 @@ namespace MPI.Tester.TestKernel
             this._pt1 = new PerformanceTimer();
             this._ptOpenShortTimeOut = new PerformanceTimer();
 
-            this._cmdData = new KernelCmdData(20);
+            this._cmdData = new KernelCmdData(40);
 
             this._isTesterKernelOpen = false;
             this._status = new SystemStatus();

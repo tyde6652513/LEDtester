@@ -3146,8 +3146,6 @@ namespace MPI.Tester.Gui
                 if (_p2TcoordTransTool.Matrix != null)
                 {
                     ChangeMapRowColByMatrix(_p2TcoordTransTool);
-                    ReportProcess.CoordTransferTool = _p2TcoordTransTool.Clone() as CoordTransferTool;
-
                 }
             }
         }

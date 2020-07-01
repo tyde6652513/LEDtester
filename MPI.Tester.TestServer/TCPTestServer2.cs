@@ -750,7 +750,7 @@ namespace MPI.Tester.TestServer
 
             this._testerSys.CmdData.DoubleData[(uint)EProberDataIndex.GroupCOL] = Convert.ToDouble((cmd as CmdSOT2).GroupPositionX);
             this._testerSys.CmdData.DoubleData[(uint)EProberDataIndex.GroupROW] = Convert.ToDouble((cmd as CmdSOT2).GroupPositionY);
-            this._testerSys.CmdData.DoubleData[(uint)EProberDataIndex.Temprature] = Convert.ToDouble((cmd as CmdSOT2).TestingTemperature);
+            this._testerSys.CmdData.DoubleData[(uint)EProberDataIndex.Temprature] = Convert.ToDouble((cmd as CmdSOT2).TestingTemperature) / 1000;//因CmdSOT2使用int傳遞，因此將溫度*1000，這邊記得除回來
 
             this._testerSys.CmdData.DoubleData[(uint)EProberDataIndex.SubCOL] = Convert.ToDouble((cmd as CmdSOT2).SubDiePositionX);
             this._testerSys.CmdData.DoubleData[(uint)EProberDataIndex.SubROW] = Convert.ToDouble((cmd as CmdSOT2).SubDiePositionY);

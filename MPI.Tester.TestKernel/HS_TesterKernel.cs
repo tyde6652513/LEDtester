@@ -1449,6 +1449,8 @@ namespace MPI.Tester.TestKernel
 
             this._acquireData.ChipInfo.Channel = 1; // 會導致dutChannel = this._acquireData.ChipInfo.Channel; 出事
 
+            this._acquireData.ChipInfo.ChuckTemp = this._cmdData.DoubleData[(uint)EProberDataIndex.Temprature];
+
             foreach (var sysItem in _sysResultItem)
             {
                 sysItem.IsTested = true;

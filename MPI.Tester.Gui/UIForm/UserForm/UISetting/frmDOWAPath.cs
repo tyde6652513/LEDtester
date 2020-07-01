@@ -22,6 +22,11 @@ namespace MPI.Tester.Gui.UIForm.UserForm.UISetting
         public frmDowaPath()
         {
             InitializeComponent();
+
+            this.cmbFileNamePresent.Items.AddRange(Enum.GetNames(typeof(EOutputFileNamePresent)));
+            this.cmbFileNamePresent.Items.Remove(EOutputFileNamePresent.WaferNum_Stage.ToString());
+            this.cmbFileNamePresent.SelectedIndex = 1;
+
         }
 
         //public frmDowaPath(PathInfo pInfo)
@@ -39,6 +44,7 @@ namespace MPI.Tester.Gui.UIForm.UserForm.UISetting
             pathUIComponent1.PathInfomation.PathName = "Binマップ保存位置";
             pucMergeFilePath.PathInfomation = TD2UIPath(DataCenter._uiSetting.MergeFilePath.Clone() as MPI.Tester.Data.PathInfo);
             pucLaserPower.PathInfomation = TD2UIPath(DataCenter._uiSetting.LaserPowerLogPath.Clone() as MPI.Tester.Data.PathInfo);
+            this.cmbFileNamePresent.SelectedItem = DataCenter._uiSetting.EMergeFileNameFormatPresent.ToString();
             return true;
         }
         public bool SaveDataToDataCenter()
@@ -46,7 +52,9 @@ namespace MPI.Tester.Gui.UIForm.UserForm.UISetting
             DataCenter._uiSetting.UIMapPathInfo = UI2TDPath(pathUIComponent1.PathInfomation);
             DataCenter._uiSetting.MergeFilePath = UI2TDPath(pucMergeFilePath.PathInfomation);
             DataCenter._uiSetting.LaserPowerLogPath = UI2TDPath(pucLaserPower.PathInfomation);
+            //DataCenter._uiSetting.EMergeFileNameFormatPresent = (enum)this.cmbFileNamePresent.SelectedItem.ToString();
 
+            DataCenter._uiSetting.EMergeFileNameFormatPresent = (EOutputFileNamePresent)Enum.Parse(typeof(EOutputFileNamePresent), this.cmbFileNamePresent.SelectedItem.ToString(), true);
             return true;
         }
 

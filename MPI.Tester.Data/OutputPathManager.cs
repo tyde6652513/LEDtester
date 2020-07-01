@@ -154,6 +154,8 @@ namespace MPI.Tester.Data
 
             OptoTechKeyInDataPath = "";//Constants.Paths.MPI_TEMP_DIR
 
+            EMergeFileNameFormatPresent = EOutputFileNamePresent.WaferNum;
+
         }
         #endregion
 
@@ -687,6 +689,12 @@ namespace MPI.Tester.Data
 
         public PathInfo MergeFilePath
         { set; get; }
+
+        //Merge file 時命名規則
+        //目前使用的客戶:DOWA
+        public EOutputFileNamePresent EMergeFileNameFormatPresent
+        { set; get; }
+
 
         public PathInfo LaserPowerLogPath
         { set; get; }

@@ -209,7 +209,7 @@ namespace MPI.Tester.Report.User.DOWA
                         {
                             if (_stg == ETestStage.LCR)
                             {
-                                line += this.AcquireData.ChipInfo.ChuckTemp.ToString(format);
+                                line += data["BIN"].ToString(format);
                             }
                         }
                         break;
@@ -564,6 +564,7 @@ namespace MPI.Tester.Report.User.DOWA
                 sList.Add("Y");
                 MapDieReader<AOISignItem> mReader = new MapDieReader<AOISignItem>(hf, pMaker, sList);
 
+                Console.WriteLine("[DOWAReport], GetRefDieData, ReadMapFromFile:" + proberTmap);
                 _posAOIDic = mReader.ReadMapFromFile(proberTmap);
             }
 
@@ -572,7 +573,7 @@ namespace MPI.Tester.Report.User.DOWA
 
         private string GetAOISign(string colrowKey)
         {
-            if (_posAOIDic.ContainsKey(colrowKey))
+            if (_posAOIDic != null && _posAOIDic.ContainsKey(colrowKey))
             { return _posAOIDic[colrowKey].SIGN; }
             return "";
         }
