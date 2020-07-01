@@ -2752,9 +2752,9 @@ namespace MPI.Tester.TestKernel
             {
                 if (this._srcMeter.Init(0, this._machineConfig.SourceMeterSN))
                 {
-                    this._machineInfo.TesterSN = this._srcMeter.SerialNumber + "_ " +
+                    this._machineInfo.TesterSN += this._srcMeter.SerialNumber + "_" +
                                                                     this._srcMeter.HardwareVersion + "_" +
-                                                                    this._srcMeter.SoftwareVersion;
+                                                                    this._srcMeter.SoftwareVersion + ",";
 
                     this._machineInfo.IsSrcInitSuccess = true;
                     this._machineInfo.SourceMeterSN = this._srcMeter.SerialNumber;
@@ -3070,9 +3070,9 @@ namespace MPI.Tester.TestKernel
                 }
 
                 this._machineInfo.LCRMeterSpec = this._lcrMeter.Spec;
-                this._machineInfo.TesterSN = this._lcrMeter.SerialNumber + "_ " +
+                this._machineInfo.TesterSN += this._lcrMeter.SerialNumber + "_" +
                                                 this._lcrMeter.HardwareVersion + "_" +
-                                                this._lcrMeter.SoftwareVersion;
+                                                this._lcrMeter.SoftwareVersion + ",";
 
                 this._machineInfo.LCRMeterSN = this._lcrMeter.SerialNumber;
                 this._machineInfo.LCRMeterHWVersion = this._lcrMeter.HardwareVersion;
@@ -3249,6 +3249,8 @@ namespace MPI.Tester.TestKernel
             // (3) Create Source Meter Instance and Initialize it 
             //---------------------------------------------------------------------------------------
             ElecDevSetting devSetting = SetElecDevsetting();
+
+            this._machineInfo.TesterSN = "";
 
             if (!SetSrcMeter(devSetting))
             {

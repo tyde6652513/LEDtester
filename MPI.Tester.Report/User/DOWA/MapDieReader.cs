@@ -92,7 +92,10 @@ namespace MPI.Tester.Report.User.DOWA
                             {
                                 string[] rawData = line.Split(this._splitChar);
                                 HeaderItemList = new List<string>();
-                                HeaderItemList.AddRange(rawData);
+                                for (int i = 0; i < rawData.Length; ++i)
+                                {
+                                    HeaderItemList.Add(rawData[i].ToUpper());
+                                }                                    HeaderItemList.AddRange(rawData);
 
                                 if (PosKeyLsit.Count == 0)
                                 {

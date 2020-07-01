@@ -33,7 +33,14 @@ namespace MPI.Tester.Report.BaseMethod.PosKeyMaker
         public PosKeyMakerBase(int xIndex, int yIndex,CoordTransferTool ct ,List<int> _extraPosColList = null):
             this(xIndex, yIndex, _extraPosColList)
         {
-            _coordTransTool = ct.Clone() as CoordTransferTool;
+            if (ct != null)
+            {
+                _coordTransTool = ct.Clone() as CoordTransferTool;
+            }
+            else
+            {
+                Console.WriteLine("[PosKeyMakerBase], PosKeyMakerBase(), CoordTransferTool is null");
+            }
         }
 
         public virtual string GetPosKey(string[] rawData)

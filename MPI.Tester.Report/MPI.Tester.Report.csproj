@@ -91,6 +91,7 @@
     <Compile Include="User\MPI_Python\Report.cs" />
     <Compile Include="User\MPI_Python\UISettingInfo.cs" />
     <Compile Include="User\OptoTech\LaserPowerReport.cs" />
+    <Compile Include="User\DOWA\MergeReport.cs" />
     <Compile Include="User\OptoTech\Report.cs" />
     <Compile Include="User\Picometrix\Report.cs" />
     <Compile Include="User\Sanan_Xiamen\Report.cs" />

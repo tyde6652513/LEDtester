@@ -23,6 +23,9 @@ namespace MPI.Tester.Device.SourceMeter
         public Persona()
         {
             this._spec = new SourceMeterSpec(_CurrRange, _VoltRange);
+            SerialNumber = "Simu001";
+            HardwareVersion = "0";
+            SoftwareVersion = "0";
         }
 
         public Persona(ElecDevSetting setting):this()

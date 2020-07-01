@@ -10,7 +10,7 @@ using MPI.Tester.Report.BaseMethod.PosKeyMaker;
 
 namespace MPI.Tester.Report.User.DOWA
 {
-    class Report : ReportBase
+    partial class Report : ReportBase
     {
         ETestStage _stg = ETestStage.IV;
         Dictionary<string, AOISignItem> _posAOIDic = new Dictionary<string, AOISignItem>();
@@ -267,7 +267,6 @@ namespace MPI.Tester.Report.User.DOWA
 
             return EErrorCode.NONE;
         }
-
 
         protected override void ReplaceReportData(Dictionary<string, string> replaceData, string inputFile, string outputFile, bool isSkipWritingTestCount = false)
         {
