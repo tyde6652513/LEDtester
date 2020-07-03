@@ -14,7 +14,7 @@ namespace MPI.Tester.DeviceCommon
     {
         public AttenuatorSettingData()
         {
-            SysChannel = 1;
+            SysChannel = -1;
             PowerContorll = false;
             Output = true;
 

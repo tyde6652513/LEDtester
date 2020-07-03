@@ -182,18 +182,7 @@ namespace MPI.Tester.TestServer
                         this.beginWait();
                         int delayTime =0;
 
-                        switch (cmdID)
-                        {
-                            case (int)MPI.RemoteControl.Tester.ETSECommand.ID_MUTIL_DIE_SOT:
-                            case (int)ETSECommand.ID_SOT:
-                            case (int)MPI.RemoteControl2.Tester.Mpi.Command.ETSECommand.ID_SOT2:
-                                delayTime = 10;
-                                break;
-                            default:
-                                delayTime = 50;
-                                break;
-
-                        }
+                        delayTime = 10;  
                          
                         TriggeReciveEvent(outpacket,delayTime);
                         

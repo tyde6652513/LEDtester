@@ -1582,6 +1582,9 @@
     <EmbeddedResource Include="UIForm\UserForm\frmTSMC00.zh-TW.resx">
       <DependentUpon>frmTSMC00.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\UISetting\frmDOWAPath.ja.resx">
+      <DependentUpon>frmDOWAPath.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIForm\UserForm\UISetting\frmDOWAPath.resx">
       <DependentUpon>frmDOWAPath.cs</DependentUpon>
     </EmbeddedResource>

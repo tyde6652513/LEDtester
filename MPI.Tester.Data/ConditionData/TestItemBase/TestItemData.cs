@@ -395,7 +395,7 @@ namespace MPI.Tester.Data
             dic.Add("ID", ID);
             dic.Add("KeyName", KeyName);
             dic.Add("Name", Name);
-            dic.Add("Type", Type);
+            dic.Add("Type", Type.ToString());
             dic.Add("Order", Order);
             dic.Add("IsEnable", IsEnable);
 
@@ -404,11 +404,14 @@ namespace MPI.Tester.Data
                 List<Dictionary<string, object>> msrtItemInfoList = new List<Dictionary<string, object>>();
                 for (int i = 0; i < _msrtResult.Length; ++i)
                 {
-                    msrtItemInfoList.Add(_msrtResult[i].GetTestResultDataInfo());
+                    if (_msrtResult[i].IsVision)//沒顯示就不要放了
+                    {
+                        msrtItemInfoList.Add(_msrtResult[i].GetTestResultDataInfo());
+                    }
                 }
-
-                dic.Add("MsrtResult", msrtItemInfoList);
                 dic.Add("TestInfo", GetTestItemForceSetting());
+                dic.Add("MsrtResult", msrtItemInfoList);
+                
             }
             //ElecSetting 以及 GainOffsetSetting應在子類別被override實作
             

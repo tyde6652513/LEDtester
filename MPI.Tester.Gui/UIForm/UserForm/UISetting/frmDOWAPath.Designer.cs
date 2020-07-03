@@ -33,11 +33,11 @@
             MPI.Tester.GuiComponent.PathInfo pathInfo6 = new MPI.Tester.GuiComponent.PathInfo();
             this.pathUIComponent1 = new MPI.Tester.GuiComponent.PathUIComponent();
             this.pnlBinMapPath = new System.Windows.Forms.Panel();
+            this.lblFileNamePresentTitle = new DevComponents.DotNetBar.LabelX();
+            this.cmbFileNamePresent = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.pucLaserPower = new MPI.Tester.GuiComponent.PathUIComponent();
             this.btnMerge = new System.Windows.Forms.Button();
             this.pucMergeFilePath = new MPI.Tester.GuiComponent.PathUIComponent();
-            this.lblFileNamePresentTitle = new DevComponents.DotNetBar.LabelX();
-            this.cmbFileNamePresent = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.pnlBinMapPath.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +73,33 @@
             this.pnlBinMapPath.Size = new System.Drawing.Size(700, 294);
             this.pnlBinMapPath.TabIndex = 1;
             // 
+            // lblFileNamePresentTitle
+            // 
+            this.lblFileNamePresentTitle.BackColor = System.Drawing.Color.MistyRose;
+            // 
+            // 
+            // 
+            this.lblFileNamePresentTitle.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
+            this.lblFileNamePresentTitle.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblFileNamePresentTitle.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblFileNamePresentTitle.ForeColor = System.Drawing.Color.Black;
+            this.lblFileNamePresentTitle.Location = new System.Drawing.Point(0, 89);
+            this.lblFileNamePresentTitle.Name = "lblFileNamePresentTitle";
+            this.lblFileNamePresentTitle.Size = new System.Drawing.Size(147, 25);
+            this.lblFileNamePresentTitle.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
+            this.lblFileNamePresentTitle.TabIndex = 459;
+            this.lblFileNamePresentTitle.Text = "合成名基準";
+            // 
+            // cmbFileNamePresent
+            // 
+            this.cmbFileNamePresent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFileNamePresent.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.cmbFileNamePresent.ForeColor = System.Drawing.Color.Black;
+            this.cmbFileNamePresent.Location = new System.Drawing.Point(206, 88);
+            this.cmbFileNamePresent.Name = "cmbFileNamePresent";
+            this.cmbFileNamePresent.Size = new System.Drawing.Size(271, 26);
+            this.cmbFileNamePresent.TabIndex = 458;
+            // 
             // pucLaserPower
             // 
             this.pucLaserPower.BackColor = System.Drawing.Color.Transparent;
@@ -85,10 +112,10 @@
             pathInfo5.EnablePath = true;
             pathInfo5.FileExt = "csv";
             pathInfo5.FolderType = MPI.Tester.GuiComponent.ETesterResultCreatFolderType.None;
-            pathInfo5.PathName = "Laser Log Data";
+            pathInfo5.PathName = "レーザデータ位置";
             pathInfo5.TestResultPath = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.pucLaserPower.PathInfomation = pathInfo5;
-            this.pucLaserPower.PathName = "Laser Log Data";
+            this.pucLaserPower.PathName = "レーザデータ位置";
             this.pucLaserPower.Size = new System.Drawing.Size(700, 24);
             this.pucLaserPower.TabIndex = 457;
             // 
@@ -115,39 +142,12 @@
             pathInfo6.EnablePath = true;
             pathInfo6.FileExt = "csv";
             pathInfo6.FolderType = MPI.Tester.GuiComponent.ETesterResultCreatFolderType.None;
-            pathInfo6.PathName = "Merge FilePath";
+            pathInfo6.PathName = "合成結果位置";
             pathInfo6.TestResultPath = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.pucMergeFilePath.PathInfomation = pathInfo6;
-            this.pucMergeFilePath.PathName = "Merge FilePath";
+            this.pucMergeFilePath.PathName = "合成結果位置";
             this.pucMergeFilePath.Size = new System.Drawing.Size(700, 24);
             this.pucMergeFilePath.TabIndex = 1;
-            // 
-            // lblFileNamePresentTitle
-            // 
-            this.lblFileNamePresentTitle.BackColor = System.Drawing.Color.MistyRose;
-            // 
-            // 
-            // 
-            this.lblFileNamePresentTitle.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
-            this.lblFileNamePresentTitle.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblFileNamePresentTitle.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblFileNamePresentTitle.ForeColor = System.Drawing.Color.Black;
-            this.lblFileNamePresentTitle.Location = new System.Drawing.Point(0, 89);
-            this.lblFileNamePresentTitle.Name = "lblFileNamePresentTitle";
-            this.lblFileNamePresentTitle.Size = new System.Drawing.Size(147, 25);
-            this.lblFileNamePresentTitle.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
-            this.lblFileNamePresentTitle.TabIndex = 459;
-            this.lblFileNamePresentTitle.Text = "Merge File Name";
-            // 
-            // cmbFileNamePresent
-            // 
-            this.cmbFileNamePresent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFileNamePresent.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
-            this.cmbFileNamePresent.ForeColor = System.Drawing.Color.Black;
-            this.cmbFileNamePresent.Location = new System.Drawing.Point(206, 88);
-            this.cmbFileNamePresent.Name = "cmbFileNamePresent";
-            this.cmbFileNamePresent.Size = new System.Drawing.Size(271, 26);
-            this.cmbFileNamePresent.TabIndex = 458;
             // 
             // frmDowaPath
             // 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using Newtonsoft.Json;
 
 using MPI.Tester.Data;
 using MPI.Tester.TestServer;
@@ -15,7 +16,7 @@ namespace MPI.Tester.Report.User.WAVETEK00
         bool IsCvTest = false;
         Dictionary<string, MsrtInfo> MsrtkeyInfoDic;
 
-        Dictionary<int,string> IndexMsrtKeyDic;
+        //Dictionary<int,string> IndexMsrtKeyDic;
 
         protected DateTime _refSearchTime = DateTime.Now;
 
@@ -36,7 +37,7 @@ namespace MPI.Tester.Report.User.WAVETEK00
 
             MsrtkeyInfoDic = new Dictionary<string, MsrtInfo>();
 
-            IndexMsrtKeyDic = new Dictionary<int, string>();
+            //IndexMsrtKeyDic = new Dictionary<int, string>();
             if (this.Product.TestCondition != null &&
 this.Product.TestCondition.TestItemArray != null &&
 this.Product.TestCondition.TestItemArray.Length > 0)
@@ -64,7 +65,7 @@ this.Product.TestCondition.TestItemArray.Length > 0)
                                         MsrtInfo mData = new MsrtInfo(rData, testItem, colIndex);
 
                                         MsrtkeyInfoDic.Add(msrtKey, mData);
-                                        IndexMsrtKeyDic.Add(colIndex, msrtKey);
+                                        //IndexMsrtKeyDic.Add(colIndex, msrtKey);
                                         break;
                                     }
                                     colIndex++;
@@ -123,6 +124,31 @@ this.Product.TestCondition.TestItemArray.Length > 0)
             }
 
             this.WriteLine("ChannelQty," + chNum);
+
+
+            ///把測試條件以及Bin表塞入
+            ///現階段在處理客製化報表還是使用Tester記憶體中紀錄的資訊
+            ///因此這段純粹是備用，以防後續進行離線轉檔的需求
+            this.WriteLine("--TestCondition--");
+            
+            Dictionary<string, object> keyInfoDic = new Dictionary<string, object>();
+
+            ProductDataInfoConverter pObj = new ProductDataInfoConverter(Product);
+
+            keyInfoDic.Add("Product", pObj.GetInfoDic());
+            BinDataInfo bObj = new BinDataInfo(SmartBinning);
+            keyInfoDic.Add("Bin", bObj.GetInfoDic());
+
+            string outStr = JsonConvert.SerializeObject(keyInfoDic, Formatting.Indented);
+
+            this.WriteLine(outStr);
+
+            this.WriteLine("--End--");
+
+            ////
+
+            //outStr = JsonConvert.SerializeObject(outDic, Formatting.Indented);
+
 
             this.WriteLine(ResultTitleInfo.TitleStr);
 
@@ -453,6 +479,8 @@ this.Product.TestCondition.TestItemArray.Length > 0)
 
                             //continue;
                         }
+                        //客戶希望Retest還是要保留上次測的內容
+                            /*
                         else
                         {
                             DateTime dt;
@@ -464,6 +492,7 @@ this.Product.TestCondition.TestItemArray.Length > 0)
                                 }
                             }
                         }
+                             * */
 
                     }
 

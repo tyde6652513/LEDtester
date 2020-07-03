@@ -65,6 +65,7 @@
     <Compile Include="User\ATV\Report.cs" />
     <Compile Include="User\ChangeLight\Report.cs" />
     <Compile Include="User\CHT\Report.cs" />
+    <Compile Include="User\DOWA\LaserPowerReport.cs" />
     <Compile Include="User\DOWA\MapDieReader.cs" />
     <Compile Include="User\DOWA\Report.cs" />
     <Compile Include="User\Emcore\Report.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="User\TSMC01\Report.cs" />
     <Compile Include="User\TYNTE\Report.cs" />
     <Compile Include="User\UOC\Report.cs" />
+    <Compile Include="User\WAVETEK00\BinDataInfo.cs" />
     <Compile Include="User\WAVETEK00\File1.cs" />
     <Compile Include="User\WAVETEK00\File2.cs" />
     <Compile Include="User\WAVETEK00\File3.cs" />
@@ -106,6 +108,7 @@
     <Compile Include="User\WAVETEK00\File5.cs" />
     <Compile Include="User\WAVETEK00\File6.cs" />
     <Compile Include="User\WAVETEK00\PostProcess.cs" />
+    <Compile Include="User\WAVETEK00\ProductDataInfo.cs" />
     <Compile Include="User\WAVETEK00\Report.cs" />
   </ItemGroup>
   <ItemGroup>

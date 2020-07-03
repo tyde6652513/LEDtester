@@ -6,6 +6,8 @@ using System.IO;
 
 using MPI.Tester.Data;
 using MPI.Tester.TestServer;
+using Newtonsoft.Json;
+using MPI.Tester.Report.BaseMethod.HeaderFinder;
 
 namespace MPI.Tester.Report.User.WAVETEK00
 {
@@ -29,6 +31,8 @@ namespace MPI.Tester.Report.User.WAVETEK00
 
         int top, down, left, right;
 
+        
+
         EErrorCode LoadRepfile(string fullFileName)
         {
             SetDataInfo = new Dictionary<string, string>();
@@ -50,6 +54,7 @@ namespace MPI.Tester.Report.User.WAVETEK00
 
                     pass_fail_Index = -1;
                     int count = 0;
+
                     foreach (var pData in this.UISetting.UserDefinedData.ResultItemNameDic)
                     {
                         if (pData.Key != ESysResultItem.ISALLPASS.ToString())
@@ -62,68 +67,52 @@ namespace MPI.Tester.Report.User.WAVETEK00
                             break;
                         }
                     }
-
+                    HeaderFinder hf = new HeaderFinder(this.TitleStrKey, TitleStrShift);
+                    EParsingState state = EParsingState.TesterInfo;
+                    string conditionStr = "";
                     //重繞tmp檔取得 ColRowkey 對應的第幾筆數據
                     while (srCheckRowCol.Peek() >= 0)
                     {
                         string line = srCheckRowCol.ReadLine();
 
-                        if (isRawData)
+                        switch (state)
                         {
-                            string[] rawData = line.Split(',');
-
-                            string colrowKey = rawData[this.ResultTitleInfo.ColIndex].ToString() + "_" + rawData[this.ResultTitleInfo.RowIndex].ToString();
-
-                            DieRawInfo dInfo = new DieRawInfo();
-                            int.TryParse(rawData[this.ResultTitleInfo.ColIndex], out dInfo.X);
-                            int.TryParse(rawData[this.ResultTitleInfo.RowIndex], out dInfo.Y);
-                            int.TryParse(rawData[this.ResultTitleInfo.BinIndex], out dInfo.Bin);
-                            int.TryParse(rawData[this.ResultTitleInfo.CHIndex], out dInfo.Ch);
-                            float.TryParse(rawData[this.ResultTitleInfo.SeqTimeIndex], out dInfo.TestTime);
-
-                            if (rawData[pass_fail_Index].StartsWith("1"))
-                            {
-                                dInfo.IsPass = true;
-                            }
-                            else
-                            {
-                                dInfo.IsPass = false;
-                            }
-
-                            dInfo.RawData = rawData.Clone() as string[];
-
-                            dieListByTime.Add(dInfo);
-
-                            int ListCnt = dieListByTime.Count;
-
-                            if (dieLogDic.ContainsKey(colrowKey))
-                            {
-                                dieLogDic[colrowKey].Push(dieListByTime[ListCnt-1]);
-                            }
-                            else
-                            {
-                                DieLog dl = new DieLog(dieListByTime[ListCnt - 1]);
-                                dieLogDic.Add(colrowKey, dl);
-                            }
+                            case EParsingState.TesterInfo:
+                                state = ParseTestInfo(line);
+                                break;
+                            case EParsingState.TestCondition:
+                                state = ParseTestCondition(line, hf, ref conditionStr);
+                                break;
+                            case EParsingState.MsrtData:
+                                state = ParseMsrtData(line);
+                                break;
                         }
-                        else
-                        {
-                            if (line == this.ResultTitleInfo.TitleStr)
-                            {
-                                isRawData = true;
-                            }
+                        //nowRow++;
 
-                            string[] strArr = line.Split(',');
-                            if (strArr.Length == 2)
-                            {
-                                SetDataInfo.Add(strArr[0], strArr[1]);
-                            }
-                            else if (strArr.Length == 1)
-                            {
-                                SetDataInfo.Add(strArr[0], "");
-                            }
+                        //if (isRawData)
+                        //{
+                        //    string[] rawData = line.Split(',');
 
-                        }
+                        //    ParseMsrtData(rawData);
+                        //}
+                        //else
+                        //{
+                        //    if (line == this.ResultTitleInfo.TitleStr)
+                        //    {
+                        //        isRawData = true;
+                        //    }
+
+                        //    string[] strArr = line.Split(',');
+                        //    if (strArr.Length == 2)
+                        //    {
+                        //        SetDataInfo.Add(strArr[0], strArr[1]);
+                        //    }
+                        //    else if (strArr.Length == 1)
+                        //    {
+                        //        SetDataInfo.Add(strArr[0], "");
+                        //    }
+
+                        //}
                     }
                 }
                 #endregion
@@ -132,6 +121,98 @@ namespace MPI.Tester.Report.User.WAVETEK00
             }
             ComputeBoundary(out top, out down, out left, out right);
             return EErrorCode.NONE;
+        }
+
+        private EParsingState ParseTestInfo(string line)
+        {
+            EParsingState state = EParsingState.TesterInfo;
+            #region
+                if (line != "")
+                {
+                    if (line.StartsWith("--TestCondition--"))
+                    {
+                        Console.WriteLine("[Report Wavetek],ParseTestInfo(),state to EParsingState.TestCondition");
+
+                        state = EParsingState.TestCondition;
+                        return state;
+                    }
+                    string[] strArr = line.Split(this.SpiltChar);
+
+                    if (strArr != null && strArr.Length > 1)
+                    {
+                        if (!SetDataInfo.ContainsKey(strArr[0]))
+                            SetDataInfo.Add(strArr[0], strArr[1]);
+                    }
+                }
+
+                #endregion
+            
+            return state;
+        }
+
+        private EParsingState ParseTestCondition(string line, HeaderFinder hf,ref string jsonStr)
+        {
+            EParsingState state = EParsingState.TestCondition;
+
+            if (hf.CheckIfRowData(line))
+            {
+                Console.WriteLine("[Report Wavetek],ParseTestInfo(),state to EParsingState.TestCondition");
+                state = EParsingState.MsrtData;
+            }
+            if (line.StartsWith("--End--"))
+            {
+                //MsrtkeyInfoDic = JsonConvert.DeserializeObject<Dictionary<string, MsrtInfo>>(jsonStr);
+                jsonStr = "";
+            }
+            else
+            {
+                if (line != null && line.Trim() != "")
+                {
+                    jsonStr += line;
+                }
+            }
+
+            return state;
+        }
+
+        private EParsingState ParseMsrtData(string line)
+        {
+            string[] rawData = line.Split(',');
+            string colrowKey = rawData[this.ResultTitleInfo.ColIndex].ToString() + "_" + rawData[this.ResultTitleInfo.RowIndex].ToString();
+
+            DieRawInfo dInfo = new DieRawInfo();
+            int.TryParse(rawData[this.ResultTitleInfo.ColIndex], out dInfo.X);
+            int.TryParse(rawData[this.ResultTitleInfo.RowIndex], out dInfo.Y);
+            int.TryParse(rawData[this.ResultTitleInfo.BinIndex], out dInfo.Bin);
+            int.TryParse(rawData[this.ResultTitleInfo.CHIndex], out dInfo.Ch);
+            float.TryParse(rawData[this.ResultTitleInfo.SeqTimeIndex], out dInfo.TestTime);
+
+            if (rawData[pass_fail_Index].StartsWith("1"))
+            {
+                dInfo.IsPass = true;
+            }
+            else
+            {
+                dInfo.IsPass = false;
+            }
+
+            dInfo.RawData = rawData.Clone() as string[];
+
+            dieListByTime.Add(dInfo);
+
+            int ListCnt = dieListByTime.Count;
+
+            if (dieLogDic.ContainsKey(colrowKey))
+            {
+                dieLogDic[colrowKey].Push(dieListByTime[ListCnt - 1]);
+            }
+            else
+            {
+                DieLog dl = new DieLog(dieListByTime[ListCnt - 1]);
+                dieLogDic.Add(colrowKey, dl);
+            }
+
+            return EParsingState.MsrtData;
         }
 
         EErrorCode PostProcess(string fullFileName)
@@ -325,6 +406,15 @@ namespace MPI.Tester.Report.User.WAVETEK00
                 //baseDieGropuDic
             }
         }
+
+        #region
+        internal enum EParsingState : int
+        {
+            TesterInfo = 1,
+            TestCondition = 2,
+            MsrtData = 3,
+        }
+        #endregion
 
         class DieLog
         {

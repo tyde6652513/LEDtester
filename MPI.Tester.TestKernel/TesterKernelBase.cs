@@ -360,8 +360,9 @@ namespace MPI.Tester.TestKernel
                 }
                 //double errLim = lss.PowerMeterSetting.Tolerence / 100;
                 double trigerLim = rItem.LaserSourceSet.AutoTuneVOASetting.TuneVOATriggerLimit / 100;
-                double tMax = tarVal * (1 + trigerLim);
+                double tMax = Math.Abs(tarVal * (1 + trigerLim));
                 double tMin = tarVal * (1 - trigerLim);
+                tMin = tMin < 0 ? 0 : tMin;
                 double abs_Val = Math.Abs(pmVal);
                 if (tMin < abs_Val && abs_Val < tMax)
                 {
@@ -524,7 +525,8 @@ namespace MPI.Tester.TestKernel
                             double tarVal = (item as LaserSourceTestItem).LaserSourceSet.PowerMeterSetting.TarPower;
                             double errLim = (item as LaserSourceTestItem).LaserSourceSet.PowerMeterSetting.Tolerence / 100;//%
                             double uLimit = Math.Abs(tarVal * (1 + errLim));
-                            double lLimit = Math.Abs(tarVal * (1 - errLim));
+                            double lLim = tarVal * (1 - errLim);
+                            double lLimit = lLim < 0 ? 0 : lLim;
                             outStr += val.ToString("E3") + ",";
                             if (val < lLimit ||uLimit < val)
                             {

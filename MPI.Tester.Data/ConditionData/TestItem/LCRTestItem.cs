@@ -246,6 +246,22 @@ namespace MPI.Tester.Data
 			}
         }
 
+        protected override object GetTestItemForceSetting()//LCR,Calc等記得要覆寫掉
+        {
+            Dictionary<string, object> kObj = new Dictionary<string, object>();
+
+            kObj.Add("MsrtType", EMsrtType.LCR.ToString());
+            kObj.Add("ForceValue", LCRSetting.DCBiasV.ToString());
+            kObj.Add("ForceUnit", "V");
+            kObj.Add("SignalLevel", LCRSetting.SignalLevelV.ToString());
+            kObj.Add("LCRMsrtType", LCRSetting.LCRMsrtType.ToString());
+            kObj.Add("Frequency", LCRSetting.Frequency.ToString());
+
+            //Frequency
+
+            return kObj;
+        }
+
         #endregion
 
 		#region >>> Public Property <<<
