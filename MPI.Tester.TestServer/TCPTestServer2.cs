@@ -608,19 +608,36 @@ namespace MPI.Tester.TestServer
                                     {
                                         //因前期 command ID 定義時常衝突，因此使用暴力法比對
                                         #region
+                                        bool matched = false;
                                         LaserBarProberInfo lbpInfo = new LaserBarProberInfo();
                                         SubRecipeInformation srInfo = new SubRecipeInformation();
 
                                         if ((cmd as CmdQueryInformation).GetTransferableItem(lbpInfo))
                                         {
                                             LaserBarProberInfoProcess(lbpInfo);
+                                            matched = true;
                                         }
                                         else if ((cmd as CmdQueryInformation).GetTransferableItem(srInfo))
                                         {
                                             SubRecipeInformationProcess(srInfo);
+                                            matched = true;
                                         }
 
-                                        echoTSECmd = new CmdQueryInformation();
+                                        if (matched)
+                                        {
+                                            echoTSECmd = new CmdQueryInformation();
+                                        }
+                                        else
+                                        {
+                                            errStr = "ID_QUERY_INFORMATION.GetTransferableItem() Fail,ID is:" + id.ToString();
+                                            ShowErrorMsg((int)EErrorCode.TCPIP2_CheckPacket_Err, errStr);
+
+                                            echoTSECmd = new CmdError();
+                                            (echoTSECmd as CmdError).ErrorCode = CmdError.EErrorCode.Undefined;
+                                            this._myClient.SendMessage(echoTSECmd.Packet.Serialize());
+                                        }
+
+
 
                                         #endregion
                                     }

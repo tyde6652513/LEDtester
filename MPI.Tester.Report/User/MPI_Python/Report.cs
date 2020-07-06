@@ -10,6 +10,7 @@ using System.Linq;
 using System.Diagnostics;
 using MPI.Tester.TestServer;
 
+using MPI.Tester.Report.BaseMethod.InfoToJSON;
 using MPI.Tester.Report.BaseMethod.HeaderFinder;
 
 
@@ -47,6 +48,9 @@ namespace MPI.Tester.Report.User.MPI_Python
 
             BinDataInfo bObj = new BinDataInfo(SmartBinning);
             keyInfoDic.Add("Bin", bObj.GetInfoDic());
+
+            MachineDataInfo mObj = new MachineDataInfo(MachineConfig,MachineInfo);
+            keyInfoDic.Add("MachineSetting", mObj.GetInfoDic());
 
             string jStr = JsonConvert.SerializeObject(keyInfoDic, Formatting.Indented);
 
@@ -145,8 +149,7 @@ namespace MPI.Tester.Report.User.MPI_Python
 
                 return;
             }
-        }
-        
+        }        
 
         protected override EErrorCode MoveFileToTargetByUser(EServerQueryCmd cmd)
         {
@@ -201,7 +204,6 @@ namespace MPI.Tester.Report.User.MPI_Python
 
             return EErrorCode.NONE;
         }
-
 
         protected override EErrorCode PushDataByUser(Dictionary<string, double> data)
         {
@@ -287,8 +289,6 @@ namespace MPI.Tester.Report.User.MPI_Python
                 {
                     line += this.SpiltChar;
                 }
-
-
             }
             line += GetTestConditionStr(data);
             this.WriteLine(line);

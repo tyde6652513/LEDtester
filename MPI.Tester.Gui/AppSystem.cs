@@ -1672,6 +1672,38 @@ namespace MPI.Tester.Gui
 
                         #endregion
                     }
+                //----------------------------------------------------------------------------------------------------------------------
+                case (int)EServerQueryCmd.CMD_SHOW_ERROR:
+                    {
+                        #region >>> CMD_SHOW_ERROR <<<
+
+                        Console.WriteLine("[ServerQueryEventHandler], CMD_SHOW_ERROR");
+
+                        if (e.BufferData != null && e.BufferData.Length >= 1)
+                        {
+                            int errNum = (int)e.BufferData[0];
+
+                            EErrorCode EErr = EErrorCode.UndefinedErrorCode;
+                            if (Enum.IsDefined(typeof(EErrorCode), errNum))
+                            {
+                                EErr = (EErrorCode)errNum;
+                            }
+                            string errMeg = "";
+                            if (e.StrData != null && e.StrData.Length >= 1)
+                            {
+                                for (int i = 0; i < e.StrData.Length; ++i)
+                                {
+                                    errMeg += e.StrData[i] + ",";
+                                }
+                            }
+
+                            Host.SetErrorCode(EErr, errMeg);
+                        }
+
+                        break;
+
+                        #endregion
+                    }
                 //
                 default:
                     break;

@@ -49,6 +49,11 @@
     <Compile Include="BaseMethod\HeaderFinder\HeaderFinder.cs" />
     <Compile Include="BaseMethod\HeaderFinder\HeaderFinder_ByEndStr.cs" />
     <Compile Include="BaseMethod\HeaderFinder\HeaderFinder_ByStartStr.cs" />
+    <Compile Include="BaseMethod\InfoToJSON\BinDataInfo.cs" />
+    <Compile Include="BaseMethod\InfoToJSON\MachineDataInfo.cs" />
+    <Compile Include="BaseMethod\InfoToJSON\ProductDataInfo.cs" />
+    <Compile Include="BaseMethod\InfoToJSON\TesterSettingInfo.cs" />
+    <Compile Include="BaseMethod\InfoToJSON\UISettingInfo.cs" />
     <Compile Include="BaseMethod\PosKeyMaker\ColRowKeyMaker.cs" />
     <Compile Include="BaseMethod\SptReportBase.cs" />
     <Compile Include="CsvQuoteMark.cs" />
@@ -86,11 +91,7 @@
     <Compile Include="User\MPI_DEMO\Report.cs" />
     <Compile Include="User\MPI_LCR\Report.cs" />
     <Compile Include="User\MPI_LD\Report.cs" />
-    <Compile Include="User\MPI_Python\BinDataInfo.cs" />
-    <Compile Include="User\MPI_Python\ProductDataInfo.cs" />
-    <Compile Include="User\MPI_Python\TesterSettingInfo.cs" />
     <Compile Include="User\MPI_Python\Report.cs" />
-    <Compile Include="User\MPI_Python\UISettingInfo.cs" />
     <Compile Include="User\OptoTech\LaserPowerReport.cs" />
     <Compile Include="User\DOWA\MergeReport.cs" />
     <Compile Include="User\OptoTech\Report.cs" />
@@ -100,7 +101,6 @@
     <Compile Include="User\TSMC01\Report.cs" />
     <Compile Include="User\TYNTE\Report.cs" />
     <Compile Include="User\UOC\Report.cs" />
-    <Compile Include="User\WAVETEK00\BinDataInfo.cs" />
     <Compile Include="User\WAVETEK00\File1.cs" />
     <Compile Include="User\WAVETEK00\File2.cs" />
     <Compile Include="User\WAVETEK00\File3.cs" />
@@ -108,7 +108,6 @@
     <Compile Include="User\WAVETEK00\File5.cs" />
     <Compile Include="User\WAVETEK00\File6.cs" />
     <Compile Include="User\WAVETEK00\PostProcess.cs" />
-    <Compile Include="User\WAVETEK00\ProductDataInfo.cs" />
     <Compile Include="User\WAVETEK00\Report.cs" />
   </ItemGroup>
   <ItemGroup>

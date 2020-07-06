@@ -182,7 +182,7 @@ namespace MPI.Tester.TestServer
                         this.beginWait();
                         int delayTime =0;
 
-                        delayTime = 10;  
+                        delayTime = 5;  
                          
                         TriggeReciveEvent(outpacket,delayTime);
                         

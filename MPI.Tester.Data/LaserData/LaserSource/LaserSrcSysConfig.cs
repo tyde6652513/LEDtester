@@ -219,6 +219,7 @@ namespace MPI.Tester.Data.LaserData.LaserSource
 
         [XmlIgnore]
         public double OSDelayInms { get; set; }
+
         
         #endregion
 
@@ -271,6 +272,23 @@ namespace MPI.Tester.Data.LaserData.LaserSource
                 }
             }
         }
+
+
+        public virtual List<Dictionary<string, object>> GetLaserInfoList()
+        {
+            List<Dictionary<string, object>> lsInfoList = new List<Dictionary<string, object>>();
+            if (ChConfigList != null && ChConfigList.Count > 0)
+            {
+                for (int i = 0; i < ChConfigList.Count; ++i)
+                {
+                    lsInfoList.Add(ChConfigList[i].GetLaserSrcChInfoList());
+                }
+            }
+
+            return lsInfoList;
+        }
+
+      
         #endregion
 
         #region >>private method <<
@@ -390,6 +408,20 @@ namespace MPI.Tester.Data.LaserData.LaserSource
 
         #endregion
 
+
+        public virtual Dictionary<string, object>  GetLaserSrcChInfoList()
+        {
+            Dictionary<string, object> LaserInfoDic = new Dictionary<string, object>();
+            LaserInfoDic.Add("ChannelName", ChannelName);
+            LaserInfoDic.Add("SysChannel", SysChannel.ToString());
+            LaserInfoDic.Add("Enable", Enable.ToString());
+            LaserInfoDic.Add("VOAConfig", AttConfig);
+            LaserInfoDic.Add("PowerMeterConfig", PowerMeterConfig);
+            LaserInfoDic.Add("OSList", _osList);
+
+
+            return LaserInfoDic;
+        }
         public object Clone()
         {
             LaserSrcChConfig obj = new LaserSrcChConfig();

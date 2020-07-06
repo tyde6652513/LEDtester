@@ -547,8 +547,9 @@ namespace MPI.Tester.Report
         protected virtual EErrorCode PushDataByUserS04(Dictionary<string, double> data,bool isMS)
         {
             string pos = "_C(" + data["COL"].ToString() + ")_R(" + data["ROW"].ToString() + ")";
-            
-            string path = GetFullPathWithFolder(this.UISetting.SweepOutputPath, this.UISetting.SweepOutputPathType);
+
+            string path = GetPathWithFolder(UISetting.SweepPathInfo01);
+            //string path = GetFullPathWithFolder(this.UISetting.SweepOutputPath, this.UISetting.SweepOutputPathType);
 
             if (this.UISetting.IsEnableSweepPath)
             {

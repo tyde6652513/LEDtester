@@ -1477,7 +1477,7 @@ namespace MPI.Tester.Device.SourceMeter
             smuSetting.IsSweepFirstElec = item.IsSweepFirstElec;
             smuSetting.IsSweepEnd = item.IsSweepEnd;
 
-            smuSetting.SweepEndPulseTurnOffTime = item.SweepTurnOffTime;// Math.Round((item.SweepTurnOffTime / 1000.0d), 6, MidpointRounding.AwayFromZero);
+            smuSetting.SweepEndPulseTurnOffTime =  Math.Round((item.SweepTurnOffTime / 1000.0d), 6, MidpointRounding.AwayFromZero);
 
             if (smuSetting.SweepEndPulseTurnOffTime == 0.0d)
             {
@@ -1958,27 +1958,7 @@ namespace MPI.Tester.Device.SourceMeter
             return !this.GetErrorMsg();
         }
 
-        private static void OverriTerminal2ScriptParam(K2600SmuSetting smuaSet, ElecTerminalSetting ets)
-        {
-            smuaSet.SweepPoints = ets.SweepRiseCount;
-            smuaSet.srcTime = ets.ForceTime;
-            smuaSet.MsrtClamp = ets.MsrtProtection;
-            smuaSet.MsrtRange = ets.MsrtRange;
-            smuaSet.SrcRange = ets.ForceRange;
-            smuaSet.MsrtNPLC = ets.MsrtNPLC;
-            smuaSet.WaitTime = 0;
-            smuaSet.SweepEndPulseTurnOffTime = ets.SweepTurnOffTime;
-            smuaSet.IsAutoMsrtRange = ets.MsrtAutoRange;
-            if (ets.SweepTurnOffTime == 0)
-            {
-                smuaSet.SweepEndPulseAction = EK2600EndPulseAction.SOURCE_HOLD;
-            }
-            else
-            {
-                smuaSet.SweepEndPulseAction = EK2600EndPulseAction.SOURCE_IDEL;
-            }
-            smuaSet.SweepStartHoldTime = 0;
-        }
+
 
        // public bool 
 

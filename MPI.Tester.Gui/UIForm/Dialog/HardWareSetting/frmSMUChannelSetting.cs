@@ -32,6 +32,7 @@ namespace MPI.Tester.Gui.UIForm.Dialog.HardWareSetting
 
 
             (this.dgvChannelConfigTable.Columns["colModel"] as DataGridViewComboBoxColumn).Items.Add(ESourceMeterModel.K2600.ToString());//.AddRange(Enum.GetNames(typeof(ESourceMeterModel)));
+            (this.dgvChannelConfigTable.Columns["colModel"] as DataGridViewComboBoxColumn).Items.Add(ESourceMeterModel.Persona.ToString());
             (this.dgvChannelConfigTable.Columns["colModel"] as DataGridViewComboBoxColumn).Items.Add(ESourceMeterModel.NONE.ToString());
 
             (this.dgvChannelConfigTable.Columns["colDevSrcCh"] as DataGridViewComboBoxColumn).Items.Add("A");

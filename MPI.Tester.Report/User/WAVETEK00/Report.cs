@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using MPI.Tester.Data;
 using MPI.Tester.TestServer;
 using MPI.Tester.Report.BaseMethod.HeaderFinder;
+using MPI.Tester.Report.BaseMethod.InfoToJSON;
 
 namespace MPI.Tester.Report.User.WAVETEK00
 {
