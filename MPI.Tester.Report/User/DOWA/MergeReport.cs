@@ -30,35 +30,39 @@ namespace MPI.Tester.Report.User.DOWA
             EErrorCode err = EErrorCode.NONE;
 
             Console.WriteLine("[DOWAReport],ProcessAfterWaferFinished()");
-            if (!this.UISetting.IsManualRunMode)
+
+            if (!useFormatA)
             {
-                string srcPath01 = GetPathWithFolder(UISetting.OutPathInfo01);
-
-                string mergeOutPath01 = GetPathWithFolder(this.UISetting.MergeFilePath);
-
-                if (UISetting.MergeFilePath.EnablePath &&
-                    UISetting.FileInProcessList != null && UISetting.FileInProcessList.Count > 1)
+                if (!this.UISetting.IsManualRunMode)
                 {
-                    if (Directory.Exists(srcPath01))
+                    string srcPath01 = GetPathWithFolder(UISetting.OutPathInfo01);
+
+                    string mergeOutPath01 = GetPathWithFolder(this.UISetting.MergeFilePath);
+
+                    if (UISetting.MergeFilePath.EnablePath &&
+                        UISetting.FileInProcessList != null && UISetting.FileInProcessList.Count > 1)
                     {
-                        string tarFolder = GetPathWithFolder(UISetting.MergeFilePath);
-
-                        string mergeFileNamewithoutExten = this.GetOutputFileName((int)UISetting.EMergeFileNameFormatPresent);
-
-                        string tarPath = Path.Combine(tarFolder, mergeFileNamewithoutExten + "." + UISetting.TestResultFileExt);
-
-                        List<string> strList = new List<string>();
-                        foreach (string str in UISetting.FileInProcessList)
+                        if (Directory.Exists(srcPath01))
                         {
-                            string pStr = Path.Combine(srcPath01, str);
-                            strList.Add(pStr);
+                            string tarFolder = GetPathWithFolder(UISetting.MergeFilePath);
+
+                            string mergeFileNamewithoutExten = this.GetOutputFileName((int)UISetting.EMergeFileNameFormatPresent);
+
+                            string tarPath = Path.Combine(tarFolder, mergeFileNamewithoutExten + "." + UISetting.TestResultFileExt);
+
+                            List<string> strList = new List<string>();
+                            foreach (string str in UISetting.FileInProcessList)
+                            {
+                                string pStr = Path.Combine(srcPath01, str);
+                                strList.Add(pStr);
+                            }
+                            err = MergeFile(tarPath, strList);
                         }
-                        err = MergeFile(tarPath, strList);
-                    }
-                    else
-                    {
-                        Console.WriteLine("[DOWAReport],ProcessAfterWaferFinished(),Err: REPORT_Merge_FilePathError");
-                        err = EErrorCode.REPORT_Merge_FilePathError;
+                        else
+                        {
+                            Console.WriteLine("[DOWAReport],ProcessAfterWaferFinished(),Err: REPORT_Merge_FilePathError");
+                            err = EErrorCode.REPORT_Merge_FilePathError;
+                        }
                     }
                 }
             }

@@ -72,7 +72,9 @@
     <Compile Include="User\CHT\Report.cs" />
     <Compile Include="User\DOWA\LaserPowerReport.cs" />
     <Compile Include="User\DOWA\MapDieReader.cs" />
+    <Compile Include="User\DOWA\Report-FormatA.cs" />
     <Compile Include="User\DOWA\Report.cs" />
+    <Compile Include="User\DOWA\Report_FormatD.cs" />
     <Compile Include="User\Emcore\Report.cs" />
     <Compile Include="User\EpiStar\Report.cs" />
     <Compile Include="User\Eti\Report.cs" />
