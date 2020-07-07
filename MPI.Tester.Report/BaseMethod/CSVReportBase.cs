@@ -344,27 +344,28 @@ namespace MPI.Tester.Report
 
             string outPath03 = string.Empty;
 
-            ETesterResultCreatFolderType type01 = ETesterResultCreatFolderType.None;
-
-            ETesterResultCreatFolderType type02 = ETesterResultCreatFolderType.None;
-
-            ETesterResultCreatFolderType type03 = ETesterResultCreatFolderType.None;
+           
 
             if (this._uiSetting.IsManualRunMode)
             {
-                SetManualMode(ref isOutputPath02, ref isOutputPath03, ref outPath01, ref outPath02, ref outPath03, ref type01, ref type02, ref type03);
+                outPath01 = GetPathWithFolder(UISetting.ManualOutPathInfo01);
+
+                outPath02 = GetPathWithFolder(UISetting.ManualOutPathInfo02);
+                isOutputPath02 = UISetting.ManualOutPathInfo02.EnablePath;
+
+                outPath03 = GetPathWithFolder(UISetting.ManualOutPathInfo03);
+                isOutputPath03 = UISetting.ManualOutPathInfo03.EnablePath;
             }
             else
             {
-                SetAutoMode(ref isOutputPath02, ref isOutputPath03, ref outPath01, ref outPath02, ref outPath03, ref type01, ref type02, ref type03);
+                outPath01 = GetPathWithFolder(UISetting.OutPathInfo01);
+
+                outPath02 = GetPathWithFolder(UISetting.OutPathInfo02);
+                isOutputPath02 = UISetting.OutPathInfo02.EnablePath;
+
+                outPath03 = GetPathWithFolder(UISetting.OutPathInfo03);
+                isOutputPath03 = UISetting.OutPathInfo03.EnablePath;
             }
-
-
-            outPath01 = GetPathWithFolder(outPath01, type01);
-
-            outPath02 = GetPathWithFolder(outPath02, type02);
-
-            outPath03 = GetPathWithFolder(outPath03, type03);
 
 
             //---------------------------------------------------------------------------------
@@ -700,7 +701,7 @@ namespace MPI.Tester.Report
 
                     foreach (var msrtItem in testItem.MsrtResult)
                     {
-                        if (!msrtItem.IsEnable || !msrtItem.IsVision || testItem.ElecSetting ==null)
+                        if (!msrtItem.IsEnable || !msrtItem.IsVision || testItem.ElecSetting == null )
                         {
                             continue;
                         }
@@ -724,15 +725,26 @@ namespace MPI.Tester.Report
 
                         line += msrtItem.Name;
 
-                        line += this.SpiltChar.ToString() +testItem.ElecSetting[0].ForceValue.ToString();
+                        if (testItem.ElecSetting.Length < 1)
+                        {
+                            line += this.SpiltChar.ToString() + testItem.ElecSetting[0].ForceValue.ToString();
 
-                        line += this.SpiltChar.ToString() + testItem.ElecSetting[0].ForceUnit;
+                            line += this.SpiltChar.ToString() + testItem.ElecSetting[0].ForceUnit;
 
-                        line += this.SpiltChar.ToString() + testItem.ElecSetting[0].ForceTime.ToString();
+                            line += this.SpiltChar.ToString() + testItem.ElecSetting[0].ForceTime.ToString();
 
-                        line += this.SpiltChar.ToString() + testItem.ElecSetting[0].MsrtProtection.ToString();
+                            line += this.SpiltChar.ToString() + testItem.ElecSetting[0].MsrtProtection.ToString();
+                            
+                        }
+                        else
+                        {
+                            for (int i = 0; i < 4; ++i)
+                            {
+                                line += this.SpiltChar.ToString();
+                            }
+                        }
 
-                        line += this.SpiltChar.ToString() + testItem.ElecSetting[0].MsrtUnit;
+                        line += this.SpiltChar.ToString() + msrtItem.Unit;
 
                         line += this.SpiltChar.ToString() + msrtItem.MinLimitValue;
 
@@ -1086,6 +1098,7 @@ namespace MPI.Tester.Report
             return EErrorCode.NONE;
         }
 
+  
         #endregion
     }
 }
