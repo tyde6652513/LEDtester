@@ -181,8 +181,8 @@ namespace MPI.Tester.Tools
         {
             Matrix m31 = TransCoord(x, y);
 
-            x = (int)m31[0, 0];
-            y = (int)m31[1, 0];
+            x = (int)Math.Round(m31[0, 0]);
+            y = (int)Math.Round(m31[1, 0]);
 
             return m31;
         }
@@ -208,7 +208,7 @@ namespace MPI.Tester.Tools
         public Point TransCoord2P(int x, int y)
         {
             Matrix m31 = TransCoord(x, y);
-            Point  p = new Point((int)m31[0, 0], (int)m31[1,0]);
+            Point  p = new Point((int)Math.Round(m31[0, 0]), (int)Math.Round(m31[1,0]));
             return p;
         }
 

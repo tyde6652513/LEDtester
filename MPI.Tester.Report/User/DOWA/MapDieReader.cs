@@ -28,12 +28,12 @@ namespace MPI.Tester.Report.User.DOWA
         HeaderFinder _headerFinder;
         PosKeyMakerBase _posMaker;
         char _splitChar = ',';
-        string posPAttern = "^[xyXY][+-]\\d";
+        string posPattern = "^[xyXY][+-]\\d";
         Regex _subDieRegex;
         #region
         public MapDieReader(HeaderFinder hf,PosKeyMakerBase posMaker,char splitChar = ',')
         {
-            _subDieRegex = new Regex(posPAttern);
+            _subDieRegex = new Regex(posPattern);
             _headerFinder = hf;
             _posMaker = posMaker;
             _splitChar = splitChar;

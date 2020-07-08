@@ -494,7 +494,7 @@ namespace MPI.Tester.Report.User.DOWA
             if (MPIFile.CopyFile(tarFileName, proberTmap))
             {
 
-                HeaderFinder_ByStartStr hf = new HeaderFinder_ByStartStr("X,Y,Bin", 0);
+                HeaderFinder_ByStartStr hf = new HeaderFinder_ByStartStr("X,Y,ProberBin,SubBin", 0);
                 List<int> cList = new List<int>();
                 cList.Add(0);
                 cList.Add(1);
