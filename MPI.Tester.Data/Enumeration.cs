@@ -1009,6 +1009,9 @@ namespace MPI.Tester.Data
         LCR_Enable_Short_Cali = 302,
         LCR_Enable_Load_Cali = 303,
 
+        //Sweep
+        VISW_CalcVp = 401,
+
     }
 
     public enum ELaserSearchMode : int

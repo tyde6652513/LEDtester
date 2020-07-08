@@ -1224,16 +1224,26 @@ namespace MPI.Tester.TestKernel
                 if (item.MsrtResult != null && !_isTVSTesting)
                 {
                     //if (item.Type != ETestType.DVF && item.Type != ETestType.LCR && item.Type != ETestType.OSA)//20170904 David
-                    if (item.Type != ETestType.DVF && item.Type != ETestType.LCR && item.Type != ETestType.LCRSWEEP && item.Type != ETestType.OSA && item.Type != ETestType.VISCAN)
+                    switch (item.Type)
                     {
-                        foreach (TestResultData data in item.MsrtResult)
-                        {
-                            if (data.Value < 0.0d)
+                        case ETestType.DVF:
+                        case ETestType.LCR:
+                        case ETestType.LCRSWEEP:
+                        case ETestType.OSA :
+                        case ETestType.VISCAN:
+                        case ETestType.VISWEEP:
+                            break;
+                        default:
+                            foreach (TestResultData data in item.MsrtResult)
                             {
-                                data.Value = 0.0d;
+                                if (data.Value < 0.0d)
+                                {
+                                    data.Value = 0.0d;
+                                }
                             }
-                        }
+                            break;
                     }
+                 
                 }
 
                 //----------------------------------------------------------------------

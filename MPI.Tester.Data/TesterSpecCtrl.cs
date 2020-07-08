@@ -1759,6 +1759,8 @@ namespace MPI.Tester.Data
                         itemDescription.Add(new ItemDescriptionBase(EItemDescription.FilterCount.ToString(), 0.0d, 20.0d, 5.0d, "cnt", "0"));
                         itemDescription.Add(new ItemDescriptionBase(EItemDescription.NPLC.ToString(), 0.01d, 10.0d, 0.01d, "", "0.00"));
                         itemDescription.Add(new ItemDescriptionBase(EItemDescription.SweepAdvanceMode.ToString(), 0, 1, 0, "", "0"));
+                        itemDescription.Add(new ItemDescriptionBase(EItemDescription.VISW_CalcVp.ToString(), 0, 1, 0, "", "0"));
+                        itemDescription[EItemDescription.VISW_CalcVp.ToString()].IsVisible = false;
                         #endregion
 
                         break;
