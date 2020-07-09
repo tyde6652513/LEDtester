@@ -441,6 +441,24 @@ namespace MPI.Tester.TestServer
                         }
                         #endregion
                     //------------------------------------------------------------------------------------------------
+                    case (int)ETSECommand.ID_TEST_ABORT:
+                        {
+                            Console.WriteLine("[EMPITestServerCmd2], ID_TEST_ABORT");
+                            double[] buffer = new double[1];
+
+                            //buffer[0] = (cmd as CmdTestAbort).ABORT_SAVE_FILE; //0: Abort, 1: SaveFile
+                            buffer[0] = 1;//先強迫寫死，後續等Prober開放此設定的UI後再改回來 20190619
+
+                            this._testerSys.CmdData.CmdID = (int)ETesterKernelCmd.StopTest;
+                            this._testerSys.RunCommand((int)ETesterKernelCmd.StopTest);
+
+                            this.Fire_ServerQueryEvent(EServerQueryCmd.CMD_TESTER_ABORT, buffer, null);
+
+                            echoTSECmd = new CmdTestAbort();
+
+                        }
+                        break;
+                    //------------------------------------------------------------------------------------------------
                     case (int)ETSECommand.ID_WAFER_FINISH:
                         #region >>ID_WAFER_FINISH<<
                         {

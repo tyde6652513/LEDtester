@@ -108,6 +108,7 @@
     <Compile Include="Command\CmdSOT.cs" />
     <Compile Include="Command\CmdSOT1.cs" />
     <Compile Include="Command\CmdSOT2.cs" />
+    <Compile Include="Command\CmdTestAbort.cs" />
     <Compile Include="Command\CmdTestItem.cs" />
     <Compile Include="Command\CmdWaferBegin.cs" />
     <Compile Include="Command\CmdWaferEnd.cs" />

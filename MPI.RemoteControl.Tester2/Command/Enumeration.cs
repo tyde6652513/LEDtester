@@ -36,6 +36,7 @@ namespace MPI.RemoteControl2.Tester.Mpi.Command
         ID_QUERY_INFORMATION       = 60025,   // p  <->  T
         ID_WAFER_BEGIN             = 60026,   // P  <->  T
         ID_WAFER_FINISH            = 60027,   // P  <->  T
+        ID_TEST_ABORT              = 60030,
         ID_ERROR_LOT_NOT_SETTING   = 60100,   // P  <--  T
         ID_ERROR_NO_TEST_ITEM_FIlE = 60101,   // P  <--  T
         ID_ERROR_NO_BIN_FILE       = 60102,   // P  <--  T
