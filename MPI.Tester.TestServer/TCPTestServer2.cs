@@ -592,7 +592,7 @@ namespace MPI.Tester.TestServer
                                         Fire_ServerQueryEvent(EServerQueryCmd.CMD_QUERY_CHECK_LASER_POWER_INFO, buffer, strData);
 
                                         cTempInfo.IsPowerCheckPass = buffer[0] == 100 ? true : false;
-
+                                        echoTSECmd = new CmdQueryInformation();
                                         (echoTSECmd as CmdQueryInformation).SetTransferableItem(cTempInfo);
                                         #endregion
                                     }
