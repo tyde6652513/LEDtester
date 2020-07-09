@@ -1279,9 +1279,10 @@ namespace MPI.Tester.TestServer
                 {
                     this._myClient.SendMessage(echoTSECmd.Packet.Serialize());
 
-                    if (echoTSECmd.CommandID != (int)ETSECommand.ID_EOT)
+                    if (cmd.CommandID == (int)ETSECommand.ID_ERROR)
                     {
-                        Console.WriteLine("[TCPTestServer], Echo CMD_ID:" + ((ETSECommand)echoTSECmd.CommandID).ToString());
+                        Console.WriteLine("[TCPTestServer], Echo ID_ERROR:" + (echoTSECmd as CmdError).ErrorCode.ToString());
+
                     }
                     this._txtLog.Add(string.Format("[RECV] {0}\r\n", cmd.CommandID.ToString()));
                     this._txtLog.Add(string.Format("[SEND] {0}\r\n", echoTSECmd.CommandID.ToString() + "\r\n"));

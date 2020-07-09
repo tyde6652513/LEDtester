@@ -80,6 +80,8 @@ namespace MPI.Tester.Report.User.DOWA
             {
                 errCode = RewriteReportByUser_FormatD();
             }
+
+            CloseLaserLog();
             return errCode;
         }
 

@@ -464,7 +464,7 @@ namespace MPI.Tester.TestServer
                             // echoTSECmd = new CmdQueryInformation();
                             TransferableCommonObjectBase tb = new TransferableCommonObjectBase();
                             (cmd as CmdQueryInformation).GetTransferableItem(tb);
-
+                            echoTSECmd = new CmdQueryInformation();
                             if (!(cmd as CmdQueryInformation).GetTransferableItem(tb))
                             {
                                 ShowErrorMsg((int)EErrorCode.TCPIP2_TransferableItem_Err, " ID_QUERY_INFORMATION ,GetTransferableItem() fail");
@@ -592,7 +592,7 @@ namespace MPI.Tester.TestServer
                                         Fire_ServerQueryEvent(EServerQueryCmd.CMD_QUERY_CHECK_LASER_POWER_INFO, buffer, strData);
 
                                         cTempInfo.IsPowerCheckPass = buffer[0] == 100 ? true : false;
-                                        echoTSECmd = new CmdQueryInformation();
+                                        
                                         (echoTSECmd as CmdQueryInformation).SetTransferableItem(cTempInfo);
                                         #endregion
                                     }
@@ -662,6 +662,12 @@ namespace MPI.Tester.TestServer
                     else
                     {
                         bArr = echoTSECmd.Serialize();
+                    }
+
+                    if (cmd.CommandID == (int)ETSECommand.ID_ERROR)
+                    {
+                        Console.WriteLine("[TCPTestServer2], Echo ID_ERROR:" + (echoTSECmd as CmdError).ErrorCode.ToString());
+                        
                     }
 
                     this._myClient.SendMessage(bArr);

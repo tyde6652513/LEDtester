@@ -107,7 +107,7 @@ namespace MPI.Tester.TestServer
         /// </summary>
         private void notifyData(IAsyncResult ar)
 		{
-            Console.WriteLine("[ClientRole],notifyData()");
+            //Console.WriteLine("[ClientRole],notifyData()");
             _pt1 = new PerformanceTimer();
             _pt1.Start();
 			if (xMailManOut.Connected == false)
