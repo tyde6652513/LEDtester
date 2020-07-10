@@ -305,7 +305,7 @@ namespace MPI.Tester.Report.User.DOWA
 
             int rawLineCount = 0;
 
-            int testCount = this.UISetting.UserDefinedData.TestStartIndex;
+            int testCount = 0;
 
             int shiftCount = TitleStrShift;
 
@@ -364,7 +364,7 @@ namespace MPI.Tester.Report.User.DOWA
                                         line += this.SpiltChar;
                                     }
                                 }
-                            }
+                            }                           
 
                             testCount++;
                         }
@@ -388,6 +388,38 @@ namespace MPI.Tester.Report.User.DOWA
                             line = replaceData[line];
                         }
                     }
+                }
+
+
+                if (_posAOIDic != null && _posAOIDic.Count > 0)
+                {
+
+                    int colCnt = this._resultTitleInfo.ChipIndexIndex;
+                    int colX = this._resultTitleInfo.ColIndex;
+                    int colY = this._resultTitleInfo.RowIndex;
+                    int colLength = _resultTitleInfo.ResultCount;
+                    foreach (var p in _posAOIDic)
+                    {
+                        string outStr = "";
+                        for (int i = 0; i < colLength; ++i)
+                        {
+                            if (i == colCnt)//變數不給switch....
+                            { outStr += testCount.ToString(); }
+                            else if (i == colX)
+                            {  outStr += p.Value.X.ToString(); }
+                            else if (i == colY)
+                            { outStr += p.Value.Y.ToString(); }
+                            else if (i == colAOI_SIGN)
+                            { outStr += p.Value.SIGN; }
+
+                            if (i != colLength - 1)
+                            {
+                                outStr += this.SpiltChar.ToString();
+                            }
+                        }
+                        testCount++;
+                    }
+                    //
                 }
 
                 sw.WriteLine(line);
@@ -514,7 +546,12 @@ namespace MPI.Tester.Report.User.DOWA
         private string GetAOISign(string colrowKey)
         {
             if (_posAOIDic != null && _posAOIDic.ContainsKey(colrowKey))
-            { return _posAOIDic[colrowKey].SIGN; }
+            {
+                string aoiSign = _posAOIDic[colrowKey].SIGN;
+                _posAOIDic.Remove(colrowKey);
+                return aoiSign;
+
+            }
             return "";
         }
 
@@ -524,7 +561,9 @@ namespace MPI.Tester.Report.User.DOWA
 
         internal class AOISignItem : IMapItem//最基本的紀錄型別
         {
-            public string SIGN;
+            public string SIGN = "";
+            public int X = 0;
+            public int Y = 0;
 
             public AOISignItem()
             {
@@ -539,7 +578,12 @@ namespace MPI.Tester.Report.User.DOWA
                 if (index >= 0 && indexX >= 0 && indexY >= 0)
                 {
                     if (strArr != null && strArr.Length > index)
+                    {
                         SIGN = strArr[index];
+                        int.TryParse(strArr[index], out X);
+                        int.TryParse(strArr[indexY], out Y);
+                    }
+                    
                 }
                 return true;
             }
