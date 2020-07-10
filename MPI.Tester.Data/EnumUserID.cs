@@ -65,6 +65,7 @@ namespace MPI.Tester.Data
         SINOEPI = 6098,
         NEWFIELD = 6103,
         SSLT0 = 6104,
+        Accelink = 6108,
         DELI = 6109,
         SRO00 = 6110,
         COS00 = 6115,

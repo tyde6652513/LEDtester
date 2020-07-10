@@ -259,6 +259,11 @@ namespace MPI.Tester.Gui
                             superTabItem2.Visible = data.DefaultValue >= 1;
                             break;
                         }
+                    case EItemDescription.VISW_CalcVp:
+                        {
+                            pnlVp.Visible = data.IsVisible;
+                            break;
+                        }
                     default:
                         break;
                 }
@@ -405,6 +410,10 @@ namespace MPI.Tester.Gui
 
             this.dinHoldTime.Value = this._item.ElecSetting[0].SweepHoldTime;
 
+            this.chkVp.Checked = this._item.IsCalcVp ;
+
+            dinMsrtdIp.Value = this._item.dIp;
+
             if (this._item.IsCustomerizeSweepMode)
             {
                 cListComp.SetSweepData(this._item.SweepInfoList);
@@ -432,6 +441,10 @@ namespace MPI.Tester.Gui
             swi.ForceUnit = fUnit;
             swi.MsrtUnit = mUnit;
             swi.TimeUnit = tUnit;
+
+            this._item.IsCalcVp = this.chkVp.Checked && pnlVp.Visible;
+
+            this._item.dIp = dinMsrtdIp.Value ;
 
             this._item.IsCustomerizeSweepMode = (superTabControl1.SelectedTabIndex == 1);
 

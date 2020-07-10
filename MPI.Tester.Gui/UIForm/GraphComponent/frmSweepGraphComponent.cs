@@ -40,10 +40,13 @@ namespace MPI.Tester.Gui
 
             this.cmbXAxis.Items.Add("Current");
             this.cmbXAxis.Items.Add("Voltage");
+            
             this.cmbXAxis.Items.Add("Time");
             
+
             this.cmbYAxis.Items.Add("Voltage");
             this.cmbYAxis.Items.Add("Current");
+            this.cmbYAxis.Items.Add("Derivative");
 
             this.cmbXAxis.SelectedIndex = 0;
             this.cmbYAxis.SelectedIndex = 0;
@@ -102,8 +105,8 @@ namespace MPI.Tester.Gui
             this._xAxisName = this.cmbXAxis.SelectedItem.ToString();
             this._yAxisName = this.cmbYAxis.SelectedItem.ToString();
 
-            this._xLabel = this.GetAxisLabel(this._xAxisName);
-            this._yLabel = this.GetAxisLabel(this._yAxisName);
+            this._xLabel = this.GetAxisLabel(this._xAxisName, _curveName);
+            this._yLabel = this.GetAxisLabel(this._yAxisName, _curveName);
 
             uint.TryParse(this.cmbChannel.SelectedItem.ToString(), out this._channel);
 
@@ -161,7 +164,7 @@ namespace MPI.Tester.Gui
             }
         }
 
-        private string GetAxisLabel(string axisName)
+        private string GetAxisLabel(string axisName,string curveName)
         {
             string lbl = axisName;
 
@@ -181,6 +184,16 @@ namespace MPI.Tester.Gui
                     {
                         lbl += " (ms)";
                         break;
+                    }
+                case "Derivative":
+                    {
+                        if (curveName.Contains("VI"))
+                        {
+                            lbl += " (dV/dA)";
+                        }
+                        else if (curveName.Contains("IV"))
+                        { lbl += " (dA/dV)"; }
+                        break; 
                     }
             }
 
@@ -227,6 +240,11 @@ namespace MPI.Tester.Gui
                 case "Time":
                     {
                         dArray = this._dataSet[channel, curveName].TimeChain;
+                        break;
+                    }
+                case "Derivative":
+                    {
+                        dArray = this._dataSet[channel, curveName].Derivative;
                         break;
                     }
             }

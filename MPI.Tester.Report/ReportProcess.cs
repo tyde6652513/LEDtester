@@ -255,7 +255,14 @@ namespace MPI.Tester.Report
                         break;
                     }
                 //-----------------------------------------------------------------
-                    
+                case EUserID.Accelink:
+                    {
+                        _report = new MPI.Tester.Report.User.Accelink.Report(objs, false);
+
+                        break;
+                    }
+                //-----------------------------------------------------------------
+
 				default:
 					{
 						ReportProcess._isImplement = false;

@@ -17,6 +17,7 @@ namespace MPI.Tester.Data
         private double[] _timeChain;
         private double[] _applyData;
         private double[] _sweepData;
+        private double[] _derivative;
 
         #endregion
 
@@ -39,6 +40,8 @@ namespace MPI.Tester.Data
             this._applyData = new double[] { 0.0d };
 
             this._sweepData = new double[] { 0.0d };
+
+            this._derivative = new double[] { 0.0d };
         }
 
         public ElecSweepData(TestItemData item, uint channel) : this()
@@ -98,6 +101,12 @@ namespace MPI.Tester.Data
             set { lock (this._lockObj) { this._sweepData = value; } }
         }
 
+        public double[] Derivative
+        {
+            get { return this._derivative; }
+            set { lock (this._lockObj) { this._derivative = value; } }
+        }
+
         #endregion
 
         #region >>> Public Method <<<
@@ -119,6 +128,8 @@ namespace MPI.Tester.Data
             cloneObj._applyData = this._applyData.Clone() as double[];
 
             cloneObj._sweepData = this._sweepData.Clone() as double[];
+
+            cloneObj.Derivative = this.Derivative.Clone() as double[];
 
             return cloneObj;
         }

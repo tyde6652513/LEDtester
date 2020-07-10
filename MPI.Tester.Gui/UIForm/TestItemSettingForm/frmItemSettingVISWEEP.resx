@@ -1197,6 +1197,114 @@
   <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="dinMsrtdIp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 11.25pt, style=Bold</value>
+  </data>
+  <data name="dinMsrtdIp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>98, 6</value>
+  </data>
+  <data name="dinMsrtdIp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 25</value>
+  </data>
+  <data name="dinMsrtdIp.TabIndex" type="System.Int32, mscorlib">
+    <value>183</value>
+  </data>
+  <data name="&gt;&gt;dinMsrtdIp.Name" xml:space="preserve">
+    <value>dinMsrtdIp</value>
+  </data>
+  <data name="&gt;&gt;dinMsrtdIp.Type" xml:space="preserve">
+    <value>DevComponents.Editors.DoubleInput, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;dinMsrtdIp.Parent" xml:space="preserve">
+    <value>pnlVp</value>
+  </data>
+  <data name="&gt;&gt;dinMsrtdIp.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelX2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelX2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 11.25pt, style=Bold</value>
+  </data>
+  <data name="labelX2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>214, 7</value>
+  </data>
+  <data name="labelX2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 21</value>
+  </data>
+  <data name="labelX2.TabIndex" type="System.Int32, mscorlib">
+    <value>194</value>
+  </data>
+  <data name="labelX2.Text" xml:space="preserve">
+    <value>duA/dV</value>
+  </data>
+  <data name="&gt;&gt;labelX2.Name" xml:space="preserve">
+    <value>labelX2</value>
+  </data>
+  <data name="&gt;&gt;labelX2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;labelX2.Parent" xml:space="preserve">
+    <value>pnlVp</value>
+  </data>
+  <data name="&gt;&gt;labelX2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chkVp.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkVp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 11.25pt, style=Bold</value>
+  </data>
+  <data name="chkVp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkVp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 6</value>
+  </data>
+  <data name="chkVp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 22</value>
+  </data>
+  <data name="chkVp.TabIndex" type="System.Int32, mscorlib">
+    <value>192</value>
+  </data>
+  <data name="chkVp.Text" xml:space="preserve">
+    <value>Calc Vpe</value>
+  </data>
+  <data name="&gt;&gt;chkVp.Name" xml:space="preserve">
+    <value>chkVp</value>
+  </data>
+  <data name="&gt;&gt;chkVp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkVp.Parent" xml:space="preserve">
+    <value>pnlVp</value>
+  </data>
+  <data name="&gt;&gt;chkVp.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pnlVp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 218</value>
+  </data>
+  <data name="pnlVp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 36</value>
+  </data>
+  <data name="pnlVp.TabIndex" type="System.Int32, mscorlib">
+    <value>191</value>
+  </data>
+  <data name="&gt;&gt;pnlVp.Name" xml:space="preserve">
+    <value>pnlVp</value>
+  </data>
+  <data name="&gt;&gt;pnlVp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlVp.Parent" xml:space="preserve">
+    <value>grpMsrtSetting</value>
+  </data>
+  <data name="&gt;&gt;pnlVp.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="chkIsAutoMsrtRange.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1228,7 +1336,7 @@
     <value>grpMsrtSetting</value>
   </data>
   <data name="&gt;&gt;chkIsAutoMsrtRange.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="lblMsrtClamp.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1333,7 +1441,7 @@
     <value>grpMsrtSetting</value>
   </data>
   <data name="&gt;&gt;pnlMsrtClamp.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lblMsrtRange.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1438,7 +1546,7 @@
     <value>grpMsrtSetting</value>
   </data>
   <data name="&gt;&gt;pnlMsrtRange.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="lblMsrtFilterCount.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1513,7 +1621,7 @@
     <value>grpMsrtSetting</value>
   </data>
   <data name="&gt;&gt;pnlFilterCount.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="lblNPLC.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1588,7 +1696,7 @@
     <value>grpMsrtSetting</value>
   </data>
   <data name="&gt;&gt;pnlNPLC.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="grpMsrtSetting.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1693,7 +1801,7 @@
     <value>0, 0</value>
   </data>
   <data name="cListComp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1048, 392</value>
+    <value>1048, 426</value>
   </data>
   <data name="cListComp.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1714,10 +1822,10 @@
     <value>Fill</value>
   </data>
   <data name="superTabControlPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 34</value>
+    <value>0, 0</value>
   </data>
   <data name="superTabControlPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1048, 392</value>
+    <value>1048, 426</value>
   </data>
   <data name="superTabControlPanel2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1735,7 +1843,7 @@
     <value>superTabControl1</value>
   </data>
   <data name="&gt;&gt;superTabControlPanel2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="superTabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1812,16 +1920,16 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Item Setting</value>
   </data>
-  <data name="&gt;&gt;superTabItem2.Name" xml:space="preserve">
-    <value>superTabItem2</value>
-  </data>
-  <data name="&gt;&gt;superTabItem2.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.SuperTabItem, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
-  </data>
   <data name="&gt;&gt;superTabItem1.Name" xml:space="preserve">
     <value>superTabItem1</value>
   </data>
   <data name="&gt;&gt;superTabItem1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.SuperTabItem, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+  </data>
+  <data name="&gt;&gt;superTabItem2.Name" xml:space="preserve">
+    <value>superTabItem2</value>
+  </data>
+  <data name="&gt;&gt;superTabItem2.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.SuperTabItem, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

@@ -71,6 +71,10 @@
             this.lblStepValue = new DevComponents.DotNetBar.LabelX();
             this.lblStepValueUnit = new DevComponents.DotNetBar.LabelX();
             this.grpMsrtSetting = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.pnlVp = new System.Windows.Forms.Panel();
+            this.dinMsrtdIp = new DevComponents.Editors.DoubleInput();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.chkVp = new System.Windows.Forms.CheckBox();
             this.chkIsAutoMsrtRange = new System.Windows.Forms.CheckBox();
             this.pnlMsrtClamp = new System.Windows.Forms.Panel();
             this.lblMsrtClamp = new DevComponents.DotNetBar.LabelX();
@@ -88,11 +92,11 @@
             this.dinNPLC = new DevComponents.Editors.DoubleInput();
             this.grpItemCondition = new System.Windows.Forms.GroupBox();
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
+            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.cListComp = new MPI.Tester.GuiComponent.TestItemComponent.CustomizeListComponent();
             this.superTabItem2 = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -116,6 +120,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dinForceTime)).BeginInit();
             this.pnlStepValue.SuspendLayout();
             this.grpMsrtSetting.SuspendLayout();
+            this.pnlVp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dinMsrtdIp)).BeginInit();
             this.pnlMsrtClamp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dinMsrtClamp)).BeginInit();
             this.pnlMsrtRange.SuspendLayout();
@@ -127,8 +133,8 @@
             this.grpItemCondition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
-            this.superTabControlPanel2.SuspendLayout();
             this.superTabControlPanel1.SuspendLayout();
+            this.superTabControlPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -178,18 +184,18 @@
             this.grpApplySetting.Style.BorderRightWidth = 1;
             this.grpApplySetting.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.grpApplySetting.Style.BorderTopWidth = 1;
-            this.grpApplySetting.Style.Class = "";
+            this.grpApplySetting.Style.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.grpApplySetting.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
             this.grpApplySetting.Style.TextColor = System.Drawing.Color.DarkOrange;
             // 
             // 
             // 
-            this.grpApplySetting.StyleMouseDown.Class = "";
+            this.grpApplySetting.StyleMouseDown.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.grpApplySetting.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.grpApplySetting.StyleMouseOver.Class = "";
+            this.grpApplySetting.StyleMouseOver.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.grpApplySetting.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // pnlHoldTime
@@ -207,7 +213,7 @@
             // 
             // 
             // 
-            this.lblHoldTime.BackgroundStyle.Class = "";
+            this.lblHoldTime.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblHoldTime.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblHoldTime.ForeColor = System.Drawing.Color.Black;
             this.lblHoldTime.Name = "lblHoldTime";
@@ -236,7 +242,7 @@
             // 
             // 
             // 
-            this.lblHoldTimeUnit.BackgroundStyle.Class = "";
+            this.lblHoldTimeUnit.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblHoldTimeUnit.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblHoldTimeUnit.ForeColor = System.Drawing.Color.Black;
             this.lblHoldTimeUnit.Name = "lblHoldTimeUnit";
@@ -256,7 +262,7 @@
             // 
             // 
             // 
-            this.lblForceRange.BackgroundStyle.Class = "";
+            this.lblForceRange.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblForceRange.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblForceRange.ForeColor = System.Drawing.Color.Black;
             this.lblForceRange.Name = "lblForceRange";
@@ -268,7 +274,7 @@
             // 
             // 
             // 
-            this.lblAutoForceRange.BackgroundStyle.Class = "";
+            this.lblAutoForceRange.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblAutoForceRange.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblAutoForceRange.ForeColor = System.Drawing.Color.DimGray;
             this.lblAutoForceRange.Name = "lblAutoForceRange";
@@ -296,7 +302,7 @@
             // 
             // 
             // 
-            this.lblSweepMode.BackgroundStyle.Class = "";
+            this.lblSweepMode.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblSweepMode.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblSweepMode.ForeColor = System.Drawing.Color.Black;
             this.lblSweepMode.Name = "lblSweepMode";
@@ -324,7 +330,7 @@
             // 
             // 
             // 
-            this.lblWaitTime.BackgroundStyle.Class = "";
+            this.lblWaitTime.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblWaitTime.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblWaitTime.ForeColor = System.Drawing.Color.Black;
             this.lblWaitTime.Name = "lblWaitTime";
@@ -353,7 +359,7 @@
             // 
             // 
             // 
-            this.lblWaitTimeUnit.BackgroundStyle.Class = "";
+            this.lblWaitTimeUnit.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblWaitTimeUnit.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblWaitTimeUnit.ForeColor = System.Drawing.Color.Black;
             this.lblWaitTimeUnit.Name = "lblWaitTimeUnit";
@@ -373,7 +379,7 @@
             // 
             // 
             // 
-            this.lblEndValue.BackgroundStyle.Class = "";
+            this.lblEndValue.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblEndValue.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblEndValue.ForeColor = System.Drawing.Color.Black;
             this.lblEndValue.Name = "lblEndValue";
@@ -402,7 +408,7 @@
             // 
             // 
             // 
-            this.lblEndValueUnit.BackgroundStyle.Class = "";
+            this.lblEndValueUnit.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblEndValueUnit.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblEndValueUnit.ForeColor = System.Drawing.Color.Black;
             this.lblEndValueUnit.Name = "lblEndValueUnit";
@@ -422,7 +428,7 @@
             // 
             // 
             // 
-            this.lblTurnOffTime.BackgroundStyle.Class = "";
+            this.lblTurnOffTime.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblTurnOffTime.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblTurnOffTime.ForeColor = System.Drawing.Color.Black;
             this.lblTurnOffTime.Name = "lblTurnOffTime";
@@ -451,7 +457,7 @@
             // 
             // 
             // 
-            this.lblTurnOffTimeUnit.BackgroundStyle.Class = "";
+            this.lblTurnOffTimeUnit.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblTurnOffTimeUnit.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblTurnOffTimeUnit.ForeColor = System.Drawing.Color.Black;
             this.lblTurnOffTimeUnit.Name = "lblTurnOffTimeUnit";
@@ -471,7 +477,7 @@
             // 
             // 
             // 
-            this.lblPoints.BackgroundStyle.Class = "";
+            this.lblPoints.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblPoints.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblPoints.ForeColor = System.Drawing.Color.Black;
             this.lblPoints.Name = "lblPoints";
@@ -500,7 +506,7 @@
             // 
             // 
             // 
-            this.lblPointsUnit.BackgroundStyle.Class = "";
+            this.lblPointsUnit.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblPointsUnit.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblPointsUnit.ForeColor = System.Drawing.Color.Black;
             this.lblPointsUnit.Name = "lblPointsUnit";
@@ -520,7 +526,7 @@
             // 
             // 
             // 
-            this.lblStartValue.BackgroundStyle.Class = "";
+            this.lblStartValue.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblStartValue.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblStartValue.ForeColor = System.Drawing.Color.Black;
             this.lblStartValue.Name = "lblStartValue";
@@ -548,7 +554,7 @@
             // 
             // 
             // 
-            this.lblStartValueUnit.BackgroundStyle.Class = "";
+            this.lblStartValueUnit.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblStartValueUnit.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblStartValueUnit.ForeColor = System.Drawing.Color.Black;
             this.lblStartValueUnit.Name = "lblStartValueUnit";
@@ -568,7 +574,7 @@
             // 
             // 
             // 
-            this.lblForceTime.BackgroundStyle.Class = "";
+            this.lblForceTime.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblForceTime.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblForceTime.ForeColor = System.Drawing.Color.Black;
             this.lblForceTime.Name = "lblForceTime";
@@ -597,7 +603,7 @@
             // 
             // 
             // 
-            this.lblForceTimeUnit.BackgroundStyle.Class = "";
+            this.lblForceTimeUnit.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblForceTimeUnit.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblForceTimeUnit.ForeColor = System.Drawing.Color.Black;
             this.lblForceTimeUnit.Name = "lblForceTimeUnit";
@@ -616,7 +622,7 @@
             // 
             // 
             // 
-            this.txtDisplayStepValue.BackgroundStyle.Class = "";
+            this.txtDisplayStepValue.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.txtDisplayStepValue.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             resources.ApplyResources(this.txtDisplayStepValue, "txtDisplayStepValue");
             this.txtDisplayStepValue.ForeColor = System.Drawing.Color.Black;
@@ -630,7 +636,7 @@
             // 
             // 
             // 
-            this.lblStepValue.BackgroundStyle.Class = "";
+            this.lblStepValue.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblStepValue.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblStepValue.ForeColor = System.Drawing.Color.Black;
             this.lblStepValue.Name = "lblStepValue";
@@ -642,7 +648,7 @@
             // 
             // 
             // 
-            this.lblStepValueUnit.BackgroundStyle.Class = "";
+            this.lblStepValueUnit.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblStepValueUnit.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblStepValueUnit.ForeColor = System.Drawing.Color.Black;
             this.lblStepValueUnit.Name = "lblStepValueUnit";
@@ -652,6 +658,7 @@
             this.grpMsrtSetting.BackColor = System.Drawing.Color.Transparent;
             this.grpMsrtSetting.CanvasColor = System.Drawing.Color.Empty;
             this.grpMsrtSetting.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
+            this.grpMsrtSetting.Controls.Add(this.pnlVp);
             this.grpMsrtSetting.Controls.Add(this.chkIsAutoMsrtRange);
             this.grpMsrtSetting.Controls.Add(this.pnlMsrtClamp);
             this.grpMsrtSetting.Controls.Add(this.pnlMsrtRange);
@@ -675,19 +682,62 @@
             this.grpMsrtSetting.Style.BorderRightWidth = 1;
             this.grpMsrtSetting.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.grpMsrtSetting.Style.BorderTopWidth = 1;
-            this.grpMsrtSetting.Style.Class = "";
+            this.grpMsrtSetting.Style.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.grpMsrtSetting.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
             this.grpMsrtSetting.Style.TextColor = System.Drawing.Color.DarkOrange;
             // 
             // 
             // 
-            this.grpMsrtSetting.StyleMouseDown.Class = "";
+            this.grpMsrtSetting.StyleMouseDown.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.grpMsrtSetting.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.grpMsrtSetting.StyleMouseOver.Class = "";
+            this.grpMsrtSetting.StyleMouseOver.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.grpMsrtSetting.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // pnlVp
+            // 
+            this.pnlVp.Controls.Add(this.dinMsrtdIp);
+            this.pnlVp.Controls.Add(this.labelX2);
+            this.pnlVp.Controls.Add(this.chkVp);
+            resources.ApplyResources(this.pnlVp, "pnlVp");
+            this.pnlVp.Name = "pnlVp";
+            // 
+            // dinMsrtdIp
+            // 
+            // 
+            // 
+            // 
+            this.dinMsrtdIp.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dinMsrtdIp.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dinMsrtdIp.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.dinMsrtdIp.DisplayFormat = "E3";
+            resources.ApplyResources(this.dinMsrtdIp, "dinMsrtdIp");
+            this.dinMsrtdIp.Increment = 0.1D;
+            this.dinMsrtdIp.MaxValue = 1000000D;
+            this.dinMsrtdIp.MinValue = 0D;
+            this.dinMsrtdIp.Name = "dinMsrtdIp";
+            this.dinMsrtdIp.ShowUpDown = true;
+            this.dinMsrtdIp.Value = 1D;
+            // 
+            // labelX2
+            // 
+            resources.ApplyResources(this.labelX2, "labelX2");
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.ForeColor = System.Drawing.Color.Black;
+            this.labelX2.Name = "labelX2";
+            // 
+            // chkVp
+            // 
+            resources.ApplyResources(this.chkVp, "chkVp");
+            this.chkVp.Name = "chkVp";
+            this.chkVp.UseVisualStyleBackColor = true;
             // 
             // chkIsAutoMsrtRange
             // 
@@ -712,7 +762,7 @@
             // 
             // 
             // 
-            this.lblMsrtClamp.BackgroundStyle.Class = "";
+            this.lblMsrtClamp.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblMsrtClamp.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblMsrtClamp.ForeColor = System.Drawing.Color.Black;
             this.lblMsrtClamp.Name = "lblMsrtClamp";
@@ -724,7 +774,7 @@
             // 
             // 
             // 
-            this.lblMsrtClampUnit.BackgroundStyle.Class = "";
+            this.lblMsrtClampUnit.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblMsrtClampUnit.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblMsrtClampUnit.ForeColor = System.Drawing.Color.Black;
             this.lblMsrtClampUnit.Name = "lblMsrtClampUnit";
@@ -761,7 +811,7 @@
             // 
             // 
             // 
-            this.lblMsrtRange.BackgroundStyle.Class = "";
+            this.lblMsrtRange.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblMsrtRange.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblMsrtRange.ForeColor = System.Drawing.Color.Black;
             this.lblMsrtRange.Name = "lblMsrtRange";
@@ -790,7 +840,7 @@
             // 
             // 
             // 
-            this.lblMsrtRangeUnit.BackgroundStyle.Class = "";
+            this.lblMsrtRangeUnit.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblMsrtRangeUnit.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblMsrtRangeUnit.ForeColor = System.Drawing.Color.Black;
             this.lblMsrtRangeUnit.Name = "lblMsrtRangeUnit";
@@ -809,7 +859,7 @@
             // 
             // 
             // 
-            this.lblMsrtFilterCount.BackgroundStyle.Class = "";
+            this.lblMsrtFilterCount.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblMsrtFilterCount.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblMsrtFilterCount.ForeColor = System.Drawing.Color.Black;
             this.lblMsrtFilterCount.Name = "lblMsrtFilterCount";
@@ -844,7 +894,7 @@
             // 
             // 
             // 
-            this.lblNPLC.BackgroundStyle.Class = "";
+            this.lblNPLC.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblNPLC.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblNPLC.ForeColor = System.Drawing.Color.Black;
             this.lblNPLC.Name = "lblNPLC";
@@ -882,12 +932,12 @@
             // 
             // 
             // 
-            this.superTabControl1.ControlBox.CloseBox.Name = "";
+            this.superTabControl1.ControlBox.CloseBox.Name = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             // 
             // 
             // 
-            this.superTabControl1.ControlBox.MenuBox.Name = "";
-            this.superTabControl1.ControlBox.Name = "";
+            this.superTabControl1.ControlBox.MenuBox.Name = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
+            this.superTabControl1.ControlBox.Name = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.superTabControl1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
@@ -901,6 +951,20 @@
             this.superTabItem1,
             this.superTabItem2});
             this.superTabControl1.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.WinMediaPlayer12;
+            // 
+            // superTabControlPanel1
+            // 
+            this.superTabControlPanel1.Controls.Add(this.splitContainer1);
+            resources.ApplyResources(this.superTabControlPanel1, "superTabControlPanel1");
+            this.superTabControlPanel1.Name = "superTabControlPanel1";
+            this.superTabControlPanel1.TabItem = this.superTabItem1;
+            // 
+            // superTabItem1
+            // 
+            this.superTabItem1.AttachedControl = this.superTabControlPanel1;
+            this.superTabItem1.GlobalItem = false;
+            this.superTabItem1.Name = "superTabItem1";
+            resources.ApplyResources(this.superTabItem1, "superTabItem1");
             // 
             // superTabControlPanel2
             // 
@@ -924,20 +988,6 @@
             this.superTabItem2.GlobalItem = false;
             this.superTabItem2.Name = "superTabItem2";
             resources.ApplyResources(this.superTabItem2, "superTabItem2");
-            // 
-            // superTabControlPanel1
-            // 
-            this.superTabControlPanel1.Controls.Add(this.splitContainer1);
-            resources.ApplyResources(this.superTabControlPanel1, "superTabControlPanel1");
-            this.superTabControlPanel1.Name = "superTabControlPanel1";
-            this.superTabControlPanel1.TabItem = this.superTabItem1;
-            // 
-            // superTabItem1
-            // 
-            this.superTabItem1.AttachedControl = this.superTabControlPanel1;
-            this.superTabItem1.GlobalItem = false;
-            this.superTabItem1.Name = "superTabItem1";
-            resources.ApplyResources(this.superTabItem1, "superTabItem1");
             // 
             // frmItemSettingVISWEEP
             // 
@@ -982,6 +1032,9 @@
             this.pnlStepValue.PerformLayout();
             this.grpMsrtSetting.ResumeLayout(false);
             this.grpMsrtSetting.PerformLayout();
+            this.pnlVp.ResumeLayout(false);
+            this.pnlVp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dinMsrtdIp)).EndInit();
             this.pnlMsrtClamp.ResumeLayout(false);
             this.pnlMsrtClamp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dinMsrtClamp)).EndInit();
@@ -997,8 +1050,8 @@
             this.grpItemCondition.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).EndInit();
             this.superTabControl1.ResumeLayout(false);
-            this.superTabControlPanel2.ResumeLayout(false);
             this.superTabControlPanel1.ResumeLayout(false);
+            this.superTabControlPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1069,6 +1122,10 @@
         private DevComponents.DotNetBar.SuperTabItem superTabItem2;
         private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel1;
         private DevComponents.DotNetBar.SuperTabItem superTabItem1;
+        private DevComponents.Editors.DoubleInput dinMsrtdIp;
+        private System.Windows.Forms.Panel pnlVp;
+        private System.Windows.Forms.CheckBox chkVp;
+        private DevComponents.DotNetBar.LabelX labelX2;
 
     }
 }

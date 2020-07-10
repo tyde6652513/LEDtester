@@ -26,15 +26,13 @@ namespace MPI.Tester.Data
             this._elecSetting[0].MsrtType = EMsrtType.FVMISWEEP;
             this._elecSetting[0].IsAutoTurnOff = true;
 
-            this._gainOffsetSetting = null;           
+            this._gainOffsetSetting = new GainOffsetData[] { new GainOffsetData(true, EGainOffsetType.GainAndOffest)};      
             
 			// Tested Result Setting
-			this._msrtResult = new TestResultData[] { new TestResultData("V", "0.000"),
-													  new TestResultData("V", "0.000"),
-													  new TestResultData("V", "0.000")};
+			this._msrtResult = new TestResultData[] { new TestResultData("V", "E4")};//求PD光電流的轉折電壓
             IsCustomerizeSweepMode = false;
-                                                        
-
+            IsCalcVp = false;
+            dIp = 0.1;
         }
 
         #region >>> Protected Methods <<<
@@ -47,10 +45,17 @@ namespace MPI.Tester.Data
 
             this._elecSetting[0].KeyName = this.KeyName;
 
-            this._msrtResult[0].KeyName = "IPEAK" + "_" + num.ToString();
-            this._msrtResult[1].KeyName = "ISTABLE" + "_" + num.ToString();
-            this._msrtResult[2].KeyName = "IDIFF" + "_" + num.ToString();
+            if (this._msrtResult == null || this._msrtResult.Length < 4)
+            {
+                this._msrtResult = new TestResultData[] { new TestResultData("V", "E4") };
+            }
+            
+            this._msrtResult[0].KeyName = "VISWVP" + "_" + num.ToString();
+            
             SetMsrtNameAsKey();
+
+            this.GainOffsetSetting[0].KeyName = this._msrtResult[0].KeyName;
+            this.GainOffsetSetting[0].Name = this._msrtResult[0].Name;
         }
 
         #endregion
@@ -82,6 +87,9 @@ namespace MPI.Tester.Data
 
         public bool IsCustomerizeSweepMode { set; get; }
 
+        public bool IsCalcVp { get; set; }
+
+        public double dIp { get; set; }//in uA
         #endregion
 
         #region >>public method<<

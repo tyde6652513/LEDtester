@@ -155,6 +155,13 @@ namespace MPI.Tester.Data
                     }
 
                     Array.Copy(this._dataList[i].SweepData, data[i].SweepData, this._dataList[i].SweepData.Length);
+                    //-----------------------------------------------------------------------------
+                    if (this._dataList[i].Derivative.Length != data[i].Derivative.Length)
+                    {
+                        data[i].Derivative = new double[this._dataList[i].Derivative.Length];
+                    }
+
+                    Array.Copy(this._dataList[i].Derivative, data[i].Derivative, this._dataList[i].Derivative.Length);
                 }
             }
         }

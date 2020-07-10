@@ -188,6 +188,7 @@ namespace MPI.Tester.Gui
 
                 data.DataSet[count].SweepData = item.SweepData.Clone() as double[];
 
+                data.DataSet[count].Derivative = item.Derivative.Clone() as double[];
                 count++;
             }
 

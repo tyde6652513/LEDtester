@@ -524,7 +524,7 @@ namespace MPI.Tester.TestKernel
                 // Copy to "chartData"
                 //++++++++++++++++++++++++++++++++
 
-                Thread.Sleep((int)item.ElecSetting[0].ForceDelayTime * 1000);
+                Thread.Sleep((int)item.ElecSetting[0].ForceDelayTime);
                 if (item.ElecSetting != null && item.ElecSetting.Length > 0)
                 {
                     for (int chIndex = 0; chIndex < trigList.Count; chIndex++)
@@ -535,6 +535,8 @@ namespace MPI.Tester.TestKernel
                         List<double> timeList = new List<double>();
                         List<double> srcList = new List<double>();
                         List<double> msrtList = new List<double>();
+
+                        List<double> devList = new List<double>();
                         for (int j = 0; j < item.ElecSetting.Length; ++j)
                         {
                             uint tarSMUItemIndex = (uint)(srcMeterItemIndex + j);
@@ -563,6 +565,8 @@ namespace MPI.Tester.TestKernel
                                     sweepData[k] = sweepData[k] * this._chipPolarity;
                                     timeChain[k] = st + timeChain[k] * 1000;//s->ms
                                 }
+
+                                devList = CalcDevList(applyData, sweepData);
 
                                 timeList.AddRange(timeChain);
                                 srcList.AddRange(applyData);
@@ -609,7 +613,7 @@ namespace MPI.Tester.TestKernel
                 // Copy to "chartData"
                 //++++++++++++++++++++++++++++++++
 
-                Thread.Sleep((int)item.ElecSetting[0].ForceDelayTime*1000);
+                Thread.Sleep((int)item.ElecSetting[0].ForceDelayTime);
                 if (item.ElecSetting != null && item.ElecSetting.Length > 0)
                 {
                     for (int chIndex = 0; chIndex < trigList.Count; chIndex++)
@@ -620,6 +624,7 @@ namespace MPI.Tester.TestKernel
                         List<double> timeList = new List<double>();
                         List<double> srcList = new List<double>();
                         List<double> msrtList = new List<double>();
+                        List<double> devList = new List<double>();
                         for (int j = 0; j < item.ElecSetting.Length; ++j)
                         {
                             uint tarSMUItemIndex = (uint)(srcMeterItemIndex + j);
@@ -641,13 +646,15 @@ namespace MPI.Tester.TestKernel
                                 double[] timeChain = srcMeter.GetTimeChainFromMeter(srcChannel, tarSMUItemIndex).Clone() as double[];  // t : time   (ms)
                                 double[] applyData = srcMeter.GetSweepPointFromMeter(srcChannel, tarSMUItemIndex).Clone() as double[]; // x : input  (V)
                                 double[] sweepData = srcMeter.GetDataFromMeter(srcChannel, tarSMUItemIndex).Clone() as double[];       // y : output (A)
-
+                                
                                 for (int k = 0; k < applyData.Length; k++)
                                 {
                                     applyData[k] = applyData[k] * this._chipPolarity;
                                     sweepData[k] = sweepData[k] * this._chipPolarity;
-                                    timeChain[k] = st + timeChain[k]*1000;//s->ms
+                                    timeChain[k] = st + timeChain[k]*1000;//s->ms                                   
+
                                 }
+                                devList = CalcDevList( applyData, sweepData);
 
                                 timeList.AddRange(timeChain);
                                 srcList.AddRange(applyData);
@@ -657,6 +664,24 @@ namespace MPI.Tester.TestKernel
                         this._acquireData.ElecSweepDataSet[dutChannel, item.KeyName].TimeChain = timeList.ToArray();	// t : time   (ms)
                         this._acquireData.ElecSweepDataSet[dutChannel, item.KeyName].ApplyData = srcList.ToArray();		// x : input  (V)
                         this._acquireData.ElecSweepDataSet[dutChannel, item.KeyName].SweepData = msrtList.ToArray();	// y : output (A) 
+                        this._acquireData.ElecSweepDataSet[dutChannel, item.KeyName].Derivative = devList.ToArray();
+                        #region
+
+                        #endregion
+
+                        #region
+                        item.MsrtResult[0].RawValue = 0;
+                        double thresholddi = (item as VISweepTestItem).dIp * UnitMath.ToSIUnit(EAmpUnit.uA.ToString());
+                        
+                        if ((item as VISweepTestItem).IsCalcVp && item.MsrtResult!= null && item.MsrtResult.Length > 0)
+                        {
+                            double vp = 0;
+                            vp = CalcVp(srcList, msrtList, thresholddi, vp);//獨立進行排序，以免分段掃描出現問題
+                            item.MsrtResult[0].RawValue = vp;
+                        }
+                        
+                        #endregion
+                        SyncDataToChannel(item, dutChannel);
                     }
                 }
                
@@ -664,8 +689,95 @@ namespace MPI.Tester.TestKernel
                 sourceMeterReadData = this._acquireData.ElecSweepDataSet[dutChannel, item.KeyName].SweepData;//強迫回傳以免判斷為量測失敗
             }
 
+            
+
             srcMeter.TurnOff();
             return sourceMeterReadData;
+        }
+
+        private static List<double> CalcDevList( double[] applyData, double[] sweepData)
+        {
+            List<double> devList = new List<double>();
+            for (int k = 0; k < applyData.Length; k++)
+            {
+                if (k == 0)
+                {
+                    devList.Add(0);
+                }
+                else
+                {
+                    double devApp = applyData[k] - applyData[k - 1];
+                    if (devApp == 0)
+                    {
+                        devList.Add(0);
+                    }
+                    else
+                    {
+                        double devSw = sweepData[k] - sweepData[k - 1];
+                        double dsw_app = devSw / devApp;
+                        devList.Add(dsw_app);
+                    }
+                }
+            }
+            return devList;
+        }
+
+        private static double CalcVp(List<double> srcList, List<double> msrtList, double thresholddi, double vp)
+        {
+            int length = srcList.Count;
+            if (length > 3 && srcList.Max() <= 0 && srcList.Min() < 0)//只給負偏壓時進行計算
+            {
+                Dictionary<double, double> smDic = new Dictionary<double, double>();
+                for (int i = 0; i < srcList.Count; ++i)
+                {
+                    if (smDic.ContainsKey(srcList[i]))
+                    {
+                        smDic[srcList[i]] = msrtList[i];
+                    }
+                    else
+                    {
+                        smDic.Add(srcList[i], msrtList[i]);
+                    }
+                }
+                List<KeyValuePair<double, double>> smPairList = new List<KeyValuePair<double, double>>();
+                smPairList = (from p in smDic
+                              orderby p.Key descending
+                              select new KeyValuePair<double, double>(p.Key, p.Value)).ToList();
+                List<double> diList = new List<double>();
+
+                for (int i = 1; i < smPairList.Count; ++i)
+                {
+                    double dv = smPairList[i].Key - smPairList[i - 1].Key;
+                    if (dv < 0)//已排序過，需小於0
+                    {
+                        double di = smPairList[i].Value - smPairList[i - 1].Value;
+                        double didv = di / dv;
+                        diList.Add(di / dv);
+                    }
+                }
+
+                int tarIndex = -1;
+                double didvMax = diList.Max();
+
+                if (didvMax > thresholddi)//有超過diMax才計算
+                {
+                    int indexMaxdi = diList.IndexOf(didvMax);//取第一組
+
+                    for (int i = indexMaxdi; i < diList.Count; ++i)
+                    {
+                        if (diList[i] < thresholddi)
+                        {
+                            tarIndex = i + 1;
+                            break;
+                        }
+                    }
+                }
+                if (tarIndex > 0 && tarIndex < smPairList.Count())
+                {
+                    vp = smPairList[tarIndex].Key;
+                }
+            }
+            return vp;
         }
 
         protected virtual double[] THY(TestItemData item, uint srcMeterItemIndex, uint srcChannel)
