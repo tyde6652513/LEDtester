@@ -128,6 +128,9 @@ namespace MPI.RemoteControl2.Tester
 				case CmdEOT2.COMMAND_ID:
 					return new CmdEOT2();
 				//---------------------------------------------------------------
+                case CmdTestAbort.COMMAND_ID:
+                    return new CmdTestAbort();
+                //---------------------------------------------------------------
 				default:
                     return null;
             }
