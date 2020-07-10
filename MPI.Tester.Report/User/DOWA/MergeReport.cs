@@ -97,7 +97,7 @@ namespace MPI.Tester.Report.User.DOWA
             }
             ivFirstCol = GetKeyColList(ivFKeyList);
 
-            List<string> cvFKeyList = new List<string>() { "BinCV", "TestTemp2" };
+            List<string> cvFKeyList = new List<string>() { "BINCV", "TestTemp2" };
             for (int i = 1; i < 10; ++i)
             {
                 ivFKeyList.Add("LCRCP_" + i.ToString());//Cp

@@ -389,41 +389,12 @@ namespace MPI.Tester.Report.User.DOWA
                         }
                     }
                 }
-
-
-                if (_posAOIDic != null && _posAOIDic.Count > 0)
-                {
-
-                    int colCnt = this._resultTitleInfo.ChipIndexIndex;
-                    int colX = this._resultTitleInfo.ColIndex;
-                    int colY = this._resultTitleInfo.RowIndex;
-                    int colLength = _resultTitleInfo.ResultCount;
-                    foreach (var p in _posAOIDic)
-                    {
-                        string outStr = "";
-                        for (int i = 0; i < colLength; ++i)
-                        {
-                            if (i == colCnt)//變數不給switch....
-                            { outStr += testCount.ToString(); }
-                            else if (i == colX)
-                            {  outStr += p.Value.X.ToString(); }
-                            else if (i == colY)
-                            { outStr += p.Value.Y.ToString(); }
-                            else if (i == colAOI_SIGN)
-                            { outStr += p.Value.SIGN; }
-
-                            if (i != colLength - 1)
-                            {
-                                outStr += this.SpiltChar.ToString();
-                            }
-                        }
-                        testCount++;
-                    }
-                    //
-                }
-
                 sw.WriteLine(line);
             }
+
+            testCount = WriteRestAOI_SIGN(sw, testCount, colAOI_SIGN);
+
+
 
             sr.Close();
 
@@ -432,6 +403,43 @@ namespace MPI.Tester.Report.User.DOWA
             sw.Close();
 
             sw.Dispose();
+        }
+
+        private int WriteRestAOI_SIGN(StreamWriter sw, int testCount, int colAOI_SIGN)
+        {
+            if (_posAOIDic != null && _posAOIDic.Count > 0)
+            {
+
+                int colCnt = this._resultTitleInfo.TestIndex;
+                int colX = this._resultTitleInfo.ColIndex;
+                int colY = this._resultTitleInfo.RowIndex;
+                int colLength = _resultTitleInfo.ResultCount;
+                foreach (var p in _posAOIDic)
+                {
+                    string outStr = "";
+                    for (int i = 0; i < colLength; ++i)
+                    {
+                        if (i == colCnt)//變數不給switch....
+                        { outStr += testCount.ToString(); }
+                        else if (i == colX)
+                        { outStr += p.Value.X.ToString(); }
+                        else if (i == colY)
+                        { outStr += p.Value.Y.ToString(); }
+                        else if (i == colAOI_SIGN)
+                        { outStr += p.Value.SIGN; }
+
+                        if (i != colLength - 1)
+                        {
+                            outStr += this.SpiltChar.ToString();
+                        }
+                        
+                    }
+                    sw.WriteLine(outStr);
+                    testCount++;
+                }
+
+            }
+            return testCount;
         }
 
         private string GetCalcItemDescription(CALCTestItem cItem)
@@ -580,7 +588,7 @@ namespace MPI.Tester.Report.User.DOWA
                     if (strArr != null && strArr.Length > index)
                     {
                         SIGN = strArr[index];
-                        int.TryParse(strArr[index], out X);
+                        int.TryParse(strArr[indexX], out X);
                         int.TryParse(strArr[indexY], out Y);
                     }
                     
