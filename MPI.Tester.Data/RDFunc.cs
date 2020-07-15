@@ -188,6 +188,7 @@ namespace MPI.Tester.Data
         private bool _b0008;
         private bool _b0009;
         private bool _b0010;
+        private bool _b0011;
 
         //private double _d0004;
         private double _d0005;
@@ -233,6 +234,8 @@ namespace MPI.Tester.Data
             this._b0009 = false;
 
             this._b0010 = false;
+
+            this._b0011 = false;
 
             this._i0001 = 0;
 
@@ -442,6 +445,12 @@ namespace MPI.Tester.Data
 			get { return this._b0022; }
 			set { this._b0022 = value; }
 		}
+
+        public bool IsDisableCheckProbeChannel
+        {
+            get { return this._b0011; }
+            set { this._b0011 = value; }
+        }
 
         public object Clone()
         {

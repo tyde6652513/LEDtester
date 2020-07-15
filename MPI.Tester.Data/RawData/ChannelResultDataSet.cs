@@ -75,6 +75,14 @@ namespace MPI.Tester.Data
                 data[channel].Row = item.Row;
 
                 data[channel].Col = item.Col;
+
+                data[channel].SubRow = item.SubRow;
+
+                data[channel].SubCol = item.SubCol;
+
+                data[channel].GroupRow = item.GroupRow;
+
+                data[channel].GroupCol = item.GroupCol;
                 
                 if (item.IsTested)
                 {

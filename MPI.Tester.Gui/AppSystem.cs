@@ -1517,6 +1517,7 @@ namespace MPI.Tester.Gui
 
                 case (int)EServerQueryCmd.CMD_SUB_RECIPE_INFO:
                     {
+                        #region
                         Console.WriteLine("[ServerQueryEventHandler], CMD_SUB_RECIPE_INFO");
 
                         Console.WriteLine("ProberRecipeName:" + DataCenter._uiSetting.ProberRecipeName);
@@ -1528,6 +1529,7 @@ namespace MPI.Tester.Gui
                         DataCenter._uiSetting.SlotNumber = e.BufferData[0].ToString("0");
 
                         break;
+                        #endregion
                     }
                 //----------------------------------------------------------------------------------------------------------------------
 
@@ -1704,7 +1706,55 @@ namespace MPI.Tester.Gui
 
                         #endregion
                     }
-                //
+                //----------------------------------------------------------------------------------------------------------------------
+                case (int)EServerQueryCmd.CMD_MAPPING_TABLE:
+                    {
+                        #region >>> CMD_MAPPING_TABLE <<<
+
+                        Console.WriteLine("[ServerQueryEventHandler], CMD_MAPPING_TABLE");
+
+                        if (_MPITesterKernel is MultiDie_TesterKernel)
+                        {
+                            if (e.StrData != null)
+                            {
+                                if (!DataCenter._rdFunc.RDFuncData.IsDisableCheckProbeChannel
+                                    && e.StrData.Length != DataCenter._machineConfig.ChannelConfig.ChannelCount)
+                                {
+                                    GlobalFlag.IsSuccessCheckChannelConfig = false;
+
+                                    Console.WriteLine("[ServerQueryEventHandler], CMD_MAPPING_TABLE, Check Channel Config Fail!");
+
+                                    return;
+                                }
+                                else
+                                {
+                                    GlobalFlag.IsSuccessCheckChannelConfig = true;
+                                }
+
+                                for (int i = 0; i < e.StrData.Length; ++i)
+                                {
+                                    string[] strArr = e.StrData[i].Split(',');
+                                    if (strArr.Length == 4)
+                                    {
+                                        int ch, layer, x, y;
+                                        if (int.TryParse(strArr[0], out ch) &&
+                                            int.TryParse(strArr[1], out layer) &&
+                                            int.TryParse(strArr[2], out x) &&
+                                            int.TryParse(strArr[3], out y))
+                                        {
+                                            bool needClear = i == 0;
+                                            (_MPITesterKernel as MultiDie_TesterKernel).PushChShiftTable(ch, layer, x, y, needClear);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        break;
+
+                        #endregion
+                    }
+                //----------------------------------------------------------------------------------------------------------------------
                 default:
                     break;
             }

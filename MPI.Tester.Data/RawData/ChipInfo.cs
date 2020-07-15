@@ -12,6 +12,8 @@ namespace MPI.Tester.Data
         private object _lockObj;
         private int _colX;
         private int _rowY;
+        private int _subColX;
+        private int _subRowY;
         private int _reTestColX;
         private int _reTestRowY;
         private int _testCount;
@@ -117,6 +119,18 @@ namespace MPI.Tester.Data
         {
             get { return this._rowY; }
             set { lock (_lockObj) { this._rowY = value; } }
+        }
+
+        public int SubColX
+        {
+            get { return this._subColX; }
+            set { lock (_lockObj) { this._subColX = value; } }
+        }
+
+        public int SubRowY
+        {
+            get { return this._subRowY; }
+            set { lock (_lockObj) { this._subRowY = value; } }
         }
 
         public uint Channel
@@ -227,6 +241,8 @@ namespace MPI.Tester.Data
             set { lock (_lockObj) { this._testTime = value; } }
         }
 
+
+
         public EPolarity Polarity
         {
             get { return this._polarity; }
@@ -322,6 +338,10 @@ namespace MPI.Tester.Data
             data._colX = this._colX;
 
             data._rowY = this._rowY;
+
+            data._subColX = this._subColX;
+
+            data._subRowY = this._subRowY;
 
             data._channel = this._channel;
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Drawing;
 
 
 using MPI.Tester.Data;
@@ -18,6 +19,8 @@ using MPI.Tester.Device.IOCard;
 using MPI.Tester.Maths.ColorMath;
 using MPI.Tester.Device.PostCalc;
 using MPI.Tester.Maths;
+using MPI.Tester.Tools;
+using MPI.Tester.Data.ChannelCoordTable;
 
 namespace MPI.Tester.TestKernel
 {
@@ -30,14 +33,11 @@ namespace MPI.Tester.TestKernel
 
         private double time = 0;
 
-        private MultiDieAdjacentCheck _adjacentCheck;
+        
 
         private bool[] _isChannelStopTest;
 
         private int[] _chipProbeBin;
-
-        private int _proberCoordRowY;
-        private int _proberCoordColX;
 
         private int _channelArrangeRotateTheta;
 
@@ -46,7 +46,11 @@ namespace MPI.Tester.TestKernel
         private bool[] _isOnlySkipIzTestItem;
 
 
-        private ILaserPostCalc _laserPostCalc;
+        //private ILaserPostCalc _laserPostCalc;
+
+        private ChannelPosShiftTable<int> _chShiftTable = new ChannelPosShiftTable<int>();
+
+        private LevelShiftTable<int> _basePosition = new LevelShiftTable<int>();
 
 
         public MultiDie_TesterKernel()
@@ -98,6 +102,9 @@ namespace MPI.Tester.TestKernel
             this._passRateCheck = new PassRateCheck();
 
             this._isQCSetting = false;
+
+            this._adjacentCheck = new MultiDieAdjacentCheck();
+
         }
 
         #region >>> Private Methods <<<
@@ -360,161 +367,95 @@ namespace MPI.Tester.TestKernel
             }
         }
 
-        private void SetBiasRowColCoord()
+        private LevelShiftTable<int> SetBiasRowColCoord()
         {
-            this._proberCoordColX = (int)(this._cmdData.DoubleData[(uint)EProberDataIndex.COL] - this._cmdData.DoubleData[(uint)EProberDataIndex.TransCOL]);
+            LevelShiftTable<int> pos = new LevelShiftTable<int>();
+            int x = (int)(CmdData.DoubleData[(uint)EProberDataIndex.COL]);
+            int y = (int)(CmdData.DoubleData[(uint)EProberDataIndex.ROW]);
+            int sx = (int)(CmdData.DoubleData[(uint)EProberDataIndex.SubCOL]);
+            int sy = (int)(CmdData.DoubleData[(uint)EProberDataIndex.SubROW]);
+            int gx = (int)(CmdData.DoubleData[(uint)EProberDataIndex.GroupCOL]);
+            int gy = (int)(CmdData.DoubleData[(uint)EProberDataIndex.GroupROW]);
+            int subDieLayer = -1;
+            if (_chShiftTable != null)
+            {
+                foreach (var p in _chShiftTable)
+                {
+                    subDieLayer = p.Value.BottomLayer;
+                    break;
+                }
 
-            this._proberCoordRowY = (int)(this._cmdData.DoubleData[(uint)EProberDataIndex.ROW] - this._cmdData.DoubleData[(uint)EProberDataIndex.TransROW]);
+            }
+
+            subDieLayer = subDieLayer < 0 ? subDieLayer : -1;
+
+            pos.Push(0, x, y);
+            pos.Push(subDieLayer, sx, sy);
+            pos.Push(1, gx, gy);
+            return pos;
         }
 
-        private int RotateColXCoord(int colX, int rowY)
+
+        private void ChangeRowColCoord(LevelShiftTable<int> basePose, ChannelPosShiftTable<int> coordTable = null)
         {
-            int rotatedCoord = colX;
+            LevelShiftTable<int> chPose = basePose.Clone() as LevelShiftTable<int>;
 
-            // x' = x * cos(Theta) - y * sin(Theta)
-            if (this._channelArrangeRotateTheta == (int)ECoordinateRotation.CW90)
+            if (coordTable == null)
             {
-                rotatedCoord = -rowY;
+                coordTable = _chShiftTable;
             }
-            else if (this._channelArrangeRotateTheta == (int)ECoordinateRotation.CW180)
-            {
-                rotatedCoord = -colX;
-            }
-            else if (this._channelArrangeRotateTheta == (int)ECoordinateRotation.CW270)
-            {
-                rotatedCoord = rowY;
-            }
-
-            return rotatedCoord;
-        }
-
-        private int RotateRowYCoord(int colX, int rowY)
-        {
-            int rotatedCoord = rowY;
-
-            // y' = x * sin(Theta) + y * cos(Theta)
-            if (this._channelArrangeRotateTheta == (int)ECoordinateRotation.CW90)
-            {
-                rotatedCoord = colX;
-            }
-            else if (this._channelArrangeRotateTheta == (int)ECoordinateRotation.CW180)
-            {
-                rotatedCoord = -rowY;
-            }
-            else if (this._channelArrangeRotateTheta == (int)ECoordinateRotation.CW270)
-            {
-                rotatedCoord = -colX;
-            }
-
-            return rotatedCoord;
-        }
-
-        private void ChangeRowColCoord()
-        {
-            int calcByChannelRowY = 0;
-
-            int calcByChannelColX = 0;
 
             uint channel = this._acquireData.ChipInfo.Channel;
 
-            int colXCount = this._machineConfig.ChannelConfig.ColXCount;
+            this._acquireData.ChannelResultDataSet[channel][EProberDataIndex.JustTestOneChannel.ToString()].Value =
+              this._cmdData.DoubleData[(uint)EProberDataIndex.JustTestOneChannel];
 
-            double deltaColX = 0.0d;
-
-            double deltaRowY = 0.0d;
-
-            if (channel == 0)
+            // 當Multi-Die 抬腳功能啟動後 , Row Col 都直接接收Prober 給的資訊，因為其他顆會當成無die，不會測試
+            if (this._cmdData.DoubleData[(uint)EProberDataIndex.JustTestOneChannel] == 1)
             {
-                // 紀錄 Channel = 0, Prober 給予的 Row/Col
-                deltaColX = (double)this._proberCoordColX;
-                deltaRowY = (double)this._proberCoordRowY;
-            }
-            else
-            {
-                // 推算剩餘的 Channel Row/Col
-                calcByChannelRowY = Math.DivRem((int)channel, colXCount, out calcByChannelColX);
-
-                // 推算的 Row / Col 會與 Prober 旋轉角度有關
-                deltaColX = this._proberCoordColX + this.RotateColXCoord(calcByChannelColX, calcByChannelRowY);
-
-                //if (_machineConfig.TesterCommMode == ETesterCommMode.TCPIP)//20190108 David
-                //{
-                //    //deltaRowY = this._proberCoordRowY - this.RotateRowYCoord(calcByChannelColX, calcByChannelRowY);
-                //    switch (this._sysSetting.ProberCoord)
-                //    {
-                //        case (int)ECoordSet.First:
-                //        case (int)ECoordSet.Second:
-                //            deltaRowY = this._proberCoordRowY - this.RotateRowYCoord(calcByChannelColX, calcByChannelRowY);
-                //            break;
-                //        case (int)ECoordSet.Third:
-                //        case (int)ECoordSet.Fourth:
-                //            deltaRowY = this._proberCoordRowY + this.RotateRowYCoord(calcByChannelColX, calcByChannelRowY);
-                //            break;
-                //    }
-                //}
-                //else
-                //{
-                //    deltaRowY = this._proberCoordRowY + this.RotateRowYCoord(calcByChannelColX, calcByChannelRowY);
-                //}
-                switch (this._sysSetting.ProberCoord)
-                {
-                    case (int)ECoordSet.First:
-                    case (int)ECoordSet.Second:
-                        deltaRowY = this._proberCoordRowY - this.RotateRowYCoord(calcByChannelColX, calcByChannelRowY);
-                        break;
-                    case (int)ECoordSet.Third:
-                    case (int)ECoordSet.Fourth:
-                        deltaRowY = this._proberCoordRowY + this.RotateRowYCoord(calcByChannelColX, calcByChannelRowY);
-                        break;
-                }
-                //deltaRowY = this._proberCoordRowY + this.RotateRowYCoord(calcByChannelColX, calcByChannelRowY);
+                channel = 1;
             }
 
-            switch (this._sysSetting.ProberCoord)
+            chPose = basePose + coordTable[(int)channel];
+
+            //--------------------------------------------------------------
+            double X = chPose.GetX(0);
+            double Y = chPose.GetY(0);
+            double SX = chPose.GetX(chPose.BottomLayer);
+            double SY = chPose.GetY(chPose.BottomLayer);
+            double GX = chPose.GetX(1); //現階段"Group比Col/Row層數還高"跟"col/Row為最上層"互相矛盾
+            double GY = chPose.GetY(1);
+
+            if (!GlobalFlag.IsGetChShiftTableFromProber)    // 有MappingTable時，Follow Prober提供的座標系，Tester不轉置象限。
             {
-                case (int)ECoordSet.Second:
-                    deltaColX *= (-1);
-                    break;
-                case (int)ECoordSet.Third:
-                    deltaColX *= (-1);
-                    deltaRowY *= (-1);
-                    break;
-                case (int)ECoordSet.Fourth:
-                    deltaRowY *= (-1);
-                    break;
-                default:
-                    break;
+                CoordTransferTool coord = new CoordTransferTool(this._sysSetting.ProberCoord, this._sysSetting.TesterCoord);
+
+                double angleInDeg = this._channelArrangeRotateTheta * 90;
+
+                double sCol = this.CmdData.DoubleData[(uint)EProberDataIndex.TransCOL];
+                double sRow = this.CmdData.DoubleData[(uint)EProberDataIndex.TransROW];
+                coord.SetMatrixShift(sCol, sRow);
+                coord.SetMatrixRotate(angleInDeg);
+
+                coord.Rotate(ref X, ref Y);
+                coord.Rotate(ref SX, ref SY);
+                coord.Rotate(ref GX, ref GY);
             }
-
-            switch (this._sysSetting.TesterCoord)
-            {
-                case (int)ECoordSet.Second:
-                    deltaColX *= (-1);
-                    break;
-                case (int)ECoordSet.Third:
-                    deltaColX *= (-1);
-                    deltaRowY *= (-1);
-                    break;
-                case (int)ECoordSet.Fourth:
-                    deltaRowY *= (-1);
-                    break;
-                default:
-                    break;
-            }
-
-
-            this._acquireData.ChipInfo.ColX = (int)(deltaColX + this._cmdData.DoubleData[(uint)EProberDataIndex.TransCOL]);
+            //--------------------------------------------------------------
 
             if (this._machineConfig.TesterFunctionType == ETesterFunctionType.Multi_Die)
             {
+                this._acquireData.ChipInfo.ColX = (int)X;
+                this._acquireData.ChipInfo.RowY = (int)Y;
+                this._acquireData.ChipInfo.SubColX = (int)SX;
+                this._acquireData.ChipInfo.SubRowY = (int)SY;
+
                 this._acquireData.ChannelResultDataSet[channel].Col = this._acquireData.ChipInfo.ColX;
-            }
-
-            this._acquireData.ChipInfo.RowY = (int)(deltaRowY + this._cmdData.DoubleData[(uint)EProberDataIndex.TransROW]);
-
-            if (this._machineConfig.TesterFunctionType == ETesterFunctionType.Multi_Die)
-            {
                 this._acquireData.ChannelResultDataSet[channel].Row = this._acquireData.ChipInfo.RowY;
+                this._acquireData.ChannelResultDataSet[channel].SubCol = this._acquireData.ChipInfo.SubColX;
+                this._acquireData.ChannelResultDataSet[channel].SubRow = this._acquireData.ChipInfo.SubRowY;
+                this._acquireData.ChannelResultDataSet[channel].GroupCol = (int)GX;
+                this._acquireData.ChannelResultDataSet[channel].GroupRow = (int)GY;
             }
         }
 
@@ -530,7 +471,8 @@ namespace MPI.Tester.TestKernel
                 return;
 
             this._acquireData.ChipInfo.StartTime = DateTime.Now;
-            this.SetBiasRowColCoord();
+
+            _basePosition = this.SetBiasRowColCoord();
 
             switch (_machineConfig.TesterFunctionType)
             {
@@ -737,7 +679,7 @@ namespace MPI.Tester.TestKernel
 
             this._sysResultItem[(int)ESysResultItem.TEST].Value++;
 
-            this.ChangeRowColCoord();
+            this.ChangeRowColCoord(_basePosition);
 
             //--------------------------------------------------------------------
             // (1) Get current dark intensity data for each 200 chips
@@ -838,7 +780,7 @@ namespace MPI.Tester.TestKernel
 
                             this._acquireData.ChipInfo.Channel = channel;
 
-                            this.ChangeRowColCoord();
+                            this.ChangeRowColCoord(_basePosition);
 
                             // 判斷Channel是否有Die &  Channel是否啟動測試
                             if (!this._isChannelHasDie[channel] || !this._condCtrl.Data.ChannelConditionTable.Channels[channel].IsEnable)
@@ -995,7 +937,7 @@ namespace MPI.Tester.TestKernel
 
                             this.ResetItemMsrtResultValueToZero(this._condCtrl.Data.ChannelConditionTable.Channels[channel].Conditions.ToArray(), 0);
 
-                            this.ChangeRowColCoord();
+                            this.ChangeRowColCoord(_basePosition);
 
                             if (!this._isChannelHasDie[channel] || !this._condCtrl.Data.ChannelConditionTable.Channels[channel].IsEnable)
                             {
@@ -1391,7 +1333,7 @@ namespace MPI.Tester.TestKernel
                 return;
             }
 
-            EAdjacentResult result = _adjacentCheck.Push(this._condCtrl.Data.ChannelConditionTable, this._acquireData.ChannelResultDataSet);
+            EAdjacentResult result = (_adjacentCheck as MultiDieAdjacentCheck).Push(this._condCtrl.Data.ChannelConditionTable, this._acquireData.ChannelResultDataSet);
 
             this._acquireData.ChipInfo.AdjacentResult = result;
 
@@ -1911,6 +1853,32 @@ namespace MPI.Tester.TestKernel
             return fValList;
         }
 
+       
+
+        private void CreateChShiftTable()
+        {
+            _chShiftTable = new ChannelPosShiftTable<int>();
+
+            int colCnt = this._machineConfig.ChannelConfig.ColXCount;
+            int rowCnt = this._machineConfig.ChannelConfig.RowYCount;
+
+            int channel = 0;
+            int level = 0;
+            for (int y = 0; y < rowCnt; ++y)
+            {
+                for (int x = 0; x < colCnt; ++x)
+                {
+                    double doubleX = (double)x;
+                    double doubleY = (double)y;
+
+                    _chShiftTable.Push(channel, level, (int)doubleX, (int)doubleY);
+
+                    ++channel;
+                }
+            }
+        }
+
+       
         #endregion
 
         #region>>protected<<
@@ -2010,7 +1978,7 @@ namespace MPI.Tester.TestKernel
                 this.TestProcess(isReTest);
             }
 
-            this._isTestSuccess = this.CheckAllDeviceErrorState();
+            this._isTestSuccess = this.CheckAllDeviceErrorState();//這個需要10ms左右
 
             time = this._ptTestTime.PeekTimeSpan(ETimeSpanUnit.MilliSecond);
 
@@ -2249,37 +2217,6 @@ namespace MPI.Tester.TestKernel
 
         #region >>> Public Methods <<<
 
-        public bool CheckChannelConfig(uint colXCount, uint rowYCount, int theta)
-        {
-            this._channelArrangeRotateTheta = theta;
-            if (_machineConfig.TesterCommMode == ETesterCommMode.TCPIP)
-            {
-                this._channelArrangeRotateTheta = (int)ECoordinateRotation.None;
-
-            }
-
-            if (this._machineConfig.TesterFunctionType == ETesterFunctionType.Multi_Die)
-            {
-                if (colXCount == this._machineConfig.ChannelConfig.ColXCount &&
-                    rowYCount == this._machineConfig.ChannelConfig.RowYCount)
-                {
-                    GlobalFlag.IsSuccessCheckChannelConfig = true;
-                }
-                else
-                {
-                    GlobalFlag.IsSuccessCheckChannelConfig = false;
-
-                    //  this.SetErrorCode(EErrorCode.SystemChannelConfigNotMatch);
-
-                    Console.WriteLine("[MultiDie_TesterKernel], Channel Config Is Not Match");
-
-                    return false;
-                }
-
-            }
-
-            return true;
-        }
 
         public override void Init<T, K>(T config, K rdFunc)
         {
@@ -2413,6 +2350,12 @@ namespace MPI.Tester.TestKernel
             elecSettingList.Clear();
             optiSettingList.Clear();
             esdSettingList.Clear();
+
+            if (!GlobalFlag.IsGetChShiftTableFromProber)
+            {
+                CreateChShiftTable();
+            }
+
             //--------------------------------------------------------------------------------------------------------
             // Set configuration and parameters data to hardware device 
             // by recipe or condtion setting
@@ -2678,7 +2621,7 @@ namespace MPI.Tester.TestKernel
                 //this._esdDevice.PreCharge();
             }
 
-            this._adjacentCheck.Reset(this._sysSetting.IsEnableAdjacentError, this._product, this._sysSetting);
+            (_adjacentCheck as MultiDieAdjacentCheck).Reset(this._sysSetting.IsEnableAdjacentError, this._product, this._sysSetting);
 
             this._passRateCheck.Start(this._sysSetting, this._condCtrl.Data.TestItemArray);
 
@@ -2906,6 +2849,10 @@ namespace MPI.Tester.TestKernel
 
                             this._acquireData.ChipInfo.RowY = this._acquireData.ChannelResultDataSet[channel].Row;
 
+                            this._acquireData.ChipInfo.SubColX = this._acquireData.ChannelResultDataSet[channel].SubCol;
+
+                            this._acquireData.ChipInfo.SubRowY = this._acquireData.ChannelResultDataSet[channel].SubRow;
+
                             //------------------------------------------------------------------------------------------//
                             // (1) 計算 LOPWL Item Result
                             //------------------------------------------------------------------------------------------//
@@ -3054,7 +3001,7 @@ namespace MPI.Tester.TestKernel
                     }
             }
 
-            this.CheckAllDeviceErrorState();
+            //this.CheckAllDeviceErrorState();
 
             this.CheckAdjacentStatus();
 
@@ -3071,6 +3018,60 @@ namespace MPI.Tester.TestKernel
 
             return;
         }
+
+        public bool CheckChannelConfig(uint colXCount, uint rowYCount, int theta)
+        {
+            this._channelArrangeRotateTheta = theta;
+
+            if (this._machineConfig.TesterFunctionType == ETesterFunctionType.Multi_Die)
+            {
+                //if (this._machineConfig.ChannelConfig.TesterSequenceType == ETesterSequenceType.Matrix)
+                //{
+                //    // 20191112 Jeemo, Matrix: Prober = Single Die, Tester = Multi-Die => Bypass Channel Check
+                //    GlobalFlag.IsSuccessCheckChannelConfig = true;
+
+                //    Console.WriteLine("[HS_TesterKernel], Enable Matrix Tester Sequence.");
+
+                //    return true;
+                //}
+
+                if (colXCount == this._machineConfig.ChannelConfig.ColXCount &&
+                    rowYCount == this._machineConfig.ChannelConfig.RowYCount)
+                {
+                    GlobalFlag.IsSuccessCheckChannelConfig = true;
+                }
+                else
+                {
+                    GlobalFlag.IsSuccessCheckChannelConfig = false;
+
+                    //  this.SetErrorCode(EErrorCode.SystemChannelConfigNotMatch);
+
+                    Console.WriteLine("[HS_TesterKernel], Channel Config Is Not Match");
+
+                    return false;
+                }
+
+            }
+
+            return true;
+        }
+
+        public bool PushChShiftTable(int channel, int layer, int x, int y, bool createNewTable = false)
+        {
+            if (createNewTable)
+            {
+                _chShiftTable = new ChannelPosShiftTable<int>();
+            }
+
+            _chShiftTable.Push(channel, layer, x, y);
+
+            GlobalFlag.IsGetChShiftTableFromProber = true;
+
+            return true;
+
+        }
+
+
 
         public override bool RunCommand(int command)
         {
@@ -3175,6 +3176,7 @@ namespace MPI.Tester.TestKernel
                     case (int)ETesterKernelCmd.StopTest:
                         this.EndTestSequence();
                         break;
+
                     //---------------------------------------------------------
                     default:
                         break;

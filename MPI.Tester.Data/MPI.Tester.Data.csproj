@@ -63,6 +63,8 @@
     <Compile Include="CalibrateData\CalibarteData.cs" />
     <Compile Include="CalibrateData\CalibrateChipValue.cs" />
     <Compile Include="CalibrateData\CalibrationCtrl.cs" />
+    <Compile Include="ChannelCoordTable\ChannelPosShiftTable.cs" />
+    <Compile Include="ChannelCoordTable\LevelShiftTable.cs" />
     <Compile Include="ConditionData\ChannelConditionTable.cs" />
     <Compile Include="ConditionData\ConditionCtrl.cs" />
     <Compile Include="ConditionData\ConditionData.cs" />
