@@ -109,8 +109,6 @@ namespace MPI.Tester.TestKernel
 
         #region >>> Private Methods <<<
 
-        
-
         private void GetOptiMsrtResult(uint index, TestItemData testItem)
         {
             if (this._sptMeter == null)
@@ -394,7 +392,6 @@ namespace MPI.Tester.TestKernel
             pos.Push(1, gx, gy);
             return pos;
         }
-
 
         private void ChangeRowColCoord(LevelShiftTable<int> basePose, ChannelPosShiftTable<int> coordTable = null)
         {

@@ -6,16 +6,20 @@ using System.IO;
 using MPI.Tester.Data;
 using MPI.Tester.DeviceCommon;
 using Newtonsoft.Json;
+using MPI.Tester.Data.ChannelCoordTable;
 
 namespace MPI.Tester.Report.BaseMethod.InfoToJSON
 {
     public class ProductDataInfoConverter
     {
         ProductData _productData = new ProductData();
-       public ProductDataInfoConverter(ProductData pData)
-       {
-           _productData = pData;
-       }
+        ChannelPosShiftTable<int> _chTable = new ChannelPosShiftTable<int>();
+        public ProductDataInfoConverter(ProductData pData, ChannelPosShiftTable<int> chTable)
+        {
+            _productData = pData;
+            _chTable = chTable;
+
+        }
 
        public Dictionary<string, object> GetInfoDic()
        {
@@ -23,6 +27,7 @@ namespace MPI.Tester.Report.BaseMethod.InfoToJSON
 
 
            outDic.Add("ProductName", _productData.ProductName);
+           outDic.Add("ChannelLayerPosShiftTable", _chTable);
            if (_productData.TestCondition != null && _productData.TestCondition.TestItemArray != null)
            {
                outDic.Add("TestCondition", _productData.TestCondition.GetItemInfoList());

@@ -8,6 +8,7 @@ using MPI.Tester.TestServer;
 using MPI.Tester.Maths;
 using MPI.Tester.TestKernel;
 using MPI.Tester.Tools;
+using MPI.Tester.Data.ChannelCoordTable;
 
 namespace MPI.Tester.Report
 {
@@ -558,7 +559,10 @@ namespace MPI.Tester.Report
 
             set 
             {
-                _report.CustomizeCoordTransTool = value;
+                if (_report != null)
+                {
+                    _report.CustomizeCoordTransTool = value;
+                }
             }
         }
 
@@ -576,7 +580,31 @@ namespace MPI.Tester.Report
 
             set 
             {
-                _report.CoordTransTool = value;
+                if (_report != null)
+                {
+                    _report.CoordTransTool = value;
+                }
+            }
+        }
+
+        public static ChannelPosShiftTable<int> Channel2PosTable
+        {
+            get
+            {
+                if (_report == null)
+                {
+                    return null;
+                }
+
+                return _report.Channel2PosTable;
+            }
+
+            set
+            {
+                if (_report != null)
+                {
+                    _report.Channel2PosTable = value;
+                }
             }
         }
 

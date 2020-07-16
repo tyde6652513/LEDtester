@@ -1748,6 +1748,8 @@ namespace MPI.Tester.Gui
                                     }
                                 }
                             }
+                            ReportProcess.Channel2PosTable = _MPITesterKernel.ChShiftTable.Clone() as MPI.Tester.Data.ChannelCoordTable.ChannelPosShiftTable<int>;
+                            //不確定 CMD_MAPPING_TABLE什麼時候才會送過來，因此有更新就丟過去ReportProcess
                         }
 
                         break;
@@ -1805,6 +1807,11 @@ namespace MPI.Tester.Gui
                 if( _p2TcoordTransTool != null)
                 {
                     ReportProcess.CoordTransferTool = _p2TcoordTransTool.Clone() as CoordTransferTool;
+                }
+
+                if (_MPITesterKernel is MultiDie_TesterKernel && _MPITesterKernel.ChShiftTable != null)
+                {
+                    ReportProcess.Channel2PosTable = _MPITesterKernel.ChShiftTable.Clone() as MPI.Tester.Data.ChannelCoordTable.ChannelPosShiftTable<int>;
                 }
             }
 
@@ -2976,12 +2983,8 @@ namespace MPI.Tester.Gui
 
             _consecutiveRecordData.Clear();
 
-            if (isClearBodyDataList)
-            {
-                AppSystem.SetDataToReport();
-
-                // Report.ReportProcess.RunCommand(TestServer.EServerQueryCmd.CMD_TESTER_START);
-            }
+            AppSystem.SetDataToReport();
+            ReportProcess.Channel2PosTable = _MPITesterKernel.ChShiftTable.Clone() as MPI.Tester.Data.ChannelCoordTable.ChannelPosShiftTable<int>;
         }
 
         public static void ResetDataList()
@@ -3117,6 +3120,8 @@ namespace MPI.Tester.Gui
             GlobalFlag.IsSuccessCheckChannelConfig = false;
 
             DataCenter._uiSetting.WaferBeginTime = DateTime.Now;
+
+            ReportProcess.Channel2PosTable = _MPITesterKernel.ChShiftTable.Clone() as MPI.Tester.Data.ChannelCoordTable.ChannelPosShiftTable<int>;
             //-------------------------------------------
             // (1) Run simulator 
             //-------------------------------------------

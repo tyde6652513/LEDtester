@@ -60,6 +60,17 @@ namespace MPI.Tester.Data.ChannelCoordTable
                 base[ch] = lt;
             }
         }
+
+        public object Clone()
+        {
+            ChannelPosShiftTable<T> obj = new ChannelPosShiftTable<T>();
+            foreach (var p in this)
+            {
+                obj.Push(p.Key, p.Value.Clone() as LevelShiftTable<T>);
+            }
+            return obj;
+ 
+        }
         #endregion
 
         
