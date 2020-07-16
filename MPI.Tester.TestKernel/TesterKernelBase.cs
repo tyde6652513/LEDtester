@@ -24,6 +24,9 @@ using MPI.Tester.Device.Pulser;
 using System.Threading;
 
 
+using MPI.Tester.Data.ChannelCoordTable;
+
+
 namespace MPI.Tester.TestKernel
 {
     public abstract partial class TesterKernelBase
@@ -115,6 +118,8 @@ namespace MPI.Tester.TestKernel
         protected KernelSequenceManagement _seqManagement;
 
         protected IOStateCheck _ioStateCheck;
+
+        protected ChannelPosShiftTable<int> _chShiftTable = new ChannelPosShiftTable<int>();
 
         #endregion
 
@@ -214,6 +219,9 @@ namespace MPI.Tester.TestKernel
         }
 
         public int TesterCoord { get { return this._sysSetting.TesterCoord; } }
+
+        public ChannelPosShiftTable<int> ChShiftTable
+        { get { return _chShiftTable; } }
         #endregion
 
         #region >>> Public Method <<<

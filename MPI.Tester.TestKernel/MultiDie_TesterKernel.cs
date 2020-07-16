@@ -48,7 +48,7 @@ namespace MPI.Tester.TestKernel
 
         //private ILaserPostCalc _laserPostCalc;
 
-        private ChannelPosShiftTable<int> _chShiftTable = new ChannelPosShiftTable<int>();
+        
 
         private LevelShiftTable<int> _basePosition = new LevelShiftTable<int>();
 
