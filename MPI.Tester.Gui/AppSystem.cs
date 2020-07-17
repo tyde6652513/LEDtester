@@ -2985,7 +2985,10 @@ namespace MPI.Tester.Gui
 
             _consecutiveRecordData.Clear();
 
-            AppSystem.SetDataToReport();
+            if (isClearBodyDataList)
+            {
+                AppSystem.SetDataToReport();
+            }
             ReportProcess.Channel2PosTable = _MPITesterKernel.ChShiftTable.Clone() as MPI.Tester.Data.ChannelCoordTable.ChannelPosShiftTable<int>;
         }
 
