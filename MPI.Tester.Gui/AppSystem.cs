@@ -869,11 +869,13 @@ namespace MPI.Tester.Gui
                                     case ETesterFunctionType.Multi_Die:
                                         {
 
-                                            if (DataCenter._machineConfig.TesterCommMode == ETesterCommMode.TCPIP)
+                                            if (DataCenter._machineConfig.TesterCommMode == ETesterCommMode.TCPIP ||
+                                                DataCenter._machineConfig.TesterCommMode == ETesterCommMode.TCPIP_MPI)
                                             {
                                                 xProberChannel = (uint)DataCenter._machineConfig.ChannelConfig.ColXCount;
                                                 yProberChannel = (uint)DataCenter._machineConfig.ChannelConfig.RowYCount;
                                             }
+
                                             if (AppSystem.CheckChannelConfig(xProberChannel, yProberChannel, tProberChannel))
                                             {
                                                 AppSystem.Run();

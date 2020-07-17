@@ -1866,7 +1866,7 @@ namespace MPI.Tester.TestKernel
                 for (int x = 0; x < colCnt; ++x)
                 {
                     double doubleX = (double)x;
-                    double doubleY = (double)y;
+                    double doubleY = -(double)y;
 
                     _chShiftTable.Push(channel, level, (int)doubleX, (int)doubleY);
 
