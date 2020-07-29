@@ -12,6 +12,8 @@ using MPI.Tester.Tools;
 using MPI.Tester.Report.BaseMethod.HeaderFinder;
 using MPI.Tester.Report.BaseMethod.PosKeyMaker;
 
+using MPI.Tester.Data.ChannelCoordTable;
+
 namespace MPI.Tester.Report
 {
 	public  abstract partial class ReportBase
@@ -82,6 +84,8 @@ namespace MPI.Tester.Report
         protected string _titleStrKey; // When reload temp file, use this key to find title row.
         protected bool _saveMapAtAbort = true;
         protected PosKeyMakerBase _crKeyMaker = null;
+
+        protected ChannelPosShiftTable<int> _chShiftTable = new ChannelPosShiftTable<int>();//逆算multi die的base時使用
         //protected bool _isRetest = false;
 
 		#endregion
@@ -2694,6 +2698,13 @@ namespace MPI.Tester.Report
             get { return _p2tCoordTransferTool; }
 
             set { _p2tCoordTransferTool = value; }
+        }
+
+        public ChannelPosShiftTable<int>  Channel2PosTable
+        {
+            get { return _chShiftTable; }
+
+            set { _chShiftTable = value; }
         }
 
         

@@ -42,7 +42,7 @@ namespace MPI.Tester.Report.User.MPI_Python
 
             keyInfoDic.Add("UISetting", uiObj.GetInfoDic());
 
-            ProductDataInfoConverter pObj = new ProductDataInfoConverter(Product);
+            ProductDataInfoConverter pObj = new ProductDataInfoConverter(Product, Channel2PosTable);
 
             keyInfoDic.Add("Product", pObj.GetInfoDic());
 

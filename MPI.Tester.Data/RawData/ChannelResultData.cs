@@ -14,11 +14,14 @@ namespace MPI.Tester.Data
         private object _lockObj;
         private bool _isTested;
         private uint _channel;
-        private int _row;
-        private int _col;
+        private int _row = 0;
+        private int _col = 0;
+        private int _subRow = 0;
+        private int _subCol = 0;
+        private int _groupRow = 0;
+        private int _groupCol = 0;
         private bool _isPass;
         private int _binGrade;
-        private string _aoiSign;
 
         private string _binGradeName;
 
@@ -66,16 +69,7 @@ namespace MPI.Tester.Data
                 { 
                     this._channel = value;
 
-                    if (this._channelResultData != null)
-                    {
-                        foreach (var item in this._channelResultData)
-                        {
-                            if (item.KeyName == "CHANNEL")
-                            {
-                                item.Value = this._channel;
-                            }
-                        }
-                    }
+                    PushValueByKey("CHANNEL", value);
                 } 
             }
         }
@@ -89,16 +83,7 @@ namespace MPI.Tester.Data
                 { 
                     this._row = value;
 
-                    if (this._channelResultData != null)
-                    {
-                        foreach (var item in this._channelResultData)
-                        {
-                            if (item.KeyName == "ROW")
-                            {
-                                item.Value = this._row;
-                            }
-                        }
-                    }
+                    PushValueByKey("ROW", value);
                 } 
             }
         }
@@ -112,17 +97,63 @@ namespace MPI.Tester.Data
                 { 
                     this._col = value;
 
-                    if (this._channelResultData != null)
-                    {
-                        foreach (var item in this._channelResultData)
-                        {
-                            if (item.KeyName == "COL")
-                            {
-                                item.Value = this._col;
-                            }
-                        }
-                    }
+                    PushValueByKey("COL", value);
                 } 
+            }
+        }
+
+        public int SubRow
+        {
+            get { return this._subRow; }
+            set
+            {
+                lock (this._lockObj)
+                {
+                    this._subRow = value;
+                    PushValueByKey("SubROW", value);
+
+                }
+            }
+        }
+
+        public int SubCol
+        {
+            get { return this._subCol; }
+            set
+            {
+                lock (this._lockObj)
+                {
+                    this._subCol = value;
+                    PushValueByKey("SubCOL", value);
+
+                }
+            }
+        }
+
+
+        public int GroupRow
+        {
+            get { return this._groupRow; }
+            set
+            {
+                lock (this._lockObj)
+                {
+                    this._groupRow = value;
+                    PushValueByKey("GroupROW", value);
+                }
+            }
+        }
+
+        public int GroupCol
+        {
+            get { return this._groupCol; }
+            set
+            {
+                lock (this._lockObj)
+                {
+                    this._groupCol = value;
+                    PushValueByKey("GroupCOL", value);
+                }
             }
         }
 
@@ -140,20 +171,22 @@ namespace MPI.Tester.Data
         public int BinGrade
         {
             get { return this._binGrade; }
-            set { lock (this._lockObj) { this._binGrade = value; } }
+            set
+            {
+                lock (this._lockObj)
+                {
+                    this._binGrade = value;
+                    PushValueByKey("BIN", value);
+                }
+            }
         }
 
         public string BinGradeName
         {
             get { return this._binGradeName; }
-            set { lock (this._lockObj) { this._binGradeName = value; } }
+            set { lock (this._lockObj) { this._binGradeName = value;  } }
         }
 
-        public string AOISign
-        {
-            get { return this._aoiSign; }
-            set { lock (this._lockObj) { this._aoiSign = value; } }
-        }
 
         public TestResultData this[string keyName]
         {
@@ -184,6 +217,23 @@ namespace MPI.Tester.Data
             }
         }
 
+        #endregion
+
+        #region >>> private method<<<
+
+        private void PushValueByKey(string key, double value)
+        {
+            if (this._channelResultData != null)
+            {
+                foreach (var item in this._channelResultData)
+                {
+                    if (item.KeyName == key)
+                    {
+                        item.Value = value;
+                    }
+                }
+            }
+        }
         #endregion
 
         #region >>> Public Method <<<
@@ -217,38 +267,12 @@ namespace MPI.Tester.Data
             {
                 if (this._channelResultData[i].IsEnable)
                 {
-                    //if (this._channelResultData[i].KeyName == "TEST")
-                    //{
-                        
-                    //}
-                    //if (this._channelResultData[i].KeyName == "CHANNEL")
-                    //{
-                    //    data._channelResultData[i].RawData = this._channel;
-
-                    //    data._channelResultData[i].Data = this._channel;
-                    //}
-                    //else if (this._channelResultData[i].KeyName == "ROW")
-                    //{
-                    //    data._channelResultData[i].RawData = this._row;
-
-                    //    data._channelResultData[i].Data = this._row;
-                    //}
-                    //else if (this._channelResultData[i].KeyName == "COL")
-                    //{
-                    //    data._channelResultData[i].RawData = this._col;
-
-                    //    data._channelResultData[i].Data = this._col;
-                    //}
-                    //else
-                    //{
-                    //    data._channelResultData[i].RawData = this._channelResultData[i].RawData;
-
-                    //    data._channelResultData[i].Data = this._channelResultData[i].Data;
-                    //}
 
                     data._channelResultData[i].RawValue = this._channelResultData[i].RawValue;
 
                     data._channelResultData[i].Value = this._channelResultData[i].Value;
+
+                    data._channelResultData[i].IsTested = this._channelResultData[i].IsTested;
                 }
             }
         }
@@ -271,7 +295,6 @@ namespace MPI.Tester.Data
 
             cloneObj._binGradeName = this._binGradeName.ToString();
 
-            cloneObj.AOISign = this.AOISign;
 
             foreach (var item in this._channelResultData)
             {

@@ -81,7 +81,7 @@ namespace MPI.Tester.TestServer
                     return -1;
                 }
 
-                Console.WriteLine("[TCPTestServer2], CommandID = " + cmd.CommandID.ToString());
+                //Console.WriteLine("[TCPTestServer2], CommandID = " + cmd.CommandID.ToString());
 
                 if (cmd.CommandID == (int)ETSECommand.ID_SOT2)
                 {
@@ -326,11 +326,11 @@ namespace MPI.Tester.TestServer
                     case (int)ETSECommand.ID_SOT2:
                         #region >>ID_SOT2<<
                         {
-                            Console.WriteLine("[SOT2Test],Start");
+                            //Console.WriteLine("[SOT2Test],Start");
                             //echoTSECmd = Test1SOT2(cmd);
                             //echoTSECmd = Test2SOT2(cmd);
                             echoTSECmd = SOT2Process(cmd); // 20200302 Single & Multi 都使用SOT2
-                            Console.WriteLine("[SOT2Test],End");
+                            //Console.WriteLine("[SOT2Test],End");
 
                             break;
                         }

@@ -869,11 +869,13 @@ namespace MPI.Tester.Gui
                                     case ETesterFunctionType.Multi_Die:
                                         {
 
-                                            if (DataCenter._machineConfig.TesterCommMode == ETesterCommMode.TCPIP)
+                                            if (DataCenter._machineConfig.TesterCommMode == ETesterCommMode.TCPIP ||
+                                                DataCenter._machineConfig.TesterCommMode == ETesterCommMode.TCPIP_MPI)
                                             {
                                                 xProberChannel = (uint)DataCenter._machineConfig.ChannelConfig.ColXCount;
                                                 yProberChannel = (uint)DataCenter._machineConfig.ChannelConfig.RowYCount;
                                             }
+
                                             if (AppSystem.CheckChannelConfig(xProberChannel, yProberChannel, tProberChannel))
                                             {
                                                 AppSystem.Run();
@@ -1517,6 +1519,7 @@ namespace MPI.Tester.Gui
 
                 case (int)EServerQueryCmd.CMD_SUB_RECIPE_INFO:
                     {
+                        #region
                         Console.WriteLine("[ServerQueryEventHandler], CMD_SUB_RECIPE_INFO");
 
                         Console.WriteLine("ProberRecipeName:" + DataCenter._uiSetting.ProberRecipeName);
@@ -1528,6 +1531,7 @@ namespace MPI.Tester.Gui
                         DataCenter._uiSetting.SlotNumber = e.BufferData[0].ToString("0");
 
                         break;
+                        #endregion
                     }
                 //----------------------------------------------------------------------------------------------------------------------
 
@@ -1704,7 +1708,57 @@ namespace MPI.Tester.Gui
 
                         #endregion
                     }
-                //
+                //----------------------------------------------------------------------------------------------------------------------
+                case (int)EServerQueryCmd.CMD_MAPPING_TABLE:
+                    {
+                        #region >>> CMD_MAPPING_TABLE <<<
+
+                        Console.WriteLine("[ServerQueryEventHandler], CMD_MAPPING_TABLE");
+
+                        if (_MPITesterKernel is MultiDie_TesterKernel)
+                        {
+                            if (e.StrData != null)
+                            {
+                                if (!DataCenter._rdFunc.RDFuncData.IsDisableCheckProbeChannel
+                                    && e.StrData.Length != DataCenter._machineConfig.ChannelConfig.ChannelCount)
+                                {
+                                    GlobalFlag.IsSuccessCheckChannelConfig = false;
+
+                                    Console.WriteLine("[ServerQueryEventHandler], CMD_MAPPING_TABLE, Check Channel Config Fail!");
+
+                                    return;
+                                }
+                                else
+                                {
+                                    GlobalFlag.IsSuccessCheckChannelConfig = true;
+                                }
+
+                                for (int i = 0; i < e.StrData.Length; ++i)
+                                {
+                                    string[] strArr = e.StrData[i].Split(',');
+                                    if (strArr.Length == 4)
+                                    {
+                                        int ch, layer, x, y;
+                                        if (int.TryParse(strArr[0], out ch) &&
+                                            int.TryParse(strArr[1], out layer) &&
+                                            int.TryParse(strArr[2], out x) &&
+                                            int.TryParse(strArr[3], out y))
+                                        {
+                                            bool needClear = i == 0;
+                                            (_MPITesterKernel as MultiDie_TesterKernel).PushChShiftTable(ch, layer, x, y, needClear);
+                                        }
+                                    }
+                                }
+                            }
+                            ReportProcess.Channel2PosTable = _MPITesterKernel.ChShiftTable.Clone() as MPI.Tester.Data.ChannelCoordTable.ChannelPosShiftTable<int>;
+                            //不確定 CMD_MAPPING_TABLE什麼時候才會送過來，因此有更新就丟過去ReportProcess
+                        }
+
+                        break;
+
+                        #endregion
+                    }
+                //----------------------------------------------------------------------------------------------------------------------
                 default:
                     break;
             }
@@ -1755,6 +1809,11 @@ namespace MPI.Tester.Gui
                 if( _p2TcoordTransTool != null)
                 {
                     ReportProcess.CoordTransferTool = _p2TcoordTransTool.Clone() as CoordTransferTool;
+                }
+
+                if (_MPITesterKernel is MultiDie_TesterKernel && _MPITesterKernel.ChShiftTable != null)
+                {
+                    ReportProcess.Channel2PosTable = _MPITesterKernel.ChShiftTable.Clone() as MPI.Tester.Data.ChannelCoordTable.ChannelPosShiftTable<int>;
                 }
             }
 
@@ -2929,9 +2988,8 @@ namespace MPI.Tester.Gui
             if (isClearBodyDataList)
             {
                 AppSystem.SetDataToReport();
-
-                // Report.ReportProcess.RunCommand(TestServer.EServerQueryCmd.CMD_TESTER_START);
             }
+            ReportProcess.Channel2PosTable = _MPITesterKernel.ChShiftTable.Clone() as MPI.Tester.Data.ChannelCoordTable.ChannelPosShiftTable<int>;
         }
 
         public static void ResetDataList()
@@ -3067,6 +3125,8 @@ namespace MPI.Tester.Gui
             GlobalFlag.IsSuccessCheckChannelConfig = false;
 
             DataCenter._uiSetting.WaferBeginTime = DateTime.Now;
+
+            ReportProcess.Channel2PosTable = _MPITesterKernel.ChShiftTable.Clone() as MPI.Tester.Data.ChannelCoordTable.ChannelPosShiftTable<int>;
             //-------------------------------------------
             // (1) Run simulator 
             //-------------------------------------------

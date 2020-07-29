@@ -646,7 +646,8 @@ namespace MPI.Tester.Gui
 			}
             //--------------------------------------------------------------------
             // (3) Reset Data
-            //--------------------------------------------------------------------            
+            //--------------------------------------------------------------------    
+            GlobalFlag.IsGetChShiftTableFromProber = false;
             AppSystem.SetDataToSystem();
 
 			this._cycleCount = 0;

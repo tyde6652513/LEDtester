@@ -134,7 +134,7 @@ this.Product.TestCondition.TestItemArray.Length > 0)
             
             Dictionary<string, object> keyInfoDic = new Dictionary<string, object>();
 
-            ProductDataInfoConverter pObj = new ProductDataInfoConverter(Product);
+            ProductDataInfoConverter pObj = new ProductDataInfoConverter(Product, Channel2PosTable);
 
             keyInfoDic.Add("Product", pObj.GetInfoDic());
             BinDataInfo bObj = new BinDataInfo(SmartBinning);

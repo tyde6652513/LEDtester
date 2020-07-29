@@ -49,6 +49,8 @@ namespace MPI.Tester.Data
 
         private static EOutputReportState _proberAssignMode;
 
+        private static bool _isGetChShiftTableFromProber = false;
+
 		#region >>> Public Property <<<
 
         public static bool Is64bit
@@ -235,6 +237,12 @@ namespace MPI.Tester.Data
         {
             get { return _proberAssignMode; }
             set { lock (_slockObj) { _proberAssignMode = value; } }
+        }
+
+        public static bool IsGetChShiftTableFromProber
+        {
+            get { return _isGetChShiftTableFromProber; }
+            set { lock (_slockObj) { _isGetChShiftTableFromProber = value; } }
         }
 
 		#endregion
