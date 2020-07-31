@@ -7,8 +7,9 @@ using MPI.Tester.Data;
 
 using MPI.Tester.Report.BaseMethod.HeaderFinder;
 using MPI.Tester.Report.BaseMethod.PosKeyMaker;
+using MPI.Tester.Report.BaseMethod.MapReader;
 
-namespace MPI.Tester.Report.User.DOWA
+namespace MPI.Tester.Report.User.Accelink
 {
     partial class Report : ReportBase
     {
@@ -20,30 +21,15 @@ namespace MPI.Tester.Report.User.DOWA
         Dictionary<string, string[]> posStrArrDic = new Dictionary<string, string[]>();
 
         List<int> ivFirstCol = new List<int>();//搜尋數量不多，用list省事
-        List<int> cvFirstCol = new List<int>();
 
         ETestStage stageOfParsingFile = ETestStage.IV;
         string _mergeFileNamewithoutExten = DateTime.Now.ToString("Merge_yyyyMMddHHmmss");
-        #region
-        protected override EErrorCode ProcessAfterWaferFinished()//在WaferFinished後啟動，目前是設計來啟動光磊合檔用
-        {
-            EErrorCode err = EErrorCode.NONE;
 
-            Console.WriteLine("[DOWAReport],ProcessAfterWaferFinished()");
-
-            if (!useFormatA)
-            {
-                return base.ProcessAfterWaferFinished();
-            }
-
-            return err;
-        }
-        #endregion
 
         #region
         public override EErrorCode MergeFile(string outputPath, List<string> fileList = null)
         {
-            Console.WriteLine("[DOWAReport],MergeFile()");
+            Console.WriteLine("[AccelinkReport],MergeFile()");
             oldFirstRow = new List<string>();
             oldFirstRow.Add("TestTime");
             spRuleRow = new List<string>();
@@ -59,19 +45,9 @@ namespace MPI.Tester.Report.User.DOWA
 
             _mergeFileNamewithoutExten = Path.GetFileNameWithoutExtension(outputPath);
 
-            List<string> ivFKeyList = new List<string>() { "POLAR", "BIN", "TestTemp1" };
-            for (int i = 2; i < 20; ++i)
-            {
-                ivFKeyList.Add("MCALC_" + i.ToString());//A/W
-            }
+            List<string> ivFKeyList = new List<string>() { "POLAR", "BIN", "AOISIGN" };
+         
             ivFirstCol = GetKeyColList(ivFKeyList);
-
-            List<string> cvFKeyList = new List<string>() { "BINCV", "TestTemp2" };
-            for (int i = 1; i < 10; ++i)
-            {
-                ivFKeyList.Add("LCRCP_" + i.ToString());//Cp
-            }
-            cvFirstCol = GetKeyColList(ivFKeyList);
 
             posStrArrDic = new Dictionary<string, string[]>();
             //List<string> headerText = new List<string>();
@@ -90,7 +66,7 @@ namespace MPI.Tester.Report.User.DOWA
                 fileList = fileOrderByLastWriteTime;
                 for (int fCnt = 0; fCnt < fileList.Count ; ++fCnt)
                 {
-                    Console.WriteLine("[DOWAReport],MergeFile(),read file:" + fileList[fCnt]);
+                    Console.WriteLine("[AccelinkReport],MergeFile(),read file:" + fileList[fCnt]);
 
                     HeaderFinder hf = new HeaderFinder(this.TitleStrKey, TitleStrShift);
                     using (StreamReader sr = new StreamReader(fileList[fCnt]))
@@ -119,7 +95,7 @@ namespace MPI.Tester.Report.User.DOWA
                 }
             }
 
-            Console.WriteLine("[ReportDowa],MergeFile(),write out data");
+            Console.WriteLine("[ReportAccelink],MergeFile(),write out data");
             string mergeTmpPath = @"C:\MPI\Temp2\mergeTemp.csv";
             if (File.Exists(mergeTmpPath))
             {
@@ -354,17 +330,6 @@ namespace MPI.Tester.Report.User.DOWA
             else
             {
                 string[] tempArr = posStrArrDic[colrowKey];
-                //不該發生
-                //if (tempArr.Length < rawData.Length)
-                //{
-                //    List<string> sList = new List<string>();
-                //    sList.AddRange(tempArr);
-                //    for (int i = tempArr.Length; i < rawData.Length; ++i)
-                //    {
-                //        sList.Add("");
-                //    }
-                //    tempArr = sList.ToArray();
-                //}
                 int minLen = Math.Min(rawData.Length, tempArr.Length);
                 for (int i = 0; i < minLen; ++i)
                 {                    
@@ -381,10 +346,6 @@ namespace MPI.Tester.Report.User.DOWA
                             {
                                 tempArr[i] = rawData[i];
                             }
-                            else if (stageOfParsingFile == ETestStage.LCR && cvFirstCol.Contains(i))
-                            {
-                                tempArr[i] = rawData[i];
-                            }
                         }
                     }
                 }
@@ -393,6 +354,7 @@ namespace MPI.Tester.Report.User.DOWA
 
             return state;
         }
+
         #endregion
         #region
         internal enum EParsingState:int

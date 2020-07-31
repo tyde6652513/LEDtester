@@ -54,6 +54,8 @@
     <Compile Include="BaseMethod\InfoToJSON\ProductDataInfo.cs" />
     <Compile Include="BaseMethod\InfoToJSON\TesterSettingInfo.cs" />
     <Compile Include="BaseMethod\InfoToJSON\UISettingInfo.cs" />
+    <Compile Include="BaseMethod\MapReader\MapDieReader.cs" />
+    <Compile Include="BaseMethod\MergeReportBase.cs" />
     <Compile Include="BaseMethod\PosKeyMaker\ColRowKeyMaker.cs" />
     <Compile Include="BaseMethod\SptReportBase.cs" />
     <Compile Include="CsvQuoteMark.cs" />
@@ -66,13 +68,13 @@
     <Compile Include="ResultTitleInfo.cs" />
     <Compile Include="StatisticSet.cs" />
     <Compile Include="BaseMethod\SweepReportBase.cs" />
+    <Compile Include="User\Accelink\MergeReport.cs" />
     <Compile Include="User\Accelink\Report.cs" />
     <Compile Include="User\AOI\Report.cs" />
     <Compile Include="User\ATV\Report.cs" />
     <Compile Include="User\ChangeLight\Report.cs" />
     <Compile Include="User\CHT\Report.cs" />
     <Compile Include="User\DOWA\LaserPowerReport.cs" />
-    <Compile Include="User\DOWA\MapDieReader.cs" />
     <Compile Include="User\DOWA\Report-FormatA.cs" />
     <Compile Include="User\DOWA\Report.cs" />
     <Compile Include="User\DOWA\Report_FormatD.cs" />

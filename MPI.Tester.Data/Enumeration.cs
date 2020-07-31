@@ -1124,6 +1124,8 @@ namespace MPI.Tester.Data
         NFT = 1,
         FFT = 2,
         LCR= 3,
+
+        Sampling = 10,
     }
 
 

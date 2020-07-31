@@ -10,7 +10,8 @@ using MPI.Tester.Report;
 using MPI.Tester.Report.BaseMethod.HeaderFinder;
 using MPI.Tester.Report.BaseMethod.PosKeyMaker;
 
-namespace MPI.Tester.Report.User.DOWA
+
+namespace MPI.Tester.Report.BaseMethod.MapReader
 {
     public interface IMapItem
     {
@@ -25,13 +26,13 @@ namespace MPI.Tester.Report.User.DOWA
         public Dictionary<string, T> PosDieDict = new Dictionary<string, T>();
 
         public bool IsDefineDataType = false;
-        HeaderFinder _headerFinder;
+        MPI.Tester.Report.BaseMethod.HeaderFinder.HeaderFinder _headerFinder;
         PosKeyMakerBase _posMaker;
         char _splitChar = ',';
         string posPattern = "^[xyXY][+-]\\d";
         Regex _subDieRegex;
         #region
-        public MapDieReader(HeaderFinder hf,PosKeyMakerBase posMaker,char splitChar = ',')
+        public MapDieReader(MPI.Tester.Report.BaseMethod.HeaderFinder.HeaderFinder hf, PosKeyMakerBase posMaker, char splitChar = ',')
         {
             _subDieRegex = new Regex(posPattern);
             _headerFinder = hf;
@@ -43,7 +44,7 @@ namespace MPI.Tester.Report.User.DOWA
             PosKeyLsit.Add("Y");
         }
 
-        public MapDieReader(HeaderFinder hf, PosKeyMakerBase posMaker, List<string> posKeyList, char splitChar = ','):
+        public MapDieReader(MPI.Tester.Report.BaseMethod.HeaderFinder.HeaderFinder hf, PosKeyMakerBase posMaker, List<string> posKeyList, char splitChar = ',') :
             this(hf,posMaker,splitChar)
         {
             PosKeyLsit = new List<string>();
@@ -148,23 +149,4 @@ namespace MPI.Tester.Report.User.DOWA
         }
         #endregion
     }
-
-
-
-    //public class MapDieBase:IMapItem//最基本的紀錄型別
-    //{
-    //    public string State;
-
-    //    public MapDieBase(  )
-    //    {            
-    //    }
-
-    //    public void SetRowData(string str,List<int> posColList)
-    //    {
-    //        State = str;
-    //    }
-
-    //}
-
-
 }

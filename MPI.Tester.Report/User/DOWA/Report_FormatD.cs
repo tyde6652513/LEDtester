@@ -7,6 +7,7 @@ using MPI.Tester.Data;
 
 using MPI.Tester.Report.BaseMethod.HeaderFinder;
 using MPI.Tester.Report.BaseMethod.PosKeyMaker;
+using MPI.Tester.Report.BaseMethod.MapReader;
 
 namespace MPI.Tester.Report.User.DOWA
 {

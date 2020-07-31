@@ -597,20 +597,6 @@ namespace MPI.Tester.Report
         }
 
 
-
-        protected virtual EErrorCode PostProcessAfterMoveFile(EServerQueryCmd cmd)//在MoveFileToTarget後啟動，目前是設計來啟動合檔用
-        {
-            EErrorCode err = EErrorCode.NONE;
-
-            return err; 
-        }
-
-        protected virtual EErrorCode ProcessAfterWaferFinished()//在WaferFinished後啟動，目前是設計來啟動光磊合檔用
-        {
-            EErrorCode err = EErrorCode.NONE;
-
-            return err;
-        }
         #endregion
 
         #region >>> Protected Method <<<
