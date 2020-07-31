@@ -258,7 +258,7 @@ namespace MPI.Tester.Report.User.Accelink
 
             int colOCR_SIGN = _resultTitleInfo.GetIndexOfKey("OCR");
 
-            HeaderFinder hf = new HeaderFinder(this.TitleStrKey, TitleStrShift);
+            HeaderFinderBase hf = new HeaderFinderBase(this.TitleStrKey, TitleStrShift);
             // 開始比對ColRowKey並寫檔
             while (sr.Peek() >= 0)
             {

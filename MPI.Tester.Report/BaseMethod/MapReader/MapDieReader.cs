@@ -26,13 +26,13 @@ namespace MPI.Tester.Report.BaseMethod.MapReader
         public Dictionary<string, T> PosDieDict = new Dictionary<string, T>();
 
         public bool IsDefineDataType = false;
-        MPI.Tester.Report.BaseMethod.HeaderFinder.HeaderFinder _headerFinder;
+        MPI.Tester.Report.BaseMethod.HeaderFinder.HeaderFinderBase _headerFinder;
         PosKeyMakerBase _posMaker;
         char _splitChar = ',';
         string posPattern = "^[xyXY][+-]\\d";
         Regex _subDieRegex;
         #region
-        public MapDieReader(MPI.Tester.Report.BaseMethod.HeaderFinder.HeaderFinder hf, PosKeyMakerBase posMaker, char splitChar = ',')
+        public MapDieReader(MPI.Tester.Report.BaseMethod.HeaderFinder.HeaderFinderBase hf, PosKeyMakerBase posMaker, char splitChar = ',')
         {
             _subDieRegex = new Regex(posPattern);
             _headerFinder = hf;
@@ -44,7 +44,7 @@ namespace MPI.Tester.Report.BaseMethod.MapReader
             PosKeyLsit.Add("Y");
         }
 
-        public MapDieReader(MPI.Tester.Report.BaseMethod.HeaderFinder.HeaderFinder hf, PosKeyMakerBase posMaker, List<string> posKeyList, char splitChar = ',') :
+        public MapDieReader(MPI.Tester.Report.BaseMethod.HeaderFinder.HeaderFinderBase hf, PosKeyMakerBase posMaker, List<string> posKeyList, char splitChar = ',') :
             this(hf,posMaker,splitChar)
         {
             PosKeyLsit = new List<string>();

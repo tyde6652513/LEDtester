@@ -11,6 +11,8 @@ using MPI.Tester.TestKernel;
 
 using MPI.Tester.DeviceCommon;
 using MPI.Tester.Report.BaseMethod.HeaderFinder;
+using MPI.Tester.Report.BaseMethod.PosKeyMaker;
+using MPI.Tester.Report.BaseMethod.Merge;
 
 namespace MPI.Tester.Report
 {
@@ -65,6 +67,25 @@ namespace MPI.Tester.Report
             return err;
         }
 
+        public virtual EErrorCode MergeFile(string outputPath, List<string> fileList = null)
+        {
+            Console.WriteLine("[ReportBase],MergeFile()");
+
+            if (_crKeyMaker == null)
+            {
+                List<int> colList = new List<int>();
+                if (this._resultTitleInfo.ChipIndexIndex >= 0)
+                {
+                    colList.Add(this._resultTitleInfo.ChipIndexIndex);
+                }
+                _crKeyMaker = new PosKeyMakerBase(this._resultTitleInfo.ColIndex, this._resultTitleInfo.RowIndex, colList);
+            }
+
+            ReportMerger merger = new ReportMerger(this.UISetting,
+                new HeaderFinderBase(this.TitleStrKey, TitleStrShift), ResultTitleInfo, _crKeyMaker);
+
+            return merger.MergeFile(outputPath, fileList);
+        }
         protected bool IsStartInRefList(string strIn, List<string> strList)
         {
             if (strList != null)

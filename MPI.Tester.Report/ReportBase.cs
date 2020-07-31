@@ -11,6 +11,7 @@ using MPI.Tester.TestKernel;
 using MPI.Tester.Tools;
 using MPI.Tester.Report.BaseMethod.HeaderFinder;
 using MPI.Tester.Report.BaseMethod.PosKeyMaker;
+//using MPI.Tester.Report.BaseMethod.Merge;
 
 using MPI.Tester.Data.ChannelCoordTable;
 
@@ -414,7 +415,7 @@ namespace MPI.Tester.Report
 
                     this._checkColRowKey.Clear();
 
-                    HeaderFinder hf = new HeaderFinder(this.TitleStrKey, TitleStrShift);
+                    HeaderFinderBase hf = new HeaderFinderBase(this.TitleStrKey, TitleStrShift);
 
                     //重繞tmp檔取得 ColRowkey 對應的第幾筆數據
                     while (srCheckRowCol.Peek() >= 0)
@@ -683,7 +684,7 @@ namespace MPI.Tester.Report
 
             int shiftCount = TitleStrShift;
 
-            HeaderFinder hf = new HeaderFinder(this.TitleStrKey, TitleStrShift);
+            HeaderFinderBase hf = new HeaderFinderBase(this.TitleStrKey, TitleStrShift);
             // 開始比對ColRowKey並寫檔
 			while (sr.Peek() >= 0)
 			{
@@ -855,7 +856,7 @@ namespace MPI.Tester.Report
 				this._appendFileTestCount = 0;
 
 				this._checkColRowKey.Clear();
-                HeaderFinder hf = new HeaderFinder(this.TitleStrKey, TitleStrShift);
+                HeaderFinderBase hf = new HeaderFinderBase(this.TitleStrKey, TitleStrShift);
 
 				using (StreamReader sr = new StreamReader(tmp, this._reportData.Encoding))
 				{
@@ -2385,114 +2386,6 @@ namespace MPI.Tester.Report
             return outPath;
         }
 
-        public virtual EErrorCode MergeFile( string outputPath ,List<string> fileList = null)
-        {
-            Console.WriteLine("[ReportBase],MergeFile()");
-            List<string> headerText = new List<string>();
-            Dictionary<int, string> colNameDic = new Dictionary<int, string>();
-            Dictionary<string, List<string>> posStrListDic = new Dictionary<string, List<string>>();
-            if (fileList != null && fileList.Count > 1)
-            {
-                for (int fCnt = 0; fCnt < fileList.Count && File.Exists(fileList[fCnt]); ++fCnt)
-                {
-                    #region
-                    using (StreamReader sr = new StreamReader(fileList[fCnt]))
-                    {
-                        bool isRawData = false;
-                        HeaderFinder hf = new HeaderFinder(this.TitleStrKey, TitleStrShift);
-                        while (sr.Peek() >= 0)
-                        {
-                            string line = sr.ReadLine();
-                            if (isRawData)
-                            {
-                                string[] rawData = line.Split(this.SpiltChar);
-
-                                string colrowKey = ColRowKeyMaker(rawData);
-
-                                if (!posStrListDic.ContainsKey(colrowKey))
-                                {
-                                    List<string> sList = new List<string>();
-                                    sList.AddRange(rawData);
-                                    posStrListDic.Add(colrowKey, sList);
-                                }
-                                else
-                                {
-                                    for (int i = 0; i < rawData.Length; ++i)
-                                    {
-                                        List<string> refList = posStrListDic[colrowKey];
-                                        if (rawData[i] != null && rawData[i] != "")
-                                        {
-                                            refList[i] = rawData[i];
-                                        }
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                #region >>header<<
-                                if (hf.CheckIfRowData(line))
-                                {
-                                    Console.WriteLine("[ReportBase],MergeFile(),found data header of" + fileList[fCnt]);
-                                    isRawData = true;
-                                    if (fCnt == 0)
-                                    {
-                                        string[] strArr = line.Split(this.SpiltChar);
-                                        {
-                                            for (int i = 0; i < strArr.Length; ++i)
-                                            {
-                                                colNameDic.Add(i, strArr[i]);
-                                            }
-                                        }
-                                    }
-
-                                    
-                                }
-
-                                if (fCnt == 0)
-                                {
-                                    headerText.Add(line);
-                                }
-                                #endregion
-                            }
-                        }
-
-                    }
-                    #endregion
-                }
-
-                Console.WriteLine("[ReportBase],MergeFile(),write out data");
-                string mergeTmpPath = @"C:\MPI\Temp2\mergeTemp.csv";
-                using (StreamWriter sw = new StreamWriter(mergeTmpPath))
-                {
-                    foreach (string str in headerText)
-                    {
-                        sw.WriteLine(str);
-                    }
-                    foreach (var p in posStrListDic.Values)
-                    {
-                        string outStr = "";
-                        int legnth = p.Count;
-                        int cnt = 1;
-                        foreach (string str in p)
-                        {
-                            outStr += str;
-                            if (cnt < legnth) { outStr += this.SpiltChar.ToString(); }
-                            ++cnt;
-                        }
-                        sw.WriteLine(outStr);
-                    }
-                }
-                if (File.Exists(mergeTmpPath))
-                {
-                    string fileName = Path.GetFileName(mergeTmpPath);
-                    string backupFullName = Path.Combine(Constants.Paths.MPI_TEMP_DIR2, fileName);
-                    MPIFile.CopyFile(mergeTmpPath, outputPath);
-                }
-                MPIFile.CopyFile(mergeTmpPath, outputPath);
-            }
-
-            return EErrorCode.NONE;
-        }
 
         public virtual void  PushRemarkInfo(string str)
         {

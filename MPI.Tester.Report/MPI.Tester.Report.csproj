@@ -46,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseMethod\CSVReportBase.cs" />
-    <Compile Include="BaseMethod\HeaderFinder\HeaderFinder.cs" />
+    <Compile Include="BaseMethod\HeaderFinder\HeaderFinderBase.cs" />
     <Compile Include="BaseMethod\HeaderFinder\HeaderFinder_ByEndStr.cs" />
     <Compile Include="BaseMethod\HeaderFinder\HeaderFinder_ByStartStr.cs" />
     <Compile Include="BaseMethod\InfoToJSON\BinDataInfo.cs" />
@@ -56,6 +56,8 @@
     <Compile Include="BaseMethod\InfoToJSON\UISettingInfo.cs" />
     <Compile Include="BaseMethod\MapReader\MapDieReader.cs" />
     <Compile Include="BaseMethod\MergeReportBase.cs" />
+    <Compile Include="BaseMethod\Merge\EParsingState.cs" />
+    <Compile Include="BaseMethod\Merge\ReportMerger.cs" />
     <Compile Include="BaseMethod\PosKeyMaker\ColRowKeyMaker.cs" />
     <Compile Include="BaseMethod\SptReportBase.cs" />
     <Compile Include="CsvQuoteMark.cs" />

@@ -185,7 +185,7 @@ namespace MPI.Tester.Report.User.DOWA
                             }
                         }
                         break;
-                    case "BinCV":
+                    case "BINCV":
                         {
                             if (_stg == ETestStage.LCR)
                             {
@@ -312,7 +312,7 @@ namespace MPI.Tester.Report.User.DOWA
 
             int colAOI_SIGN = _resultTitleInfo.GetIndexOfKey("AOISIGN");
 
-            HeaderFinder hf = new HeaderFinder(this.TitleStrKey, TitleStrShift);
+            HeaderFinderBase hf = new HeaderFinderBase(this.TitleStrKey, TitleStrShift);
             // 開始比對ColRowKey並寫檔
             while (sr.Peek() >= 0)
             {

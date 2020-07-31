@@ -1011,7 +1011,7 @@ namespace MPI.Tester.Report
                             this.TitleStrKey = ResultTitleInfo.TitleStr;
                         }
 
-                        HeaderFinder hf = new HeaderFinder(this.TitleStrKey, TitleStrShift);
+                        HeaderFinderBase hf = new HeaderFinderBase(this.TitleStrKey, TitleStrShift);
 
                         while (sr.Peek() >= 0)
                         {

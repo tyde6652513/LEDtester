@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MPI.Tester.Report.BaseMethod.HeaderFinder
 {
-    public class HeaderFinder_ByStartStr: HeaderFinder
+    public class HeaderFinder_ByStartStr: HeaderFinderBase
     {
         bool startCount = false;
 

@@ -453,7 +453,7 @@ this.Product.TestCondition.TestItemArray.Length > 0)
 
             int shiftCount = TitleStrShift;
             int timeCol = GetIndexOfKey();
-            HeaderFinder hf = new HeaderFinder(this.TitleStrKey, TitleStrShift);
+            HeaderFinderBase hf = new HeaderFinderBase(this.TitleStrKey, TitleStrShift);
             // 開始比對ColRowKey並寫檔
             while (sr.Peek() >= 0)
             {

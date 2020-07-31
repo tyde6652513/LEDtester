@@ -5,13 +5,13 @@ using System.Text;
 
 namespace MPI.Tester.Report.BaseMethod.HeaderFinder
 {
-    public class HeaderFinder
+    public class HeaderFinderBase:ICloneable
     {
         public string TarStr = "";
         public int ShiftRow = 0;
         bool startCount = false;
 
-        public HeaderFinder(string tarStr, int shift)
+        public HeaderFinderBase(string tarStr, int shift)
         {
             TarStr = tarStr;
             ShiftRow = shift;
@@ -37,5 +37,12 @@ namespace MPI.Tester.Report.BaseMethod.HeaderFinder
 
         public virtual bool IsFitTarStr(string str)//純粹確認輸入的字串與TarStr
         { return str == TarStr; }
+
+        public object Clone()
+        {
+            HeaderFinderBase obj = new HeaderFinderBase(TarStr, ShiftRow);
+            return obj;
+
+        }
     }
 }
