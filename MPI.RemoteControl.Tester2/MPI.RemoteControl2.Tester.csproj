@@ -103,8 +103,10 @@
     <Compile Include="Command\CmdMPIBased.cs" />
     <Compile Include="Command\CmdOverrideTesterReport.cs" />
     <Compile Include="Command\CmdPropertyBased.cs" />
+    <Compile Include="Command\CmdQueryAbleMode.cs" />
     <Compile Include="Command\CmdQueryInformation.cs" />
     <Compile Include="Command\CmdREOT.cs" />
+    <Compile Include="Command\CmdSetTestMode.cs" />
     <Compile Include="Command\CmdSOT.cs" />
     <Compile Include="Command\CmdSOT1.cs" />
     <Compile Include="Command\CmdSOT2.cs" />
