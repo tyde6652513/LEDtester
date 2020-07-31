@@ -165,6 +165,183 @@ namespace MPI.Tester.TestServer
                         }
                         #endregion
                     //------------------------------------------------------------------------------------------------
+                    case (int)ETSECommand.ID_QUERY_ABLE_MODE: //20180608 David
+                        {
+                            #region
+                            Console.WriteLine("[TCPTestServer2], ID_QUERY_ABLE_MODE");
+
+                            string testItemFileName = new string((cmd as CmdQueryAbleMode).TestItemName);
+                            string binFileName = new string((cmd as CmdQueryAbleMode).BinFileName);
+                            string[] strData = new string[2];
+
+                            testItemFileName = testItemFileName.TrimEnd('\0');
+                            binFileName = binFileName.Trim('\0');
+
+                            strData[0] = testItemFileName;
+                            strData[1] = binFileName;
+
+                            double[] buffer = new double[1];
+                            buffer[0] = 0;//IsPresampling
+
+                            Console.WriteLine("[TCPTestServer2], ID_QUERY_ABLE_MODE,change recipe");
+                            Fire_ServerQueryEvent(EServerQueryCmd.CMD_LOAD_ITEM_FILE, new double[1], strData);
+
+                            if (GlobalFlag.IsSuccessLoadProduct && GlobalFlag.IsSuccessLoadBin)
+                            {
+                                echoTSECmd = new CmdBarcodeInsert();
+                                (echoTSECmd as CmdBarcodeInsert).TestItemName = testItemFileName.ToCharArray();
+                                (echoTSECmd as CmdBarcodeInsert).BinFileName = binFileName.ToCharArray();
+                            }
+                            else if (GlobalFlag.IsSuccessLoadProduct == false)
+                            {
+                                echoTSECmd = new CmdErrorNoTestItemFile();
+                                Console.WriteLine("[TCPTestServer2], ID_BARCODE_INSERT, LoadProduct Fail!");
+                                break;
+                            }
+                            else if (GlobalFlag.IsSuccessLoadBin == false)
+                            {
+                                echoTSECmd = new CmdErrorNoBinFile();
+                                Console.WriteLine("[TCPTestServer2], ID_BARCODE_INSERT, LoadBin Fail!");
+                                break;
+                            }
+                            #endregion
+                            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                            #region
+                            string lotNumStr = new string((cmd as CmdQueryAbleMode).LotNo);
+                            string waferNumStr = new string((cmd as CmdQueryAbleMode).WaferNo);
+                            string opName = new string((cmd as CmdQueryAbleMode).OperatorName);
+                            string pRecipe = new string((cmd as CmdQueryAbleMode).ProberMainRecipe);
+
+
+                            strData = new string[11];
+                            lotNumStr = lotNumStr.TrimEnd('\0');
+                            waferNumStr = waferNumStr.TrimEnd('\0');
+                            opName = opName.TrimEnd('\0');
+
+                            strData[0] = "";				// barcode number
+                            strData[1] = lotNumStr;
+                            strData[2] = "";				// cassette number
+                            strData[3] = waferNumStr;
+                            strData[4] = opName;
+                            strData[5] = pRecipe;			// ProberRecipe
+                            strData[6] = "";				// ProductType
+                            strData[7] = "";				// Substrate
+                            strData[8] = "";				// CassettleID
+                            strData[9] = "";				// SlotID
+                            strData[10] = "";				// CustomerKeyNumber
+
+
+                            // Fire evnet
+                            Fire_ServerQueryEvent(EServerQueryCmd.CMD_CHECK_AVALIABLE_MODE, new double[1], strData);
+
+                            echoTSECmd = new CmdQueryAbleMode();
+
+
+                            switch (GlobalFlag.OutputReportState)
+                            {
+                                case EOutputReportState.CanAppend:
+                                    {
+                                        //Fire_ServerQueryEvent(EServerQueryCmd.CMD_CREATE_MAP_FROM_TEMP, null, null);//create map from temp
+                                        (echoTSECmd as CmdQueryAbleMode).FileAppendable = true;
+                                        (echoTSECmd as CmdQueryAbleMode).FileNameRepeat = false;
+                                    }
+                                    break;
+                                case EOutputReportState.CanOverwrite:
+                                case EOutputReportState.CanRetest:
+                                    {
+                                        (echoTSECmd as CmdQueryAbleMode).FileAppendable = false;
+                                        (echoTSECmd as CmdQueryAbleMode).FileNameRepeat = true;
+                                    }
+                                    break;
+                                case EOutputReportState.FileNameIsEmpty:
+                                    {
+                                        (echoTSECmd as CmdError).ErrorCode = CmdError.EErrorCode.WaferInFailed;
+                                    }
+                                    break;
+                                case EOutputReportState.CanNotAppend:
+                                case EOutputReportState.None:
+                                    {
+                                        (echoTSECmd as CmdQueryAbleMode).FileAppendable = false;
+                                        (echoTSECmd as CmdQueryAbleMode).FileNameRepeat = false;
+                                    }
+                                    break;
+                            }
+
+                            (echoTSECmd as CmdQueryAbleMode).TesterCoord = _testerSys.TesterCoord;
+
+
+                            #endregion
+                        }
+                        break;
+                    //------------------------------------------------------------------------------------------------
+                    case (int)ETSECommand.ID_SET_TEST_MODE: //20180608 David
+                        #region
+                        {
+                            Console.WriteLine("[TCPTestServer2], ID_START_TEST_MODE");
+
+                            CmdSetTestMode.ETestMode mode = ((cmd as CmdSetTestMode).TestMode);
+
+                            string[] strData = new string[11];
+
+                            echoTSECmd = new CmdSetTestMode();//後面特例時改為CmdError
+
+                            switch (mode)
+                            {
+                                case CmdSetTestMode.ETestMode.CONTINOUS:
+                                    {
+                                        Console.WriteLine("[TCPTestServer2], ID_START_TEST_MODE,CONTINOUS");
+                                        Fire_ServerQueryEvent(EServerQueryCmd.CMD_APPEND_TESTER_OUTPUT_FILE, null, null);
+                                        //Fire_ServerQueryEvent(EServerQueryCmd.CMD_CREATE_MAP_FROM_TEMP, null, null);//create map from temp
+
+                                        GlobalFlag.OutputReportState = EOutputReportState.CanAppend;
+                                    }
+                                    break;
+                                //case CmdSetTestMode.ETestMode.NG_CONTINOUS:
+                                //    {
+                                //        Console.WriteLine("[TCPTestServer2], ID_START_TEST_MODE,OVERWRITE");
+                                //        Fire_ServerQueryEvent(EServerQueryCmd.CMD_OVERWRITE_TESTER_OUTPUT_FILE, new double[1], strData);
+                                //        Fire_ServerQueryEvent(EServerQueryCmd.CMD_CREATE_MAP_FROM_TEMP, null, null);//create map from temp
+                                //        GlobalFlag.OutputReportState = EOutputReportState.None;
+                                //    }
+                                //    break;
+                                case CmdSetTestMode.ETestMode.NG_RETEST:
+                                    {
+                                        Console.WriteLine("[TCPTestServer2], ID_START_TEST_MODE,NG_Retest");
+
+                                        Fire_ServerQueryEvent(EServerQueryCmd.CMD_LOAD_FILE_TO_TEMP, null, null);//clone data to temp                                        
+                                        Fire_ServerQueryEvent(EServerQueryCmd.CMD_APPEND_TESTER_OUTPUT_FILE, null, null);
+                                        GlobalFlag.OutputReportState = EOutputReportState.CanAppend;
+                                    }
+                                    break;
+                                case CmdSetTestMode.ETestMode.OVERWRITE:
+                                    {
+                                        Console.WriteLine("[TCPTestServer2], ID_START_TEST_MODE,OVERWRITE");
+                                        Fire_ServerQueryEvent(EServerQueryCmd.CMD_OVERWRITE_TESTER_OUTPUT_FILE, new double[1], strData);
+                                        GlobalFlag.OutputReportState = EOutputReportState.None;
+                                    }
+                                    break;
+
+                                default:
+                                case CmdSetTestMode.ETestMode.NORMAL:
+                                case CmdSetTestMode.ETestMode.NG_SKIP:
+                                    {
+                                        Console.WriteLine("[TCPTestServer2], ID_START_TEST_MODE,NORMAL");
+                                        GlobalFlag.OutputReportState = EOutputReportState.None;
+                                        //do nothing
+                                    }
+                                    break;
+                                case CmdSetTestMode.ETestMode.UNDEFINED:
+                                    Console.WriteLine("[TCPTestServer2], ID_START_TEST_MODE,UNDEFINED");
+                                    echoTSECmd = new CmdError();
+                                    break;
+                            }
+
+                        }
+
+                        #endregion
+                        break;
+                    //------------------------------------------------------------------------------------------------
                     case (int)ETSECommand.ID_WAFER_IN:
                         #region >>ID_WAFER_IN<<
                         {
