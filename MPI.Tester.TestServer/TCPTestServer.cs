@@ -988,6 +988,7 @@ namespace MPI.Tester.TestServer
                             echoTSECmd = new CmdQueryInformation();
 
 							int objctType = baseObj.GetHashCode();
+                            
 
                             switch (objctType)
                             {
@@ -1212,58 +1213,59 @@ namespace MPI.Tester.TestServer
                                         ShowErrorMsg((int)EErrorCode.TCPIP2_TransferableItem_Err, "ID_QUERY_INFORMATION ,hash =-1");
 
                                         echoTSECmd = new CmdQueryInformation();
+
+                                        bool matched = false;
+                                        LaserBarProberInfo lbpInfo = new LaserBarProberInfo();
+                                        SubRecipeInformation srInfo = new SubRecipeInformation();
+
+                                        if ((cmd as CmdQueryInformation).GetTransferableItem(lbpInfo))
+                                        {
+                                            double[] dData = new double[10];
+
+                                            double temperature = lbpInfo.ProbingTemperature;
+
+                                            dData[0] = temperature;
+
+                                            Console.WriteLine("[TCPTestServer], ID_QUERY_INFORMATION,CMD_LASER_BAR_INFO, ProbingTemperature = " + temperature.ToString("0.00"));
+
+                                            this.Fire_ServerQueryEvent(EServerQueryCmd.CMD_LASER_BAR_INFO, dData, null);
+                                            matched = true;
+                                        }
+                                        else if ((cmd as CmdQueryInformation).GetTransferableItem(srInfo))
+                                        {
+                                            double[] dData = new double[3];
+
+                                            string[] sData = new string[2];
+
+                                            sData[0] = srInfo.MainRecipeName;
+                                            sData[1] = srInfo.SubRecipeName;
+
+                                            dData[0] = srInfo.SlotNumber;
+                                            dData[1] = srInfo.SubRecipeIndex;
+                                            dData[2] = srInfo.Temperature;
+
+                                            Console.WriteLine("[TCPTestServer], ID_QUERY_INFORMATION,CMD_LASER_BAR_INFO, SubRecipeInformation = " + srInfo.SubRecipeName);
+
+                                            this.Fire_ServerQueryEvent(EServerQueryCmd.CMD_SUB_RECIPE_INFO, dData, sData);
+                                            matched = true;
+                                        }
+
+
+                                        if (matched)
+                                        {
+                                            echoTSECmd = new CmdQueryInformation();
+                                        }
+                                        else
+                                        {
+                                            errStr = "ID_QUERY_INFORMATION.GetTransferableItem() Fail,ID is:" + objctType.ToString();
+                                            ShowErrorMsg((int)EErrorCode.TCPIP_TransferableItem_Err, errStr);
+
+                                            echoTSECmd = new CmdError();
+                                            (echoTSECmd as CmdError).ErrorCode = (int)DS_ERROR_CODE.DS_ERROR_UNKNOW_ERROR;
+                                            this._myClient.SendMessage(echoTSECmd.Packet.Serialize());
+                                        }                                       
                                     }
                                     break;
-                            }
-
-                            LaserBarProberInfo lbpInfo = new LaserBarProberInfo();
-                            SubRecipeInformation srInfo = new SubRecipeInformation();
-                            bool matched = false;
-
-                            if ((cmd as CmdQueryInformation).GetTransferableItem(lbpInfo))
-                            {
-                                double[] dData = new double[10];
-
-                                double temperature = lbpInfo.ProbingTemperature;
-
-                                dData[0] = temperature;
-
-                                Console.WriteLine("[TCPTestServer], ID_QUERY_INFORMATION,CMD_LASER_BAR_INFO, ProbingTemperature = " + temperature.ToString("0.00"));
-
-                                this.Fire_ServerQueryEvent(EServerQueryCmd.CMD_LASER_BAR_INFO, dData, null);
-                                matched = true;
-                            }                           
-                            else if ((cmd as CmdQueryInformation).GetTransferableItem(srInfo))
-                            {
-                                double[] dData = new double[3];
-
-                                string[] sData = new string[2];
-
-                                sData[0] = srInfo.MainRecipeName;
-                                sData[1] = srInfo.SubRecipeName;
-
-                                dData[0] = srInfo.SlotNumber;
-                                dData[1] = srInfo.SubRecipeIndex;
-                                dData[2] = srInfo.Temperature;
-
-                                Console.WriteLine("[TCPTestServer], ID_QUERY_INFORMATION,CMD_LASER_BAR_INFO, SubRecipeInformation = " + srInfo.SubRecipeName);
-
-                                this.Fire_ServerQueryEvent(EServerQueryCmd.CMD_SUB_RECIPE_INFO, dData, sData);
-                                matched = true;
-                            }
-
-                            if (matched)
-                            {
-                                echoTSECmd = new CmdQueryInformation();
-                            }
-                            else
-                            {
-                                errStr = "ID_QUERY_INFORMATION.GetTransferableItem() Fail,ID is:" + objctType.ToString();
-                                ShowErrorMsg((int)EErrorCode.TCPIP_TransferableItem_Err, errStr);
-
-                                echoTSECmd = new CmdError();
-                                (echoTSECmd as CmdError).ErrorCode = (int)DS_ERROR_CODE.DS_ERROR_UNKNOW_ERROR;
-                                this._myClient.SendMessage(echoTSECmd.Packet.Serialize());
                             }
 
 
