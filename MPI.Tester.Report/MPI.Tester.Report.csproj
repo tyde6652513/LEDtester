@@ -77,6 +77,7 @@
     <Compile Include="User\ChangeLight\Report.cs" />
     <Compile Include="User\CHT\Report.cs" />
     <Compile Include="User\DOWA\LaserPowerReport.cs" />
+    <Compile Include="User\DOWA\MapReader_DOWA.cs" />
     <Compile Include="User\DOWA\Report-FormatA.cs" />
     <Compile Include="User\DOWA\Report.cs" />
     <Compile Include="User\DOWA\Report_FormatD.cs" />

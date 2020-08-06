@@ -26,11 +26,11 @@ namespace MPI.Tester.Report.BaseMethod.MapReader
         public Dictionary<string, T> PosDieDict = new Dictionary<string, T>();
 
         public bool IsDefineDataType = false;
-        MPI.Tester.Report.BaseMethod.HeaderFinder.HeaderFinderBase _headerFinder;
-        PosKeyMakerBase _posMaker;
-        char _splitChar = ',';
-        string posPattern = "^[xyXY][+-]\\d";
-        Regex _subDieRegex;
+        protected MPI.Tester.Report.BaseMethod.HeaderFinder.HeaderFinderBase _headerFinder;
+        protected PosKeyMakerBase _posMaker;
+        protected char _splitChar = ',';
+        protected string posPattern = "^[xyXY][+-]\\d";
+        protected Regex _subDieRegex;
         #region
         public MapDieReader(MPI.Tester.Report.BaseMethod.HeaderFinder.HeaderFinderBase hf, PosKeyMakerBase posMaker, char splitChar = ',')
         {
@@ -40,8 +40,8 @@ namespace MPI.Tester.Report.BaseMethod.MapReader
             _splitChar = splitChar;
 
             PosKeyLsit = new List<string>();
-            PosKeyLsit.Add("X");
-            PosKeyLsit.Add("Y");
+            PosKeyLsit.Add("Col");
+            PosKeyLsit.Add("Row");
         }
 
         public MapDieReader(MPI.Tester.Report.BaseMethod.HeaderFinder.HeaderFinderBase hf, PosKeyMakerBase posMaker, List<string> posKeyList, char splitChar = ',') :
@@ -93,10 +93,12 @@ namespace MPI.Tester.Report.BaseMethod.MapReader
                             {
                                 string[] rawData = line.Split(this._splitChar);
                                 HeaderItemList = new List<string>();
-                                for (int i = 0; i < rawData.Length; ++i)
-                                {
-                                    HeaderItemList.Add(rawData[i].ToUpper());
-                                }                                    HeaderItemList.AddRange(rawData);
+                                //for (int i = 0; i < rawData.Length; ++i)
+                                //{
+                                //    HeaderItemList.Add(rawData[i].ToUpper());
+                                //}
+
+                                HeaderItemList.AddRange(rawData);
 
                                 if (PosKeyLsit.Count == 0)
                                 {
@@ -130,12 +132,13 @@ namespace MPI.Tester.Report.BaseMethod.MapReader
         #endregion
 
         #region
-        private List<string> CollectPosKeys(List<string> keyList) // X,Y, X+1
+        protected virtual List<string> CollectPosKeys(List<string> keyList) // X,Y, X+1
         {
             List<string> xyList = (from key in keyList
-                                   where (key == "X" || key == "Y")
-                                   orderby key == "X"?1:0
+                                   where (key == "Col" || key == "Row")
+                                   orderby key == "Col" ? 1 : 0
                                    select key).ToList();
+            //先保留不動，使用X+N,Y+N 來表示sub XY
             char[] splitArr = {'X','Y'};
             List<string> subxyList = (from key in keyList
                                       where (_subDieRegex.IsMatch(key))

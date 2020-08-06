@@ -543,7 +543,7 @@ namespace MPI.Tester.Report.User.DOWA
                 List<string> sList = new List<string>();
                 sList.Add("X");
                 sList.Add("Y");
-                MapDieReader<AOISignItem> mReader = new MapDieReader<AOISignItem>(hf, pMaker, sList);
+                MapReader_DOWA mReader = new MapReader_DOWA(hf, pMaker, sList);
 
                 Console.WriteLine("[DOWAReport], GetRefDieData, ReadMapFromFile:" + proberTmap);
                 _posAOIDic = mReader.ReadMapFromFile(proberTmap);
@@ -568,37 +568,39 @@ namespace MPI.Tester.Report.User.DOWA
 
         #region
 
-        internal class AOISignItem : IMapItem//最基本的紀錄型別
-        {
-            public string SIGN = "";
-            public int X = 0;
-            public int Y = 0;
-
-            public AOISignItem()
-            {
-            }
-
-            public bool SetRowData(string str, List<string> refColList)
-            {
-                int index = refColList.IndexOf("AOI_SIGN");
-                int indexX = refColList.IndexOf("X");
-                int indexY = refColList.IndexOf("Y");
-                string[] strArr = str.Split(',');
-                if (index >= 0 && indexX >= 0 && indexY >= 0)
-                {
-                    if (strArr != null && strArr.Length > index)
-                    {
-                        SIGN = strArr[index];
-                        int.TryParse(strArr[indexX], out X);
-                        int.TryParse(strArr[indexY], out Y);
-                    }
-                    
-                }
-                return true;
-            }
-
-        }
+      
 
         #endregion
+    }
+
+    public class DOWA_AOISignItem : IMapItem//最基本的紀錄型別
+    {
+        public string SIGN = "";
+        public int X = 0;
+        public int Y = 0;
+
+        public DOWA_AOISignItem()
+        {
+        }
+
+        public bool SetRowData(string str, List<string> refColList)
+        {
+            int index = refColList.IndexOf("AOI_SIGN");
+            int indexX = refColList.IndexOf("X");
+            int indexY = refColList.IndexOf("Y");
+            string[] strArr = str.Split(',');
+            if (index >= 0 && indexX >= 0 && indexY >= 0)
+            {
+                if (strArr != null && strArr.Length > index)
+                {
+                    SIGN = strArr[index];
+                    int.TryParse(strArr[indexX], out X);
+                    int.TryParse(strArr[indexY], out Y);
+                }
+
+            }
+            return true;
+        }
+
     }
 }

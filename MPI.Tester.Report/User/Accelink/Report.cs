@@ -458,14 +458,14 @@ namespace MPI.Tester.Report.User.Accelink
             if (MPIFile.CopyFile(tarFileName, proberTmap))
             {
 
-                HeaderFinder_ByStartStr hf = new HeaderFinder_ByStartStr("X,Y,ProberBin,SubBin", 0);
+                HeaderFinder_ByStartStr hf = new HeaderFinder_ByStartStr("Col,Row,ProberBin,SubBin", 0);
                 List<int> cList = new List<int>();
                 cList.Add(0);
                 cList.Add(1);
                 PosKeyMakerBase pMaker = new PosKeyMakerBase(0, 1, this.CoordTransTool);
                 List<string> sList = new List<string>();
-                sList.Add("X");
-                sList.Add("Y");
+                sList.Add("Col");
+                sList.Add("Row");
                 MapDieReader<AOI_OCR_SignItem> mReader = new MapDieReader<AOI_OCR_SignItem>(hf, pMaker, sList);
 
                 Console.WriteLine("[AcceLinkReport], GetRefDieData, ReadMapFromFile:" + proberTmap);
@@ -514,10 +514,10 @@ namespace MPI.Tester.Report.User.Accelink
 
             public bool SetRowData(string str, List<string> refColList)
             {
-                int index = refColList.IndexOf("AOI_SIGN");
+                int index = refColList.IndexOf("AOIResult");
                 int indexOcr = refColList.IndexOf("OCR");
-                int indexX = refColList.IndexOf("X");
-                int indexY = refColList.IndexOf("Y");
+                int indexX = refColList.IndexOf("Col");
+                int indexY = refColList.IndexOf("Row");
                 string[] strArr = str.Split(',');
                 if (index >= 0 && indexX >= 0 && indexY >= 0 && indexOcr >=0)
                 {
