@@ -240,25 +240,25 @@ namespace MPI.Tester.Data
 
         public bool IsPassAndIsTested
         {
-			get
-			{
-				if (this._isVerify == false || this._isTested == false)
-					{
-						return true;
-					}
-					else
-					{
-						this._tempValue = Convert.ToDouble(this._value.ToString(this._formate));
-						if (this._tempValue >= this._minLimitValue && this._tempValue <= this._maxLimitValue)
-						{				    
-							return true;
-						}
-						else
-						{
-							return false;
-						}
-					}
-				}
+            get
+            {
+                if (this._isVerify == false || this._isTested == false)
+                {
+                    return true;
+                }
+                else
+                {
+                    this._tempValue = Convert.ToDouble(this._value.ToString(this._formate));
+                    if (this._tempValue >= this._minLimitValue && this._tempValue <= this._maxLimitValue)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            }
         }
 
 		public bool IsPass

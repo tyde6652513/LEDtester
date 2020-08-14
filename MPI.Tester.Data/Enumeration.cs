@@ -1126,6 +1126,8 @@ namespace MPI.Tester.Data
         LCR= 3,
 
         Sampling = 10,
+        Sampling1 = 11,
+        Sampling2 = 12,
     }
 
 

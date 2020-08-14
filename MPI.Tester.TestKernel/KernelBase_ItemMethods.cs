@@ -654,6 +654,7 @@ namespace MPI.Tester.TestKernel
                                     timeChain[k] = st + timeChain[k]*1000;//s->ms                                   
 
                                 }
+                                //sweepData = new double[] { -8.91E-06, -8.93E-06, -9.23E-06, -9.60E-06, -1.15E-05, -1.96E-05, -2.10E-05, -2.22E-05, -2.37E-05, -2.57E-05, -2.70E-05 };
                                 devList = CalcDevList( applyData, sweepData);
 
                                 timeList.AddRange(timeChain);
@@ -661,6 +662,8 @@ namespace MPI.Tester.TestKernel
                                 msrtList.AddRange(sweepData);
                             }                           
                         }
+
+
                         this._acquireData.ElecSweepDataSet[dutChannel, item.KeyName].TimeChain = timeList.ToArray();	// t : time   (ms)
                         this._acquireData.ElecSweepDataSet[dutChannel, item.KeyName].ApplyData = srcList.ToArray();		// x : input  (V)
                         this._acquireData.ElecSweepDataSet[dutChannel, item.KeyName].SweepData = msrtList.ToArray();	// y : output (A) 
@@ -767,7 +770,7 @@ namespace MPI.Tester.TestKernel
                     {
                         if (diList[i] < thresholddi)
                         {
-                            tarIndex = i + 1;
+                            tarIndex = i +1;
                             break;
                         }
                     }

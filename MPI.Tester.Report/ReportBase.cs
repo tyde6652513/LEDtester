@@ -1356,7 +1356,61 @@ namespace MPI.Tester.Report
         
  		protected virtual EErrorCode AddReportCode(string filePath)
         {
-            return EErrorCode.NONE;
+            string tempEncodingReportPath = @"C:\MPI\Temp2\encodingTemp.csv";
+            int codeLine = 0;
+            string lastStr = "";
+            int row = 0;
+            using (StreamReader sr = new StreamReader(filePath))
+            {
+                while (sr.Peek() >= 0)
+                {
+                    string line = sr.ReadLine();
+
+                    if (line.StartsWith("InvoiceNo"))
+                    {
+                        codeLine = row;
+                    }
+                    lastStr = line;
+                    ++row;
+                }
+            }
+            // 規則為最後一筆測試資料
+            string[] lastRawData = lastStr.Split(this.SpiltChar);
+
+            // 取得密碼
+            string code = Encryption.GetCode(lastRawData);
+
+
+            row = 0;
+            using (StreamReader sr = new StreamReader(filePath))
+            {
+                using (StreamWriter sw = new StreamWriter(tempEncodingReportPath))
+                {
+                    while (sr.Peek() >= 0)
+                    {
+
+                        string line = sr.ReadLine();
+
+                        if (codeLine == row)
+                        {
+                            line = "InvoiceNo" + this.SpiltChar.ToString() + code;
+                        }
+                        sw.WriteLine(line);
+                        ++row;
+                    }
+                }
+            }
+
+            if (MPIFile.CopyFile(tempEncodingReportPath, filePath))
+            {
+                return EErrorCode.NONE;
+            }
+            else 
+            {
+                return EErrorCode.REPORT_AddReportCodeFail;
+            }
+
+            
         }
 
 		#endregion

@@ -236,7 +236,7 @@ namespace MPI.Tester.Report
         {
             int binSN = (int)data["BINSN"];
 
-            SmartBinDataBase bin = this._smartBinning.GetBinFromSN(binSN);
+            SmartBinDataBase bin = this.SmartBinning.GetBinFromSN(binSN);
 
             int binGrade = 0;
 
@@ -286,9 +286,9 @@ namespace MPI.Tester.Report
                 {
                     string format = string.Empty;
 
-                    if (this._uiSetting.UserDefinedData[item.Key] != null)
+                    if (this.UISetting.UserDefinedData[item.Key] != null)
                     {
-                        format = this._uiSetting.UserDefinedData[item.Key].Formate;
+                        format = this.UISetting.UserDefinedData[item.Key].Formate;
                     }
 
                     line += data[item.Key].ToString(format);

@@ -1563,6 +1563,8 @@ namespace MPI.Tester.TestKernel
                 colX = 1;
                 rowY = 1;
             }
+
+            this._sysResultItem[(int)ESysResultItem.TEST].Value = 1;
             /////////////////////////////////////////////////////////////////group simulation
             //if (istestGroup)
             //{

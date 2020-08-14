@@ -48,7 +48,16 @@ namespace MPI.Tester.Report.User.Accelink
                 string str ="VISWVP_" + i.ToString("0");
                 merger.SamplingFirstKeyList.Add(str);
             }
-            return merger.MergeFile(outputPath, fileList);
+
+            EErrorCode result = merger.MergeFile(outputPath, fileList);
+            if(result == EErrorCode.NONE)
+            {
+                result =  AddReportCode(outputPath);
+            }
+
+            return result;
+
+            //return AddReportCode(this.FileFullNameRep);
         }
 
 

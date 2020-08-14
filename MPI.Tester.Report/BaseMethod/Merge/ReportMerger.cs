@@ -57,10 +57,12 @@ namespace MPI.Tester.Report.BaseMethod.Merge
         public List<string> IVFirstKeyList = new List<string>();
         public List<string> CVFirstKeyList = new List<string>();
         public List<string> SamplingFirstKeyList = new List<string>();
+        public string DUTCountKey = "TEST";
+        public int DUTCountCol = -1;
         public char SpiltChar = ',';
         #endregion
 
-        #region
+        #region public method
         public EErrorCode MergeFile(string outputPath, List<string> fileList = null)
         {
             Console.WriteLine("[ReportMerger],MergeFile()");
@@ -72,8 +74,10 @@ namespace MPI.Tester.Report.BaseMethod.Merge
 
             _ivFirstCol = GetKeyColList(IVFirstKeyList);
 
-            _samplingFirstCol = GetKeyColList(SamplingFirstKeyList);            
+            _samplingFirstCol = GetKeyColList(SamplingFirstKeyList);
 
+            List<string> sList = new List<string>() { DUTCountKey };
+            DUTCountCol = GetKeyColList(sList)[0]; 
             _posStrArrDic = new Dictionary<string, string[]>();
             //List<string> headerText = new List<string>();
             List<string> nameList = new List<string>();
@@ -155,19 +159,28 @@ namespace MPI.Tester.Report.BaseMethod.Merge
 
                 sw.WriteLine(this._resultTitleInfo.TitleStr);
                 sw.Flush();
+                int DUTCount = 1;
                 foreach (var p in _posStrArrDic.Values)
                 {
                     string outStr = "";
                     int legnth = p.Length;
-                    int cnt = 1;
+                    int cnt = 0;
                     foreach (string str in p)
                     {
-                        outStr += str;
-                        if (cnt < legnth) { outStr += this.SpiltChar.ToString(); }
+                        if (cnt == DUTCountCol)
+                        {
+                            outStr += (DUTCount).ToString();
+                        }
+                        else
+                        {
+                            outStr += str;
+                        }
+                        if (cnt < legnth-1) { outStr += this.SpiltChar.ToString(); }
                         ++cnt;
                     }
                     sw.WriteLine(outStr);
-                    sw.Flush();
+                    sw.Flush(); 
+                    ++DUTCount;
                 }
                 #endregion
             }
@@ -183,7 +196,7 @@ namespace MPI.Tester.Report.BaseMethod.Merge
         }
         #endregion
 
-        #region
+        #region protected method
         protected EParsingState ParseTestInfo(string line, int fCnt, int nowRow)
         {
             EParsingState state = EParsingState.TesterInfo;
@@ -264,6 +277,14 @@ namespace MPI.Tester.Report.BaseMethod.Merge
                             else if (tStr.Contains("_Sampling"))
                             {
                                  stageOfParsingFile = ETestStage.Sampling;
+                            }
+                            else if (tStr.Contains("_Sampling1"))
+                            {
+                                stageOfParsingFile = ETestStage.Sampling1;
+                            }
+                            else if (tStr.Contains("_Sampling2"))
+                            {
+                                stageOfParsingFile = ETestStage.Sampling2;
                             }
                             else
                             {
@@ -356,17 +377,37 @@ namespace MPI.Tester.Report.BaseMethod.Merge
                             {
                                 tempArr[i] = rawData[i];
                             }
-                            else if (stageOfParsingFile == ETestStage.IV && _ivFirstCol.Contains(i))
+                            else
                             {
-                                tempArr[i] = rawData[i];
-                            }
-                            else if (stageOfParsingFile == ETestStage.LCR && _cvFirstCol.Contains(i))
-                            {
-                                tempArr[i] = rawData[i];
-                            }
-                            else if (stageOfParsingFile == ETestStage.Sampling && _samplingFirstCol.Contains(i))
-                            {
-                                tempArr[i] = rawData[i];
+                                switch (stageOfParsingFile)
+                                {
+                                    case ETestStage.IV:
+                                        {
+                                            if (_ivFirstCol.Contains(i))
+                                            {
+                                                tempArr[i] = rawData[i];
+                                            }
+                                        }
+                                        break;
+                                    case ETestStage.LCR:
+                                        {
+                                            if (_cvFirstCol.Contains(i))
+                                            {
+                                                tempArr[i] = rawData[i];
+                                            }
+                                        }
+                                        break;
+                                    case ETestStage.Sampling:
+                                    case ETestStage.Sampling1:
+                                    case ETestStage.Sampling2:
+                                        {
+                                            if (_samplingFirstCol.Contains(i))
+                                            {
+                                                tempArr[i] = rawData[i];
+                                            }
+                                        }
+                                        break;
+                                }
                             }
                         }
                     }

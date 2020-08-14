@@ -15,7 +15,8 @@ namespace MPI.Tester.Report.User.Accelink
     {
         ETestStage _stg = ETestStage.IV;
         Dictionary<string, AOI_OCR_SignItem> _posAOIDic = new Dictionary<string, AOI_OCR_SignItem>();
-        List<string> _testedPosList = new List<string>(); 
+        List<string> _testedPosList = new List<string>();
+        List<string> _notEnableItemList = new List<string>();
 
         public Report(List<object> objs, bool isReStatistic)
             : base(objs, isReStatistic)
@@ -25,6 +26,9 @@ namespace MPI.Tester.Report.User.Accelink
         protected override void SetResultTitle()
         {
             this.ResultTitleInfo.SetResultData(this.UISetting.UserDefinedData.ResultItemNameDic);
+
+            _notEnableItemList = GetNotEnableMsrtItem();
+           
         }
 
         protected override EErrorCode WriteReportHeadByUser()
@@ -59,6 +63,9 @@ namespace MPI.Tester.Report.User.Accelink
             this.WriteLine("BinFileName" + this.SpiltChar.ToString() + "\"" + this.UISetting.BinDataFileName + "\"");
             
             this.WriteLine("Samples" + this.SpiltChar.ToString() + "\"\"");
+
+
+            this.WriteLine("InvoiceNo" + this.SpiltChar.ToString());
 
             this.WriteLine("Stage" + this.SpiltChar.ToString() + _stg.ToString());
 
@@ -191,6 +198,40 @@ namespace MPI.Tester.Report.User.Accelink
             {
                 this.ReplaceReportData_AcceLink(replaceData, this.FileFullNameTmp, this.FileFullNameRep, false);
             }
+
+            return AddReportCode(this.FileFullNameRep);
+        }
+
+        protected override EErrorCode PushDataByUser(Dictionary<string, double> data)
+        {
+           
+            string line = string.Empty;
+
+            int index = 0;            
+
+            foreach (var item in this._resultTitleInfo)
+            {
+                if (data.ContainsKey(item.Key) && !_notEnableItemList.Contains(item.Key))
+                {
+                    string format = string.Empty;
+
+                    if (this.UISetting.UserDefinedData[item.Key] != null)
+                    {
+                        format = this.UISetting.UserDefinedData[item.Key].Formate;
+                    }
+
+                    line += data[item.Key].ToString(format);
+                }
+
+                index++;
+
+                if (index != this._resultTitleInfo.ResultCount)
+                {
+                    line += this.SpiltChar;
+                }
+            }
+
+            this.WriteLine(line);
 
             return EErrorCode.NONE;
         }
@@ -431,6 +472,14 @@ namespace MPI.Tester.Report.User.Accelink
                     strExt.Add("_Sampling");
                     strExt.Add("_S");
                     break;
+                case ETestStage.Sampling1:
+                    strExt.Add("_Sampling1");
+                    strExt.Add("_S1");
+                    break;
+                case ETestStage.Sampling2:
+                    strExt.Add("_Sampling2");
+                    strExt.Add("_S2");
+                    break;
 
             }
 
@@ -498,6 +547,32 @@ namespace MPI.Tester.Report.User.Accelink
 
             }
             return "";
+        }
+
+        private List<string> GetNotEnableMsrtItem()
+        {
+
+            List<string> neList = new List<string>();
+             if (this.Product.TestCondition != null &&
+    this.Product.TestCondition.TestItemArray != null &&
+    this.Product.TestCondition.TestItemArray.Length > 0)
+            {
+                foreach (var testItem in this.Product.TestCondition.TestItemArray)
+                {
+                    if (testItem.MsrtResult == null || testItem.MsrtResult.Length == 0)
+                    {
+                        continue;
+                    }
+                    foreach (var msrtItem in testItem.MsrtResult)
+                    {
+                        if (!testItem.IsEnable ||!msrtItem.IsEnable || !msrtItem.IsVision)
+                        {
+                            neList.Add(msrtItem.KeyName);
+                        }
+                    }
+                }
+            }
+             return neList;
         }
         #endregion
 
