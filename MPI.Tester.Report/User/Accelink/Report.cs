@@ -519,6 +519,8 @@ namespace MPI.Tester.Report.User.Accelink
 
                 Console.WriteLine("[AcceLinkReport], GetRefDieData, ReadMapFromFile:" + proberTmap);
                 _posAOIDic = mReader.ReadMapFromFile(proberTmap);
+                int cnt = _posAOIDic == null ? 0 : _posAOIDic.Count;
+                Console.WriteLine("[AcceLinkReport], GetRefDieData, Ref Pos Cnt:" + cnt.ToString());
             }
 
             return err;

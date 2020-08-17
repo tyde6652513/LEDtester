@@ -1378,7 +1378,7 @@ namespace MPI.Tester.Report
             string[] lastRawData = lastStr.Split(this.SpiltChar);
 
             // 取得密碼
-            string code = Encryption.GetCode(lastRawData);
+            int code = Encryption.GetCode(lastRawData);
 
 
             row = 0;
@@ -1393,7 +1393,7 @@ namespace MPI.Tester.Report
 
                         if (codeLine == row)
                         {
-                            line = "InvoiceNo" + this.SpiltChar.ToString() + code;
+                            line = "InvoiceNo" + this.SpiltChar.ToString() + code.ToString();
                         }
                         sw.WriteLine(line);
                         ++row;

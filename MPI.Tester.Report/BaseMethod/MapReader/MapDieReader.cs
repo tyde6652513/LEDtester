@@ -84,7 +84,7 @@ namespace MPI.Tester.Report.BaseMethod.MapReader
                         }
                         else
                         {
-                            if (_headerFinder.CheckIfRowData(line))
+                            if (_headerFinder.CheckIfRowData(line.Trim()))//部分過度版本還是保留有空格，因此先這樣來處理相容問題
                             {
                                 isRawData = true;
                             }

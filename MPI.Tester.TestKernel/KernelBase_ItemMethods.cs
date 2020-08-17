@@ -770,7 +770,7 @@ namespace MPI.Tester.TestKernel
                     {
                         if (diList[i] < thresholddi)
                         {
-                            tarIndex = i +1;
+                            tarIndex = i ;
                             break;
                         }
                     }

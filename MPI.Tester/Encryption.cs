@@ -8,12 +8,21 @@ namespace MPI.Tester
 	//=======================================//
 	// LD200與MapAnalyzer務必同步改版
 	// 否則會無法讀取報表
+    //---------------------------------------
 	// Version 1.1
 	// Modify Date:20180627 
+    //---------------------------------------
+    // Version 1.2
+    // Modify Date:20180824
+    // 修改Encoder結果為Abs
+    //---------------------------------------
+    // Version 1.3
+    // Modify Date:20200817
+    // 修改在CheckCode才轉Abs判斷
 	//=======================================//
 	public class Encryption
 	{
-		public static string GetCode( string[] strAry )
+        public static int GetCode(string[] strAry)
 		{
 			string str = string.Empty;
 
@@ -27,10 +36,10 @@ namespace MPI.Tester
 
 		public static bool CheckCode( string[] strAry, string code )
 		{
-			return Encryption.GetCode( strAry ) == code;
+            return Math.Abs(Encryption.GetCode(strAry)) == Math.Abs(int.Parse(code));
 		}
 
-		private static string Encoder( string str )
+        private static int Encoder(string str)
 		{
 			int code = 0;
 
@@ -48,7 +57,9 @@ namespace MPI.Tester
 				}
 			}
 
-			return code.ToString();
+            //return code.ToString();
+            //return Math.Abs(code).ToString();
+            return code;
 		}
 	}
 }
