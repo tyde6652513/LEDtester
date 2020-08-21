@@ -306,7 +306,7 @@ namespace MPI.Tester.Report.User.DOWA
 
             int rawLineCount = 0;
 
-            int testCount = 0;
+            int testCount = 1;
 
             int shiftCount = TitleStrShift;
 

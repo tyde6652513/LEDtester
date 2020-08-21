@@ -291,7 +291,7 @@ namespace MPI.Tester.Report.User.Accelink
 
             int rawLineCount = 0;
 
-            int testCount = 0;
+            int testCount = 1;
 
             int shiftCount = TitleStrShift;
 
