@@ -67,7 +67,7 @@ namespace MPI.Tester.Report.User.WAVETEK00
                             break;
                         }
                     }
-                    HeaderFinder hf = new HeaderFinder(this.TitleStrKey, TitleStrShift);
+                    HeaderFinderBase hf = new HeaderFinderBase(this.TitleStrKey, TitleStrShift);
                     EParsingState state = EParsingState.TesterInfo;
                     string conditionStr = "";
                     //重繞tmp檔取得 ColRowkey 對應的第幾筆數據
@@ -150,7 +150,7 @@ namespace MPI.Tester.Report.User.WAVETEK00
             return state;
         }
 
-        private EParsingState ParseTestCondition(string line, HeaderFinder hf,ref string jsonStr)
+        private EParsingState ParseTestCondition(string line, HeaderFinderBase hf,ref string jsonStr)
         {
             EParsingState state = EParsingState.TestCondition;
 

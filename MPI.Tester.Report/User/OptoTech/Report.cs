@@ -317,6 +317,7 @@ namespace MPI.Tester.Report.User.OptoTech
                     if (Directory.Exists(srcPath01))
                     {
                         string tarFolder = GetPathWithFolder(UISetting.MergeFilePath);
+
                         string tarPath = Path.Combine(tarFolder, UISetting.FileInProcessList[0]);
 
                         List<string> strList = new List<string>();
@@ -927,21 +928,6 @@ this.Product.TestCondition.TestItemArray != null)
             }
 
             return LimStr;
-        }
-
-        private bool IsStartInRefList(string strIn,List<string> strList)
-        {
-            if (strList != null)
-            {
-                foreach (string str in strList)
-                {
-                    if (strIn.StartsWith(str))
-                    {
-                        return true;
-                    }
-                }
-            }
-            return false;
         }
 
         private string StrArrToString(string[] strArr,string splitStr)

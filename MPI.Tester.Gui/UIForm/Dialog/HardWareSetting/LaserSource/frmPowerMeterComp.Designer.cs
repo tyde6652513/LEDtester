@@ -36,7 +36,6 @@ namespace MPI.Tester.Gui.UIForm.Dialog.HardWareSetting.LaserSource
             this.label13 = new System.Windows.Forms.Label();
             this.dinPDGain = new DevComponents.Editors.DoubleInput();
             this.pnlClamp = new System.Windows.Forms.Panel();
-            this.CmpClampA = new MPI.Tester.GuiComponent.UnitA();
             this.label8 = new System.Windows.Forms.Label();
             this.pnlBias = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -60,6 +59,8 @@ namespace MPI.Tester.Gui.UIForm.Dialog.HardWareSetting.LaserSource
             this.lblResultPow = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.chkRecord = new System.Windows.Forms.CheckBox();
+            this.CmpClampA = new MPI.Tester.GuiComponent.UnitA();
+            this.doubleInput1 = new DevComponents.Editors.DoubleInput();
             this.pnlSMU.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dinPDGain)).BeginInit();
@@ -74,6 +75,7 @@ namespace MPI.Tester.Gui.UIForm.Dialog.HardWareSetting.LaserSource
             this.pnlWaveLength.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dinWaveLength)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.doubleInput1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSMU
@@ -82,7 +84,7 @@ namespace MPI.Tester.Gui.UIForm.Dialog.HardWareSetting.LaserSource
             this.pnlSMU.Controls.Add(this.pnlClamp);
             this.pnlSMU.Controls.Add(this.pnlBias);
             this.pnlSMU.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSMU.Location = new System.Drawing.Point(0, 172);
+            this.pnlSMU.Location = new System.Drawing.Point(0, 161);
             this.pnlSMU.Name = "pnlSMU";
             this.pnlSMU.Size = new System.Drawing.Size(360, 107);
             this.pnlSMU.TabIndex = 3;
@@ -96,7 +98,7 @@ namespace MPI.Tester.Gui.UIForm.Dialog.HardWareSetting.LaserSource
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.panel3.ForeColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(0, 68);
+            this.panel3.Location = new System.Drawing.Point(0, 63);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(360, 34);
             this.panel3.TabIndex = 8;
@@ -148,18 +150,10 @@ namespace MPI.Tester.Gui.UIForm.Dialog.HardWareSetting.LaserSource
             this.pnlClamp.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlClamp.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.pnlClamp.ForeColor = System.Drawing.Color.Black;
-            this.pnlClamp.Location = new System.Drawing.Point(0, 34);
+            this.pnlClamp.Location = new System.Drawing.Point(0, 28);
             this.pnlClamp.Name = "pnlClamp";
-            this.pnlClamp.Size = new System.Drawing.Size(360, 34);
+            this.pnlClamp.Size = new System.Drawing.Size(360, 35);
             this.pnlClamp.TabIndex = 6;
-            // 
-            // CmpClampA
-            // 
-            this.CmpClampA.EnableModifyUnit = true;
-            this.CmpClampA.Location = new System.Drawing.Point(126, 2);
-            this.CmpClampA.Name = "CmpClampA";
-            this.CmpClampA.Size = new System.Drawing.Size(189, 32);
-            this.CmpClampA.TabIndex = 9;
             // 
             // label8
             // 
@@ -175,13 +169,14 @@ namespace MPI.Tester.Gui.UIForm.Dialog.HardWareSetting.LaserSource
             // 
             this.pnlBias.Controls.Add(this.label5);
             this.pnlBias.Controls.Add(this.label6);
+            this.pnlBias.Controls.Add(this.doubleInput1);
             this.pnlBias.Controls.Add(this.dinBias);
             this.pnlBias.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlBias.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.pnlBias.ForeColor = System.Drawing.Color.Black;
             this.pnlBias.Location = new System.Drawing.Point(0, 0);
             this.pnlBias.Name = "pnlBias";
-            this.pnlBias.Size = new System.Drawing.Size(360, 34);
+            this.pnlBias.Size = new System.Drawing.Size(360, 28);
             this.pnlBias.TabIndex = 5;
             // 
             // label5
@@ -230,9 +225,9 @@ namespace MPI.Tester.Gui.UIForm.Dialog.HardWareSetting.LaserSource
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.panel1.ForeColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(0, 138);
+            this.panel1.Location = new System.Drawing.Point(0, 129);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(360, 34);
+            this.panel1.Size = new System.Drawing.Size(360, 32);
             this.panel1.TabIndex = 7;
             // 
             // label10
@@ -278,14 +273,14 @@ namespace MPI.Tester.Gui.UIForm.Dialog.HardWareSetting.LaserSource
             this.pnlTarPow.ForeColor = System.Drawing.Color.Black;
             this.pnlTarPow.Location = new System.Drawing.Point(0, 68);
             this.pnlTarPow.Name = "pnlTarPow";
-            this.pnlTarPow.Size = new System.Drawing.Size(360, 70);
+            this.pnlTarPow.Size = new System.Drawing.Size(360, 61);
             this.pnlTarPow.TabIndex = 4;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("PMingLiU", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label11.Location = new System.Drawing.Point(257, 44);
+            this.label11.Location = new System.Drawing.Point(257, 35);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(36, 19);
             this.label11.TabIndex = 6;
@@ -302,7 +297,7 @@ namespace MPI.Tester.Gui.UIForm.Dialog.HardWareSetting.LaserSource
             this.dinCheckLim.DisplayFormat = "0";
             this.dinCheckLim.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dinCheckLim.Increment = 1D;
-            this.dinCheckLim.Location = new System.Drawing.Point(126, 36);
+            this.dinCheckLim.Location = new System.Drawing.Point(126, 31);
             this.dinCheckLim.MaxValue = 1000D;
             this.dinCheckLim.MinValue = 20D;
             this.dinCheckLim.Name = "dinCheckLim";
@@ -315,7 +310,7 @@ namespace MPI.Tester.Gui.UIForm.Dialog.HardWareSetting.LaserSource
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("PMingLiU", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label7.Location = new System.Drawing.Point(3, 36);
+            this.label7.Location = new System.Drawing.Point(3, 35);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(99, 19);
             this.label7.TabIndex = 4;
@@ -458,6 +453,33 @@ namespace MPI.Tester.Gui.UIForm.Dialog.HardWareSetting.LaserSource
             this.chkRecord.UseVisualStyleBackColor = true;
             this.chkRecord.Visible = false;
             // 
+            // CmpClampA
+            // 
+            this.CmpClampA.EnableModifyUnit = true;
+            this.CmpClampA.Location = new System.Drawing.Point(126, 2);
+            this.CmpClampA.Name = "CmpClampA";
+            this.CmpClampA.Size = new System.Drawing.Size(189, 32);
+            this.CmpClampA.TabIndex = 9;
+            // 
+            // doubleInput1
+            // 
+            // 
+            // 
+            // 
+            this.doubleInput1.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.doubleInput1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.doubleInput1.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.doubleInput1.DisplayFormat = "0.00";
+            this.doubleInput1.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.doubleInput1.Increment = 1D;
+            this.doubleInput1.Location = new System.Drawing.Point(126, 1);
+            this.doubleInput1.MaxValue = 10D;
+            this.doubleInput1.MinValue = -10D;
+            this.doubleInput1.Name = "doubleInput1";
+            this.doubleInput1.ShowUpDown = true;
+            this.doubleInput1.Size = new System.Drawing.Size(125, 27);
+            this.doubleInput1.TabIndex = 0;
+            // 
             // frmPowerMeterComp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -492,6 +514,7 @@ namespace MPI.Tester.Gui.UIForm.Dialog.HardWareSetting.LaserSource
             ((System.ComponentModel.ISupportInitialize)(this.dinWaveLength)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.doubleInput1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -528,5 +551,6 @@ namespace MPI.Tester.Gui.UIForm.Dialog.HardWareSetting.LaserSource
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private DevComponents.Editors.DoubleInput dinPDGain;
+        private DevComponents.Editors.DoubleInput doubleInput1;
     }
 }

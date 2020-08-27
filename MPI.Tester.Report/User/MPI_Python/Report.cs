@@ -104,7 +104,7 @@ namespace MPI.Tester.Report.User.MPI_Python
 
                     this._checkColRowKey.Clear();
 
-                    HeaderFinder hf = new HeaderFinder(this.TitleStrKey, TitleStrShift);
+                    HeaderFinderBase hf = new HeaderFinderBase(this.TitleStrKey, TitleStrShift);
 
                     //重繞tmp檔取得 ColRowkey 對應的第幾筆數據
                     while (srCheckRowCol.Peek() >= 0)
@@ -324,7 +324,7 @@ namespace MPI.Tester.Report.User.MPI_Python
 
             int shiftCount = TitleStrShift;
 
-            HeaderFinder hf = new HeaderFinder(this.TitleStrKey, TitleStrShift);
+            HeaderFinderBase hf = new HeaderFinderBase(this.TitleStrKey, TitleStrShift);
             // 開始比對ColRowKey並寫檔
             while (sr.Peek() >= 0)
             {

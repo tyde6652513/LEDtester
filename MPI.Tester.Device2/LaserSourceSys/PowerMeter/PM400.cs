@@ -106,8 +106,8 @@ namespace MPI.Tester.Device.LaserSourceSys.PowerMeter
 
                         if (firstPowermeterFound != "")
                         {
-                            _tlpm = new PM100D(firstPowermeterFound, false, true);  //  For valid Ressource_Name see NI-Visa documentation.
-                            _tlpm.reset();
+                            _tlpm = new PM100D(firstPowermeterFound, false, false);  //  For valid Ressource_Name see NI-Visa documentation.
+                            //_tlpm.reset();
                             Connect = new DriverObjConnect(_tlpm);
                             _tlpm.setPowerRefState(false);
                             _tlpm.setPowerAutoRange(true);

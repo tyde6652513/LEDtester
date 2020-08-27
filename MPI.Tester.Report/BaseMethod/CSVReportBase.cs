@@ -236,7 +236,7 @@ namespace MPI.Tester.Report
         {
             int binSN = (int)data["BINSN"];
 
-            SmartBinDataBase bin = this._smartBinning.GetBinFromSN(binSN);
+            SmartBinDataBase bin = this.SmartBinning.GetBinFromSN(binSN);
 
             int binGrade = 0;
 
@@ -286,9 +286,9 @@ namespace MPI.Tester.Report
                 {
                     string format = string.Empty;
 
-                    if (this._uiSetting.UserDefinedData[item.Key] != null)
+                    if (this.UISetting.UserDefinedData[item.Key] != null)
                     {
-                        format = this._uiSetting.UserDefinedData[item.Key].Formate;
+                        format = this.UISetting.UserDefinedData[item.Key].Formate;
                     }
 
                     line += data[item.Key].ToString(format);
@@ -597,20 +597,6 @@ namespace MPI.Tester.Report
         }
 
 
-
-        protected virtual EErrorCode PostProcessAfterMoveFile(EServerQueryCmd cmd)//在MoveFileToTarget後啟動，目前是設計來啟動合檔用
-        {
-            EErrorCode err = EErrorCode.NONE;
-
-            return err; 
-        }
-
-        protected virtual EErrorCode ProcessAfterWaferFinished()//在WaferFinished後啟動，目前是設計來啟動光磊合檔用
-        {
-            EErrorCode err = EErrorCode.NONE;
-
-            return err;
-        }
         #endregion
 
         #region >>> Protected Method <<<
@@ -1025,7 +1011,7 @@ namespace MPI.Tester.Report
                             this.TitleStrKey = ResultTitleInfo.TitleStr;
                         }
 
-                        HeaderFinder hf = new HeaderFinder(this.TitleStrKey, TitleStrShift);
+                        HeaderFinderBase hf = new HeaderFinderBase(this.TitleStrKey, TitleStrShift);
 
                         while (sr.Peek() >= 0)
                         {

@@ -131,6 +131,11 @@ namespace MPI.RemoteControl2.Tester
                 case CmdTestAbort.COMMAND_ID:
                     return new CmdTestAbort();
                 //---------------------------------------------------------------
+                case CmdSetTestMode.COMMAND_ID:
+                    return new CmdSetTestMode();
+                //---------------------------------------------------------------
+                case CmdQueryAbleMode.COMMAND_ID:
+                    return new CmdQueryAbleMode();
 				default:
                     return null;
             }

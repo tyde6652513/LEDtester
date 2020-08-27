@@ -426,6 +426,8 @@ namespace MPI.Tester.TestKernel
 
                 data.OutputTestResult[i].RawValue = this._outputTestResult[i].RawValue;
 
+                data.OutputTestResult[i].IsTested = this._outputTestResult[i].IsTested;
+
                 if (data.OutputTestResult[i].RawValueArray != null)
                 {
                     for (int j = 0; j < data.OutputTestResult[i].RawValueArray.Length; j++)

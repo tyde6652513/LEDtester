@@ -120,6 +120,7 @@ namespace MPI.Tester.Gui
             enableIdList.Add(EUserID.WAVETEK00);
             enableIdList.Add(EUserID.DOWA);
             enableIdList.Add(EUserID.OptoTech);
+            enableIdList.Add(EUserID.Accelink);
             if (enableIdList.Contains(DataCenter._uiSetting.UserID))
             {
                 tabiCustomer.Visible = true;
@@ -156,12 +157,25 @@ namespace MPI.Tester.Gui
                     break;
                 case EUserID.OptoTech:
                     {
+                        #region
                         if (customerFrm == null)
                         {
                             //customerFrm = new MPI.Tester.Gui.UIForm.UserForm.UISetting.frmOptoTechPath(DataCenter._uiSetting.MergeFilePath);
                             customerFrm = new MPI.Tester.Gui.UIForm.UserForm.UISetting.frmOptoTechPath();
                         }
+                        #endregion
                     }
+                    break;
+                case EUserID.Accelink:
+                    #region
+                    if (customerFrm == null)
+                    {
+                        //customerFrm = new MPI.Tester.Gui.UIForm.UserForm.UISetting.frmOptoTechPath(DataCenter._uiSetting.MergeFilePath);
+                        customerFrm = new MPI.Tester.Gui.UIForm.UserForm.UISetting.frmAccelinkPath();
+                    }
+                    #endregion
+
+
                     break;
                 default:
                     tabiCustomer.Visible = false;
@@ -581,11 +595,15 @@ namespace MPI.Tester.Gui
                 case (EUserID.OptoTech):
                     {
                         (customerFrm as MPI.Tester.Gui.UIForm.UserForm.UISetting.frmOptoTechPath).LoadDataFromDataCenter();
-                        //(customerFrm as MPI.Tester.Gui.UIForm.UserForm.UISetting.frmOptoTechPath).SetData(DataCenter._uiSetting.MergeFilePath.Clone() as PathInfo);
-
-                        //(customerFrm as MPI.Tester.Gui.UIForm.UserForm.UISetting.frmOptoTechPath).SetKeyInDataPath(DataCenter._uiSetting.OptoTechKeyInDataPath);
                     }
                     break;
+                case (EUserID.Accelink):
+                    {
+                        (customerFrm as MPI.Tester.Gui.UIForm.UserForm.UISetting.frmAccelinkPath).LoadDataFromDataCenter();
+                    }
+                    break;
+
+                    
                 default:
                     break;            
             }
@@ -951,18 +969,20 @@ namespace MPI.Tester.Gui
                     {
                         if (customerFrm != null)
                         {
-                            //PathInfo pInfo = (customerFrm as MPI.Tester.Gui.UIForm.UserForm.UISetting.frmOptoTechPath).GetData();
-
-                            //DataCenter._uiSetting.MergeFilePath = pInfo;
-
-                            //string kDataPath = (customerFrm as MPI.Tester.Gui.UIForm.UserForm.UISetting.frmOptoTechPath).GetKeyInDataPath();
-
-                            //DataCenter._uiSetting.OptoTechKeyInDataPath = kDataPath;
-
                             (customerFrm as MPI.Tester.Gui.UIForm.UserForm.UISetting.frmOptoTechPath).SaveDataToDataCenter();
                         }
                     }
                     break;
+                case (EUserID.Accelink):
+                    {
+                        if (customerFrm != null)
+                        {
+                            (customerFrm as MPI.Tester.Gui.UIForm.UserForm.UISetting.frmAccelinkPath).SaveDataToDataCenter();
+                        }
+                    }
+                    break;
+
+                    
                 default:
                     break;
             }

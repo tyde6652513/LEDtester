@@ -7,13 +7,14 @@ using MPI.Tester.Data;
 
 using MPI.Tester.Report.BaseMethod.HeaderFinder;
 using MPI.Tester.Report.BaseMethod.PosKeyMaker;
+using MPI.Tester.Report.BaseMethod.MapReader;
 
 namespace MPI.Tester.Report.User.DOWA
 {
     partial class Report : ReportBase
     {
         ETestStage _stg = ETestStage.IV;
-        Dictionary<string, AOISignItem> _posAOIDic = new Dictionary<string, AOISignItem>();
+        Dictionary<string, DOWA_AOISignItem> _posAOIDic = new Dictionary<string, DOWA_AOISignItem>();
         bool useFormatA = true;
 
        // Dictionary<string, MapDieBase> _keyMDic;

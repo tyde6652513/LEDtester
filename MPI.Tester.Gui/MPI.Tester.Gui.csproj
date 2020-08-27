@@ -827,6 +827,12 @@
     <Compile Include="UIForm\UserForm\frmInfiniLED.Designer.cs">
       <DependentUpon>frmInfiniLED.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIForm\UserForm\UISetting\frmAccelinkPath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\UserForm\UISetting\frmAccelinkPath.Designer.cs">
+      <DependentUpon>frmAccelinkPath.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIForm\UserForm\UISetting\frmDOWAPath.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1581,6 +1587,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIForm\UserForm\frmTSMC00.zh-TW.resx">
       <DependentUpon>frmTSMC00.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\UISetting\frmAccelinkPath.resx">
+      <DependentUpon>frmAccelinkPath.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIForm\UserForm\UISetting\frmDOWAPath.ja.resx">
       <DependentUpon>frmDOWAPath.cs</DependentUpon>

@@ -360,10 +360,10 @@ namespace MPI.Tester.Report.User.Heptagon
             string[] lastRawData = reportList[reportList.Count - 1];
 
             // 取得密碼
-            string code = Encryption.GetCode(lastRawData);
+            int code = Encryption.GetCode(lastRawData);
 
             // 檔頭加入密碼
-            reportList[codeLine] = new string[] { "InvoiceNo", code };
+            reportList[codeLine] = new string[] { "InvoiceNo", code.ToString() };
 
             CSVUtil.WriteCSV(filePath, reportList);
 

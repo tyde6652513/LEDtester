@@ -71,6 +71,9 @@ namespace MPI.Tester.Gui
             this.cmbStage.Items.Clear();
             this.cmbStage.Items.Add(ETestStage.IV.ToString());
             this.cmbStage.Items.Add(ETestStage.LCR.ToString());
+            this.cmbStage.Items.Add(ETestStage.Sampling.ToString());
+            this.cmbStage.Items.Add(ETestStage.Sampling1.ToString());
+            this.cmbStage.Items.Add(ETestStage.Sampling2.ToString());
 
             if (DataCenter._machineConfig.OSAModel != EOSAModel.NONE)
             {
