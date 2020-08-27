@@ -99,12 +99,14 @@ namespace MPI.Tester.Device.SourceMeter
         public double[] GetApplyDataFromMeter(uint channel, uint settingIndex)
         {
             double[] darr = new double[] { 1 };
+            darr[0] = (double)(channel + 1);
             return darr;//後面再補上
         }
 
         public double[] GetDataFromMeter(uint channel, uint settingIndex)
         {
             double[] valArr = new double[]{1};
+            valArr[0] = (double)(channel + 1);
             return valArr;
         }
         public double GetPDDarkSample(int count)

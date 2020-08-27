@@ -1866,7 +1866,15 @@ namespace MPI.Tester.TestKernel
                 for (int x = 0; x < colCnt; ++x)
                 {
                     double doubleX = (double)x;
-                    double doubleY = -(double)y;
+                    double doubleY = (double)y;
+
+                    switch (this._sysSetting.ProberCoord)
+                    {
+                        case (int)ECoordSet.First:
+                        case (int)ECoordSet.Second:
+                            doubleY *= -1;//舊版的包袱
+                            break;
+                    }
 
                     _chShiftTable.Push(channel, level, (int)doubleX, (int)doubleY);
 

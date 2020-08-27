@@ -164,7 +164,7 @@ namespace MPI.Tester.Report.User.WAVETEK00
                 wtSw.WriteLine("  X coordinate.... : " + strArr[0]);//gData.Value.X.ToString());
                 wtSw.WriteLine("  Y coordinate.... : " + strArr[1]);//gData.Value.Y.ToString());
 
-                string title = "Number\tSite\tResult\tTest Name\tChannel\tLow\t\tMeasured\tHigh\t\tForce\t\tLoc";
+                string title = "Number\tSite\tResult\tTest Name\tChannel\tLow\t\t\tMeasured\t\tHigh\t\t\tForce\t\t\tLoc";
                 wtSw.WriteLine(title);
                 int itemCount = 1;
                 //int failCounter = 0;
@@ -183,7 +183,10 @@ namespace MPI.Tester.Report.User.WAVETEK00
                         string format = mInfo.Value.MsrtData.Formate;
                         int index = mInfo.Value.ColIndex;
 
-                        if ((mInfo.Value.MsrtData.IsInSpec(dLog.RawData[index])))
+                        double val = 0;
+                        double.TryParse(dLog.RawData[index], out val);
+
+                        if ((mInfo.Value.MsrtData.IsInSpec(val)))
                         {
                             passStr = "PASS";
                             dLog.PassTestCnt++;
@@ -194,14 +197,20 @@ namespace MPI.Tester.Report.User.WAVETEK00
                             passStr = "FAIL";
                             dLog.FailTestCnt++;
                         }
+
+                        string tempStr = "";
                         str += "\t" + passStr;
                         str += "\t" + mInfo.Value.GetCustomerName_1base(3);
                         str += "\t\t" + (dLog.Ch);//有疑慮
-                        str += "\t" + mInfo.Value.MsrtData.MinLimitValue.ToString("0.000000") + " " + mInfo.Value.MsrtData.Unit;
 
-                        str += "\t" + dLog.RawData[index] + " " + mInfo.Value.MsrtData.Unit;
+                        tempStr = mInfo.Value.MsrtData.MinLimitValue.ToString("0.000000000") + " " + mInfo.Value.MsrtData.Unit;
+                        str += "\t" + tempStr.PadRight(16, ' ');
 
-                        str += "\t" + mInfo.Value.MsrtData.MaxLimitValue.ToString("0.000000") + " " + mInfo.Value.MsrtData.Unit;
+                        tempStr = val.ToString("0.000000000") + " " + mInfo.Value.MsrtData.Unit;
+                        str += "\t" + tempStr.PadRight(16, ' ');
+
+                        tempStr = mInfo.Value.MsrtData.MaxLimitValue.ToString("0.000000000") + " " + mInfo.Value.MsrtData.Unit;
+                        str += "\t" + tempStr.PadRight(16, ' ');
                         string forceStr = "";
                         if (mInfo.Value.TestData is LCRTestItem)
                         {
@@ -209,9 +218,11 @@ namespace MPI.Tester.Report.User.WAVETEK00
                         }
                         else
                         {
-                            forceStr = mInfo.Value.TestData.ElecSetting[0].ForceValue.ToString("0.000000");
+                            forceStr = mInfo.Value.TestData.ElecSetting[0].ForceValue.ToString("0.000000000");
                         }
-                        str += "\t" + forceStr + " " + mInfo.Value.TestData.ElecSetting[0].ForceUnit;
+
+                        tempStr = forceStr + " " + mInfo.Value.TestData.ElecSetting[0].ForceUnit;
+                        str += "\t" + tempStr.PadRight(16, ' ');
                         str += "\t 0";
                         wtSw.WriteLine(str);
                         
