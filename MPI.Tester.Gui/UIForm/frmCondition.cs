@@ -356,7 +356,7 @@ namespace MPI.Tester.Gui
             this.cmbPolarity.SelectedItem = DataCenter._product.TestCondition.ChipPolarity.ToString();
 
             this.cmbStage.SelectedItem = DataCenter._product.TestCondition.TestStage.ToString();
-
+          
             this.cmbFilterPosition.SelectedIndex = (int)DataCenter._product.ProductFilterWheelPos;
 
             this.dinPdDetectorFactor.Value = DataCenter._product.PdDetectorFactor;

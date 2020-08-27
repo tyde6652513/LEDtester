@@ -1525,10 +1525,14 @@ namespace MPI.Tester.Gui
                         Console.WriteLine("ProberRecipeName:" + DataCenter._uiSetting.ProberRecipeName);
                         Console.WriteLine("ProberSubRecipe:" + DataCenter._uiSetting.ProberSubRecipe);
                         Console.WriteLine("SlotNumber:" + DataCenter._uiSetting.SlotNumber + ",Ori:" + e.BufferData[0]);
+                        Console.WriteLine("ProerSubRecipeIndex:" +  DataCenter._uiSetting.ProerSubRecipeIndex.ToString() + ",Ori:" + e.BufferData[1]);
+
 
                         DataCenter._uiSetting.ProberRecipeName = e.StrData[0];
                         DataCenter._uiSetting.ProberSubRecipe = e.StrData[1];
                         DataCenter._uiSetting.SlotNumber = e.BufferData[0].ToString("0");
+
+                        DataCenter._uiSetting.ProerSubRecipeIndex = (int)(Math.Round(e.BufferData[1]));
 
                         break;
                         #endregion

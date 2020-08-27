@@ -25,7 +25,39 @@ namespace MPI.Tester.Report.User.Accelink
 
         protected override void SetResultTitle()
         {
-            this.ResultTitleInfo.SetResultData(this.UISetting.UserDefinedData.ResultItemNameDic);
+            //this.ResultTitleInfo.SetResultData(this.UISetting.UserDefinedData.ResultItemNameDic);
+
+            Dictionary<string, string> keyNameDic = new Dictionary<string, string>();
+
+            if (this.UISetting.UserDefinedData.ResultItemNameDic != null)
+            {
+                foreach (var p in this.UISetting.UserDefinedData.ResultItemNameDic)
+                {
+                    string key = p.Key;
+                    string val = p.Value;
+                    bool isTest = true;
+
+                    if (this.Product.TestCondition != null &&
+                        this.Product.TestCondition.TestItemArray != null)
+                    {
+                        foreach (var testItem in this.Product.TestCondition.TestItemArray)
+                        {
+                            foreach (var rData in testItem.MsrtResult)
+                            {
+                                if (rData.KeyName == key)
+                                {
+                                    val = rData.Name;
+                                    isTest = rData.IsThisItemTested || rData.IsSystemItem;
+                                }
+                            }
+                        }
+                    }
+                    
+                    keyNameDic.Add(key, val);
+                }
+            }
+
+            this.ResultTitleInfo.SetResultData(keyNameDic);
 
             _notEnableItemList = GetNotEnableMsrtItem();
            
