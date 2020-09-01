@@ -12,26 +12,26 @@ using MPI.Tester.Report.BaseMethod.MapReader;
 
 namespace MPI.Tester.Report.BaseMethod.Merge
 {
-    public class ReportMerger
+    public class ReportMergerBase
     {
 
-        List<string[]> _headerArrList = new List<string[]>();
-        List<string> _testConditionRow = new List<string>();
-        Dictionary<string, string[]> _posStrArrDic = new Dictionary<string, string[]>();  
-        ETestStage stageOfParsingFile = ETestStage.IV;
-        string _mergeFileNamewithoutExten = DateTime.Now.ToString("Merge_yyyyMMddHHmmss");
+        protected List<string[]> _headerArrList = new List<string[]>();
+        protected List<string> _testConditionRow = new List<string>();
+        protected Dictionary<string, string[]> _posStrArrDic = new Dictionary<string, string[]>();
+        protected ETestStage stageOfParsingFile = ETestStage.IV;
+        protected string _mergeFileNamewithoutExten = DateTime.Now.ToString("Merge_yyyyMMddHHmmss");
 
-        public List<int> _ivFirstCol = new List<int>();//搜尋數量不多，用list省事
-        public List<int> _cvFirstCol = new List<int>();//搜尋數量不多，用list省事
-        public List<int> _samplingFirstCol = new List<int>();//搜尋數量不多，用list省事
+        protected List<int> _ivFirstCol = new List<int>();//搜尋數量不多，用list省事
+        protected List<int> _cvFirstCol = new List<int>();//搜尋數量不多，用list省事
+        protected List<int> _samplingFirstCol = new List<int>();//搜尋數量不多，用list省事
 
-        HeaderFinderBase _headerFinder;
-        UISetting _uiSetting;
-        ResultTitleInfo _resultTitleInfo;
-        PosKeyMakerBase _crKeyMaker;
+        protected HeaderFinderBase _headerFinder;
+        protected UISetting _uiSetting;
+        protected ResultTitleInfo _resultTitleInfo;
+        protected PosKeyMakerBase _crKeyMaker;
 
         #region
-        public ReportMerger(UISetting uiset, HeaderFinderBase hf, ResultTitleInfo rti, PosKeyMakerBase posMaker)
+        public ReportMergerBase(UISetting uiset, HeaderFinderBase hf, ResultTitleInfo rti, PosKeyMakerBase posMaker)
         {
             _uiSetting = uiset;
             _headerFinder = hf.Clone() as HeaderFinderBase;
@@ -197,7 +197,7 @@ namespace MPI.Tester.Report.BaseMethod.Merge
         #endregion
 
         #region protected method
-        protected EParsingState ParseTestInfo(string line, int fCnt, int nowRow)
+        protected virtual EParsingState ParseTestInfo(string line, int fCnt, int nowRow)
         {
             EParsingState state = EParsingState.TesterInfo;
             if (fCnt == 0)
@@ -329,7 +329,7 @@ namespace MPI.Tester.Report.BaseMethod.Merge
             return state;
         }
 
-        protected EParsingState ParseTestCondition(string line, HeaderFinderBase hf)
+        protected virtual EParsingState ParseTestCondition(string line, HeaderFinderBase hf)
         {
             EParsingState state = EParsingState.TestCondition;
 
@@ -350,7 +350,7 @@ namespace MPI.Tester.Report.BaseMethod.Merge
             return state;
         }
 
-        protected EParsingState ParseMsrtData(string line)
+        protected virtual EParsingState ParseMsrtData(string line)
         {
             EParsingState state = EParsingState.MsrtData;
 
@@ -370,7 +370,6 @@ namespace MPI.Tester.Report.BaseMethod.Merge
                 {
                     if (rawData[i] != null)
                     {
-
                         if (rawData[i] != "")
                         {
                             if (tempArr[i] == "")

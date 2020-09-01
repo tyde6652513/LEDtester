@@ -114,6 +114,15 @@ namespace MPI.Tester.Report
                 {
                     this._passIndex = index;
                 }
+                else if (item.Key == EProberDataIndex.SubROW.ToString())
+                {
+                    this._subYIndex = index;
+                }
+                else if (item.Key == EProberDataIndex.SubCOL.ToString())
+                {
+                    this._subXIndex = index;
+                }
+                
 
 				this._titleStr += item.Value;
 

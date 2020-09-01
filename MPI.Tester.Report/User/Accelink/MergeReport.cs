@@ -14,6 +14,50 @@ namespace MPI.Tester.Report.User.Accelink
 {
     partial class Report : ReportBase
     {
+        protected override EErrorCode ProcessAfterWaferFinished()//在WaferFinished後啟動，目前是設計來啟動光磊合檔用
+        {
+            EErrorCode err = EErrorCode.NONE;
+
+            Console.WriteLine("[Report_Accelink],ProcessAfterWaferFinished()");
+
+            if (!this.UISetting.IsManualRunMode)
+            {
+                string srcPath01 = GetPathWithFolder(UISetting.OutPathInfo01);
+
+                string mergeOutPath01 = GetPathWithFolder(this.UISetting.MergeFilePath);
+
+                //在sampling才會合併檔案，因此override
+                if (Product.CustomerizedSetting.IsMergeReport &&
+                    UISetting.MergeFilePath.EnablePath &&
+                    UISetting.FileInProcessList != null && UISetting.FileInProcessList.Count > 1)
+                {
+                    if (Directory.Exists(srcPath01))
+                    {
+                        string tarFolder = GetPathWithFolder(UISetting.MergeFilePath);
+
+                        string mergeFileNamewithoutExten = this.GetOutputFileName((int)UISetting.EMergeFileNameFormatPresent);
+
+                        string tarPath = Path.Combine(tarFolder, mergeFileNamewithoutExten + "_Merge." + UISetting.TestResultFileExt);
+
+                        List<string> strList = new List<string>();
+                        foreach (string str in UISetting.FileInProcessList)
+                        {
+                            string pStr = Path.Combine(srcPath01, str);
+                            strList.Add(pStr);
+                        }
+                        err = MergeFile(tarPath, strList);
+                    }
+                    else
+                    {
+                        Console.WriteLine("[ReportBase],ProcessAfterWaferFinished(),Err: REPORT_Merge_FilePathError");
+                        err = EErrorCode.REPORT_Merge_FilePathError;
+                    }
+                }
+            }
+
+            return err;
+        }
+
 
         public override EErrorCode MergeFile(string outputPath, List<string> fileList = null)
         {
@@ -22,10 +66,12 @@ namespace MPI.Tester.Report.User.Accelink
             if (_crKeyMaker == null)
             {
                 List<int> colList = new List<int>();
-                if (this._resultTitleInfo.ChipIndexIndex >= 0)
-                {
-                    colList.Add(this._resultTitleInfo.ChipIndexIndex);
-                }
+                //if (this._resultTitleInfo.SubYIndex >= 0 &&
+                //    this._resultTitleInfo.SubXIndex >= 0)
+                //{
+                //    colList.Add(this._resultTitleInfo.SubXIndex);
+                //    colList.Add(this._resultTitleInfo.SubYIndex);
+                //}
                 _crKeyMaker = new PosKeyMakerBase(this._resultTitleInfo.ColIndex, this._resultTitleInfo.RowIndex, colList);
             }
 
@@ -62,4 +108,7 @@ namespace MPI.Tester.Report.User.Accelink
 
 
     }
+
+
+
 }

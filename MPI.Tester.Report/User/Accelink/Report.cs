@@ -27,6 +27,8 @@ namespace MPI.Tester.Report.User.Accelink
         {
             //this.ResultTitleInfo.SetResultData(this.UISetting.UserDefinedData.ResultItemNameDic);
 
+            _stg = this.Product.TestCondition.TestStage;
+
             Dictionary<string, string> keyNameDic = new Dictionary<string, string>();
 
             if (this.UISetting.UserDefinedData.ResultItemNameDic != null)
@@ -332,6 +334,13 @@ namespace MPI.Tester.Report.User.Accelink
             int colOCR_SIGN = _resultTitleInfo.GetIndexOfKey("OCR");
 
             HeaderFinderBase hf = new HeaderFinderBase(this.TitleStrKey, TitleStrShift);
+
+            List<int> colList = new List<int>();
+            if (this._resultTitleInfo.ColIndex > 0)
+                colList.Add(this._resultTitleInfo.ColIndex);
+            if (this._resultTitleInfo.RowIndex > 0)
+                colList.Add(this._resultTitleInfo.RowIndex);
+            PosKeyMakerBase myCRKeyMaker = new PosKeyMakerBase(this._resultTitleInfo.ColIndex, this._resultTitleInfo.RowIndex, colList);
             // 開始比對ColRowKey並寫檔
             while (sr.Peek() >= 0)
             {
@@ -348,8 +357,8 @@ namespace MPI.Tester.Report.User.Accelink
                         string colrowKey = ColRowKeyMaker(rawData);
 
                         // 把 row.col 和 checkRowCol "raw line count " 相同時, 才會push資料,解決當點重測row,col的問題
-                        if (((this._checkColRowKey.ContainsKey(colrowKey) && this._checkColRowKey[colrowKey] == rawLineCount) && this.TesterSetting.IsCheckRowCol)
-                            || !this.TesterSetting.IsCheckRowCol)
+                        //if (((this._checkColRowKey.ContainsKey(colrowKey) && this._checkColRowKey[colrowKey] == rawLineCount) && this.TesterSetting.IsCheckRowCol)
+                        //    || !this.TesterSetting.IsCheckRowCol)
                         {
                             //Rewrite TEST
                             if (this._resultTitleInfo.TestIndex >= 0)
@@ -377,6 +386,10 @@ namespace MPI.Tester.Report.User.Accelink
                                         {
                                             line += GetOCRSign( colrowKey);
                                         }
+                                        if (i == this._resultTitleInfo.BinIndex)
+                                        {
+                                            line += GetAOISign(colrowKey);
+                                        }
                                         else
                                         {
                                             line += rawData[i];
@@ -392,10 +405,10 @@ namespace MPI.Tester.Report.User.Accelink
 
                             testCount++;
                         }
-                        else
-                        {
-                            continue;
-                        }
+                        //else
+                        //{
+                        //    continue;
+                        //}
                     }
 
                 }

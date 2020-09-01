@@ -471,6 +471,8 @@ namespace MPI.Tester.Data
 
         private bool _isEnableTestGroup;
 
+        private bool _isMergeReport;
+
         //[XmlIgnore]
         //private Dictionary<string, CustomerMsrtNameInfo> _cusmreNameDic;
 
@@ -491,6 +493,7 @@ namespace MPI.Tester.Data
             //this._cusmreNameList = new List<CustomerMsrtNameInfo>();
             //_cusmreNameDic = null;
             this._isEnableTestGroup = false;
+            this._isMergeReport = false;
         }
 
 
@@ -539,6 +542,14 @@ namespace MPI.Tester.Data
             get { return this._WAFOutputPath03; }
             set { lock (this._lockObj) { this._WAFOutputPath03 = value; } }
         }
+        
+        
+        public bool IsMergeReport
+        {
+            get { return this._isMergeReport; }
+            set { lock (this._lockObj) { this._isMergeReport = value; } }
+        }
+
 
         //public List<CustomerMsrtNameInfo> CustomerNameInfo { // 沒辦法 Dictionary 序列化會有問題
         //    get {

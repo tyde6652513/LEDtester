@@ -81,7 +81,7 @@ namespace MPI.Tester.Report
                 _crKeyMaker = new PosKeyMakerBase(this._resultTitleInfo.ColIndex, this._resultTitleInfo.RowIndex, colList);
             }
 
-            ReportMerger merger = new ReportMerger(this.UISetting,
+            ReportMergerBase merger = new ReportMergerBase(this.UISetting,
                 new HeaderFinderBase(this.TitleStrKey, TitleStrShift), ResultTitleInfo, _crKeyMaker);
 
             return merger.MergeFile(outputPath, fileList);

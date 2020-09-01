@@ -28,7 +28,7 @@ namespace MPI.Tester.Report.User.DOWA
                 _crKeyMaker = new PosKeyMakerBase(this._resultTitleInfo.ColIndex, this._resultTitleInfo.RowIndex, colList);
             }
 
-            ReportMerger merger = new ReportMerger(this.UISetting,
+            ReportMergerBase merger = new ReportMergerBase(this.UISetting,
                 new HeaderFinderBase(this.TitleStrKey, TitleStrShift), ResultTitleInfo, _crKeyMaker);
 
             merger.OldFirstRow = new List<string>() { "TestTime" };
