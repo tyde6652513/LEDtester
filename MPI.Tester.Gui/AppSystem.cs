@@ -1868,16 +1868,16 @@ namespace MPI.Tester.Gui
                 ReportProcess.PushRemarkLog(logStr);
             }
 
-            if (!isPass)
-            {
-                _MPITesterKernel.GetPowerMeterInfo(ref isPass, out errMsg);
+            //if (!isPass)
+            //{
+            //    _MPITesterKernel.GetPowerMeterInfo(ref isPass, out errMsg);
                 if (!isPass)
                 {
                     Host.SetErrorCode(EErrorCode.LASER_PowerMeter_CheckPower_Fail_Err, errMsg);
 
                     Console.WriteLine("[AppSystem], MonitorLaser(),LASER_PowerMeter_CheckPower_Fail_Err");
                 }
-            }
+            //}
 
             _MPITesterKernel.SetOpticalSwitchToDefault();
 
