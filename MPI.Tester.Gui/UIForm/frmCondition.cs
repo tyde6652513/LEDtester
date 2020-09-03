@@ -259,7 +259,7 @@ namespace MPI.Tester.Gui
 
             if (customerFrm != null)
             {
-                customerFrm.Reftesh();
+                customerFrm.Refresh();
             }
 			//------------------------------------------------------------------------------------------
 			// Update the data grid view of "setting table" and "gain offset table"

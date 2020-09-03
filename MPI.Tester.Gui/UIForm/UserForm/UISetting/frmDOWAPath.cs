@@ -58,17 +58,6 @@ namespace MPI.Tester.Gui.UIForm.UserForm.UISetting
             return true;
         }
 
-        //public void SetData(PathInfo pInfo)
-        //{
-        //    pathUIComponent1.PathInfomation = TD2UIPath(pInfo);
-        //}
-
-        //public PathInfo GetData()
-        //{
-        //    PathInfo pInfo = UI2TDPath(pathUIComponent1.PathInfomation);
-        //    return pInfo;
-        //}
-
         private static MPI.Tester.GuiComponent.PathInfo TD2UIPath(MPI.Tester.Data.PathInfo pInfo)
         {
             MPI.Tester.GuiComponent.PathInfo uiPInfo = new GuiComponent.PathInfo();

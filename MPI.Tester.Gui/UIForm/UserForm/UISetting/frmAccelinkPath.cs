@@ -23,31 +23,23 @@ namespace MPI.Tester.Gui.UIForm.UserForm.UISetting
 
 
         #region>>public method<<
-        //public void SetData(PathInfo pInfo)
-        //{
-        //    pathUIComponent1.PathInfomation = TD2UIPath(pInfo);
-        //}
-
-        //public PathInfo GetData()
-        //{
-        //    PathInfo pInfo = UI2TDPath(pathUIComponent1.PathInfomation);
-
-        //    return pInfo;
-        //}
-
         
         public bool SaveDataToDataCenter()
         {
             DataCenter._uiSetting.MergeFilePath = UI2TDPath(pathUIComponent1.PathInfomation);
+            DataCenter._uiSetting.UIMapPathInfo = UI2TDPath(pucWaferMap.PathInfomation);
             return true;
         }
         public bool LoadDataFromDataCenter()
         {
+            
             pathUIComponent1.PathInfomation = TD2UIPath(DataCenter._uiSetting.MergeFilePath.Clone() as MPI.Tester.Data.PathInfo);
+            pucWaferMap.PathInfomation = TD2UIPath(DataCenter._uiSetting.UIMapPathInfo.Clone() as MPI.Tester.Data.PathInfo);
             return true;
         }
         
         #endregion
+
         #region >>private method<<
         private static MPI.Tester.GuiComponent.PathInfo TD2UIPath(MPI.Tester.Data.PathInfo pInfo)
         {

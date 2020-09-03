@@ -9,6 +9,6 @@ namespace MPI.Tester.Gui.UIForm.UserForm.Condition
     public interface IfrmCusConditin
     {
         bool Save();
-        bool Reftesh();
+        bool Refresh();
     }
 }

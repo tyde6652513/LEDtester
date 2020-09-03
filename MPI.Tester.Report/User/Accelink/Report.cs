@@ -99,7 +99,7 @@ namespace MPI.Tester.Report.User.Accelink
             this.WriteLine("Samples" + this.SpiltChar.ToString() + "\"\"");
 
 
-            this.WriteLine("InvoiceNo" + this.SpiltChar.ToString());
+            //this.WriteLine("InvoiceNo" + this.SpiltChar.ToString());
 
             this.WriteLine("Stage" + this.SpiltChar.ToString() + _stg.ToString());
 
@@ -233,7 +233,8 @@ namespace MPI.Tester.Report.User.Accelink
                 this.ReplaceReportData_AcceLink(replaceData, this.FileFullNameTmp, this.FileFullNameRep, false);
             }
 
-            return AddReportCode(this.FileFullNameRep);
+            //return AddReportCode(this.FileFullNameRep);//報表可能由AOI加工，因此不應加這個
+            return EErrorCode.NONE;
         }
 
         protected override EErrorCode PushDataByUser(Dictionary<string, double> data)
