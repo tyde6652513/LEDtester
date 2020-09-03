@@ -30,6 +30,8 @@ namespace MPI.Tester.Report.BaseMethod.Merge
         protected ResultTitleInfo _resultTitleInfo;
         protected PosKeyMakerBase _crKeyMaker;
 
+        protected int _parsingFileCnt = 0;
+
         #region
         public ReportMergerBase(UISetting uiset, HeaderFinderBase hf, ResultTitleInfo rti, PosKeyMakerBase posMaker)
         {
@@ -60,6 +62,7 @@ namespace MPI.Tester.Report.BaseMethod.Merge
         public string DUTCountKey = "TEST";
         public int DUTCountCol = -1;
         public char SpiltChar = ',';
+
         #endregion
 
         #region public method
@@ -85,6 +88,7 @@ namespace MPI.Tester.Report.BaseMethod.Merge
 
 
             _testConditionRow = new List<string>();
+            _parsingFileCnt = 0;
 
             if (fileList != null && fileList.Count > 1)
             {
@@ -93,12 +97,12 @@ namespace MPI.Tester.Report.BaseMethod.Merge
                                                          orderby File.GetLastWriteTime(path)
                                                          select path).ToList();//按照產出時間先後排序
                 fileList = fileOrderByLastWriteTime;
-                for (int fCnt = 0; fCnt < fileList.Count; ++fCnt)
+                for (_parsingFileCnt = 0; _parsingFileCnt < fileList.Count; ++_parsingFileCnt)
                 {
-                    Console.WriteLine("[ReportMerger],MergeFile(),read file:" + fileList[fCnt]);
+                    Console.WriteLine("[ReportMerger],MergeFile(),read file:" + fileList[_parsingFileCnt]);
                     HeaderFinderBase tempHf = _headerFinder.Clone() as HeaderFinderBase;
 
-                    using (StreamReader sr = new StreamReader(fileList[fCnt]))
+                    using (StreamReader sr = new StreamReader(fileList[_parsingFileCnt]))
                     {
                         int nowRow = 0;
                         EParsingState state = EParsingState.TesterInfo;
@@ -109,7 +113,7 @@ namespace MPI.Tester.Report.BaseMethod.Merge
                             switch (state)
                             {
                                 case EParsingState.TesterInfo:
-                                    state = ParseTestInfo(line, fCnt, nowRow);
+                                    state = ParseTestInfo(line, _parsingFileCnt, nowRow);
                                     break;
                                 case EParsingState.TestCondition:
                                     state = ParseTestCondition(line, tempHf);

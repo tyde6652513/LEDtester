@@ -14,7 +14,7 @@ namespace MPI.Tester.Report.User.Accelink
 {
     partial class Report : ReportBase
     {
-        protected override EErrorCode ProcessAfterWaferFinished()//在WaferFinished後啟動，目前是設計來啟動光磊合檔用
+        protected override EErrorCode ProcessAfterWaferFinished()//在WaferFinished後啟動，目前是設計來啟動合檔用
         {
             EErrorCode err = EErrorCode.NONE;
 
@@ -66,12 +66,6 @@ namespace MPI.Tester.Report.User.Accelink
             if (_crKeyMaker == null)
             {
                 List<int> colList = new List<int>();
-                //if (this._resultTitleInfo.SubYIndex >= 0 &&
-                //    this._resultTitleInfo.SubXIndex >= 0)
-                //{
-                //    colList.Add(this._resultTitleInfo.SubXIndex);
-                //    colList.Add(this._resultTitleInfo.SubYIndex);
-                //}
                 _crKeyMaker = new PosKeyMakerBase(this._resultTitleInfo.ColIndex, this._resultTitleInfo.RowIndex, colList);
             }
 
