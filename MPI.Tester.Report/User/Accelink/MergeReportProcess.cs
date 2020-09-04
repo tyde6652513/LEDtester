@@ -61,9 +61,9 @@ namespace MPI.Tester.Report.User.Accelink
                         }
 
 
-                        if (UISetting.UIMapPathInfo.EnablePath)
+                        if (UISetting.PathInfoArr[0].EnablePath)
                         {
-                            string folderName = GetPathWithFolder(UISetting.UIMapPathInfo);
+                            string folderName = GetPathWithFolder(UISetting.PathInfoArr[0]);
                             string fileName = Path.GetFileNameWithoutExtension(MergeTarPath);
                             string tarFileName = Path.Combine(folderName, fileName + ".jpg");
                             string settingFilePath = GetcustomizePath();
