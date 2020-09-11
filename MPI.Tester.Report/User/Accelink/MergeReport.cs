@@ -70,8 +70,23 @@ namespace MPI.Tester.Report.User.Accelink
                 _crKeyMaker = new PosKeyMakerBase(this._resultTitleInfo.ColIndex, this._resultTitleInfo.RowIndex, colList);
             }
 
-            ReportMerger merger = new ReportMerger(this.UISetting,
-                new HeaderFinderBase(this.TitleStrKey, TitleStrShift), ResultTitleInfo, _crKeyMaker);
+            string headerStr = "";
+            int maxCnt = 4;
+            //for (int i = 0; i < 4; ++i)
+            int cnt = 0;
+            foreach (var mItem in ResultTitleInfo)
+            {
+                headerStr += mItem.Value + ",";
+                if (cnt >= maxCnt)
+                {
+                    break;
+                }
+                cnt++;
+            }
+
+            HeaderFinder_ByStartStr hf = new HeaderFinder_ByStartStr(headerStr, TitleStrShift);
+
+            ReportMerger merger = new ReportMerger(this.UISetting, hf, ResultTitleInfo, _crKeyMaker);
 
             merger.OldFirstRow = new List<string>() { "TestTime" };
             merger.OldFirstRow.Add("TestTime");
