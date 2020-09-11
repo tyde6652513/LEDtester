@@ -387,10 +387,10 @@ namespace MPI.Tester.Report.User.Accelink
                                         {
                                             line += GetOCRSign( colrowKey);
                                         }
-                                        if (i == this._resultTitleInfo.BinIndex)
-                                        {
-                                            line += GetAOISign(colrowKey);
-                                        }
+                                        //if (i == this._resultTitleInfo.BinIndex)
+                                        //{
+                                        //    line += GetAOISign(colrowKey);
+                                        //}
                                         else
                                         {
                                             line += rawData[i];
@@ -476,6 +476,10 @@ namespace MPI.Tester.Report.User.Accelink
                             { outStr += p.Value.SIGN; }
                             else if (i == colOCR_SIGN)
                             { outStr += p.Value.OCR; }
+                            else if (i == this._resultTitleInfo.BinIndex)
+                            {
+                                outStr += p.Value.SIGN;
+                            }
 
                             if (i != colLength - 1)
                             {
