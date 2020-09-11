@@ -36,6 +36,7 @@ namespace MPI.Tester.Report.BaseMethod.MapReader
         {
             _subDieRegex = new Regex(posPattern);
             _headerFinder = hf;
+            _headerFinder.Reset();
             _posMaker = posMaker;
             _splitChar = splitChar;
 
