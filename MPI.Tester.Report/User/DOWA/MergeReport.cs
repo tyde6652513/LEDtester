@@ -59,7 +59,7 @@ namespace MPI.Tester.Report.User.DOWA
 
             //ReportMerger merger = new ReportMerger(this.UISetting, hf, ResultTitleInfo, _crKeyMaker,d4rti);
 
-            ReportMerger merger = new ReportMerger(this.UISetting, hf, d4rti, _crKeyMaker );
+            ReportMergerBase merger = new ReportMergerBase(this.UISetting, hf, d4rti, _crKeyMaker );
 
             merger.OldFirstRow = new List<string>() { "TestTime" };
 

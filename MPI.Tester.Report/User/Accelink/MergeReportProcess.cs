@@ -92,8 +92,35 @@ namespace MPI.Tester.Report.User.Accelink
                 _crKeyMaker = new PosKeyMakerBase(this._resultTitleInfo.ColIndex, this._resultTitleInfo.RowIndex, colList);
             }
 
-            ReportMerger merger = new ReportMerger(this.UISetting,
-                new HeaderFinderBase(this.TitleStrKey, TitleStrShift), ResultTitleInfo, _crKeyMaker);
+            #region
+            string headerStr = "";
+            int maxCnt = 4;
+            //for (int i = 0; i < 4; ++i)
+            int cnt = 0;
+            foreach (var mItem in ResultTitleInfo)
+            {
+                headerStr += mItem.Value + ",";
+                if (cnt >= maxCnt)
+                {
+                    break;
+                }
+                cnt++;
+            }
+            HeaderFinder_ByStartStr hf = new HeaderFinder_ByStartStr(headerStr, TitleStrShift);
+            #endregion
+
+
+            #region
+
+            ResultTitleInfo d4rti = new ResultTitleInfo();
+
+            Dictionary<string, string> d4keyNameDic = GetD4KeyHeaderDic(this.UISetting.UserDefinedData.ResultItemNameDic);
+
+            d4rti.SetResultData(d4keyNameDic);
+            #endregion
+
+
+            ReportMerger merger = new ReportMerger(this.UISetting, hf, d4rti, _crKeyMaker);
 
             merger.OldFirstRow = new List<string>() { "TestTime" };
             merger.OldFirstRow.Add("TestTime");
@@ -134,6 +161,30 @@ namespace MPI.Tester.Report.User.Accelink
         }
 
         #endregion
+
+
+        private Dictionary<string, string> GetD4KeyHeaderDic(Dictionary<string, string> keyNameDic)
+        {
+            Dictionary<string, string> kvDic = new Dictionary<string, string>();
+
+            if (keyNameDic != null)
+            {
+                foreach (var p in keyNameDic)
+                {
+                    string name = p.Value;
+                    string key = p.Key;
+                    var item = this.UISetting.UserDefinedData[key];
+                    if (item != null)
+                    {
+                        string name1 = item.Name;
+                        string unit = item.Unit;
+                        name = name1;
+                    }
+                    kvDic.Add(key, name);
+                }
+            }
+            return kvDic;
+        }
 
 
     }

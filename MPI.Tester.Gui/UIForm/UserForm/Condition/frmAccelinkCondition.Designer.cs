@@ -36,7 +36,7 @@
             this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colShow = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnMerge = new System.Windows.Forms.Button();
+            this.btnConvert = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVsetting)).BeginInit();
             this.SuspendLayout();
@@ -124,22 +124,22 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnMerge
+            // btnConvert
             // 
-            this.btnMerge.Font = new System.Drawing.Font("PMingLiU", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnMerge.Location = new System.Drawing.Point(280, 21);
-            this.btnMerge.Name = "btnMerge";
-            this.btnMerge.Size = new System.Drawing.Size(80, 37);
-            this.btnMerge.TabIndex = 11;
-            this.btnMerge.Text = "Merge";
-            this.btnMerge.UseVisualStyleBackColor = true;
-            this.btnMerge.Click += new System.EventHandler(this.btnMerge_Click);
+            this.btnConvert.Font = new System.Drawing.Font("PMingLiU", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnConvert.Location = new System.Drawing.Point(274, 21);
+            this.btnConvert.Name = "btnConvert";
+            this.btnConvert.Size = new System.Drawing.Size(86, 37);
+            this.btnConvert.TabIndex = 11;
+            this.btnConvert.Text = "Convert";
+            this.btnConvert.UseVisualStyleBackColor = true;
+            this.btnConvert.Click += new System.EventHandler(this.btnConvert_Click);
             // 
             // frmAccelinkCondition
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(698, 247);
-            this.Controls.Add(this.btnMerge);
+            this.Controls.Add(this.btnConvert);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.chkMergeFile);
@@ -164,6 +164,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colName;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colShow;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnMerge;
+        private System.Windows.Forms.Button btnConvert;
     }
 }

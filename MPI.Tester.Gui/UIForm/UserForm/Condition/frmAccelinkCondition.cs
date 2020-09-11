@@ -206,7 +206,7 @@ namespace MPI.Tester.Gui.UIForm.UserForm.Condition
             Save();
         }
 
-        private void btnMerge_Click(object sender, EventArgs e)
+        private void btnConvert_Click(object sender, EventArgs e)
         {
             Save();
             string srcFile = SelctReadFile();
