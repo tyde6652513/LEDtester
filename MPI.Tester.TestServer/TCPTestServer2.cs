@@ -381,7 +381,10 @@ namespace MPI.Tester.TestServer
                             }
                             else
                             {
-                                if (GlobalFlag.OutputReportState == EOutputReportState.None)
+                                if (GlobalFlag.OutputReportState == EOutputReportState.None ||
+                                    GlobalFlag.OutputReportState == EOutputReportState.CanAppend ||
+                                    GlobalFlag.OutputReportState == EOutputReportState.CanOverwrite ||
+                                    GlobalFlag.OutputReportState == EOutputReportState.CanRetest)
                                 {
                                     if (this._isTCPIPSendEnableResultItem)
                                     {
