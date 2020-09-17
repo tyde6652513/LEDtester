@@ -57,7 +57,8 @@ namespace MPI.Tester.Report.User.Accelink
 
                                 tempArr[i] = isPass?"1":"0";
                             }
-                            else
+                            else if (rawData[i] != "")
+                            //else
                             {
                                 tempArr[i] = rawData[i];
                             }
