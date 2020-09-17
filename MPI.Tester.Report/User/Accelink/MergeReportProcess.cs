@@ -208,7 +208,7 @@ namespace MPI.Tester.Report.User.Accelink
 
             string str = File.Exists(p.StartInfo.FileName).ToString();
             string s2 = str;
-            string sArguments = srcFileName + " " + tarFileName;
+            string sArguments = "\"" + srcFileName + "\"" + " " + "\"" + tarFileName + "\"";
 
             List<string> mapItemList = (from s in sList
                                         where s.ShowOnMap
