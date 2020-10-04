@@ -25,7 +25,41 @@ namespace MPI.Tester.Report.User.Accelink
 
         protected override void SetResultTitle()
         {
-            this.ResultTitleInfo.SetResultData(this.UISetting.UserDefinedData.ResultItemNameDic);
+            //this.ResultTitleInfo.SetResultData(this.UISetting.UserDefinedData.ResultItemNameDic);
+
+            _stg = this.Product.TestCondition.TestStage;
+
+            Dictionary<string, string> keyNameDic = new Dictionary<string, string>();
+
+            if (this.UISetting.UserDefinedData.ResultItemNameDic != null)
+            {
+                foreach (var p in this.UISetting.UserDefinedData.ResultItemNameDic)
+                {
+                    string key = p.Key;
+                    string val = p.Value;
+                    bool isTest = true;
+
+                    if (this.Product.TestCondition != null &&
+                        this.Product.TestCondition.TestItemArray != null)
+                    {
+                        foreach (var testItem in this.Product.TestCondition.TestItemArray)
+                        {
+                            foreach (var rData in testItem.MsrtResult)
+                            {
+                                if (rData.KeyName == key)
+                                {
+                                    val = rData.Name;
+                                    isTest = rData.IsThisItemTested || rData.IsSystemItem;
+                                }
+                            }
+                        }
+                    }
+                    
+                    keyNameDic.Add(key, val);
+                }
+            }
+
+            this.ResultTitleInfo.SetResultData(keyNameDic);
 
             _notEnableItemList = GetNotEnableMsrtItem();
            
@@ -65,7 +99,7 @@ namespace MPI.Tester.Report.User.Accelink
             this.WriteLine("Samples" + this.SpiltChar.ToString() + "\"\"");
 
 
-            this.WriteLine("InvoiceNo" + this.SpiltChar.ToString());
+            //this.WriteLine("InvoiceNo" + this.SpiltChar.ToString());
 
             this.WriteLine("Stage" + this.SpiltChar.ToString() + _stg.ToString());
 
@@ -199,7 +233,8 @@ namespace MPI.Tester.Report.User.Accelink
                 this.ReplaceReportData_AcceLink(replaceData, this.FileFullNameTmp, this.FileFullNameRep, false);
             }
 
-            return AddReportCode(this.FileFullNameRep);
+            //return AddReportCode(this.FileFullNameRep);//報表可能由AOI加工，因此不應加這個
+            return EErrorCode.NONE;
         }
 
         protected override EErrorCode PushDataByUser(Dictionary<string, double> data)
@@ -300,6 +335,13 @@ namespace MPI.Tester.Report.User.Accelink
             int colOCR_SIGN = _resultTitleInfo.GetIndexOfKey("OCR");
 
             HeaderFinderBase hf = new HeaderFinderBase(this.TitleStrKey, TitleStrShift);
+
+            List<int> colList = new List<int>();
+            if (this._resultTitleInfo.ColIndex > 0)
+                colList.Add(this._resultTitleInfo.ColIndex);
+            if (this._resultTitleInfo.RowIndex > 0)
+                colList.Add(this._resultTitleInfo.RowIndex);
+            PosKeyMakerBase myCRKeyMaker = new PosKeyMakerBase(this._resultTitleInfo.ColIndex, this._resultTitleInfo.RowIndex, colList);
             // 開始比對ColRowKey並寫檔
             while (sr.Peek() >= 0)
             {
@@ -316,8 +358,8 @@ namespace MPI.Tester.Report.User.Accelink
                         string colrowKey = ColRowKeyMaker(rawData);
 
                         // 把 row.col 和 checkRowCol "raw line count " 相同時, 才會push資料,解決當點重測row,col的問題
-                        if (((this._checkColRowKey.ContainsKey(colrowKey) && this._checkColRowKey[colrowKey] == rawLineCount) && this.TesterSetting.IsCheckRowCol)
-                            || !this.TesterSetting.IsCheckRowCol)
+                        //if (((this._checkColRowKey.ContainsKey(colrowKey) && this._checkColRowKey[colrowKey] == rawLineCount) && this.TesterSetting.IsCheckRowCol)
+                        //    || !this.TesterSetting.IsCheckRowCol)
                         {
                             //Rewrite TEST
                             if (this._resultTitleInfo.TestIndex >= 0)
@@ -345,6 +387,10 @@ namespace MPI.Tester.Report.User.Accelink
                                         {
                                             line += GetOCRSign( colrowKey);
                                         }
+                                        //if (i == this._resultTitleInfo.BinIndex)
+                                        //{
+                                        //    line += GetAOISign(colrowKey);
+                                        //}
                                         else
                                         {
                                             line += rawData[i];
@@ -360,10 +406,10 @@ namespace MPI.Tester.Report.User.Accelink
 
                             testCount++;
                         }
-                        else
-                        {
-                            continue;
-                        }
+                        //else
+                        //{
+                        //    continue;
+                        //}
                     }
 
                 }
@@ -430,6 +476,10 @@ namespace MPI.Tester.Report.User.Accelink
                             { outStr += p.Value.SIGN; }
                             else if (i == colOCR_SIGN)
                             { outStr += p.Value.OCR; }
+                            else if (i == this._resultTitleInfo.BinIndex)
+                            {
+                                outStr += p.Value.SIGN;
+                            }
 
                             if (i != colLength - 1)
                             {

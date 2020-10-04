@@ -12,40 +12,53 @@ using MPI.Tester.Report.BaseMethod.MapReader;
 
 namespace MPI.Tester.Report.BaseMethod.Merge
 {
-    public class ReportMerger
+    public class ReportMergerBase
     {
 
-        List<string[]> _headerArrList = new List<string[]>();
-        List<string> _testConditionRow = new List<string>();
-        Dictionary<string, string[]> _posStrArrDic = new Dictionary<string, string[]>();  
-        ETestStage stageOfParsingFile = ETestStage.IV;
+        protected List<string[]> _headerArrList = new List<string[]>();
+        protected List<string> _testConditionRow = new List<string>();
+        protected Dictionary<string, string[]> _posStrArrDic = new Dictionary<string, string[]>();
+        protected ETestStage stageOfParsingFile = ETestStage.IV;
         string _mergeFileNamewithoutExten = DateTime.Now.ToString("Merge_yyyyMMddHHmmss");
 
-        public List<int> _ivFirstCol = new List<int>();//搜尋數量不多，用list省事
-        public List<int> _cvFirstCol = new List<int>();//搜尋數量不多，用list省事
-        public List<int> _samplingFirstCol = new List<int>();//搜尋數量不多，用list省事
+        protected List<int> _ivFirstCol = new List<int>();//搜尋數量不多，用list省事
+        protected List<int> _cvFirstCol = new List<int>();//搜尋數量不多，用list省事
+        protected List<int> _samplingFirstCol = new List<int>();//搜尋數量不多，用list省事
 
-        HeaderFinderBase _headerFinder;
-        UISetting _uiSetting;
-        ResultTitleInfo _resultTitleInfo;
-        PosKeyMakerBase _crKeyMaker;
+        protected List<string> _d4headerList = new List<string>();
+        protected List<string> _headerList = new List<string>();
+
+        protected HeaderFinderBase _headerFinder;
+        protected UISetting _uiSetting;
+        protected ResultTitleInfo _d4ResultTitleInfo;
+        protected PosKeyMakerBase _crKeyMaker;
+
+        protected int _parsingFileCnt = 0;
+        //ResultTitleInfo _d4ResultTitleInfo = null;//給可重新命名的檔頭做為參考用
+
+
 
         #region
-        public ReportMerger(UISetting uiset, HeaderFinderBase hf, ResultTitleInfo rti, PosKeyMakerBase posMaker)
+        //改成default ResultTitleInfo是為了merge 時能夠確認該欄位是否被改過名稱
+        public ReportMergerBase(UISetting uiset, HeaderFinderBase hf, ResultTitleInfo d4Rti, PosKeyMakerBase posMaker)
         {
             _uiSetting = uiset;
-            _headerFinder = hf.Clone() as HeaderFinderBase;
-            _resultTitleInfo = rti;
+            _headerFinder = hf;
+            _d4ResultTitleInfo = d4Rti;
             _crKeyMaker = posMaker;
+
+            _headerList = new List<string>(_d4ResultTitleInfo.TitleStr.Split(this.SpiltChar));
+
+            _d4headerList = new List<string>(_d4ResultTitleInfo.TitleStr.Split(this.SpiltChar));
 
             if (_crKeyMaker == null)
             {
                 List<int> colList = new List<int>();
-                if (this._resultTitleInfo.ChipIndexIndex >= 0)
+                if (this._d4ResultTitleInfo.ChipIndexIndex >= 0)
                 {
-                    colList.Add(this._resultTitleInfo.ChipIndexIndex);
+                    colList.Add(this._d4ResultTitleInfo.ChipIndexIndex);
                 }
-                _crKeyMaker = new PosKeyMakerBase(this._resultTitleInfo.ColIndex, this._resultTitleInfo.RowIndex, colList);
+                _crKeyMaker = new PosKeyMakerBase(this._d4ResultTitleInfo.ColIndex, this._d4ResultTitleInfo.RowIndex, colList);
             }
         }
         #endregion
@@ -65,8 +78,7 @@ namespace MPI.Tester.Report.BaseMethod.Merge
         #region public method
         public EErrorCode MergeFile(string outputPath, List<string> fileList = null)
         {
-            Console.WriteLine("[ReportMerger],MergeFile()");
-         
+            Console.WriteLine("[ReportMerger],MergeFile()");         
 
             _mergeFileNamewithoutExten = Path.GetFileNameWithoutExtension(outputPath);
 
@@ -93,12 +105,13 @@ namespace MPI.Tester.Report.BaseMethod.Merge
                                                          orderby File.GetLastWriteTime(path)
                                                          select path).ToList();//按照產出時間先後排序
                 fileList = fileOrderByLastWriteTime;
-                for (int fCnt = 0; fCnt < fileList.Count; ++fCnt)
+                for (_parsingFileCnt = 0; _parsingFileCnt < fileList.Count; ++_parsingFileCnt)
                 {
-                    Console.WriteLine("[ReportMerger],MergeFile(),read file:" + fileList[fCnt]);
-                    HeaderFinderBase tempHf = _headerFinder.Clone() as HeaderFinderBase;
+                    Console.WriteLine("[ReportMerger],MergeFile(),read file:" + fileList[_parsingFileCnt]);
 
-                    using (StreamReader sr = new StreamReader(fileList[fCnt]))
+                    _headerFinder.Reset();
+
+                    using (StreamReader sr = new StreamReader(fileList[_parsingFileCnt]))
                     {
                         int nowRow = 0;
                         EParsingState state = EParsingState.TesterInfo;
@@ -109,10 +122,10 @@ namespace MPI.Tester.Report.BaseMethod.Merge
                             switch (state)
                             {
                                 case EParsingState.TesterInfo:
-                                    state = ParseTestInfo(line, fCnt, nowRow);
+                                    state = ParseTestInfo(line, _parsingFileCnt, nowRow);
                                     break;
                                 case EParsingState.TestCondition:
-                                    state = ParseTestCondition(line, tempHf);
+                                    state = ParseTestCondition(line, _headerFinder);
                                     break;
                                 case EParsingState.MsrtData:
                                     state = ParseMsrtData(line);
@@ -157,7 +170,20 @@ namespace MPI.Tester.Report.BaseMethod.Merge
                 }
                 sw.WriteLine("");
 
-                sw.WriteLine(this._resultTitleInfo.TitleStr);
+
+                string headerStr = "";
+
+                for (int i = 0; i < _headerList.Count; ++i)
+                {
+                    headerStr += _headerList[i];
+                    if (i < _headerList.Count - 1)
+                    {
+                        headerStr += ",";
+                    }
+                }
+                sw.WriteLine(headerStr);
+
+                //sw.WriteLine(this._resultTitleInfo.TitleStr);
                 sw.Flush();
                 int DUTCount = 1;
                 foreach (var p in _posStrArrDic.Values)
@@ -197,7 +223,7 @@ namespace MPI.Tester.Report.BaseMethod.Merge
         #endregion
 
         #region protected method
-        protected EParsingState ParseTestInfo(string line, int fCnt, int nowRow)
+        protected virtual EParsingState ParseTestInfo(string line, int fCnt, int nowRow)
         {
             EParsingState state = EParsingState.TesterInfo;
             if (fCnt == 0)
@@ -329,28 +355,47 @@ namespace MPI.Tester.Report.BaseMethod.Merge
             return state;
         }
 
-        protected EParsingState ParseTestCondition(string line, HeaderFinderBase hf)
+        protected virtual EParsingState ParseTestCondition(string line, HeaderFinderBase hf)
         {
             EParsingState state = EParsingState.TestCondition;
 
-            if (hf.CheckIfRowData(line))
-            {
-                Console.WriteLine("[ReportMerger],ParseTestInfo(),state to EParsingState.TestCondition");
-                state = EParsingState.MsrtData;
-            }
-            else
-            {
-                if (line != null && line.Trim() != "")
+            if (line != null )
                 {
-                    if (!_testConditionRow.Contains(line))
-                        _testConditionRow.Add(line);
-                }
+                    if (line.Trim() != "")
+                    {
+                        if (hf.IsFitTarStr(line))
+                        {
+                            string[] rawData = line.Split(this.SpiltChar);
+
+                            for (int i = 0; rawData != null && i < _d4headerList.Count && i<rawData.Length; ++i)
+                            {
+                                if (rawData[i] != _d4headerList[i])
+                                {
+                                    _headerList[i] = rawData[i];
+                                }
+                            }
+                        }
+                    }
+
+                    if (hf.CheckIfRowData(line))
+                    {
+                        Console.WriteLine("[ReportMerger],ParseTestInfo(),state to EParsingState.TestCondition");
+                        state = EParsingState.MsrtData;
+                    }
+                    else
+                    {
+                        if (line.Trim() != "")
+                        {
+                            if (!_testConditionRow.Contains(line))
+                                _testConditionRow.Add(line);
+                        }
+                    }
             }
 
             return state;
         }
 
-        protected EParsingState ParseMsrtData(string line)
+        protected virtual EParsingState ParseMsrtData(string line)
         {
             EParsingState state = EParsingState.MsrtData;
 
@@ -418,7 +463,7 @@ namespace MPI.Tester.Report.BaseMethod.Merge
             return state;
         }
 
-        protected bool IsStartInRefList(string strIn, List<string> strList)
+        protected virtual bool IsStartInRefList(string strIn, List<string> strList)
         {
             if (strList != null)
             {
@@ -433,13 +478,13 @@ namespace MPI.Tester.Report.BaseMethod.Merge
             return false;
         }
 
-        protected List<int> GetKeyColList(List<string> keyList)
+        protected virtual List<int> GetKeyColList(List<string> keyList)
         {
             List<int> colList = new List<int>();
 
             foreach (string key in keyList)
             {
-                int col = _resultTitleInfo.GetIndexOfKey(key);
+                int col = _d4ResultTitleInfo.GetIndexOfKey(key);
                 if (col >= 0)
                 {
                     colList.Add(col);
@@ -448,6 +493,7 @@ namespace MPI.Tester.Report.BaseMethod.Merge
             return colList;
         }
 
+        
         #endregion
         
     }

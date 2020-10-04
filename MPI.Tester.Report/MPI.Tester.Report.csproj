@@ -70,8 +70,9 @@
     <Compile Include="ResultTitleInfo.cs" />
     <Compile Include="StatisticSet.cs" />
     <Compile Include="BaseMethod\SweepReportBase.cs" />
-    <Compile Include="User\Accelink\MergeReport.cs" />
+    <Compile Include="User\Accelink\MergeReportProcess.cs" />
     <Compile Include="User\Accelink\Report.cs" />
+    <Compile Include="User\Accelink\ReportMerger.cs" />
     <Compile Include="User\AOI\Report.cs" />
     <Compile Include="User\ATV\Report.cs" />
     <Compile Include="User\ChangeLight\Report.cs" />

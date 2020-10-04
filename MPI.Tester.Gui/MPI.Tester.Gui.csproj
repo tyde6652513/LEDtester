@@ -808,6 +808,12 @@
     <Compile Include="UIForm\UIComponent\frmSysPathSet.Designer.cs">
       <DependentUpon>frmSysPathSet.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIForm\UserForm\Condition\frmAccelinkCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\UserForm\Condition\frmAccelinkCondition.Designer.cs">
+      <DependentUpon>frmAccelinkCondition.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIForm\UserForm\Condition\frmWAVETEC00Condition.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1524,6 +1530,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIForm\UIComponent\frmSysPathSet.resx">
       <DependentUpon>frmSysPathSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\UserForm\Condition\frmAccelinkCondition.resx">
+      <DependentUpon>frmAccelinkCondition.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIForm\UserForm\Condition\frmWAVETEC00Condition.resx">
       <DependentUpon>frmWAVETEC00Condition.cs</DependentUpon>

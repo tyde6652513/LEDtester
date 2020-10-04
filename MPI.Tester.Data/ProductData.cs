@@ -471,6 +471,9 @@ namespace MPI.Tester.Data
 
         private bool _isEnableTestGroup;
 
+        private bool _isMergeReport;
+        private string _customerSetFilePath;
+
         //[XmlIgnore]
         //private Dictionary<string, CustomerMsrtNameInfo> _cusmreNameDic;
 
@@ -487,10 +490,12 @@ namespace MPI.Tester.Data
             this._WAFOutputPath01 = Constants.Paths.MPI_TEMP_DIR;
             this._WAFOutputPath02 = Constants.Paths.MPI_TEMP_DIR;
             this._WAFOutputPath03 = Constants.Paths.MPI_TEMP_DIR;
+            _customerSetFilePath = "";
 
             //this._cusmreNameList = new List<CustomerMsrtNameInfo>();
             //_cusmreNameDic = null;
             this._isEnableTestGroup = false;
+            this._isMergeReport = false;
         }
 
 
@@ -539,6 +544,22 @@ namespace MPI.Tester.Data
             get { return this._WAFOutputPath03; }
             set { lock (this._lockObj) { this._WAFOutputPath03 = value; } }
         }
+        
+        
+        public bool IsMergeReport
+        {
+            get { return this._isMergeReport; }
+            set { lock (this._lockObj) { this._isMergeReport = value; } }
+        }
+
+
+        public string CustomerSetFilePath
+        {
+            get { return this._customerSetFilePath; }
+            set { lock (this._lockObj) { this._customerSetFilePath = value; } }
+        }
+
+        //_customerSetFilePath
 
         //public List<CustomerMsrtNameInfo> CustomerNameInfo { // 沒辦法 Dictionary 序列化會有問題
         //    get {

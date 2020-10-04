@@ -678,8 +678,7 @@ namespace MPI.Tester.TestKernel
                         
                         if ((item as VISweepTestItem).IsCalcVp && item.MsrtResult!= null && item.MsrtResult.Length > 0)
                         {
-                            double vp = 0;
-                            vp = CalcVp(srcList, msrtList, thresholddi, vp);//獨立進行排序，以免分段掃描出現問題
+                            double vp = CalcVp(srcList, msrtList, thresholddi);//獨立進行排序，以免分段掃描出現問題
                             item.MsrtResult[0].RawValue = vp;
                         }
                         
@@ -725,60 +724,78 @@ namespace MPI.Tester.TestKernel
             return devList;
         }
 
-        private static double CalcVp(List<double> srcList, List<double> msrtList, double thresholddi, double vp)
+        private static double CalcVp(List<double> srcList, List<double> msrtList, double thresholddi)
         {
+            double vp = 0;
             int length = srcList.Count;
-            if (length > 3 && srcList.Max() <= 0 && srcList.Min() < 0)//只給負偏壓時進行計算
+            try
             {
-                Dictionary<double, double> smDic = new Dictionary<double, double>();
-                for (int i = 0; i < srcList.Count; ++i)
+                if (length > 3 && srcList.Max() <= 0 && srcList.Min() < 0)//只給負偏壓時進行計算
                 {
-                    if (smDic.ContainsKey(srcList[i]))
+                    Dictionary<double, double> smDic = new Dictionary<double, double>();
+                    for (int i = 0; i < srcList.Count; ++i)
                     {
-                        smDic[srcList[i]] = msrtList[i];
-                    }
-                    else
-                    {
-                        smDic.Add(srcList[i], msrtList[i]);
-                    }
-                }
-                List<KeyValuePair<double, double>> smPairList = new List<KeyValuePair<double, double>>();
-                smPairList = (from p in smDic
-                              orderby p.Key descending
-                              select new KeyValuePair<double, double>(p.Key, p.Value)).ToList();
-                List<double> diList = new List<double>();
-
-                for (int i = 1; i < smPairList.Count; ++i)
-                {
-                    double dv = smPairList[i].Key - smPairList[i - 1].Key;
-                    if (dv < 0)//已排序過，需小於0
-                    {
-                        double di = smPairList[i].Value - smPairList[i - 1].Value;
-                        double didv = di / dv;
-                        diList.Add(di / dv);
-                    }
-                }
-
-                int tarIndex = -1;
-                double didvMax = diList.Max();
-
-                if (didvMax > thresholddi)//有超過diMax才計算
-                {
-                    int indexMaxdi = diList.IndexOf(didvMax);//取第一組
-
-                    for (int i = indexMaxdi; i < diList.Count; ++i)
-                    {
-                        if (diList[i] < thresholddi)
+                        if (smDic.ContainsKey(srcList[i]))
                         {
-                            tarIndex = i ;
-                            break;
+                            smDic[srcList[i]] = msrtList[i];
+                        }
+                        else
+                        {
+                            smDic.Add(srcList[i], msrtList[i]);
+                        }
+                    }
+                    List<KeyValuePair<double, double>> smPairList = new List<KeyValuePair<double, double>>();
+                    smPairList = (from p in smDic
+                                  orderby p.Key descending
+                                  select new KeyValuePair<double, double>(p.Key, p.Value)).ToList();
+                    List<double> diList = new List<double>();
+
+                    for (int i = 1; i < smPairList.Count; ++i)
+                    {
+                        double dv = smPairList[i].Key - smPairList[i - 1].Key;
+                        if (dv < 0)//已排序過，需小於0
+                        {
+                            double di = smPairList[i].Value - smPairList[i - 1].Value;
+                            double didv = di / dv;
+                            diList.Add(di / dv);
+                        }
+                    }
+
+                    int tarIndex = -1;
+                    double didvMax = diList.Max();
+
+                    if (didvMax > thresholddi)//有超過diMax才計算
+                    {
+                        tarIndex = diList.IndexOf(didvMax);
+                        /*
+                        int indexMaxdi = diList.IndexOf(didvMax);//取第一組
+
+                        for (int i = indexMaxdi; i < diList.Count; ++i)
+                        {
+                            if (diList[i] < thresholddi)
+                            {
+                                tarIndex = i ;
+                                break;
+                            }
+                        }*/
+                    }
+                    if (tarIndex > 0)
+                    {
+                        if (tarIndex + 1 < smPairList.Count())
+                        {
+                            vp = smPairList[tarIndex + 1].Key;
+                        }
+                        else if (tarIndex < smPairList.Count())
+                        {
+                            vp = smPairList[tarIndex ].Key;
                         }
                     }
                 }
-                if (tarIndex > 0 && tarIndex < smPairList.Count())
-                {
-                    vp = smPairList[tarIndex].Key;
-                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("[TesterKernelBase_ItemMethods],CalcVp(),Exception" + e.Message);
+ 
             }
             return vp;
         }

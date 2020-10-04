@@ -467,12 +467,12 @@ namespace MPI.Tester.Report
             if (_crKeyMaker == null)
             {
                 List<int> colList = new List<int>();
-                //colList.Add(this._resultTitleInfo.ColIndex);
-                //colList.Add(this._resultTitleInfo.RowIndex);
+                //if (this._resultTitleInfo.ColIndex > 0)
+                //    colList.Add(this._resultTitleInfo.ColIndex);
+                //if (this._resultTitleInfo.RowIndex > 0)
+                //    colList.Add(this._resultTitleInfo.RowIndex);
                 if (this._resultTitleInfo.ChipIndexIndex >= 0)
-                {
                     colList.Add(this._resultTitleInfo.ChipIndexIndex);
-                }
                 _crKeyMaker = new PosKeyMakerBase(this._resultTitleInfo.ColIndex, this._resultTitleInfo.RowIndex, colList);
             }
 

@@ -259,7 +259,7 @@ namespace MPI.Tester.Gui
 
             if (customerFrm != null)
             {
-                customerFrm.Reftesh();
+                customerFrm.Refresh();
             }
 			//------------------------------------------------------------------------------------------
 			// Update the data grid view of "setting table" and "gain offset table"
@@ -356,7 +356,7 @@ namespace MPI.Tester.Gui
             this.cmbPolarity.SelectedItem = DataCenter._product.TestCondition.ChipPolarity.ToString();
 
             this.cmbStage.SelectedItem = DataCenter._product.TestCondition.TestStage.ToString();
-
+          
             this.cmbFilterPosition.SelectedIndex = (int)DataCenter._product.ProductFilterWheelPos;
 
             this.dinPdDetectorFactor.Value = DataCenter._product.PdDetectorFactor;
@@ -1875,26 +1875,21 @@ namespace MPI.Tester.Gui
 
         private void SetCustomerUI()
         {
+
+            List<EUserID> enableIdList = new List<EUserID>();
+            enableIdList.Add(EUserID.DOWA);
+            enableIdList.Add(EUserID.Accelink);
+
             switch (DataCenter._uiSetting.UserID)
             {
                 case EUserID.WAVETEK00:
                     {
-                        //tabControlPanel6.
-                        //MPI.Tester.Gui.UIForm.UserForm.Condition.IfrmCusConditin
-                        tabCustomer.Visible = true;
-                        customerFrm = new frmWAVETEC00Condition();
-
-                        (customerFrm as frmWAVETEC00Condition).TopLevel = false;
-
-                        tabControlPanel6.Controls.Add(customerFrm as Form);
-
-                        (customerFrm as frmWAVETEC00Condition).Dock = DockStyle.Fill;
-
-                        (customerFrm as frmWAVETEC00Condition).Size = tabControlPanel6.Size;
-
-                        (customerFrm as frmWAVETEC00Condition).Show();
-
-                        tabcCond.SelectedTabIndex = 4;
+                        customerFrm = new frmWAVETEC00Condition();  
+                    }
+                    break;
+                case EUserID.Accelink:
+                    {
+                        customerFrm = new frmAccelinkCondition();
                     }
                     break;
                 default:
@@ -1902,6 +1897,23 @@ namespace MPI.Tester.Gui
                         tabCustomer.Visible = false;
                     }
                     break;
+            }
+
+            if (enableIdList.Contains(DataCenter._uiSetting.UserID))
+            {
+                tabCustomer.Visible = true;
+
+                (customerFrm as Form).TopLevel = false;
+
+                tabControlPanel6.Controls.Add((customerFrm as Form));
+
+                (customerFrm as Form).Dock = DockStyle.Fill;
+
+                (customerFrm as Form).Size = tabControlPanel6.Size;
+
+                (customerFrm as Form).Show();
+
+                tabcCond.SelectedTabIndex = 4;
             }
             //tabControlPanel6
         }

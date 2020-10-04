@@ -33,7 +33,7 @@ namespace MPI.Tester.Gui.UIForm.UserForm.Condition
         {
             Save();
             DataCenter.SaveProductFile();
-            Reftesh();
+            Refresh();
         }
 
         private void dgvResultName_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -61,7 +61,7 @@ namespace MPI.Tester.Gui.UIForm.UserForm.Condition
             return true;
         }
 
-        public bool Reftesh()
+        public bool Refresh()
         {
             _isRefreshEnd = false;
 

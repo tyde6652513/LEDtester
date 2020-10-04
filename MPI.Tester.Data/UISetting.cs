@@ -600,6 +600,7 @@ namespace MPI.Tester.Data
             FileInProcessList = new List<string>();
 
             ProberSubRecipe = "";
+            ProerSubRecipeIndex = 0;
 
             TestTimes = "";//重測次數(一般點測為1,第一次重測為2)
             EdgeSensorName = "";
@@ -1795,7 +1796,9 @@ namespace MPI.Tester.Data
 		[XmlIgnore]
         public string ProberSubRecipe
         { set; get; }
-
+        [XmlIgnore]
+        public int ProerSubRecipeIndex
+        { set; get; }
 
         [XmlIgnore]
         public string SubPiece//破片/全片

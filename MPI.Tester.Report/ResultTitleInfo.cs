@@ -26,6 +26,9 @@ namespace MPI.Tester.Report
         private int _chipIndexIndex;
         private int _passIndex;
 
+        private int _subXIndex = -1;
+        private int _subYIndex = -1;
+
 		#endregion
 
 		#region >>> Constructor / Disposor <<<
@@ -111,6 +114,15 @@ namespace MPI.Tester.Report
                 {
                     this._passIndex = index;
                 }
+                else if (item.Key == EProberDataIndex.SubROW.ToString())
+                {
+                    this._subYIndex = index;
+                }
+                else if (item.Key == EProberDataIndex.SubCOL.ToString())
+                {
+                    this._subXIndex = index;
+                }
+                
 
 				this._titleStr += item.Value;
 
@@ -241,6 +253,12 @@ namespace MPI.Tester.Report
         {
             get { return _passIndex; }
         }
+
+        public int SubXIndex
+        { get { return _subXIndex; } }
+
+        public int SubYIndex
+        { get { return _subYIndex; } }
 
 		#endregion
 
