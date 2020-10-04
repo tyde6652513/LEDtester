@@ -135,7 +135,7 @@ namespace MPI.Tester.Report.User.WAVETEK00
             wtSw.WriteLine("ExecRevision,A.01.07");
             wtSw.WriteLine("ModeCode,P");
             wtSw.WriteLine("BurnTime,0");
-            wtSw.WriteLine("Facility,WTK");
+            wtSw.WriteLine("Facility,UMC01");
 
             wtSw.WriteLine("Process," + Product.ProductName);
             string esName ="";

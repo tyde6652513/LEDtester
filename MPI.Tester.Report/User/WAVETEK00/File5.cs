@@ -86,7 +86,7 @@ namespace MPI.Tester.Report.User.WAVETEK00
             for (int y = 1; y <= top; y++)
             {
                 string rowStr = "";
-                for (int x = 0; x <= right; x++)
+                for (int x = 1; x <= right; x++)
                 {
                     string keystr = x.ToString() + "_" + y.ToString();
                     if (dieLogDic.ContainsKey(keystr))

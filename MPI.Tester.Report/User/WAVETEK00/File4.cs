@@ -108,7 +108,7 @@ namespace MPI.Tester.Report.User.WAVETEK00
             wtSw.WriteLine("FLOW ID             : CP" + (IsCvTest ? "2" : "1"));
             wtSw.WriteLine("START TIME          : " + startTimeStr);
             wtSw.WriteLine("STOP TIME           : " + endTimeStr);
-            wtSw.WriteLine("SUBCON              : WTK");
+            wtSw.WriteLine("SUBCON              : UMC01");
             wtSw.WriteLine("TESTER NAME         : " + UISetting.MachineName);
             wtSw.WriteLine("TEST PROGRAM        : " + UISetting.TaskSheetFileName);
             wtSw.WriteLine("LOAD BOARD ID       : ");
