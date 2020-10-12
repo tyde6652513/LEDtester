@@ -45,7 +45,7 @@ namespace MPI.Tester.Report.User.DOWA
 
             this.WriteLine("");
 
-            this.WriteLine("Item,Bias,BiasUnit,Time(ms),Compliance,CompUnit,Lower,Upper,RltUnit,Wavelengh");
+            this.WriteLine("Item,Bias,BiasUnit,Time(ms),Compliance,CompUnit,Lower,Upper,RltUnit,Wavelengh,Calc");
 
 
             string lastWaveLength = "";
@@ -94,6 +94,8 @@ namespace MPI.Tester.Report.User.DOWA
                                         line += this.SpiltChar.ToString() + msrtItem.MaxLimitValue;
 
                                         line += this.SpiltChar.ToString() + msrtItem.Unit;
+
+                                        line += this.SpiltChar.ToString() + lastWaveLength;
 
                                         line += this.SpiltChar.ToString() + "\"" + GetCalcItemDescription(testItem as CALCTestItem) + "\"";
 
@@ -393,7 +395,8 @@ namespace MPI.Tester.Report.User.DOWA
                 sw.WriteLine(line);
             }
 
-            testCount = WriteRestAOI_SIGN(sw, testCount, colAOI_SIGN);
+            //#45274 報表修改AOIMap資訊中未測試項目不需顯示
+            //testCount = WriteRestAOI_SIGN(sw, testCount, colAOI_SIGN);
 
 
 

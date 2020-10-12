@@ -1877,7 +1877,7 @@ namespace MPI.Tester.Gui
         {
 
             List<EUserID> enableIdList = new List<EUserID>();
-            enableIdList.Add(EUserID.DOWA);
+            enableIdList.Add(EUserID.WAVETEK00);
             enableIdList.Add(EUserID.Accelink);
 
             switch (DataCenter._uiSetting.UserID)
@@ -1892,6 +1892,7 @@ namespace MPI.Tester.Gui
                         customerFrm = new frmAccelinkCondition();
                     }
                     break;
+
                 default:
                     {
                         tabCustomer.Visible = false;
