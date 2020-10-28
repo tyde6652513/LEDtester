@@ -633,6 +633,8 @@ namespace MPI.Tester.Gui
             rtbOutput.Text = "";
             rtbInput.Text = "";
             localAssemble = "";
+
+            
             //this.cmbCalcAddItemB.Items.Add(this._item.MsrtResult[0].Name);
         }
   
@@ -678,6 +680,16 @@ namespace MPI.Tester.Gui
             this.chbUseValB.Checked = true;
             this.dinValB.Value = this._item.ValB;
             this.chbUseValB.Checked = this._item.IsBConst;
+
+            if (DataCenter._uiSetting.UserID == EUserID.DOWA)
+            {
+                gbRemark.Visible = true;
+                tbRemark.Text = _item.Remark;
+            }
+            else
+            {
+                gbRemark.Visible = false;                
+            }
 
             switch (this._item.CalcType)
             {
@@ -844,6 +856,14 @@ namespace MPI.Tester.Gui
                 this._item.IsUserSetEnable = false;
                 this._item.MsrtResult[0].IsEnable = false;
             }
+
+            if (DataCenter._uiSetting.UserID == EUserID.DOWA)
+            {
+                gbRemark.Visible = true;
+                _item.Remark = tbRemark.Text;
+            }
+
+
 
             return this._item;
         }

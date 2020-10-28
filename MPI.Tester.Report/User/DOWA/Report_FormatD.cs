@@ -95,7 +95,7 @@ namespace MPI.Tester.Report.User.DOWA
 
                                         line += this.SpiltChar.ToString() + msrtItem.Unit;
 
-                                        line += this.SpiltChar.ToString() + lastWaveLength;
+                                        line += this.SpiltChar.ToString() + (testItem as CALCTestItem).Remark;
 
                                         line += this.SpiltChar.ToString() + "\"" + GetCalcItemDescription(testItem as CALCTestItem) + "\"";
 

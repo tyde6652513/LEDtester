@@ -38,6 +38,8 @@
             this.lblGain = new DevComponents.DotNetBar.LabelX();
             this.lblMulti = new DevComponents.DotNetBar.LabelX();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chbUseValA = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.dinValA = new DevComponents.Editors.DoubleInput();
             this.chbUseValB = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.dinValB = new DevComponents.Editors.DoubleInput();
             this.rdDeltaR = new System.Windows.Forms.RadioButton();
@@ -66,8 +68,9 @@
             this.superTabControl2 = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.chbUseValA = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.dinValA = new DevComponents.Editors.DoubleInput();
+            this.gbRemark = new System.Windows.Forms.GroupBox();
+            this.lblRemark = new System.Windows.Forms.Label();
+            this.tbRemark = new System.Windows.Forms.TextBox();
             this.grpItemCondition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
@@ -76,6 +79,7 @@
             this.gBxGain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dinGain)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dinValA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dinValB)).BeginInit();
             this.pnlCalcTitle.SuspendLayout();
             this.superTabControlPanel3.SuspendLayout();
@@ -89,7 +93,7 @@
             this.splitContainer2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dinValA)).BeginInit();
+            this.gbRemark.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpItemCondition
@@ -108,12 +112,12 @@
             // 
             // 
             // 
-            this.superTabControl1.ControlBox.CloseBox.Name = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
+            this.superTabControl1.ControlBox.CloseBox.Name = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             // 
             // 
             // 
-            this.superTabControl1.ControlBox.MenuBox.Name = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
-            this.superTabControl1.ControlBox.Name = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
+            this.superTabControl1.ControlBox.MenuBox.Name = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
+            this.superTabControl1.ControlBox.Name = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.superTabControl1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
@@ -141,6 +145,7 @@
             this.grpApplySetting.BackColor = System.Drawing.Color.Transparent;
             this.grpApplySetting.CanvasColor = System.Drawing.Color.Empty;
             this.grpApplySetting.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
+            this.grpApplySetting.Controls.Add(this.gbRemark);
             this.grpApplySetting.Controls.Add(this.gBxGain);
             this.grpApplySetting.Controls.Add(this.groupBox1);
             this.grpApplySetting.Controls.Add(this.pnlCalcTitle);
@@ -162,18 +167,18 @@
             this.grpApplySetting.Style.BorderRightWidth = 1;
             this.grpApplySetting.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.grpApplySetting.Style.BorderTopWidth = 1;
-            this.grpApplySetting.Style.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
+            this.grpApplySetting.Style.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.grpApplySetting.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
             this.grpApplySetting.Style.TextColor = System.Drawing.Color.DarkOrange;
             // 
             // 
             // 
-            this.grpApplySetting.StyleMouseDown.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
+            this.grpApplySetting.StyleMouseDown.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.grpApplySetting.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.grpApplySetting.StyleMouseOver.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
+            this.grpApplySetting.StyleMouseOver.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.grpApplySetting.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // gBxGain
@@ -207,7 +212,7 @@
             // 
             // 
             // 
-            this.lblGain.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
+            this.lblGain.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblGain.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             resources.ApplyResources(this.lblGain, "lblGain");
             this.lblGain.ForeColor = System.Drawing.Color.Black;
@@ -220,7 +225,7 @@
             // 
             // 
             // 
-            this.lblMulti.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
+            this.lblMulti.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblMulti.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             resources.ApplyResources(this.lblMulti, "lblMulti");
             this.lblMulti.ForeColor = System.Drawing.Color.Black;
@@ -247,12 +252,38 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
+            // chbUseValA
+            // 
+            // 
+            // 
+            // 
+            this.chbUseValA.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
+            this.chbUseValA.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.chbUseValA, "chbUseValA");
+            this.chbUseValA.Name = "chbUseValA";
+            this.chbUseValA.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            // 
+            // dinValA
+            // 
+            // 
+            // 
+            // 
+            this.dinValA.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dinValA.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dinValA.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.dinValA.DisplayFormat = "E3";
+            this.dinValA.ForeColor = System.Drawing.Color.Black;
+            this.dinValA.Increment = 1D;
+            resources.ApplyResources(this.dinValA, "dinValA");
+            this.dinValA.Name = "dinValA";
+            this.dinValA.ShowUpDown = true;
+            // 
             // chbUseValB
             // 
             // 
             // 
             // 
-            this.chbUseValB.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
+            this.chbUseValB.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.chbUseValB.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             resources.ApplyResources(this.chbUseValB, "chbUseValB");
             this.chbUseValB.Name = "chbUseValB";
@@ -293,7 +324,7 @@
             // 
             // 
             // 
-            this.lblCalcType.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
+            this.lblCalcType.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblCalcType.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             resources.ApplyResources(this.lblCalcType, "lblCalcType");
             this.lblCalcType.ForeColor = System.Drawing.Color.Black;
@@ -306,7 +337,7 @@
             // 
             // 
             // 
-            this.lblAItem.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
+            this.lblAItem.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblAItem.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             resources.ApplyResources(this.lblAItem, "lblAItem");
             this.lblAItem.ForeColor = System.Drawing.Color.Black;
@@ -335,7 +366,7 @@
             // 
             // 
             // 
-            this.lblBItem.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
+            this.lblBItem.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblBItem.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             resources.ApplyResources(this.lblBItem, "lblBItem");
             this.lblBItem.ForeColor = System.Drawing.Color.Black;
@@ -377,7 +408,7 @@
             // 
             // 
             // 
-            this.lblCalcFunc.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
+            this.lblCalcFunc.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblCalcFunc.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             resources.ApplyResources(this.lblCalcFunc, "lblCalcFunc");
             this.lblCalcFunc.ForeColor = System.Drawing.Color.Black;
@@ -390,7 +421,7 @@
             // 
             // 
             // 
-            this.lblResultName.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
+            this.lblResultName.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.lblResultName.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             resources.ApplyResources(this.lblResultName, "lblResultName");
             this.lblResultName.ForeColor = System.Drawing.Color.Black;
@@ -489,12 +520,12 @@
             // 
             // 
             // 
-            this.superTabControl2.ControlBox.CloseBox.Name = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
+            this.superTabControl2.ControlBox.CloseBox.Name = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             // 
             // 
             // 
-            this.superTabControl2.ControlBox.MenuBox.Name = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
-            this.superTabControl2.ControlBox.Name = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
+            this.superTabControl2.ControlBox.MenuBox.Name = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
+            this.superTabControl2.ControlBox.Name = global::MPI.Tester.Gui.ResourceErr.ERR_10002;
             this.superTabControl2.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl2.ControlBox.MenuBox,
             this.superTabControl2.ControlBox.CloseBox});
@@ -514,31 +545,23 @@
             this.superTabControlPanel2.Name = "superTabControlPanel2";
             this.superTabControlPanel2.TabItem = this.superTabItem1;
             // 
-            // chbUseValA
+            // gbRemark
             // 
+            this.gbRemark.Controls.Add(this.tbRemark);
+            this.gbRemark.Controls.Add(this.lblRemark);
+            resources.ApplyResources(this.gbRemark, "gbRemark");
+            this.gbRemark.Name = "gbRemark";
+            this.gbRemark.TabStop = false;
             // 
+            // lblRemark
             // 
+            resources.ApplyResources(this.lblRemark, "lblRemark");
+            this.lblRemark.Name = "lblRemark";
             // 
-            this.chbUseValA.BackgroundStyle.Class = global::MPI.Tester.Gui.ResourceErr.ERR_10027;
-            this.chbUseValA.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(this.chbUseValA, "chbUseValA");
-            this.chbUseValA.Name = "chbUseValA";
-            this.chbUseValA.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            // tbRemark
             // 
-            // dinValA
-            // 
-            // 
-            // 
-            // 
-            this.dinValA.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dinValA.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dinValA.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.dinValA.DisplayFormat = "E3";
-            this.dinValA.ForeColor = System.Drawing.Color.Black;
-            this.dinValA.Increment = 1D;
-            resources.ApplyResources(this.dinValA, "dinValA");
-            this.dinValA.Name = "dinValA";
-            this.dinValA.ShowUpDown = true;
+            resources.ApplyResources(this.tbRemark, "tbRemark");
+            this.tbRemark.Name = "tbRemark";
             // 
             // frmItemSettingCALC
             // 
@@ -558,6 +581,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dinGain)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dinValA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dinValB)).EndInit();
             this.pnlCalcTitle.ResumeLayout(false);
             this.superTabControlPanel3.ResumeLayout(false);
@@ -571,7 +595,8 @@
             this.splitContainer2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dinValA)).EndInit();
+            this.gbRemark.ResumeLayout(false);
+            this.gbRemark.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -617,6 +642,9 @@
         private DevComponents.DotNetBar.ButtonX btnCompile;
         private DevComponents.DotNetBar.Controls.CheckBoxX chbUseValA;
         private DevComponents.Editors.DoubleInput dinValA;
+        private System.Windows.Forms.GroupBox gbRemark;
+        private System.Windows.Forms.TextBox tbRemark;
+        private System.Windows.Forms.Label lblRemark;
 
     }
 }

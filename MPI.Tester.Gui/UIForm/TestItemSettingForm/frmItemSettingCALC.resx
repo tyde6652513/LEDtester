@@ -117,6 +117,89 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tbRemark.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 33</value>
+  </data>
+  <data name="tbRemark.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 26</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tbRemark.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tbRemark.Name" xml:space="preserve">
+    <value>tbRemark</value>
+  </data>
+  <data name="&gt;&gt;tbRemark.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbRemark.Parent" xml:space="preserve">
+    <value>gbRemark</value>
+  </data>
+  <data name="&gt;&gt;tbRemark.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblRemark.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRemark.Location" type="System.Drawing.Point, System.Drawing">
+    <value>164, 36</value>
+  </data>
+  <data name="lblRemark.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 19</value>
+  </data>
+  <data name="lblRemark.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblRemark.Text" xml:space="preserve">
+    <value>nm</value>
+  </data>
+  <data name="&gt;&gt;lblRemark.Name" xml:space="preserve">
+    <value>lblRemark</value>
+  </data>
+  <data name="&gt;&gt;lblRemark.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRemark.Parent" xml:space="preserve">
+    <value>gbRemark</value>
+  </data>
+  <data name="&gt;&gt;lblRemark.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gbRemark.Location" type="System.Drawing.Point, System.Drawing">
+    <value>663, 42</value>
+  </data>
+  <data name="gbRemark.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 79</value>
+  </data>
+  <data name="gbRemark.TabIndex" type="System.Int32, mscorlib">
+    <value>147</value>
+  </data>
+  <data name="gbRemark.Text" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="&gt;&gt;gbRemark.Name" xml:space="preserve">
+    <value>gbRemark</value>
+  </data>
+  <data name="&gt;&gt;gbRemark.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbRemark.Parent" xml:space="preserve">
+    <value>grpApplySetting</value>
+  </data>
+  <data name="&gt;&gt;gbRemark.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dinGain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>42, 105</value>
+  </data>
+  <data name="dinGain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 26</value>
+  </data>
+  <data name="dinGain.TabIndex" type="System.Int32, mscorlib">
+    <value>144</value>
+  </data>
   <data name="&gt;&gt;dinGain.Name" xml:space="preserve">
     <value>dinGain</value>
   </data>
@@ -128,6 +211,21 @@
   </data>
   <data name="&gt;&gt;dinGain.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="lblGain.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="lblGain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>42, 24</value>
+  </data>
+  <data name="lblGain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 25</value>
+  </data>
+  <data name="lblGain.TabIndex" type="System.Int32, mscorlib">
+    <value>143</value>
+  </data>
+  <data name="lblGain.Text" xml:space="preserve">
+    <value>Gain</value>
   </data>
   <data name="&gt;&gt;lblGain.Name" xml:space="preserve">
     <value>lblGain</value>
@@ -141,6 +239,21 @@
   <data name="&gt;&gt;lblGain.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="lblMulti.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 20.25pt, style=Bold</value>
+  </data>
+  <data name="lblMulti.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 106</value>
+  </data>
+  <data name="lblMulti.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 25</value>
+  </data>
+  <data name="lblMulti.TabIndex" type="System.Int32, mscorlib">
+    <value>145</value>
+  </data>
+  <data name="lblMulti.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
   <data name="&gt;&gt;lblMulti.Name" xml:space="preserve">
     <value>lblMulti</value>
   </data>
@@ -153,14 +266,12 @@
   <data name="&gt;&gt;lblMulti.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="gBxGain.Location" type="System.Drawing.Point, System.Drawing">
     <value>456, 54</value>
   </data>
   <data name="gBxGain.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 224</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="gBxGain.TabIndex" type="System.Int32, mscorlib">
     <value>146</value>
   </data>
@@ -174,7 +285,7 @@
     <value>grpApplySetting</value>
   </data>
   <data name="&gt;&gt;gBxGain.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="chbUseValA.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 153</value>
@@ -562,7 +673,22 @@
     <value>grpApplySetting</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="lblCalcFunc.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="lblCalcFunc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 3</value>
+  </data>
+  <data name="lblCalcFunc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>435, 25</value>
+  </data>
+  <data name="lblCalcFunc.TabIndex" type="System.Int32, mscorlib">
+    <value>143</value>
+  </data>
+  <data name="lblCalcFunc.Text" xml:space="preserve">
+    <value>Calc Funtion</value>
   </data>
   <data name="&gt;&gt;lblCalcFunc.Name" xml:space="preserve">
     <value>lblCalcFunc</value>
@@ -575,6 +701,21 @@
   </data>
   <data name="&gt;&gt;lblCalcFunc.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="lblResultName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
+  </data>
+  <data name="lblResultName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="lblResultName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 26</value>
+  </data>
+  <data name="lblResultName.TabIndex" type="System.Int32, mscorlib">
+    <value>142</value>
+  </data>
+  <data name="lblResultName.Text" xml:space="preserve">
+    <value>Calc Result</value>
   </data>
   <data name="&gt;&gt;lblResultName.Name" xml:space="preserve">
     <value>lblResultName</value>
@@ -607,7 +748,7 @@
     <value>grpApplySetting</value>
   </data>
   <data name="&gt;&gt;pnlCalcTitle.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="grpApplySetting.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -691,7 +832,7 @@
     <value>0, 0</value>
   </data>
   <data name="rtbInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>879, 317</value>
+    <value>879, 292</value>
   </data>
   <data name="rtbInput.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -733,7 +874,7 @@
     <value>0, 0</value>
   </data>
   <data name="rtbOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>879, 88</value>
+    <value>879, 81</value>
   </data>
   <data name="rtbOutput.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -766,10 +907,10 @@
     <value>1</value>
   </data>
   <data name="splitContainer2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>879, 409</value>
+    <value>879, 377</value>
   </data>
   <data name="splitContainer2.SplitterDistance" type="System.Int32, mscorlib">
-    <value>317</value>
+    <value>292</value>
   </data>
   <data name="splitContainer2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -798,6 +939,21 @@
   <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="btnTestRun.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15.75pt, style=Bold</value>
+  </data>
+  <data name="btnTestRun.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 91</value>
+  </data>
+  <data name="btnTestRun.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 48</value>
+  </data>
+  <data name="btnTestRun.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnTestRun.Text" xml:space="preserve">
+    <value>Test</value>
+  </data>
   <data name="&gt;&gt;btnTestRun.Name" xml:space="preserve">
     <value>btnTestRun</value>
   </data>
@@ -809,6 +965,21 @@
   </data>
   <data name="&gt;&gt;btnTestRun.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="btnCompile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 15.75pt, style=Bold</value>
+  </data>
+  <data name="btnCompile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 15</value>
+  </data>
+  <data name="btnCompile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 48</value>
+  </data>
+  <data name="btnCompile.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnCompile.Text" xml:space="preserve">
+    <value>Compile</value>
   </data>
   <data name="&gt;&gt;btnCompile.Name" xml:space="preserve">
     <value>btnCompile</value>
@@ -829,7 +1000,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 409</value>
+    <value>165, 377</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -859,7 +1030,7 @@
     <value>1</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1048, 409</value>
+    <value>1048, 377</value>
   </data>
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
     <value>879</value>
@@ -883,10 +1054,10 @@
     <value>Fill</value>
   </data>
   <data name="superTabControlPanel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>0, 32</value>
   </data>
   <data name="superTabControlPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1048, 409</value>
+    <value>1048, 377</value>
   </data>
   <data name="superTabControlPanel3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -904,7 +1075,7 @@
     <value>superTabControl1</value>
   </data>
   <data name="&gt;&gt;superTabControlPanel3.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="superTabControl2.Location" type="System.Drawing.Point, System.Drawing">
     <value>103, 4</value>
@@ -998,189 +1169,6 @@
   </data>
   <data name="&gt;&gt;grpItemCondition.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="dinGain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>42, 105</value>
-  </data>
-  <data name="dinGain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 26</value>
-  </data>
-  <data name="dinGain.TabIndex" type="System.Int32, mscorlib">
-    <value>144</value>
-  </data>
-  <data name="&gt;&gt;dinGain.Name" xml:space="preserve">
-    <value>dinGain</value>
-  </data>
-  <data name="&gt;&gt;dinGain.Type" xml:space="preserve">
-    <value>DevComponents.Editors.DoubleInput, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
-  </data>
-  <data name="&gt;&gt;dinGain.Parent" xml:space="preserve">
-    <value>gBxGain</value>
-  </data>
-  <data name="&gt;&gt;dinGain.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblGain.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 12pt, style=Bold</value>
-  </data>
-  <data name="lblGain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>42, 24</value>
-  </data>
-  <data name="lblGain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 25</value>
-  </data>
-  <data name="lblGain.TabIndex" type="System.Int32, mscorlib">
-    <value>143</value>
-  </data>
-  <data name="lblGain.Text" xml:space="preserve">
-    <value>Gain</value>
-  </data>
-  <data name="&gt;&gt;lblGain.Name" xml:space="preserve">
-    <value>lblGain</value>
-  </data>
-  <data name="&gt;&gt;lblGain.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
-  </data>
-  <data name="&gt;&gt;lblGain.Parent" xml:space="preserve">
-    <value>gBxGain</value>
-  </data>
-  <data name="&gt;&gt;lblGain.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblMulti.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 20.25pt, style=Bold</value>
-  </data>
-  <data name="lblMulti.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 106</value>
-  </data>
-  <data name="lblMulti.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 25</value>
-  </data>
-  <data name="lblMulti.TabIndex" type="System.Int32, mscorlib">
-    <value>145</value>
-  </data>
-  <data name="lblMulti.Text" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="&gt;&gt;lblMulti.Name" xml:space="preserve">
-    <value>lblMulti</value>
-  </data>
-  <data name="&gt;&gt;lblMulti.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
-  </data>
-  <data name="&gt;&gt;lblMulti.Parent" xml:space="preserve">
-    <value>gBxGain</value>
-  </data>
-  <data name="&gt;&gt;lblMulti.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lblCalcFunc.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 12pt, style=Bold</value>
-  </data>
-  <data name="lblCalcFunc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 3</value>
-  </data>
-  <data name="lblCalcFunc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 25</value>
-  </data>
-  <data name="lblCalcFunc.TabIndex" type="System.Int32, mscorlib">
-    <value>143</value>
-  </data>
-  <data name="lblCalcFunc.Text" xml:space="preserve">
-    <value>Calc Funtion</value>
-  </data>
-  <data name="&gt;&gt;lblCalcFunc.Name" xml:space="preserve">
-    <value>lblCalcFunc</value>
-  </data>
-  <data name="&gt;&gt;lblCalcFunc.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
-  </data>
-  <data name="&gt;&gt;lblCalcFunc.Parent" xml:space="preserve">
-    <value>pnlCalcTitle</value>
-  </data>
-  <data name="&gt;&gt;lblCalcFunc.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblResultName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 12pt, style=Bold</value>
-  </data>
-  <data name="lblResultName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="lblResultName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 26</value>
-  </data>
-  <data name="lblResultName.TabIndex" type="System.Int32, mscorlib">
-    <value>142</value>
-  </data>
-  <data name="lblResultName.Text" xml:space="preserve">
-    <value>Calc Result</value>
-  </data>
-  <data name="&gt;&gt;lblResultName.Name" xml:space="preserve">
-    <value>lblResultName</value>
-  </data>
-  <data name="&gt;&gt;lblResultName.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
-  </data>
-  <data name="&gt;&gt;lblResultName.Parent" xml:space="preserve">
-    <value>pnlCalcTitle</value>
-  </data>
-  <data name="&gt;&gt;lblResultName.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btnTestRun.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 15.75pt, style=Bold</value>
-  </data>
-  <data name="btnTestRun.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 91</value>
-  </data>
-  <data name="btnTestRun.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 48</value>
-  </data>
-  <data name="btnTestRun.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="btnTestRun.Text" xml:space="preserve">
-    <value>Test</value>
-  </data>
-  <data name="&gt;&gt;btnTestRun.Name" xml:space="preserve">
-    <value>btnTestRun</value>
-  </data>
-  <data name="&gt;&gt;btnTestRun.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
-  </data>
-  <data name="&gt;&gt;btnTestRun.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;btnTestRun.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btnCompile.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 15.75pt, style=Bold</value>
-  </data>
-  <data name="btnCompile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 15</value>
-  </data>
-  <data name="btnCompile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 48</value>
-  </data>
-  <data name="btnCompile.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="btnCompile.Text" xml:space="preserve">
-    <value>Compile</value>
-  </data>
-  <data name="&gt;&gt;btnCompile.Name" xml:space="preserve">
-    <value>btnCompile</value>
-  </data>
-  <data name="&gt;&gt;btnCompile.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=9.5.0.8, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
-  </data>
-  <data name="&gt;&gt;btnCompile.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;btnCompile.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="superTabControlPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>

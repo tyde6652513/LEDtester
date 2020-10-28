@@ -46,6 +46,7 @@ namespace MPI.Tester.Data
             this._isAdvanceMode = false;
             this._userCommands = "";
             this._localAssemble = "";
+            this.Remark = "";
         }
 
        #region >>> Public Methods <<<
@@ -115,6 +116,8 @@ namespace MPI.Tester.Data
             set { lock (this._lockObj) { this._localAssemble = value; } }
 
         }
+
+        public string Remark { get; set; }
         //_localAssemble
         
 		#endregion
