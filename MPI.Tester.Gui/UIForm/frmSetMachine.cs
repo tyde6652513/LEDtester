@@ -49,6 +49,12 @@ namespace MPI.Tester.Gui
                 pnlESDConfigGroup.Visible = false;
                 pnlSwitchConfigGroup.Visible = false;
             }
+			
+            if (DataCenter._uiSetting.UserID == EUserID.WAVETEK00)
+            {
+                btnResetChannelData.Visible = false;
+            }
+
 
             //-----------------------------------------------------------------------------------------------------
 			// UI component initialization
