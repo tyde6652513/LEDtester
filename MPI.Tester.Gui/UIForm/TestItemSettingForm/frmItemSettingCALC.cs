@@ -630,6 +630,16 @@ namespace MPI.Tester.Gui
                 cmbCalcAddItemB.SelectedIndex = 0;
             }
 
+            if (DataCenter._uiSetting.UserID == EUserID.DOWA)
+            {
+                gbRemark.Visible = true;
+                tbRemark.Text = _item.Remark;
+            }
+            else
+            {
+                gbRemark.Visible = false;
+            }
+
             rtbOutput.Text = "";
             rtbInput.Text = "";
             localAssemble = "";
