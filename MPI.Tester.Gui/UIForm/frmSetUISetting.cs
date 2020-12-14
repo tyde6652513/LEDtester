@@ -982,8 +982,11 @@ namespace MPI.Tester.Gui
                     }
                     break;
 
-                    
+
                 default:
+                    {
+                        DataCenter._uiSetting.UIMapPathInfo.EnablePath = false;//強制取消，避免不同user互相複製時UI不顯示又無法關閉
+                    }
                     break;
             }
         }

@@ -263,6 +263,13 @@ namespace MPI.Tester.Report
                         break;
                     }
                 //-----------------------------------------------------------------
+                case EUserID.ASE:
+                    {
+                        _report = new MPI.Tester.Report.User.ASE.Report(objs, false);
+
+                        break;
+                    }
+                //-----------------------------------------------------------------
 
 				default:
 					{
@@ -272,6 +279,7 @@ namespace MPI.Tester.Report
 
 						break;
 					}
+
 			}
 
 			ReportBase.ResetStatisticData(productData);

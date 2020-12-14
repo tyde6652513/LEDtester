@@ -118,6 +118,7 @@ namespace MPI.Tester.Data
 		AWSC   = 8137,
         PIXELED = 8139,
 		PlayInTride = 8138,
+        ASE = 8141,
         TYNTE = 8145,
         Philips = 9005,
         TSB = 9016,
