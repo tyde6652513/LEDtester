@@ -463,9 +463,12 @@ namespace MPI.Tester.Gui
             if (_item.SweepInfoList != null && _item.SweepInfoList.Count > 0)
             {
                 _item.SweepInfoList[0].ForceDelayTime = dinForceDelay.Value;
-            }
+            }            
 
-            _item.RefreshElecSetting();            
+            _item.RefreshElecSetting();
+
+            if (this._item.ElecSetting != null && this._item.ElecSetting.Length > 0)
+            { this._item.ElecSetting[0].ForceDelayTime = dinForceDelay.Value; }
 
             return this._item;
         }

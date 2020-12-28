@@ -500,6 +500,9 @@ namespace MPI.Tester.Gui
             }
             _item.RefreshElecSetting();
 
+            if (this._item.ElecSetting != null && this._item.ElecSetting.Length > 0)
+            { this._item.ElecSetting[0].ForceDelayTime = dinForceDelay.Value; }
+
             return this._item;
 
 
