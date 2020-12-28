@@ -2580,8 +2580,14 @@ namespace MPI.Tester.Gui
         {
             TestResultData selectedData = this[keyName];
 
+            
+
             if (selectedData != null)
             {
+                for (int i = 0; _dataList != null && i < _dataList.Count; ++i)
+                {
+                    _dataList[i].Index = i;
+                }
                 int order = selectedData.Index;
 
                 if (order >= 0 && order < this._dataList.Count)
