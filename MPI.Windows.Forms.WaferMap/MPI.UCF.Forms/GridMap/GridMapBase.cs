@@ -149,25 +149,27 @@ namespace MPI.UCF.Forms.Domain
 
 		public void DrawOne( int row, int col )
 		{
-			Rectangle area = new Rectangle( col, row, 1, 1 );
-			//_coordData2UI.ToWorld( ref area );
+            Rectangle area = new Rectangle(col, row, 1, 1);
+            //_coordData2UI.ToWorld( ref area );
+            if (_coordData2UI != null)
+            {
+                area = _coordData2UI.TransCoord(area);
+                area.Offset(-_scrollX, -_scrollY);
 
-            area = _coordData2UI.TransCoord(area);
-			area.Offset( -_scrollX, -_scrollY );
-			
-			if ( OwnerDraw )
-			{
-				Graphics canvas_g = Graphics.FromHdcInternal( _canvas.Hdc );
-				bool owner_draw = this.innerOwnerDraw( canvas_g, area, ref _canvas );
-				canvas_g.Dispose();
-			}
-			else
-			{
-				this.innerOwnerDraw( null, area, ref _canvas );
-			}
+                if (OwnerDraw)
+                {
+                    Graphics canvas_g = Graphics.FromHdcInternal(_canvas.Hdc);
+                    bool owner_draw = this.innerOwnerDraw(canvas_g, area, ref _canvas);
+                    canvas_g.Dispose();
+                }
+                else
+                {
+                    this.innerOwnerDraw(null, area, ref _canvas);
+                }
 
-			this.Invalidate( area );
-			_fullDraw = false;
+                this.Invalidate(area);
+                _fullDraw = false;
+            }
 		}
 
 		public bool SaveToImage( string file )
