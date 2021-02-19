@@ -30,35 +30,47 @@ namespace MPI.Tester.Report.User.HpoLED
             //
             this.WriteLine("FileName" + this.SpiltChar.ToString() + "\"" + Path.Combine(this.TestResultFileNameWithoutExt() + "." + this.UISetting.TestResultFileExt) + "\"");
 
-            this.WriteLine("UserID" + this.SpiltChar.ToString() + "\"" + this.UISetting.UserID.ToString() + "_" + this.UISetting.FormatName + "\"");
-
             this.WriteLine("TestTime" + this.SpiltChar.ToString() + "\"" + this.TesterSetting.StartTestTime.ToString("yyyy/MM/dd HH:mm:ss.fff") + "\"");
-
-            this.WriteLine("EndTime" + this.SpiltChar.ToString() + "\"" + "\"");
 
             this.WriteLine("TesterModel" + this.SpiltChar.ToString() + "\"" + this.MachineInfo.TesterModel + "/" + this.MachineInfo.TesterSN + "\"");
 
-            this.WriteLine("MachineName" + this.SpiltChar.ToString() + "\"" + this.UISetting.MachineName + "\"");
+            this.WriteLine("TesterNumber" + this.SpiltChar.ToString() + "\"" + this.UISetting.MachineName + "\"");
+
+            this.WriteLine("DeviceNumber" + this.SpiltChar.ToString() + "\"" + this.UISetting.WeiminUIData.DeviceNumber + "\"");
+
+            this.WriteLine("Specification" + this.SpiltChar.ToString() + "\"" + this.UISetting.WeiminUIData.Specification + "\"");
+
+            this.WriteLine("SpecRemark" + this.SpiltChar.ToString() + "\"" + this.UISetting.WeiminUIData.SpecificationRemark + "\"");
 
             this.WriteLine("LotNumber" + this.SpiltChar.ToString() + "\"" + this.UISetting.LotNumber + "\"");
 
-            this.WriteLine("Substrate" + this.SpiltChar.ToString() + "\"" + this.UISetting.Substrate + "\"");
-
-            this.WriteLine("TaskFile" + this.SpiltChar.ToString() + "\"" + this.UISetting.TaskSheetFileName + "\"");
-
-            this.WriteLine("Recipe" + this.SpiltChar.ToString() + "\"" + this.UISetting.ProductFileName + "\"");
-
-            this.WriteLine("ConditionFileName" + this.SpiltChar.ToString() + "\"" + this.UISetting.ConditionFileName + "\"");
-
-            this.WriteLine("Filter Wheel" + this.SpiltChar.ToString() + "\"" + this.Product.ProductFilterWheelPos.ToString() + "\"");
-
-            this.WriteLine("LOPSaveItem" + this.SpiltChar.ToString() + "\"" + this.Product.LOPSaveItem.ToString() + "\"");
-
             this.WriteLine("Operator" + this.SpiltChar.ToString() + "\"" + this.UISetting.OperatorName + "\"");
 
-            this.WriteLine("Samples" + this.SpiltChar.ToString() + "\"\"");
+            this.WriteLine("EquipmentNo" + this.SpiltChar.ToString() + "\"" + "Unknown" + "\"");
 
-            this.WriteLine("Unit" + this.SpiltChar.ToString() + "\"9999\"");
+            this.WriteLine("Rework" + this.SpiltChar.ToString() + "\"" + "Unknown" + "\"");
+
+            this.WriteLine("K Value" + this.SpiltChar.ToString() + "\"" + "Unknown" + "\"");
+
+            this.WriteLine("LOP Ratio" + this.SpiltChar.ToString() + "\"" + "0, 0, 0, 0, 0, ToolFactor, 1, 0, 0, 0, 0, 0, 0" + "\"");
+
+            this.WriteLine("Dark Value" + this.SpiltChar.ToString() + "\"" + "Unknown" + "\"");
+
+            this.WriteLine("Epi" + this.SpiltChar.ToString() + "\"" + "Unknown" + "\"");
+
+            this.WriteLine("Sqin" + this.SpiltChar.ToString() + "\"" + "Unknown" + "\"");
+
+            this.WriteLine("Type" + this.SpiltChar.ToString() + "\"" + "Unknown" + "\"");
+
+            this.WriteLine("MFNO" + this.SpiltChar.ToString() + "\"" + "Unknown" + "\"");
+
+            this.WriteLine("Remark1" + this.SpiltChar.ToString() + "\"" + this.UISetting.TestResultPath01 + "\"");
+
+            this.WriteLine("BinGrade" + this.SpiltChar.ToString() + "\"" + "Unknown" + "\"");
+
+            this.WriteLine("Sort" + this.SpiltChar.ToString() + "\"" + "Unknown" + "\"");
+
+            this.WriteLine("Bin" + this.SpiltChar.ToString() + "\"" + "Unknown" + "\"");
 
             this.WriteLine("");
 
