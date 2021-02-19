@@ -1,0 +1,5 @@
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\Assembly\MPI.Tester.Data.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\Assembly\MPI.Tester.Data.pdb
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Data\obj\Release\MPI.Tester.Data.csprojResolveAssemblyReference.cache
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Data\obj\Release\MPI.Tester.Data.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Data\obj\Release\MPI.Tester.Data.pdb

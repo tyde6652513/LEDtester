@@ -1,0 +1,13 @@
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\Assembly\MPI.Tester.GuiComponent.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\Assembly\MPI.Tester.GuiComponent.pdb
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.GuiComponent\obj\Release\MPI.Tester.GuiComponent.csprojResolveAssemblyReference.cache
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.GuiComponent\obj\Release\MPI.Tester.GuiComponent.PathUIComponent.resources
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.GuiComponent\obj\Release\MPI.Tester.GuiComponent.Properties.Resources.resources
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.GuiComponent\obj\Release\MPI.Tester.GuiComponent.TestItemComponent.CustomizeListComponent.resources
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.GuiComponent\obj\Release\MPI.Tester.GuiComponent.ForceRangeComponent.resources
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.GuiComponent\obj\Release\MPI.Tester.GuiComponent.UnitA.resources
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.GuiComponent\obj\Release\MPI.Tester.GuiComponent.UnitV.resources
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.GuiComponent\obj\Release\MPI.Tester.GuiComponent.UnitValueComponent.resources
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.GuiComponent\obj\Release\MPI.Tester.GuiComponent.csproj.GenerateResource.Cache
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.GuiComponent\obj\Release\MPI.Tester.GuiComponent.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.GuiComponent\obj\Release\MPI.Tester.GuiComponent.pdb

@@ -1,0 +1,9 @@
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Maths\bin\Debug\MPI.Tester.Maths.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Maths\bin\Debug\MPI.Tester.Maths.pdb
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Maths\bin\Debug\MPI.Tester.DeviceCommon.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Maths\bin\Debug\MPI.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Maths\bin\Debug\ICSharpCode.SharpZLib.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Maths\bin\Debug\MPI.Tester.DeviceCommon.pdb
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Maths\obj\Debug\MPI.Tester.Maths.csprojResolveAssemblyReference.cache
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Maths\obj\Debug\MPI.Tester.Maths.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Maths\obj\Debug\MPI.Tester.Maths.pdb

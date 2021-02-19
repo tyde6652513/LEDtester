@@ -224,9 +224,32 @@ namespace MPI.Tester.Report.User.HpoLED
             this.WriteLine(lineGain2);
 
             this.WriteLine(lineOffset2);
-
-            this.WriteLine("");
             #endregion
+            this.WriteLine("WDOffset1" + this.SpiltChar.ToString() + 
+                 "WDOffset2" + this.SpiltChar.ToString() + 
+                 "WDOffset3" + this.SpiltChar.ToString() + 
+                 "WDOffset4" + this.SpiltChar.ToString() + 
+                 "MLOP1" + this.SpiltChar.ToString() + 
+                 "MLOP2" + this.SpiltChar.ToString() + 
+                 "MLOP3" + this.SpiltChar.ToString() + 
+                 "MLOP4" + this.SpiltChar.ToString() + 
+                 "MWLD1" + this.SpiltChar.ToString() + 
+                 "MWLD2" + this.SpiltChar.ToString() + 
+                 "MWLD3" + this.SpiltChar.ToString() + "\"" +
+                 "MWLD4" + "\"");
+            this.WriteLine("0" + this.SpiltChar.ToString() + 
+                 "0" + this.SpiltChar.ToString() + 
+                 "0" + this.SpiltChar.ToString() + 
+                 "0" + this.SpiltChar.ToString() + 
+                 "0" + this.SpiltChar.ToString() + 
+                 "0" + this.SpiltChar.ToString() + 
+                 "0" + this.SpiltChar.ToString() + 
+                 "0" + this.SpiltChar.ToString() + 
+                 "0" + this.SpiltChar.ToString() + 
+                 "0" + this.SpiltChar.ToString() +
+                 "0" + this.SpiltChar.ToString() + "\"" +
+                 "0" +  "\"");
+            this.WriteLine("");
             ////////////////////////////////////////////
             //Write Result Item Title
             ////////////////////////////////////////////

@@ -88,6 +88,7 @@
     <Compile Include="User\Eti\Report.cs" />
     <Compile Include="User\GPI\Report.cs" />
     <Compile Include="User\Heptagon\Report.cs" />
+    <Compile Include="User\HpoLED\Report.cs" />
     <Compile Include="User\InfiniLED\Report.cs" />
     <Compile Include="User\EPISKY\Report.cs" />
     <Compile Include="User\HP000\Report.cs" />

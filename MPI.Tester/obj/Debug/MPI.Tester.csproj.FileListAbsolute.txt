@@ -1,0 +1,4 @@
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester\bin\Debug\MPI.Tester.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester\bin\Debug\MPI.Tester.pdb
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester\obj\Debug\MPI.Tester.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester\obj\Debug\MPI.Tester.pdb

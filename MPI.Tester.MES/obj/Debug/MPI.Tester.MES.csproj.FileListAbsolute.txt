@@ -1,0 +1,5 @@
+C:\MPI\LEDTester\MPI.Tester.MES.dll
+C:\MPI\LEDTester\MPI.Tester.MES.pdb
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.MES\obj\Debug\MPI.Tester.MES.csprojResolveAssemblyReference.cache
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.MES\obj\Debug\MPI.Tester.MES.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.MES\obj\Debug\MPI.Tester.MES.pdb

@@ -1,0 +1,5 @@
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.TestServer\obj\Debug\MPI.Tester.TestServer.csprojResolveAssemblyReference.cache
+C:\MPI\LEDTester\MPI.Tester.TestServer.dll
+C:\MPI\LEDTester\MPI.Tester.TestServer.pdb
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.TestServer\obj\Debug\MPI.Tester.TestServer.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.TestServer\obj\Debug\MPI.Tester.TestServer.pdb

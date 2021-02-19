@@ -1,0 +1,5 @@
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\Assembly\MPI.Tester.Device2.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\Assembly\MPI.Tester.Device2.pdb
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Device2\obj\Release\MPI.Tester.Device2.csprojResolveAssemblyReference.cache
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Device2\obj\Release\MPI.Tester.Device2.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Device2\obj\Release\MPI.Tester.Device2.pdb

@@ -1,0 +1,14 @@
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Data\bin\Debug\MPI.Tester.Data.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Data\bin\Debug\MPI.Tester.Data.pdb
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Data\bin\Debug\MPI.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Data\bin\Debug\MPI.Tester.DeviceCommon.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Data\bin\Debug\MPI.Tester.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Data\bin\Debug\MPI.Tester.Maths.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Data\bin\Debug\Newtonsoft.Json.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Data\bin\Debug\ICSharpCode.SharpZLib.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Data\bin\Debug\MPI.Tester.DeviceCommon.pdb
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Data\bin\Debug\MPI.Tester.Maths.pdb
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Data\bin\Debug\MPI.Tester.pdb
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Data\obj\Debug\MPI.Tester.Data.csprojResolveAssemblyReference.cache
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Data\obj\Debug\MPI.Tester.Data.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester.Data\obj\Debug\MPI.Tester.Data.pdb

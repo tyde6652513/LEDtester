@@ -1,0 +1,9 @@
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\Assembly\MPI.Windows.Forms.WaferMap.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\Assembly\MPI.Windows.Forms.WaferMap.pdb
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Windows.Forms.WaferMap\obj\Release\MPI.Windows.Forms.WaferMap.csprojResolveAssemblyReference.cache
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Windows.Forms.WaferMap\obj\Release\MPI.Windows.Forms.frmBinColorSet.resources
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Windows.Forms.WaferMap\obj\Release\MPI.Windows.Forms.frmBinColorShow.resources
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Windows.Forms.WaferMap\obj\Release\MPI.Windows.Forms.WaferMap.csproj.GenerateResource.Cache
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Windows.Forms.WaferMap\obj\Release\MPI.Windows.Forms.WaferMap.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Windows.Forms.WaferMap\obj\Release\MPI.Windows.Forms.WaferMap.pdb
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Windows.Forms.WaferMap\obj\Release\MPI.Windows.Forms.KBlendWaferMap.resources

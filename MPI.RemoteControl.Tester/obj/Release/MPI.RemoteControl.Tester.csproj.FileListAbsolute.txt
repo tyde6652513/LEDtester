@@ -1,0 +1,5 @@
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\Assembly\MPI.RemoteControl.MPIDS7600Command.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\Assembly\MPI.RemoteControl.MPIDS7600Command.pdb
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.RemoteControl.Tester\obj\Release\MPI.RemoteControl.Tester.csprojResolveAssemblyReference.cache
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.RemoteControl.Tester\obj\Release\MPI.RemoteControl.MPIDS7600Command.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.RemoteControl.Tester\obj\Release\MPI.RemoteControl.MPIDS7600Command.pdb

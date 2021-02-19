@@ -1,0 +1,8 @@
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.RemoteControl.Tester2\bin\x64\Debug\MPI.RemoteControl2.Tester.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.RemoteControl.Tester2\bin\x64\Debug\MPI.RemoteControl2.Tester.pdb
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.RemoteControl.Tester2\bin\x64\Debug\MPI.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.RemoteControl.Tester2\bin\x64\Debug\MPI.MCF.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.RemoteControl.Tester2\bin\x64\Debug\Newtonsoft.Json.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.RemoteControl.Tester2\bin\x64\Debug\ICSharpCode.SharpZLib.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.RemoteControl.Tester2\obj\x64\Debug\MPI.RemoteControl2.Tester.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.RemoteControl.Tester2\obj\x64\Debug\MPI.RemoteControl2.Tester.pdb

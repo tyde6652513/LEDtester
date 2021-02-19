@@ -326,6 +326,35 @@ namespace MPI.Windows.Forms
             this.Dispose();
         }
 
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // _vScroll
+            // 
+            this._vScroll.Location = new System.Drawing.Point(83, 0);
+            this._vScroll.Size = new System.Drawing.Size(17, 83);
+            this._vScroll.Scroll += new System.Windows.Forms.ScrollEventHandler(this._vScroll_Scroll);
+            // 
+            // _hScroll
+            // 
+            this._hScroll.Location = new System.Drawing.Point(0, 83);
+            this._hScroll.Size = new System.Drawing.Size(100, 17);
+            this._hScroll.Scroll += new System.Windows.Forms.ScrollEventHandler(this._hScroll_Scroll);
+            this.ResumeLayout(false);
+
+        }
+
+        private void _hScroll_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+
+        private void _vScroll_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+
 		//public void ResetScale()
 		//{
 		//    this.AutoScale();

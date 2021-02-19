@@ -112,6 +112,9 @@
     <EmbeddedResource Include="frmBinColorShow.resx">
       <DependentUpon>frmBinColorShow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KBlendWaferMap.resx">
+      <DependentUpon>KBlendWaferMap.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MPI.Tester.Data\MPI.Tester.Data.csproj">

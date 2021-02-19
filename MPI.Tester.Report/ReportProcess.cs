@@ -270,6 +270,13 @@ namespace MPI.Tester.Report
                         break;
                     }
                 //-----------------------------------------------------------------
+                case EUserID.HpoLED:
+                    {
+                        _report = new MPI.Tester.Report.User.HpoLED.Report(objs, false);
+
+                        break;
+                    }
+                //-----------------------------------------------------------------
 
 				default:
 					{
@@ -390,7 +397,7 @@ namespace MPI.Tester.Report
                 return EErrorCode.SaveFileFail;
             }
 
-			return ReportProcess._report.CombineSimulatorReportInterpolation(optiReport, elecReport);
+			return ReportProcess._report.CombineSimulatorReportInterpolation(optiReport, elecReport);            
 		}
 
         public static EErrorCode SimulatorReportInterpolation(string Report)

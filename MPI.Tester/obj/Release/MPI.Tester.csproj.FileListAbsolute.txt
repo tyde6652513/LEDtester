@@ -1,0 +1,4 @@
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\Assembly\MPI.Tester.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\Assembly\MPI.Tester.pdb
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester\obj\Release\MPI.Tester.dll
+D:\Code\聯勝\Program_Ver1.2.07.29T_Git\MPI.Tester\obj\Release\MPI.Tester.pdb
